@@ -4,7 +4,7 @@ Review date: 12 October 2026. This is a bounded, AI-assisted source-coverage not
 
 ## The precise question
 
-The maintained [Erdős Problem 670 page](https://www.erdosproblems.com/670) and Ho's Remark 9 discuss a fixed dimension with an eventual coefficient-one diameter lower bound; the error rate may depend on that dimension. The accompanying theorem gives sets in one dimension, 458999, for every n≥68000 with separated unordered-edge distances and diameter below 0.74n². Choosing ε=1/4 contradicts that maintained fixed-dimensional formulation. It does not settle the plane, determine a least dimension, or optimize the coefficient.
+The maintained [Erdős Problem 670 page](https://www.erdosproblems.com/670) and Ho's Remark 9 discuss a fixed dimension with an eventual coefficient-one diameter lower bound; the error rate may depend on that dimension. The accompanying theorem gives sets in the fixed ambient dimension 458999 for every n≥68000 with separated unordered-edge distances and diameter below 0.74n². Choosing ε=1/4 contradicts that maintained fixed-dimensional formulation. It does not settle the plane, determine a least dimension, or optimize the coefficient.
 
 Erdős's original Problem 20 appears on printed p. 6 of his 1997 chapter. An earlier source-access review visually inspected that page in a scanned reproduction, checked the volume's front matter, and read extracted chapter text. The original prose does not explicitly fix the quantifier order or uniformity in dimension. The present literature audit relied on that retained access receipt rather than freshly opening the page. The result here is stated against the maintained fixed-dimensional interpretation, without attributing a more precise assertion to the original page.
 
@@ -29,4 +29,4 @@ Pach–Radoičić–Vondrák study many nearly equal distances, a different hypo
 | Baron 1990 | Original preview pp. 1–2 read and freshly inspected | Pp. 3–5 not accessed |
 | Schoenberg 1935 | Bibliographic identity checked | Original full text not freshly read |
 
-The earlier historical ledger's “Erdős inaccessible” entry was superseded by its preserved original-source access addendum; this note uses the later access record. A full specialist proof review, exhaustive historical search, and owner release decision remain open. Missing older texts are a coverage limit, not evidence for or against novelty.
+A full specialist proof review and exhaustive historical search remain open. Missing older texts are a coverage limit, not evidence for or against novelty.

@@ -17,20 +17,20 @@
       "sha256": "1fd645ed69c35a4584582f84621c6be839df6630ee708521513f95658ff9c7b3"
     },
     "PRIOR_ART.md": {
-      "bytes": 4612,
-      "sha256": "068f4332c4dc830e3cfef16985caf00ac637637e96fafe52a37e9815424e276c"
+      "bytes": 4430,
+      "sha256": "ccc9bfcc31b69ee5d97e1ffe9a95b5a9076a8ecc64a50ce281ae7cf57b22397f"
     },
     "PROOF_CORRESPONDENCE.md": {
-      "bytes": 2843,
-      "sha256": "b497dc127c0c8eaee4f66f7f606fefe7da378fe1111ca0d9f16f946b17494fc7"
+      "bytes": 2008,
+      "sha256": "ccecdb15852fd1f80d6b7c5f0547805472cf3035ff4a3082448ab204c0e75961"
     },
     "PUBLIC_EXPORT.md": {
-      "bytes": 3450,
-      "sha256": "780f8b64c1eb0e2bde2374f6735e87b7ee85f4273808db587d703518b96fdcc5"
+      "bytes": 977,
+      "sha256": "72a58716069650eaac15c217c14b6132a222b4c0a291bf1b6595c1b57703212e"
     },
     "README.md": {
-      "bytes": 5876,
-      "sha256": "e7e848d31dd84b8ea12d23121db343ce50a2a1829e5d195269c2da4eb8c8dc25"
+      "bytes": 5252,
+      "sha256": "de1a47f96114bb508f187b5f6e62216d80eba955948eb5c8f6db30a39bfc035c"
     },
     "lean-fixed670/.gitignore": {
       "bytes": 35,
@@ -285,28 +285,28 @@
       "sha256": "80581f60cef5ae6da36e38c087d5ebd33bd553e153883aba3bf1621972ba40a3"
     },
     "paper/fixed_dimension_670.pdf": {
-      "bytes": 155470,
-      "sha256": "8b9c48959835386795b78e14ee200ca71413c0c31432c546179652b42ce403ea"
+      "bytes": 154397,
+      "sha256": "6b6eb104f507c4a8fc70fee4d6431d81b86a6ed3f301f7761ac2aa65809194ec"
     },
     "paper/fixed_dimension_670.tex": {
-      "bytes": 40444,
-      "sha256": "d7faa1e6d5dc5f595655a3055371030b3ae05be7015c49d9672bc38eac520a11"
+      "bytes": 39557,
+      "sha256": "c30147a6e5468b1cfb52a3de1c46948555d49bac5fe5a0d5c281b67d460a99a0"
     },
     "verification/fixed670/FROZEN_FILES_SHA256.json": {
       "bytes": 9919,
       "sha256": "e090b7630ece050a47498bd8c084eb31ff2bc3f0f9ce689f2a021962c2b79326"
     },
     "verification/fixed670/REPLAY_STATUS.md": {
-      "bytes": 3000,
-      "sha256": "a4eb89131bc93aaf514da235ed4295ad71128c3701a82c3b0b07704f02e8fd78"
+      "bytes": 2872,
+      "sha256": "6aa0f8c6e3edd048fa93ff89320bc8dafcf0ae7fcd660a5381df49bcfed6ab60"
     },
     "verification/fixed670/SOURCE_MANIFEST.json": {
       "bytes": 39037,
       "sha256": "1060cb440d3a748a7bcb772e2e51980ef709b796bdc12ecd856b87ee9f858d12"
     },
     "verification/fixed670/SOURCE_PIN.md": {
-      "bytes": 2942,
-      "sha256": "c79e2508f808e4f9f8cd6662e70743dbca5e749f87f1e301e58dfb45fa8eb7fd"
+      "bytes": 2392,
+      "sha256": "180af5d586f39aca71cc109fe86aa6169ec0a9f19ee6246a72fb547dcee49e05"
     },
     "verification/fixed670/execution/00_TrigonometricChord.log": {
       "bytes": 739,
@@ -552,6 +552,10 @@
       "bytes": 5323,
       "sha256": "8d43692a9997aba6c9f7ec048735cd2dd397edbbbe92896ffe91e5b67d44a6c7"
     },
+    "verification/manuscript670/CURRENT_VALIDATION.md": {
+      "bytes": 2840,
+      "sha256": "10c1a94ef673f6695f1f2f8c6abaf0172a1b436a8a314913ef334b40623c72e6"
+    },
     "verification/manuscript670/VALIDATION.md": {
       "bytes": 3392,
       "sha256": "97302fae71df1961407d6d3a47f3df94079a705f1b7284d0de3a2ccc925a9f12"
@@ -563,6 +567,30 @@
     "verification/manuscript670/check_manuscript.py": {
       "bytes": 3321,
       "sha256": "6d0cf8e2ec47effafbc1572f44e0e0c5f1b55fd0112e56dcfb8cd0c4d7effa9e"
+    },
+    "verification/manuscript670/editorial/arithmetic_and_references.json": {
+      "bytes": 1358,
+      "sha256": "474ee1905461b7eb95d87bfa7d9ab6d389b8654e1a919d71ad824ae76069d678"
+    },
+    "verification/manuscript670/editorial/tectonic-a.stderr.log": {
+      "bytes": 793,
+      "sha256": "3220c93bb97744c2eeb731fc43adf8fa0d97a22c209d42b4df2bbead2caa7fbf"
+    },
+    "verification/manuscript670/editorial/tectonic-a.stdout.log": {
+      "bytes": 429,
+      "sha256": "de3054e244ce4e68f12b7bd92f4a8ec5e072f05a4624a017bbb27964760a087a"
+    },
+    "verification/manuscript670/editorial/tectonic-b.stderr.log": {
+      "bytes": 793,
+      "sha256": "3220c93bb97744c2eeb731fc43adf8fa0d97a22c209d42b4df2bbead2caa7fbf"
+    },
+    "verification/manuscript670/editorial/tectonic-b.stdout.log": {
+      "bytes": 429,
+      "sha256": "a0636ba72fd4842c5300b8cd6963a5f9f9787e582fc5cce957999d8bb40a23ee"
+    },
+    "verification/manuscript670/editorial/tectonic-final.log": {
+      "bytes": 15317,
+      "sha256": "6cfce60a7e8a2efd9f66df6d810f9dee1cdce1e614b479b4891950a7f01c58aa"
     },
     "verification/manuscript670/tectonic-a.stderr.log": {
       "bytes": 1007,

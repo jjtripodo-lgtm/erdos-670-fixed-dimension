@@ -1,6 +1,6 @@
-# Revised integrated-source standalone replay
+# Source-bound standalone replay
 
-**PASS.** This receipt belongs to the integrated source commit `35c67a69e009c9ca27267077608864987b7e2851` and the revised replay scripts in this candidate. It is separate from the historical pre-fix run preserved privately outside the selected-tree allowlist.
+**PASS.** The recorded run uses source commit `35c67a69e009c9ca27267077608864987b7e2851` and the exact replay scripts and dependency locks included here.
 
 The run began 12 October 2026 17:19:47 UTC in a fresh extraction with zero project `.olean` files, and finished 17:25:03 UTC. It used the exact 54-module final import closure, 54 topologically ordered `lake --no-cache build <module>` calls, a default `lake --no-cache build` (3,490 jobs), and `lake env lean --trust=0 AxiomAudit.lean`. All 56 processes exited zero. The script verified the **exact expected set** of 54 produced project `.olean` paths before setting `status=PASS`.
 
@@ -8,6 +8,6 @@ The [execution receipt](execution/RECEIPT.json) has SHA-256 `3d3267331443424cbbb
 
 The six trust-zero declarations are the direct colex reserve, actual whole-family B budget, universal completion, actual cross-square and cross-metric constructors, and `fixed_dimension_erdos_670`. Each axiom print contains exactly `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx`. The final source theorem file remains SHA-256 `97cfb0df31070d64c6a48cac85de205745e7ab8a267a7c8720891893050ddd58`.
 
-Run `python3 verification/fixed670/verify_execution.py` from the candidate root to check the source-bound receipt and all 56 copied log hashes without executing Lean. `negative_tests.py` first accepts the exact receipt, then rejects eleven mutations covering status, source hash, command count/arguments, exit code, log hash, missing/extra `.olean`, dependency HEAD, dirty checkout and an unsupported cache-authentication claim. Both checks passed. The source verifier independently confirms all 54 module hashes, imports, dependency objects, toolchain and frozen source files.
+Run `python3 verification/fixed670/verify_execution.py` from the repository root to check the source-bound receipt and all 56 copied log hashes without executing Lean. `negative_tests.py` first accepts the exact receipt, then rejects eleven mutations covering status, source hash, command count/arguments, exit code, log hash, missing/extra `.olean`, dependency HEAD, dirty checkout and an unsupported cache-authentication claim. Both checks passed. The source verifier independently confirms all 54 module hashes, imports, dependency objects, toolchain and frozen source files.
 
-This replay did not rebuild Mathlib or other upstream dependencies from source, run on another machine, run hosted CI, or constitute independent human proof or priority review. The clean-project claim covers the exported 54 modules only. The paper's rewritten exposition requires separate review.
+This replay did not rebuild Mathlib or other upstream dependencies from source, run on another machine, run hosted CI, or constitute independent human proof or priority review. The clean-project claim covers the exported 54 modules only. The paper's exposition requires separate review.

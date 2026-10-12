@@ -54,7 +54,7 @@ $P:\{0,\ldots,n-1\}\to\R^{458999}$ such that
 
 In particular, the assertion that the coefficient $1$ is a lower bound in every fixed dimension is false: take $d=458999$ and $\varepsilon=1/4$ in the proposed eventual lower bound $(1-\varepsilon)n^2$, since $37/50<3/4$. The theorem gives the same conclusion in every dimension at least $458999$ by zero-coordinate padding. It gives no conclusion about the conjectured bound in dimension two, or about the optimal constant in any fixed dimension.
 
-An earlier manuscript from this research program concerns a separate construction with growing dimension and an exact consecutive distance spectrum. No exact consecutive spectrum is asserted here. The present proof uses $mk$ points in dimension $9m-1$, where $34000\le m\le51000$ and $k$ grows with the requested number of points.
+The proof uses $mk$ points in dimension $9m-1$, where $34000\le m\le51000$ and $k$ grows with the requested number of points.
 
 \paragraph{Roadmap.}
 Start with $m$ macro points whose edge lengths have distinct colexicographic labels. Replace each macro point by a cluster of $k$ points. A global positive-semidefinite completion makes perturbations from different clusters orthogonal, so one literal family of points supports both the local and cross-distance calculations. A prime-residue ruler separates edges inside clusters. Fine, carry, and macro steps separate the cross edges in lexicographic order; a final mixed guard places every cross length above every local length. The scalar estimates pay for the perturbations and keep the diameter below the finite-source budget. Finally, select the requested $n$ points from a suitable $mk$-point family and pad their coordinates to the same ambient dimension $458999$.
@@ -617,9 +617,9 @@ Formal verification establishes the encoded statements relative to the pinned en
 
 \section{Research provenance}
 
-This manuscript was prepared with substantial assistance from an OpenAI assistant for mathematical exposition, comparison with Lean source, proof checking, and drafting. The preceding research program's preserved manuscript records extensive use of OpenAI ChatGPT and Anthropic Claude during exploration and proof engineering. This paper does not assign particular steps of the present fixed-dimensional proof to Claude without a corresponding record.
+This manuscript was prepared with substantial assistance from OpenAI ChatGPT for mathematical exposition, comparison with Lean source, proof checking, and drafting. The broader research program used both OpenAI ChatGPT and Anthropic Claude for exploration and proof engineering; the available record does not assign particular steps of this fixed-dimensional proof to Claude.
 
-John Tripodo directed the research workflow and curated the private artifacts. No professional mathematical affiliation, credential, independent expert verification, or completed peer review is asserted. This AI-assisted research manuscript has not undergone independent mathematical or priority review. The author is responsible for decisions about release and submission.
+John Tripodo directed the research workflow and curated the source and verification artifacts. No professional mathematical affiliation, credential, independent expert verification, or completed peer review is asserted. This AI-assisted research manuscript has not undergone independent mathematical or priority review. The author is responsible for the manuscript and any subsequent submission.
 
 \appendix
 \section{Reproducibility details and source correspondence}\label{app:repro}
@@ -627,7 +627,7 @@ John Tripodo directed the research workflow and curated the private artifacts. N
 The pinned environment is Lean \code{v4.31.0-rc1}, with mathlib commit
 \begin{center}\code{0ed37c9258f123a2c76a2175596f75c2bd50f941}.\end{center}
 
-The original source checkpoint had an older proof path. At the integrated checkpoint above, the direct Cauchy--Schwarz reserve and whole-$B$ completion have both been formalized and connected to the unchanged final theorem. A new standalone replay on 12 October 2026 started with zero project \code{.olean} files and freshly compiled all 54 modules in its extracted import closure. All 56 captured process invocations, including the final default build and a six-declaration \code{--trust=0} axiom audit, exited successfully. The audit includes both simplified lemmas, their completion consumer and the final theorem. Every audited declaration uses exactly \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; none uses \code{sorryAx}.
+A standalone replay on 12 October 2026 started with zero project \code{.olean} files and compiled all 54 modules in the included import closure. All 56 captured process invocations, including the final default build and a six-declaration \code{--trust=0} axiom audit, exited successfully. The audit includes the direct colex reserve, whole-$B$ budget, universal completion, cross-metric constructors, and final theorem. Every audited declaration uses exactly \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; none uses \code{sorryAx}.
 
 The included execution receipt is
 \begin{center}\code{verification/fixed670/execution/RECEIPT.json}\end{center}
@@ -638,7 +638,7 @@ with SHA-256 digest
 \end{center}
 The replay reused compiled upstream dependency imports. It was not a full rebuild of mathlib, a build of the entire multi-project development repository, a successful hosted CI run, a second-machine reproduction, or independent human review. The receipt records the source hashes, all nine locked dependency checkout HEADs and their nonignored dirty states, commands, exit codes, output hashes, and dependency-cache boundary. Checkout identity does not authenticate the provenance of precompiled caches.
 
-For a read-only check or new replay of this \emph{integrated candidate package}, start at the parent of this paper directory. It contains \code{verify\_candidate.py} and \code{lean-fixed670/}. In a standalone extraction use the extracted root. Run the hash checks before attempting a replay:
+For a read-only check or new replay, start at the repository root, the parent of this paper directory. It contains \code{verify\_candidate.py} and \code{lean-fixed670/}. Run the hash checks before attempting a replay:
 \begin{verbatim}
 python3 verify_candidate.py
 python3 lean-fixed670/verify_sources.py
@@ -647,7 +647,7 @@ python3 lean-fixed670/prepare_dependencies.py --fetch
 replay_parent="$(mktemp -d)"
 python3 lean-fixed670/replay.py --output "$replay_parent/run"
 \end{verbatim}
-The \code{run} path must not already exist. Dependency acquisition uses only the nine public locked Git sources; the candidate includes all of its own source. An optional \code{lake exe cache get} in \code{lean-fixed670/} requests Mathlib's binary cache. Without it, upstream compilation can require substantial time and disk space. The first two hash commands do not compile Lean. The README gives the exact setup and cache options. An earlier packet had a distinct proof path and receipt.
+The \code{run} path must not already exist. Dependency acquisition uses only the nine public locked Git sources; this repository includes the full theorem import closure. An optional \code{lake exe cache get} in \code{lean-fixed670/} requests Mathlib's binary cache. Without it, upstream compilation can require substantial time and disk space. The first two hash commands do not compile Lean. The README gives the exact setup and cache options.
 
 The proof correspondence is as follows; all paths in the right column are under the fixed-dimension source directory.
 \begin{center}\small
@@ -665,7 +665,7 @@ Theorem~\ref{thm:main} & \code{AllNArithmetic}, \code{SourceAllNEmbedding}, \cod
 \end{tabular}
 \end{center}
 
-The exposition sometimes uses simpler consequences of the formal estimates; for instance, \eqref{eq:easy-cross} uses $E\le10^{-6}k$, while the source proves $E\le(648/5852077991)k$. It follows the formal direct-polarization route for fine digits and the formal $147/200$ diameter cap. The shorter Cauchy--Schwarz bound for $\mathsf N$ and the whole-matrix estimate \eqref{eq:B-whole} now have checked counterparts in the final theorem's dependency path: \code{IncidenceBridge} uses the direct reserve, and \code{SourceActualCrossMetric} uses the universal completion from \code{SourceQuadraticMatrix} in both consumer calls. The old weighted-Young and anchored-solve lemmas remain available, but these two simplified steps are the integrated route. The earlier written construction used a different error-variation argument and sharper optional scalar constants; those are not needed for this theorem.
+The exposition sometimes uses simpler consequences of the formal estimates; for instance, \eqref{eq:easy-cross} uses $E\le10^{-6}k$, while the source proves $E\le(648/5852077991)k$. It follows the formal direct-polarization route for fine digits and the formal $147/200$ diameter cap. The Cauchy--Schwarz bound for $\mathsf N$ and the whole-matrix estimate \eqref{eq:B-whole} are in the final theorem's dependency path: \code{IncidenceBridge} uses the direct reserve, and \code{SourceActualCrossMetric} uses the universal completion from \code{SourceQuadraticMatrix} in both consumer calls.
 
 \begin{thebibliography}{99}
 \bibitem{Erdos} P. Erd\H{o}s, \emph{Some unsolved problems}, in \emph{Combinatorics, Geometry and Probability: A Tribute to Paul Erd\H{o}s}, B. Bollob\'as and A. Thomason, eds., Cambridge University Press, 1997, pp.~1--10, Problem~20. \url{https://doi.org/10.1017/CBO9780511662034.004}
