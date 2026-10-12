@@ -2,11 +2,13 @@
 
 **Research manuscript prepared 12 October 2026.** This repository contains the manuscript and the complete 54-module Lean source closure at source commit `35c67a69e009c9ca27267077608864987b7e2851`. The included sources suffice for the checks and replay described below. This work has not been independently refereed.
 
+**[Download paper (PDF)](https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/80ed553f5059b73998b49c54a83b9df5a952e8b3/paper/fixed_dimension_670.pdf)** — direct download if GitHub's PDF preview does not render.
+
 The final unconditional theorem, `Erdos488.Geometry.SeparatedDistances.FixedDimension.fixed_dimension_erdos_670`, gives for every `n ≥ 68000` an injectively indexed set of `n` points in `EuclideanSpace Real (Fin 458999)`. Every nonzero pair distance is at least one, distances from distinct unordered non-diagonal pairs differ by at least one, and diameter is strictly below `(37/50)n²`. The historical `Erdos488` directory name is only a source identifier; this is the Problem 670 result.
 
 | Read | Location |
 | --- | --- |
-| Manuscript | [PDF](paper/fixed_dimension_670.pdf), [TeX](paper/fixed_dimension_670.tex), [current validation](verification/manuscript670/CURRENT_VALIDATION.md) |
+| Manuscript | [PDF](https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/80ed553f5059b73998b49c54a83b9df5a952e8b3/paper/fixed_dimension_670.pdf), [TeX](paper/fixed_dimension_670.tex), [current validation](verification/manuscript670/CURRENT_VALIDATION.md) |
 | Final theorem and proof path | [Lean declaration](lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.lean), [paper-to-source correspondence](PROOF_CORRESPONDENCE.md) |
 | Source identity | [pin](verification/fixed670/SOURCE_PIN.md), [54-module manifest](verification/fixed670/SOURCE_MANIFEST.json) |
 | Replay evidence | [status and limits](verification/fixed670/REPLAY_STATUS.md), [machine-readable receipt](verification/fixed670/execution/RECEIPT.json) |
