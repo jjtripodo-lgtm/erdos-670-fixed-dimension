@@ -1,0 +1,17 @@
+START locked_dependencies_before_cache
+END locked_dependencies_before_cache exit=0 seconds=0.275
+START official_mathlib_cache
+END official_mathlib_cache exit=0 seconds=667.84
+START locked_dependencies_after_cache
+END locked_dependencies_after_cache exit=0 seconds=1.229
+START source_identity_before_replay
+END source_identity_before_replay exit=0 seconds=0.17
+START independent_project_replay
+END independent_project_replay exit=0 seconds=870.962
+START fresh_kernel_replay
+END fresh_kernel_replay exit=0 seconds=1510.504
+START source_identity_after_replay
+END source_identity_after_replay exit=0 seconds=0.197
+START locked_dependencies_after_replay
+END locked_dependencies_after_replay exit=0 seconds=0.715
+INDEPENDENT VERIFICATION PASS

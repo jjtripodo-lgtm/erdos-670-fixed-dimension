@@ -1,0 +1,21 @@
+⚠ [2420/2515] Replayed Erdos488.Geometry.SeparatedDistances.Defs
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3090/3091] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean:12:39: `Sym2.isDiag_iff_proj_eq` has been deprecated: Use `Sym2.mk_isDiag_iff` instead
+⚠ [3091/3091] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly (6.2s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean:53:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean:69:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3091 jobs).

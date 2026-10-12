@@ -627,16 +627,18 @@ John Tripodo directed the research workflow and curated the source and verificat
 The pinned environment is Lean \code{v4.31.0-rc1}, with mathlib commit
 \begin{center}\code{0ed37c9258f123a2c76a2175596f75c2bd50f941}.\end{center}
 
-A standalone replay on 12 October 2026 started with zero project \code{.olean} files and compiled all 54 modules in the included import closure. All 56 captured process invocations, including the final default build and a six-declaration \code{--trust=0} axiom audit, exited successfully. The audit includes the direct colex reserve, whole-$B$ budget, universal completion, cross-metric constructors, and final theorem. Every audited declaration uses exactly \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; none uses \code{sorryAx}.
+The macOS standalone replay on 12 October 2026 started with zero project \code{.olean} files and compiled all 54 modules in the included import closure. All 56 captured process invocations, including the final default build and a six-declaration \code{--trust=0} axiom audit, exited successfully. The audit includes the direct colex reserve, whole-$B$ budget, universal completion, cross-metric constructors, and final theorem. Every audited declaration uses exactly \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; none uses \code{sorryAx}.
 
-The included execution receipt is
+The original macOS execution receipt is
 \begin{center}\code{verification/fixed670/execution/RECEIPT.json}\end{center}
 with SHA-256 digest
 \begin{center}
 \code{3d3267331443424cbbb61d70519de8f8}\\
 \code{0c772cb8302dfacde20b1cd93f30be74}.
 \end{center}
-The replay reused compiled upstream dependency imports. It was not a full rebuild of mathlib, a build of the entire multi-project development repository, a successful hosted CI run, a second-machine reproduction, or independent human review. The receipt records the source hashes, all nine locked dependency checkout HEADs and their nonignored dirty states, commands, exit codes, output hashes, and dependency-cache boundary. Checkout identity does not authenticate the provenance of precompiled caches.
+The macOS replay reused pre-existing compiled upstream imports. Its receipt records the source hashes, all nine locked dependency checkout HEADs and their nonignored dirty states, commands, exit codes, output hashes, and dependency-cache boundary. An independent Linux machine subsequently repeated the 54-module project source build and all 56 replay commands with nine freshly fetched pinned, clean dependency checkouts. Its six axiom prints again reported only the three axioms above. The pinned toolchain's \code{leanchecker --fresh} then exited zero after 1,510.504 seconds, replaying the compiled transitive import environment through Lean's kernel. The Linux receipts and logs are included under \code{verification/fixed670/}.
+
+The Linux run used freshly downloaded official upstream compiled caches. Neither run was a full source rebuild of mathlib or the entire multi-project development repository, and neither authenticates source-to-binary correspondence for upstream caches. The fresh checker uses Lean's own kernel; it is not an independently implemented kernel. No successful hosted CI run, independent human mathematical review, or priority review is claimed.
 
 For a read-only check or new replay, start at the repository root, the parent of this paper directory. It contains \code{verify\_candidate.py} and \code{lean-fixed670/}. Run the hash checks before attempting a replay:
 \begin{verbatim}

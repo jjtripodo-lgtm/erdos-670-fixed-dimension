@@ -33,12 +33,11 @@ has the same nine dependency objects and changes only the Lake package name
 to `erdos670_fixed`. Mathlib is exactly
 `0ed37c9258f123a2c76a2175596f75c2bd50f941`.
 
-The recorded standalone run's machine-readable [execution receipt](execution/RECEIPT.json)
-binds its source, script and lock hashes to the nine actual checkout HEADs
-and nonignored clean states. Each HEAD matched the lock before and after the
-run. The pre-existing compiled dependency outputs are separately counted;
-their build provenance is not authenticated by the checkout check. See
-[REPLAY_STATUS.md](REPLAY_STATUS.md) for the exact scope.
+The macOS [execution receipt](execution/RECEIPT.json) and independent Linux
+[evidence bundle](independent-linux-20261012/README.md) bind their runs to the
+same source and nine pinned clean dependency checkouts. See
+[REPLAY_STATUS.md](REPLAY_STATUS.md) for the project builds, axiom audits,
+fresh kernel check, and dependency-cache scope.
 
 All source modules, locks, and verification scripts needed for replay are
 present here; access to the owning development repository is not required.

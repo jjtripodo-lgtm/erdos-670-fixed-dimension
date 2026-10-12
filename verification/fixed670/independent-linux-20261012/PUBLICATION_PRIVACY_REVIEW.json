@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checked": "All distributed text files scanned for absolute local paths, known execution host/workspace identifiers, credential/token forms, authorization headers and signed redirect URL parameters; file selection and URL content manually reviewed",
+  "private_originals_retained": true,
+  "sanitized_file": "INDEPENDENT_VERIFICATION.sanitized.json",
+  "sanitized_fields": [
+    "stages[0].cwd",
+    "stages[1].cwd",
+    "stages[2].cwd",
+    "stages[3].cwd",
+    "stages[4].cwd",
+    "stages[4].command[-1]",
+    "stages[5].cwd",
+    "stages[6].cwd",
+    "stages[7].cwd"
+  ],
+  "unchanged_evidence": "Project replay receipt and all 56 logs, kernel log, public source pins and provenance logs included byte-for-byte",
+  "omitted": "Raw transport response headers and local checkout-fetch logs; unrelated material"
+}

@@ -1,0 +1,295 @@
+⚠ [3066/3071] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:76:5: Variable name `hD₀` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:90:58: Variable name `hD` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3136/3196] Replayed Erdos488.Geometry.SeparatedDistances.Defs
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3234/3316] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean:81:13: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3235/3316] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean:13:47: This simp argument is unused:
+  Pi.mul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵_̵d̵i̵a̵g̵o̵n̵a̵l̵,̵d̵o̵t̵P̵r̵o̵d̵u̵c̵t̵,̵P̵i̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵]̵[̲M̲a̲t̲r̲i̲x̲.̲m̲u̲l̲V̲e̲c̲_̲d̲i̲a̲g̲o̲n̲a̲l̲,̲ ̲d̲o̲t̲P̲r̲o̲d̲u̲c̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3236/3316] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:57: This simp argument is unused:
+  zero_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self,z̵e̵r̵o̵_̵p̵o̵w̵,̵ ̲Finset.sum_const_zero, ̲zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:66: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self, ̲zero_pow,F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵c̵o̵n̵s̵t̵_̵ ̲zero,̵z̵e̵r̵o̵_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:88: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self, ̲zero_pow, ̲Finset.sum_const_zero,̵z̵e̵r̵o̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3237/3316] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:65:15: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  simp [ha, ̲hb̵,̵h̵AB, ̲Ne.symm hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:65:22: This simp argument is unused:
+  Ne.symm hAB
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵a̵,̵h̵b̵,̵h̵A̵B̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲a̲,̲ ̲h̲b̲,̲ hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:66:40: This simp argument is unused:
+  hAB
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵a̵,̵h̵b̵,̵h̵A̵B̵,̵N̵e̵.̵s̵y̵m̵m̵[̲h̲a̲,̲ ̲h̲b̲,̲ ̲N̲e̲.̲s̲y̲m̲m̲ hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3250/3316] Replayed Erdos488.Geometry.SeparatedDistances.GramRealization
+warning: Erdos488/Geometry/SeparatedDistances/GramRealization.lean:38:28: This simp argument is unused:
+  starRingEnd_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [incrementGram, s̵t̵a̵r̵R̵i̵n̵g̵E̵n̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵star_trivial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3456/3467] Replayed Erdos488.Geometry.SeparatedDistances.ColexPositivity
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:209:34: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix, i, M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hab, hne, Ne.symm hne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:233:31: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix, M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hkA, hkB, hne, Ne.symm hne, hrev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:233:62: This simp argument is unused:
+  hne
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix, Matrix.single_apply, hkA, hkB, h̵n̵e̵,̵ ̵Ne.symm hne, hrev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:233:67: This simp argument is unused:
+  Ne.symm hne
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix, Matrix.single_apply, hkA, hkB, hne, N̵e̵.̵s̵y̵m̵m̵ ̵hn̵e̵,̵ ̵h̵rev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:244:29: This simp argument is unused:
+  Matrix.conjTranspose_single
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix,̵ ̵M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵j̵T̵r̵a̵n̵s̵p̵o̵s̵e̵_̵s̵i̵n̵g̵l̵e̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:267:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:272:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:298:29: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexPathEdgeMatrix, M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵ha0', hb0', hab0, hba0]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:316:29: This simp argument is unused:
+  huvA
+
+Hint: Omit it from the simp argument list.
+  simp [Matrix.single_apply, huv̵A̵, hu̵,̵ ̵h̵v]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:409:12: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hka]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:602:33: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexEndpointMatrix, M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hm1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:609:35: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexEndpointMatrix,̵ ̵M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:621:35: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [colexEndpointMatrix, M̵a̵t̵r̵i̵x̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hlastFin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean:717:4: 'push_cast' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3459/3467] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:77:4: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+      s̵u̵b̵_̵m̵u̵l̵,̵ ̵Finset.sum_sub_distrib, hfirst, hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq',
+  ̲  ̲ ̲ ̲Finset.mem_univ, ite_true, ite_false,
+  ̵  ̵ ̵ ̵Finset.sum_const_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:77:13: This simp argument is unused:
+  Finset.sum_sub_distrib
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+  ̵  ̵ ̵ ̵sub_mul, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵s̵u̵b̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵hfirst,
+  ̲  ̲ ̲ ̲hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq', Finset.mem_univ, ite_true, ite_false,
+      Finset.sum_const_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:79:4: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+  ̵  ̵ ̵ ̵sub_mul,
+  ̲  ̲ ̲ ̲Finset.sum_sub_distrib, hfirst, hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq',
+  ̲  ̲ ̲ ̲Finset.mem_univ, ite_true, ite_false,
+  ̵  ̵ ̵ ̵F̵i̵n̵se̵t̵.̵s̵um̵_̵c̵o̵n̵s̵t̵_̵z̵e̵r̵o̵,̵ ̵s̵u̵b_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:94:4: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+      s̵u̵b̵_̵m̵u̵l̵,̵ ̵Finset.sum_sub_distrib, hfirst, hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq',
+  ̲  ̲ ̲ ̲Finset.mem_univ, ite_true, ite_false,
+  ̵  ̵ ̵ ̵Finset.sum_const_zero, zero_sub, neg_mul,
+  ̲  ̲ ̲ ̲Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:94:13: This simp argument is unused:
+  Finset.sum_sub_distrib
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+  ̵  ̵ ̵ ̵sub_mul, F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵s̵u̵b̵_̵d̵i̵s̵t̵r̵i̵b̵,̵ ̵hfirst,
+  ̲  ̲ ̲ ̲hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq', Finset.mem_univ, ite_true, ite_false,
+      Finset.sum_const_zero, zero_sub, neg_mul, Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:96:4: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [Matrix.mulVec, dotProduct, Matrix.transpose_apply, pathIncidence,
+  ̵  ̵ ̵ ̵sub_mul,
+  ̲  ̲ ̲ ̲Finset.sum_sub_distrib, hfirst, hsecond, ite_mul, one_mul, zero_mul,
+  ̵  ̵ ̵ ̵Finset.sum_ite_eq',
+  ̲  ̲ ̲ ̲Finset.mem_univ, ite_true, ite_false,
+  ̵  ̵ ̵ ̵F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵c̵o̵n̵s̵t̵_̵zero,̵ ̵z̵e̵r̵o̵_sub, neg_mul, Finset.sum_neg_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:144:15: This simp argument is unused:
+  ite_false
+
+Hint: Omit it from the simp argument list.
+  simp only [macroVertexWeight, Fin.val_zero, ↓reduceIte, Fin.val_last,
+  ̵  ̵ ̵ ̵Fin.val_castSucc,
+  ̲  ̲ ̲ ̲Fin.val_succ, Nat.add_eq_zero_iff, one_ne_zero,
+  ̵  ̵ ̵ ̵and_false,̵ ̵i̵t̵e̵_̵f̵a̵l̵s̵e̵] at *
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean:150:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3461/3467] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean:56:49: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  simp only [Finset.sum_div, Finset.sum_mul,̵ ̵F̵i̵n̵s̵e̵t̵.̵m̵u̵l̵_̵s̵u̵m̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3466/3467] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean:50:58: This simp argument is unused:
+  Nat.cast_one
+
+Hint: Omit it from the simp argument list.
+  simp only [̵h̵,̵h̵₂̵,̵h̵a̵i̵,̵i̵f̵_̵p̵o̵s̵,̵i̵f̵_̵f̵a̵l̵s̵e̵,̵h̵c̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵a̵d̵d̵,̵N̵a̵t̵.̵c̵a̵s̵t̵_̵o̵n̵e̵,̵n̵e̵g̵_̵z̵e̵r̵o̵]̵[̲h̲,̲ ̲h̲₂̲,̲ ̲h̲a̲i̲,̲ ̲i̲f̲_̲p̲o̲s̲,̲ ̲i̲f̲_̲f̲a̲l̲s̲e̲,̲ ̲h̲c̲,̲ ̲N̲a̲t̲.̲c̲a̲s̲t̲_̲a̲d̲d̲,̲ ̲n̲e̲g̲_̲z̲e̲r̲o̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean:77:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean:97:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3467/3467] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge (26s)
+Build completed successfully (3467 jobs).

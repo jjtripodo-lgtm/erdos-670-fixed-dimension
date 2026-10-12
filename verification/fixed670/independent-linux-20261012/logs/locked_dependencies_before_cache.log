@@ -1,0 +1,2 @@
+PASS: 9 public dependency HEADs equal the lock; all tracked and nonignored files are clean; 0 cached upstream .olean files observed
+Compiled upstream cache provenance is not authenticated by this check.

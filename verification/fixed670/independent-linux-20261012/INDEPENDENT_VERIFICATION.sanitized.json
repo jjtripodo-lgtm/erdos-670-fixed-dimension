@@ -1,0 +1,184 @@
+{
+  "started_utc": "2026-10-12T20:04:56Z",
+  "machine": "separate cloud Linux x86_64 workspace; not connected Mac",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "repository_url": "https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension",
+  "repository_commit": "5dc4278b24e5f10db0c006b0cb9ecf30857ffaca",
+  "source_module_pin": "35c67a69e009c9ca27267077608864987b7e2851",
+  "toolchain": {
+    "release_api_url": "https://api.github.com/repos/leanprover/lean4/releases/tags/v4.31.0-rc1",
+    "release_html_url": "https://github.com/leanprover/lean4/releases/tag/v4.31.0-rc1",
+    "tag_name": "v4.31.0-rc1",
+    "published_at": "2026-05-28T14:10:59Z",
+    "asset": {
+      "name": "lean-4.31.0-rc1-linux.tar.zst",
+      "size": 557871462,
+      "digest": "sha256:055f1780f20f9774bbe270d5d4cf7561fb26ee6734c0917ba6cfb867e33cb99e",
+      "browser_download_url": "https://github.com/leanprover/lean4/releases/download/v4.31.0-rc1/lean-4.31.0-rc1-linux.tar.zst",
+      "created_at": "2026-05-28T14:09:55Z",
+      "updated_at": "2026-05-28T14:10:30Z"
+    }
+  },
+  "toolchain_sha256_verified": true,
+  "toolchain_sha256": "055f1780f20f9774bbe270d5d4cf7561fb26ee6734c0917ba6cfb867e33cb99e",
+  "toolchain_source_commit": "fd009949156901e6cf15b6d9bf1122294b8e697a",
+  "dependency_mode": "fresh locked public source checkouts plus freshly downloaded official Mathlib binary cache; project rebuilt from zero project oleans; not a full dependency source rebuild",
+  "initial_project_olean_count": 0,
+  "initial_upstream_olean_count": 0,
+  "modifies_public_repository": false,
+  "paid_resources": false,
+  "status": "PASS",
+  "stages": [
+    {
+      "stage": "locked_dependencies_before_cache",
+      "command": [
+        "python3",
+        "prepare_dependencies.py"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:11:27.650343+00:00",
+      "exit_code": 0,
+      "seconds": 0.275,
+      "log": "logs/locked_dependencies_before_cache.log",
+      "sha256": "eda4e3ad21de742d9c76c37795c090f7dd4bd7decff5d4433653ba2592911380"
+    },
+    {
+      "stage": "official_mathlib_cache",
+      "command": [
+        "lake",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+        "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+        "Mathlib.Analysis.InnerProductSpace.GramMatrix",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.Matrix.LDL",
+        "Mathlib.Analysis.Matrix.Order",
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Analysis.Real.Sqrt",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Data.Matrix.Basic",
+        "Mathlib.Data.Nat.ModEq",
+        "Mathlib.Data.Nat.Prime.Defs",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.LinearAlgebra.Matrix.Block",
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.NumberTheory.Bertrand",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Tactic"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:11:27.926918+00:00",
+      "exit_code": 0,
+      "seconds": 667.84,
+      "log": "logs/official_mathlib_cache.log",
+      "sha256": "949d96877d047b60c5ddff6d7bce4103e33bac58243c2a0ee44b524306b61d30"
+    },
+    {
+      "stage": "locked_dependencies_after_cache",
+      "command": [
+        "python3",
+        "prepare_dependencies.py"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:22:35.772981+00:00",
+      "exit_code": 0,
+      "seconds": 1.229,
+      "log": "logs/locked_dependencies_after_cache.log",
+      "sha256": "5e6f2db1458cc818b24f3c4a7c71c7d736209fdb296e03bb5fa7fcff24721aed"
+    },
+    {
+      "stage": "source_identity_before_replay",
+      "command": [
+        "python3",
+        "verify_sources.py"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:22:37.003116+00:00",
+      "exit_code": 0,
+      "seconds": 0.17,
+      "log": "logs/source_identity_before_replay.log",
+      "sha256": "c51cf454051bc5f5e592bd63acbe034c15fd0874847501d55b28a55152436c79"
+    },
+    {
+      "stage": "independent_project_replay",
+      "command": [
+        "python3",
+        "replay.py",
+        "--output",
+        "<VERIFICATION_OUTPUT>/replay"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:22:37.174002+00:00",
+      "exit_code": 0,
+      "seconds": 870.962,
+      "log": "logs/independent_project_replay.log",
+      "sha256": "f913fdb69684a8e7d7e575fd461f1583eb0a4e460146f0c7a94537c5d4aecaeb"
+    },
+    {
+      "stage": "fresh_kernel_replay",
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "--fresh",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T20:37:08.144102+00:00",
+      "exit_code": 0,
+      "seconds": 1510.504,
+      "log": "logs/fresh_kernel_replay.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "stage": "source_identity_after_replay",
+      "command": [
+        "python3",
+        "verify_sources.py"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T21:02:18.657974+00:00",
+      "exit_code": 0,
+      "seconds": 0.197,
+      "log": "logs/source_identity_after_replay.log",
+      "sha256": "c51cf454051bc5f5e592bd63acbe034c15fd0874847501d55b28a55152436c79"
+    },
+    {
+      "stage": "locked_dependencies_after_replay",
+      "command": [
+        "python3",
+        "prepare_dependencies.py"
+      ],
+      "cwd": "<SOURCE_CHECKOUT>/lean-fixed670",
+      "started_utc": "2026-10-12T21:02:18.857020+00:00",
+      "exit_code": 0,
+      "seconds": 0.715,
+      "log": "logs/locked_dependencies_after_replay.log",
+      "sha256": "5e6f2db1458cc818b24f3c4a7c71c7d736209fdb296e03bb5fa7fcff24721aed"
+    }
+  ],
+  "official_mathlib_cache_url": "https://lakecache.blob.core.windows.net/mathlib4",
+  "active_stage": null,
+  "finished_utc": "2026-10-12T21:02:19.573771+00:00",
+  "source_checkout_git_status_porcelain_after": "",
+  "source_checkout_commit_after": "5dc4278b24e5f10db0c006b0cb9ecf30857ffaca",
+  "sanitized_copy": {
+    "original_retained_separately": true,
+    "original_sha256": "c673d3fae8e283ba925695af92544a6fbf913382dd4ba8f4709fd06a308c2843",
+    "replacements": "Absolute local filesystem locations replaced with descriptive placeholders; no commands, flags, exits, durations, source pins or log hashes changed otherwise",
+    "fields": [
+      "stages[0].cwd",
+      "stages[1].cwd",
+      "stages[2].cwd",
+      "stages[3].cwd",
+      "stages[4].cwd",
+      "stages[4].command[-1]",
+      "stages[5].cwd",
+      "stages[6].cwd",
+      "stages[7].cwd"
+    ]
+  }
+}

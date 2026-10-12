@@ -1,16 +1,32 @@
 # Current manuscript validation — 12 October 2026
 
-This note covers the public manuscript after a prose-only editorial cleanup. The [original dated validation record](VALIDATION.md), its logs, and its arithmetic result remain unchanged as evidence for the previous TeX/PDF pair. They do not certify the present PDF. The current scientific version before these edits is preserved by public Git commit `632b571a37859bc5141da40e1d0bcae4dc448f9e`.
+This record covers the paired TeX and PDF after an appendix prose update that
+distinguishes the original macOS source replay from the completed independent
+Linux replay and fresh Lean kernel check. The prior [editorial validation](EDITORIAL_VALIDATION_20261012.md)
+and [original referee-revised validation](VALIDATION.md) remain unchanged as
+historical receipts; neither certifies the current PDF. The theorem statement,
+mathematical proof text, calculations, and Lean source files were not edited.
 
 | Current artifact | SHA-256 |
 | --- | --- |
-| `paper/fixed_dimension_670.tex` | `c30147a6e5468b1cfb52a3de1c46948555d49bac5fe5a0d5c281b67d460a99a0` |
-| `paper/fixed_dimension_670.pdf` | `6b6eb104f507c4a8fc70fee4d6431d81b86a6ed3f301f7761ac2aa65809194ec` |
-| [Current arithmetic and reference checks](editorial/arithmetic_and_references.json) | `474ee1905461b7eb95d87bfa7d9ab6d389b8654e1a919d71ad824ae76069d678` |
-| [Current final TeX log](editorial/tectonic-final.log) | `6cfce60a7e8a2efd9f66df6d810f9dee1cdce1e614b479b4891950a7f01c58aa` |
+| `paper/fixed_dimension_670.tex` | `d1740d28939baee4a8b3f8fdac255aa5f897ca1d37f7467731bb2945e893b8c0` |
+| `paper/fixed_dimension_670.pdf` | `ac7a85b0301e334410006ae3d14598350700f96bbd03fabe4ca11e1f8eaf44ce` |
+| [Arithmetic and reference checks](verification-wording-20261012/arithmetic_and_references.json) | `35028eaf59484f3d370d37430fd7457beae552b77e321eb82ddb50ce9718529a` |
+| [Final TeX log](verification-wording-20261012/tectonic-final.log) | `aeb5662ff519916d9814a332d8976d6507b9444cdbf04467e148dee3fdeb7b0d` |
 
-The edits remove references to an earlier internal manuscript, proof route, and candidate package from the paper's prose. The theorem statement, proof calculations, and source correspondence remain. A structural comparison against the TeX at commit `632b571` found identical sequences of 338 inline dollar math spans, 36 bracketed displays, 28 equation/alignment environments, eight theorem/lemma/proposition environments, 47 labels, and 60 references or citations. A sorted-key JSON serialization of those extracted sequences has SHA-256 `39ef1b7dacb6be07e872b57ce8a77f7c86807890e1c5a1fae1b73329d874b12f` on both versions. This comparison checks preserved TeX structure; it is not independent proof review.
+Tectonic 0.17.0 built the revised TeX twice in separate clean output directories
+with `SOURCE_DATE_EPOCH=1791763200`, `--only-cached`, and `--keep-logs`. Both
+processes exited zero and produced byte-identical 15-page PDFs and TeX logs.
+The [first](verification-wording-20261012/tectonic-a.stdout.log) and
+[second](verification-wording-20261012/tectonic-b.stdout.log) build outputs,
+their corresponding stderr logs, and the final TeX log are included. The log
+has no TeX error, unresolved reference, missing character, or overfull box.
+Underfull spacing warnings remain. Pages 13 and 14, which contain the changed
+appendix prose, were rendered and visually inspected without clipping.
 
-Tectonic 0.17.0 built the edited TeX twice in separate clean output directories with `SOURCE_DATE_EPOCH=1791763200`, `--only-cached`, and `--keep-logs`. Both builds exited zero and produced byte-identical PDFs. The [first](editorial/tectonic-a.stdout.log) and [second](editorial/tectonic-b.stdout.log) process outputs, corresponding [stderr](editorial/tectonic-a.stderr.log) and [stderr](editorial/tectonic-b.stderr.log), and final log are included. Neither log has a TeX error, unresolved reference, missing character, or overfull box. Four underfull horizontal boxes remain, without visible clipping. Ghostscript 10.07.1 reported 15 pages, and all 15 rendered pages were visually inspected. Extracted text had no `??` or `undefined` marker.
-
-The unchanged `check_manuscript.py` passed all 34 supplementary arithmetic, source-structure, label, reference, and citation checks on the edited TeX. The Lean source and its [source-bound replay status](../fixed670/REPLAY_STATUS.md) are unchanged. The replay reused precompiled upstream imports and is not an independent mathematical or priority review; the editorial PDF build adds no such review.
+The unchanged `check_manuscript.py` passed all 34 supplementary exact
+arithmetic, source-structure, label, reference, and citation checks on the
+current TeX. The [Lean verification record](../fixed670/REPLAY_STATUS.md)
+documents the macOS and Linux builds, axiom audits, fresh checker result, and
+upstream compiled-cache boundary. This PDF rebuild adds no new Lean execution,
+independent mathematical review, or priority review.

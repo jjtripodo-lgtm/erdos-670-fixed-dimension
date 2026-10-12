@@ -1,0 +1,14 @@
+{
+  "release_api_url": "https://api.github.com/repos/leanprover/lean4/releases/tags/v4.31.0-rc1",
+  "release_html_url": "https://github.com/leanprover/lean4/releases/tag/v4.31.0-rc1",
+  "tag_name": "v4.31.0-rc1",
+  "published_at": "2026-05-28T14:10:59Z",
+  "asset": {
+    "name": "lean-4.31.0-rc1-linux.tar.zst",
+    "size": 557871462,
+    "digest": "sha256:055f1780f20f9774bbe270d5d4cf7561fb26ee6734c0917ba6cfb867e33cb99e",
+    "browser_download_url": "https://github.com/leanprover/lean4/releases/download/v4.31.0-rc1/lean-4.31.0-rc1-linux.tar.zst",
+    "created_at": "2026-05-28T14:09:55Z",
+    "updated_at": "2026-05-28T14:10:30Z"
+  }
+}

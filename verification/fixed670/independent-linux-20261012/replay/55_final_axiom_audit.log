@@ -1,0 +1,18 @@
+'Erdos488.Geometry.SeparatedDistances.colex_incrementGram_ge_half_tridiagonal_direct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.sourceBQuadraticCoefficients_source_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.source_actual_operator_completion_universal_B_matrix' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.source_actual_ruler_configuration_cross_square' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.source_actual_ruler_configuration_metrics' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.fixed_dimension_erdos_670' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "target_repository": "https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension",
+  "target_commit": "5dc4278b24e5f10db0c006b0cb9ecf30857ffaca",
+  "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670",
+  "command": [
+    "lake",
+    "env",
+    "leanchecker",
+    "--fresh",
+    "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670"
+  ],
+  "working_directory_relative_to_source_checkout": "lean-fixed670",
+  "toolchain": "leanprover/lean4:v4.31.0-rc1",
+  "toolchain_source_commit": "fd009949156901e6cf15b6d9bf1122294b8e697a",
+  "toolchain_distribution_sha256": "055f1780f20f9774bbe270d5d4cf7561fb26ee6734c0917ba6cfb867e33cb99e",
+  "started_utc": "2026-10-12T20:37:08.144102+00:00",
+  "elapsed_seconds": 1510.504,
+  "exit_code": 0,
+  "stdout_stderr_log": "logs/fresh_kernel_replay.log",
+  "stdout_stderr_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Replay all declarations from the target module and its imported environment into an empty environment through the official Lean kernel",
+  "external_independently_implemented_kernel": false,
+  "source_identity_after": "PASS",
+  "nine_locked_dependency_checkouts_after": "PASS",
+  "source_checkout_git_status_porcelain": ""
+}
