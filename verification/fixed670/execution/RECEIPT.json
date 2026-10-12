@@ -1,0 +1,972 @@
+{
+  "schema_version": 2,
+  "started_utc": "2026-10-12T17:19:47.320673+00:00",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "scope": "fresh 54 project modules; upstream compiled imports may be reused",
+  "module_count": 54,
+  "clean_project_olean_count_before": 0,
+  "source_commit": "35c67a69e009c9ca27267077608864987b7e2851",
+  "source_identity_sha256": {
+    "lean-fixed670/AxiomAudit.lean": "1c7b7499ab8d72a6f7efc0db21b9cb557f4a8797263c0eb057eaa5daba1f260f",
+    "lean-fixed670/lake-manifest.json": "a6eaf4622922b9e2a9eba5b5f09cbabb721be6b85bca5184e2799ddbcfc1b302",
+    "lean-fixed670/lakefile.toml": "4de7b6d0c10b1d13ebf173fb05e0689f79d6789eecf6a8cc488989f880597061",
+    "lean-fixed670/lean-toolchain": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd",
+    "lean-fixed670/prepare_dependencies.py": "01832f0ed045421290f505420c5918ef5491b22a216c6ebf8a67d97b3b2d3b1c",
+    "lean-fixed670/replay.py": "70f7021e7060ded47932deb811bbe971219c05c6259e602023dba40e27fc4afc",
+    "lean-fixed670/replay_contract.py": "55acb4320ce5b200408e747c905082c1f0fad24bee1dba1920d1da18edb186d1",
+    "lean-fixed670/verify_sources.py": "80581f60cef5ae6da36e38c087d5ebd33bd553e153883aba3bf1621972ba40a3",
+    "verification/fixed670/FROZEN_FILES_SHA256.json": "e090b7630ece050a47498bd8c084eb31ff2bc3f0f9ce689f2a021962c2b79326",
+    "verification/fixed670/SOURCE_MANIFEST.json": "1060cb440d3a748a7bcb772e2e51980ef709b796bdc12ecd856b87ee9f858d12",
+    "verification/fixed670/upstream-lake-manifest.json": "b091eb307e6a7fe5a0d4bf3245aaa63d3f2810df242cc55cd017ffd1e06974a3",
+    "verification/fixed670/upstream-lean-toolchain": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd",
+    "verification/fixed670/verify_execution.py": "8d43692a9997aba6c9f7ec048735cd2dd397edbbbe92896ffe91e5b67d44a6c7"
+  },
+  "dependency_checkouts_before": [
+    {
+      "name": "mathlib",
+      "locked_rev": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "checkout_head": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 8163,
+      "path": ".lake/packages/mathlib"
+    },
+    {
+      "name": "plausible",
+      "locked_rev": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "checkout_head": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 13,
+      "path": ".lake/packages/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "locked_rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "checkout_head": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 4,
+      "path": ".lake/packages/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "locked_rev": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "checkout_head": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 10,
+      "path": ".lake/packages/importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "locked_rev": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "checkout_head": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 12,
+      "path": ".lake/packages/proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "locked_rev": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "checkout_head": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 135,
+      "path": ".lake/packages/aesop"
+    },
+    {
+      "name": "Qq",
+      "locked_rev": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "checkout_head": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 14,
+      "path": ".lake/packages/Qq"
+    },
+    {
+      "name": "batteries",
+      "locked_rev": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "checkout_head": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 176,
+      "path": ".lake/packages/batteries"
+    },
+    {
+      "name": "Cli",
+      "locked_rev": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "checkout_head": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 0,
+      "path": ".lake/packages/Cli"
+    }
+  ],
+  "dependency_cache_before": {
+    "packages_root_is_symlink": true,
+    "upstream_compiled_oleans_before": 8527,
+    "cache_provenance_authenticated": false,
+    "scope": "Git HEAD and nonignored dirty-state checked; compiled-cache provenance not authenticated"
+  },
+  "commands": [
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord"
+      ],
+      "exit_code": 0,
+      "seconds": 24.263,
+      "log": "00_TrigonometricChord.log",
+      "log_sha256": "2cc560ab22737738cff4d8cb6bffc6a1afdbdd9e7b4b3258fb10bf13ef8693ee"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits"
+      ],
+      "exit_code": 0,
+      "seconds": 5.412,
+      "log": "01_SineDigits.log",
+      "log_sha256": "b0618bc23c9105d84888fbbc823fa829f3fcfa809a85a7dd06d31bb42836960c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 3.5,
+      "log": "02_SpectrumSeparation.log",
+      "log_sha256": "15095930e105ae00e782907532dcfa806947b12fc22f620797f771fbbfd06d70"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 3.952,
+      "log": "03_DirectCrossSpectrum.log",
+      "log_sha256": "33f64cbded423257de2b39ad65465144664bec2efc28d0b4d59b39cd14916b5c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards"
+      ],
+      "exit_code": 0,
+      "seconds": 3.667,
+      "log": "04_SourceCrossGuards.log",
+      "log_sha256": "02e48ac1b11fe07af0879edd6ce8a0c5d8c5a00dd7fc97282245dadd8f5b2aa0"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.Defs",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.Defs"
+      ],
+      "exit_code": 0,
+      "seconds": 10.259,
+      "log": "05_Defs.log",
+      "log_sha256": "c0a886188a0fb252009171cfc30d2c57b88adcf7bc06048a7be0d8eb6d2400d2"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion"
+      ],
+      "exit_code": 0,
+      "seconds": 19.682,
+      "log": "06_GlobalCompletion.log",
+      "log_sha256": "47bbf1253c7097325fe18374a8d6aafbc23fbf44936e23903dbe733baaba9132"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor"
+      ],
+      "exit_code": 0,
+      "seconds": 11.732,
+      "log": "07_CompletionFactor.log",
+      "log_sha256": "c6627b42d5dddba6ad9d539e9461fe2a5f81477d8a14033dea97fa5b96d2ad97"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel"
+      ],
+      "exit_code": 0,
+      "seconds": 10.537,
+      "log": "08_HarmonicLocalModel.log",
+      "log_sha256": "64b7cd296773927697217c987adcbee459205ffb8690f57c75513a3ac73c9b57"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures"
+      ],
+      "exit_code": 0,
+      "seconds": 5.938,
+      "log": "09_TrigonometricFeatures.log",
+      "log_sha256": "9a74f12dce0dab53dc658b883fe99add9d89583cbc7da4f2cbe043db1e3296e0"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures"
+      ],
+      "exit_code": 0,
+      "seconds": 8.134,
+      "log": "10_CompletedTrigonometricFeatures.log",
+      "log_sha256": "0bf7c0f3361162d5ace1305c0dc2a31011af6ec6e818ee490c4d7d761031bf56"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates"
+      ],
+      "exit_code": 0,
+      "seconds": 5.905,
+      "log": "11_EuclideanClusterCoordinates.log",
+      "log_sha256": "22935ecd06850e9b2dd94c8e3ab60af1136e99815ef9c83a5eae3f972199cb2b"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates"
+      ],
+      "exit_code": 0,
+      "seconds": 5.63,
+      "log": "12_EuclideanCrossCoordinates.log",
+      "log_sha256": "05ad66ff08b055591736c26d1d22f6e94eec12f0ba98016bc17b92ca6525a4d5"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 4.551,
+      "log": "13_SourceCrossSpectrum.log",
+      "log_sha256": "a4939e46632eb56b4cffb23527459b91d2cf60d1dfa7515d35755ca62ce188b2"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler"
+      ],
+      "exit_code": 0,
+      "seconds": 4.936,
+      "log": "14_PrimeRuler.log",
+      "log_sha256": "7c23d39e5d8ea3dce3a3fef412ffb954a0e3d9e707d3e73a798fd9cbbce0a19c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 4.112,
+      "log": "15_PrimeRulerSeparation.log",
+      "log_sha256": "08ac72ae45dea29212d226abc9d37b48919ae8bee1efb2c794fed3c5fc193fcf"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 7.118,
+      "log": "16_LocalRulerSeparation.log",
+      "log_sha256": "60d5a9f7a7291af3218d4b46a449e79d5e5d9109684d812edaf21b1697c416c2"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards"
+      ],
+      "exit_code": 0,
+      "seconds": 5.505,
+      "log": "17_SourceLocalGuards.log",
+      "log_sha256": "e912d495454a255e636c5c334fa9a7a37d7415159df16dee548ea2f5b26c7d4b"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 4.017,
+      "log": "18_SourceLocalSpectrum.log",
+      "log_sha256": "412509380536942219b12a6df2ff8a231c311abbf927f095de8f1314cd522729"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands"
+      ],
+      "exit_code": 0,
+      "seconds": 4.178,
+      "log": "19_SourceMixedBands.log",
+      "log_sha256": "eb047e55646f15d7338ea88e15496ea474caa77a2c8d950573fd84614519ad84"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets"
+      ],
+      "exit_code": 0,
+      "seconds": 3.324,
+      "log": "20_SourceReserveBudgets.log",
+      "log_sha256": "feca7667213c60518c80ecca5eca645622f4f2ab1965b975be0bd788c792d40a"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.Flattening",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.Flattening"
+      ],
+      "exit_code": 0,
+      "seconds": 2.783,
+      "log": "21_Flattening.log",
+      "log_sha256": "70da0d3033e57244fd39f2506767651e548122357b1b8d361ed5e0b72891a2d0"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.GramRealization",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.GramRealization"
+      ],
+      "exit_code": 0,
+      "seconds": 2.915,
+      "log": "22_GramRealization.log",
+      "log_sha256": "ca0b22d2efc4c13ab2e03fc37aa792a4388a009dc2b597e1b4536fa798c0b064"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.PrefixSums",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.PrefixSums"
+      ],
+      "exit_code": 0,
+      "seconds": 2.897,
+      "log": "23_PrefixSums.log",
+      "log_sha256": "dfc19f3ce2ddadf4e1ad8a79ee1b8eb50a7cc246378a88d5c44677e539161119"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.EuclideanRealization",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.EuclideanRealization"
+      ],
+      "exit_code": 0,
+      "seconds": 3.119,
+      "log": "24_EuclideanRealization.log",
+      "log_sha256": "3d2296f2b20fcbacbed9f9e525e62b2c73515e34b582c0d3457b8f6821f24788"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.Labels",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.Labels"
+      ],
+      "exit_code": 0,
+      "seconds": 3.413,
+      "log": "25_Labels.log",
+      "log_sha256": "822f274f773102cb782073ae5348a8c0c926cd8d9d1f6cb83f1596c73f554b3e"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.ColexBase",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.ColexBase"
+      ],
+      "exit_code": 0,
+      "seconds": 2.992,
+      "log": "26_ColexBase.log",
+      "log_sha256": "af881ce420003c945b2ac7ff4c57f297f3a4c75b1f2de80ef0708a80759f41c7"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.ColexPositivity",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.ColexPositivity"
+      ],
+      "exit_code": 0,
+      "seconds": 6.901,
+      "log": "27_ColexPositivity.log",
+      "log_sha256": "11c85865de581b2df31de1ee1d05a28d06ad5e0172f8fda7481d2b0ed854a1f1"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserve",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserve"
+      ],
+      "exit_code": 0,
+      "seconds": 5.223,
+      "log": "28_ColexReserve.log",
+      "log_sha256": "731c24386ae17d9c7676bae86413361056503a2e57633724388a0976cd98213c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserveDirectCS",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserveDirectCS"
+      ],
+      "exit_code": 0,
+      "seconds": 4.267,
+      "log": "29_ColexReserveDirectCS.log",
+      "log_sha256": "96ae58de001ff387d8a70c578fca1047da32c6ecebe1d8d189ba76585978e782"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge"
+      ],
+      "exit_code": 0,
+      "seconds": 15.219,
+      "log": "30_IncidenceBridge.log",
+      "log_sha256": "046d08528574eeb4100a092f454f747437ca3229691d73b1e18447b760e7ab05"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve"
+      ],
+      "exit_code": 0,
+      "seconds": 8.087,
+      "log": "31_PotentialSolve.log",
+      "log_sha256": "d86ea095a456016e944550418e23158a1d0985917425a6bfb7d0e27665eaca04"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur"
+      ],
+      "exit_code": 0,
+      "seconds": 5.547,
+      "log": "32_WeightedSchur.log",
+      "log_sha256": "43e59cf51c80d56feec3a7239f68164c4d5f0d3b0cd2a68da8addc4429dbab5c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.HardyWeights",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.HardyWeights"
+      ],
+      "exit_code": 0,
+      "seconds": 4.498,
+      "log": "33_HardyWeights.log",
+      "log_sha256": "0634278669b30389778fb9f08268248777a7a8356f1a249e0512170a7068b2ab"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.FiniteHardy",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.FiniteHardy"
+      ],
+      "exit_code": 0,
+      "seconds": 3.215,
+      "log": "34_FiniteHardy.log",
+      "log_sha256": "8727df4ce8f00e1a86e37e246b9e0795c964ae85e80c4df0328d963e9e8bc76f"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TriangularBounds",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TriangularBounds"
+      ],
+      "exit_code": 0,
+      "seconds": 3.432,
+      "log": "35_TriangularBounds.log",
+      "log_sha256": "3c568d7f9f26fbf4da4553c52503d09878d5cc4c94c151eadf9c7da13e304cd1"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricPotential",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricPotential"
+      ],
+      "exit_code": 0,
+      "seconds": 3.77,
+      "log": "36_GeometricPotential.log",
+      "log_sha256": "5ed0d17b1ea85460d703c26c02c59e2eb05b36f9786b98794106f2c9c43055e9"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence"
+      ],
+      "exit_code": 0,
+      "seconds": 3.262,
+      "log": "37_LiteralIncidence.log",
+      "log_sha256": "be8f649f0bbb190c0316c42adf73b0290a1ce2840b979dbbdbe8950ea6e4e34d"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge"
+      ],
+      "exit_code": 0,
+      "seconds": 5.05,
+      "log": "38_SourceOperatorBridge.log",
+      "log_sha256": "d55aed86d5eed0bd748f73823ce83af0013910da478ac61cb6a971ca29363a4f"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.Parameters",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.Parameters"
+      ],
+      "exit_code": 0,
+      "seconds": 4.228,
+      "log": "39_Parameters.log",
+      "log_sha256": "47cc0f34bc592821ef8a5909512b6f2114fcebd50bf56eb00f7a5c9dc7fe7299"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceParameterBounds",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceParameterBounds"
+      ],
+      "exit_code": 0,
+      "seconds": 3.973,
+      "log": "40_SourceParameterBounds.log",
+      "log_sha256": "35e22694b6c4f87d401a2287e8ad7869b3731ca75ceb1d6fcec9790ed236a0c2"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceQuadraticMatrix",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceQuadraticMatrix"
+      ],
+      "exit_code": 0,
+      "seconds": 7.064,
+      "log": "41_SourceQuadraticMatrix.log",
+      "log_sha256": "f731560aab9dac8992f90641bae7c5d1a29aa1fa7f8c80f1ecf3eb14056d0424"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 5.445,
+      "log": "42_GeometricLocalSeparation.log",
+      "log_sha256": "1c9109e6be16998c3a2203e41089e5487fca36f35fbeef9f917f9a1a19685d6d"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric"
+      ],
+      "exit_code": 0,
+      "seconds": 4.984,
+      "log": "43_SourceActualCrossMetric.log",
+      "log_sha256": "bbd2052fb5dcbf09181b2b960c02bd5fe1b10959a31dbe3012b874ee0c3c5d1b"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSpectrum",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSpectrum"
+      ],
+      "exit_code": 0,
+      "seconds": 3.19,
+      "log": "44_SourceActualSpectrum.log",
+      "log_sha256": "e1a4b17e9fd9903d75a9cc8a61ab78f2eb488943adebfd1629a2e253239f28d1"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 4.778,
+      "log": "45_UnorderedEdgeSeparation.log",
+      "log_sha256": "88a8e3979b810b4928934e6386300409851fb622aa634c0f4fa931449eb8fbea"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly"
+      ],
+      "exit_code": 0,
+      "seconds": 4.995,
+      "log": "46_ClusterEdgeAssembly.log",
+      "log_sha256": "718a550bce8890b1659c10facffac6c51bb40281d8a5c274d652e48f51fd4dec"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourcePrime",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourcePrime"
+      ],
+      "exit_code": 0,
+      "seconds": 4.233,
+      "log": "47_SourcePrime.log",
+      "log_sha256": "72a7ebb0a2d445f1b582cf2ef41e04883a791ebcd7a56a178cfd67954eacb2da"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSeparation",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSeparation"
+      ],
+      "exit_code": 0,
+      "seconds": 5.067,
+      "log": "48_SourceActualSeparation.log",
+      "log_sha256": "0adf042636b824cc5f0f9e11a4b4903eb45bed2bb89266abfb7dd52ada590240"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualDiameter",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualDiameter"
+      ],
+      "exit_code": 0,
+      "seconds": 3.785,
+      "log": "49_SourceActualDiameter.log",
+      "log_sha256": "68ae157a0d68cb36ee498d7c1bd4e949b0004627caa3285910038a789d4096ab"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic"
+      ],
+      "exit_code": 0,
+      "seconds": 4.077,
+      "log": "50_AllNArithmetic.log",
+      "log_sha256": "a9c93077093d233ac3a39bf0956e0dd1b3007a15574a82237e51da0a7210da0b"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar"
+      ],
+      "exit_code": 0,
+      "seconds": 4.787,
+      "log": "51_SourceFinalScalar.log",
+      "log_sha256": "9132baee63f1f101157ac55817e2326e2c5542ca646f9ab68cca3724494cae11"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding"
+      ],
+      "exit_code": 0,
+      "seconds": 3.329,
+      "log": "52_SourceAllNEmbedding.log",
+      "log_sha256": "0ab1cd6dcc563e834fbb767cbf6724e722af34f757cb8a30b2dc83ae8e02370c"
+    },
+    {
+      "label": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670"
+      ],
+      "exit_code": 0,
+      "seconds": 4.085,
+      "log": "53_SourceFixedDimension670.log",
+      "log_sha256": "21d40278323380d04a0a893320a6fa99fbdc533d74d5587d04b1c5fd128a7ff1"
+    },
+    {
+      "label": "final_default_build",
+      "command": [
+        "lake",
+        "--no-cache",
+        "build"
+      ],
+      "exit_code": 0,
+      "seconds": 1.34,
+      "log": "54_final_default_build.log",
+      "log_sha256": "061a31f4daa4cd3f90b1c1bfc81e7a726440aeb11d288eb0bcd9a22450e2b4a8"
+    },
+    {
+      "label": "final_axiom_audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 2.416,
+      "log": "55_final_axiom_audit.log",
+      "log_sha256": "46bb3c1010a98bffdf47d009eacc464e9b735b8b803a4e95c4bdd226c0db434f"
+    }
+  ],
+  "status": "PASS",
+  "produced_project_oleans": [
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/ColexBase.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/ColexPositivity.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/Defs.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/EuclideanRealization.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualDiameter.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSpectrum.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/GramRealization.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/Labels.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/Parameters.olean",
+    ".lake/build/lib/lean/Erdos488/Geometry/SeparatedDistances/PrefixSums.olean"
+  ],
+  "dependency_checkouts_after": [
+    {
+      "name": "mathlib",
+      "locked_rev": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "checkout_head": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 8163,
+      "path": ".lake/packages/mathlib"
+    },
+    {
+      "name": "plausible",
+      "locked_rev": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "checkout_head": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 13,
+      "path": ".lake/packages/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "locked_rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "checkout_head": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 4,
+      "path": ".lake/packages/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "locked_rev": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "checkout_head": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 10,
+      "path": ".lake/packages/importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "locked_rev": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "checkout_head": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 12,
+      "path": ".lake/packages/proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "locked_rev": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "checkout_head": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 135,
+      "path": ".lake/packages/aesop"
+    },
+    {
+      "name": "Qq",
+      "locked_rev": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "checkout_head": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 14,
+      "path": ".lake/packages/Qq"
+    },
+    {
+      "name": "batteries",
+      "locked_rev": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "checkout_head": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 176,
+      "path": ".lake/packages/batteries"
+    },
+    {
+      "name": "Cli",
+      "locked_rev": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "checkout_head": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "git_status_porcelain": "",
+      "cached_olean_count_before": 0,
+      "path": ".lake/packages/Cli"
+    }
+  ],
+  "dependency_cache_after": {
+    "packages_root_is_symlink": true,
+    "upstream_compiled_oleans_before": 8527,
+    "cache_provenance_authenticated": false,
+    "scope": "Git HEAD and nonignored dirty-state checked; compiled-cache provenance not authenticated"
+  },
+  "finished_utc": "2026-10-12T17:25:03.563705+00:00"
+}

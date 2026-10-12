@@ -1,0 +1,21 @@
+⚠ [2420/2870] Replayed Erdos488.Geometry.SeparatedDistances.Defs
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3188/3190] Replayed Erdos488.Geometry.SeparatedDistances.GramRealization
+warning: Erdos488/Geometry/SeparatedDistances/GramRealization.lean:38:28: This simp argument is unused:
+  starRingEnd_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [incrementGram, s̵t̵a̵r̵R̵i̵n̵g̵E̵n̵d̵_̵a̵p̵p̵l̵y̵,̵ ̵star_trivial]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3190/3190] Built Erdos488.Geometry.SeparatedDistances.EuclideanRealization (1.9s)
+Build completed successfully (3190 jobs).

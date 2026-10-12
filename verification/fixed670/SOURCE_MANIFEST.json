@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "source_repository": "jjtripodo-lgtm/john-lean-math",
+  "source_commit": "35c67a69e009c9ca27267077608864987b7e2851",
+  "theorem": "Erdos488.Geometry.SeparatedDistances.FixedDimension.fixed_dimension_erdos_670",
+  "root_module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670",
+  "module_count": 54,
+  "modules": [
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean",
+      "sha256": "40570d8bad67aeab4c395e49ceaac063d75c5297c0a2a54721b15bd78a518de0",
+      "git_blob": "a47d9d242bab1861350c3ec68170d1f8bd431bcd",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean",
+      "sha256": "92b3a9fce9691a0e00f56e840a75fc7380e380979e88d9337e8231c65d953345",
+      "git_blob": "62a83de58e4d3a025bbf044cf30a5d5686f32355",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean",
+      "sha256": "3d205d64de48c81103f68179657f79112a3d7befb41ceb0a5653b3ef0467ed29",
+      "git_blob": "89b8a8de0b0c519a8b3ca4f5be3e275598f92ed8",
+      "imports": [
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean",
+      "sha256": "98e65661665e8af0ec403e432957c395cca552ba2de057a5b7e3cff8995e96ac",
+      "git_blob": "aac7a5c7ae7953c8230c9a68b2dc6b10a69a7310",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean",
+      "sha256": "c8af0b3d950ae0ea48f7057d23cac9814a5008f24a1a5f200a24864a18701ae4",
+      "git_blob": "526055d2ba7447dd8554011632dd4eda180f698d",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.Defs",
+      "path": "Erdos488/Geometry/SeparatedDistances/Defs.lean",
+      "sha256": "9d696a0ba758b3ae236564116bf66b7462dcb4aac62c81cc000b9b8eb31ebaf3",
+      "git_blob": "de9341403c0f9e36b935f153077095b70ddb5bb1",
+      "imports": [
+        "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+        "Mathlib.Data.Matrix.Basic",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.LinearAlgebra.Matrix.PosDef"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/Defs.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean",
+      "sha256": "0c7d0187ab8c8e6265d37d349e6b7418ef069ebe70d95fc6455eb15d8df7131f",
+      "git_blob": "6b1dcbaee949dd974e7361f970986a3835344e0e",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean",
+      "sha256": "85bd0cc75f49257c34843e31f6c4e4a5f4efd9df6f0d7ff8af39edbc0e260cb7",
+      "git_blob": "7bcf0e1afa553aaecb59dd256d53581b91b5292e",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion",
+        "Mathlib.Analysis.Matrix.Order"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean",
+      "sha256": "c01a5a7687cd79c1427d69325313a2ce7f7fb5c64819adc4763c08e88e6d1f5f",
+      "git_blob": "1993cfca0996d500fff47949c8b454140766faa5",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean",
+      "sha256": "c4a5baefade16bf942d30c3a0d5890601ee8a5793082f55d20caaf38ec44c436",
+      "git_blob": "0b6ddccad8e2d521e3fd3c505291e7936c74333b",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean",
+      "sha256": "f9388d8b9c89b89f34884bfb191e87caf969a96d3c1a813039556ae48a577a75",
+      "git_blob": "ba75a6f670572fcf11bb87c211fe55949e2222cb",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean",
+      "sha256": "a1ac4e3af6c7e52b85bbc287ad1193b4d964e74236dae9fa0b50bd9e24060bab",
+      "git_blob": "6e89c71aad04dfb41aeaae8ff171294bfd4fe15c",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean",
+      "sha256": "bf5d75e740bb0a5de06c8bd3c08b597b98fe09cebd8195a23bb2760084e48d2e",
+      "git_blob": "127fc698f39f7db10358523dd2cee0ac8287a37d",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean",
+      "sha256": "dcb41d4152296cb746eec3bd486a98e699d84c65579e1adbf489adc4518effae",
+      "git_blob": "45ac530f2f6ec4b1b529018a14717400ab974d82",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean",
+      "sha256": "b2cbe478c30ec8b0391b4d02bca358f21633c3c0de7f8274578e2124dc17173c",
+      "git_blob": "336918301d3c5ae68bce4488172ca015725b8c0f",
+      "imports": [
+        "Mathlib.Data.Nat.ModEq",
+        "Mathlib.Data.Nat.Prime.Defs",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean",
+      "sha256": "90fe75f807ce75a632b8f81ee0a8ae7266a08bc6ce02e78d675bef687d3ad1fb",
+      "git_blob": "bb723a0e0916fce5077cd942ca4599bfe4b33e35",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean",
+      "sha256": "a37fc6e7666681f9dfd57a8f476111c5e3cee0fc5664acf46186a9dbd829df76",
+      "git_blob": "764500d0f5cf31e99d741fc23eef8830629f8ec9",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean",
+      "sha256": "d549e36433886c0a53325ca77df65266ef298c155aaafaacb8840ea997a9bf5e",
+      "git_blob": "6366f3768846476f713edf4322bfa1bd4ff59d62",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean",
+      "sha256": "83ccbc287deed29c4f510373b60a50f7523cb8a5865689f0fcb2b075631cc5e3",
+      "git_blob": "4be01e7168b083ea6147c84383a413dcce64228e",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean",
+      "sha256": "a15e10e7b12b3bfb0de356d0f8539af79512feeb890d156c908f99fcf87e4841",
+      "git_blob": "39de28ed9340b95f6535b98178c8c9e3864685b0",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean",
+      "sha256": "fc5a809c5d893f70f51423c57b6d1c8f9b431f3bb533f276dfed1588c0194c6f",
+      "git_blob": "1a9f9d3ced4f5aba64f3199a46d2f2136ea89f53",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.Flattening",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.lean",
+      "sha256": "6d8a8f8ca84755abf95f19bbdcce3eba4081c35ec00e2ca045eaf879d867cd7e",
+      "git_blob": "f455b8f4b9c1be7d749dd68a91100807a5f11101",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.GramRealization",
+      "path": "Erdos488/Geometry/SeparatedDistances/GramRealization.lean",
+      "sha256": "a240a1ab49ccf582ad967a37b950ca6a6ef8e41d8fb4831868377b6eadbeec01",
+      "git_blob": "d516cc771e351a16400c9caca3c298973f579482",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Analysis.InnerProductSpace.GramMatrix",
+        "Mathlib.Analysis.Matrix.LDL",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/GramRealization.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.PrefixSums",
+      "path": "Erdos488/Geometry/SeparatedDistances/PrefixSums.lean",
+      "sha256": "59679a3d8a59b3a1d2400dd97ae00e01ce86d37d4f1719a937ab99832c002782",
+      "git_blob": "ba300bb789004702e64fd24c2065412cc6a7e72e",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.GramRealization",
+        "Mathlib.LinearAlgebra.Matrix.Block"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/PrefixSums.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.EuclideanRealization",
+      "path": "Erdos488/Geometry/SeparatedDistances/EuclideanRealization.lean",
+      "sha256": "d63bd7300d026ff27d52c67cfb471920b3edc316d31ac1d548d7e29266644314",
+      "git_blob": "e97ff9ba569225ae87126ab30a20283f31cc8b7a",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.PrefixSums",
+        "Mathlib.Analysis.InnerProductSpace.PiL2"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/EuclideanRealization.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.Labels",
+      "path": "Erdos488/Geometry/SeparatedDistances/Labels.lean",
+      "sha256": "5bd3ddb10a4e827497db3c9952210cd0c1232054c31c714ae406ea16d391b35f",
+      "git_blob": "263a1799e6d5f13e5a82e72a7a1e17e9a179d539",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/Labels.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.ColexBase",
+      "path": "Erdos488/Geometry/SeparatedDistances/ColexBase.lean",
+      "sha256": "f4ef600ffb08f6357b8d0bf74428286ce2617a32d7e34353905dbfea36c61db4",
+      "git_blob": "17686d5e666e64a32cd27ca3e098972ca3da006f",
+      "imports": [
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/ColexBase.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.ColexPositivity",
+      "path": "Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean",
+      "sha256": "da4ea3133ef045bd76c06a2f956a67130889d2e2a532be23dbe02fb8aaf9a1b5",
+      "git_blob": "8d62b42bc6da2281fbc54ba4659b7a9265964b76",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.GramRealization",
+        "Erdos488.Geometry.SeparatedDistances.EuclideanRealization",
+        "Erdos488.Geometry.SeparatedDistances.Labels",
+        "Erdos488.Geometry.SeparatedDistances.ColexBase",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserve",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.lean",
+      "sha256": "62c7a55590ffffaf56632eab74bc544fea0125be8e5f07ba31a0367c255ad066",
+      "git_blob": "ae988fe1de676ce81f048637dcb1aeea9f93185b",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.ColexPositivity"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserveDirectCS",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.lean",
+      "sha256": "e8bd7220e2962f0f9bc557b5dde7e35c7d5bdca4c147f1fa6ef14b692cb3b1d6",
+      "git_blob": "2ee8ccfc066291ed4ab66851b0b3be8149b8b940",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.ColexPositivity"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean",
+      "sha256": "0b1c811368a409e84d7f9dad718450fbf17a65120ce1782cd1ea52d627c547a3",
+      "git_blob": "8870031bb399af4a279f8afcf8e447c43b6bca3f",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.Flattening",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserve",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserveDirectCS"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.lean",
+      "sha256": "5d7ed3b800e6ce9f39b42896fd6126dea0e239fbd5e0fac24c6bde246cc8307d",
+      "git_blob": "d83cfc0af30d50fa980c1a60276f8fb0115d8483",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean",
+      "sha256": "2c14b164bb4a17236fe313608d0fdc8b7fb7a9ad63e8d851d9c845cda646a142",
+      "git_blob": "503d44808b46b29a20ffc489bc8c2f88005f1088",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve",
+        "Mathlib.Analysis.Real.Sqrt"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.HardyWeights",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.lean",
+      "sha256": "1c09496199eb2ab1d25b80bf9f515041f5332cdeeaef5dbb7025a91152420a0a",
+      "git_blob": "1fa78fc756431d99fd25526bbe48f5c36351e5a9",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.FiniteHardy",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.lean",
+      "sha256": "472f31e05f95d14f809f746eda497a68c3f6cfad0f055cd2d345872a75c1474b",
+      "git_blob": "f7de2697907d8ce6baa99ae401daa054af99f651",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.HardyWeights"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.TriangularBounds",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.lean",
+      "sha256": "5dafad3ed1210e28eccc756f12a553312e07bd2fa1307502b565ec921636e377",
+      "git_blob": "af2315d39869ff1fd602c96326c70c7935eeb9e7",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.FiniteHardy"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricPotential",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.lean",
+      "sha256": "765e4363c9a202b4e0f22b41bcb7f1d4b5f0bdd991eed661293e3f3c3002d836",
+      "git_blob": "b446c81b7c3f6566e61dbe4e3131af281c8177f7",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean",
+      "sha256": "d0a107d3211626b35cb1c431f01b4fc7ec3fd3547afb6dc38a52bb1f466f5973",
+      "git_blob": "fe7cd78c948c5d08d9dc2cad78444c440db1ae0d",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.TriangularBounds",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricPotential"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.lean",
+      "sha256": "48e2913fe771254f5ba077de57bd35928d09a03ecc658c8a52ce328ea9d7d478",
+      "git_blob": "018b3edfb48065f5a3a7766fd77ca91addd3b06e",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.Parameters",
+      "path": "Erdos488/Geometry/SeparatedDistances/Parameters.lean",
+      "sha256": "39539a0b75eb74c86b8dafd93e6d40452b85cf9e6df1304c48787b6c1735088b",
+      "git_blob": "427525e3a4a765d187061ae7575cca632129b0ab",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/Parameters.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceParameterBounds",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.lean",
+      "sha256": "53e88896bd605170c11d14f7a6fea42a761026d2d8076f2e68a09524f7a6626c",
+      "git_blob": "6662427d55ad7408747e8ab693f8a36d5ca10307",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge",
+        "Erdos488.Geometry.SeparatedDistances.Parameters"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceQuadraticMatrix",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.lean",
+      "sha256": "427a7456c12dd2e4fda0dac6313e4e76b1945e3e1621a25756704a5152f8c7bd",
+      "git_blob": "dee40080d6ebdfe699a660f2b1704053cd26d813",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceParameterBounds"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.lean",
+      "sha256": "d78635a29078698e85e4c8fdd247fe57553a2179a2c348aaeb9719b0ec3bc748",
+      "git_blob": "9ac816510b2d4d21904179cc6e126b6482a064b6",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.lean",
+      "sha256": "ec85d75bb3a4a0cc23da237211f7ccdebecc52c05d73e547624eea4ffd69744d",
+      "git_blob": "c9a85956c26b19f61f925667c8044ce21ef5899b",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceQuadraticMatrix",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSpectrum",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSpectrum.lean",
+      "sha256": "c74a71d6a4bb1752bfcebf95345fceef96dc6a0cc3919735771b64ff9283ce2d",
+      "git_blob": "3228e69047a83a5ca58a62b76037e2ba8f3b7cb1",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSpectrum.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean",
+      "sha256": "bcafead776d4d54b463da7f94bf0391d38a6443fc2cf25bfade3970ffe35d3b9",
+      "git_blob": "cbf3b27d88c9329b3c1dd2b87d5260cb08198747",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.Defs",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean",
+      "sha256": "c84410052ab9f41e7b76de74d847d95739fef9256992266329937b9effb131ed",
+      "git_blob": "52fafbc58c90426c781f053ba6e978fbe6b3cb3e",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourcePrime",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.lean",
+      "sha256": "22569801afcc48f93b02178f3fe81d21efbb61a34b9c32abbc2c8f769aa90bb2",
+      "git_blob": "03e553d7173bff683cad6c6cc913ec4142e61856",
+      "imports": [
+        "Mathlib.NumberTheory.Bertrand",
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSeparation",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSeparation.lean",
+      "sha256": "18bd0bbdb5127c157f26f6f4a3b3c47069af15f3fe9b11a2b552398fdcea20a8",
+      "git_blob": "577336ea180e45d5e1d4728bb1158ca305b827ee",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSpectrum",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourcePrime"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSeparation.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualDiameter",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualDiameter.lean",
+      "sha256": "542002fe6bbdb8510e2ae34af67246f1141c48d51ad22f1e9519bca8a450112c",
+      "git_blob": "a4ff5c67b602cc9aba297a1f069ab46948a213df",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualDiameter.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean",
+      "sha256": "6ab22c6b16e3b4579b296c467c8faed2ddf200476d33a1c461b67b6267e98c71",
+      "git_blob": "12bacd7e9f4a82f4bd29d52e3752fa4101005fc4",
+      "imports": [
+        "Mathlib.Tactic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean",
+      "sha256": "6ba2b52a98f627f24240280f91d062a7866ee31a52c295abbccdf4d613c58980",
+      "git_blob": "5fadf638570674ae732db96235143dc4c8859535",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean",
+      "sha256": "eef1bbd08fad3ab5c88b74ba2e2e25702b4f310a7148444a6bd789a6df1684b3",
+      "git_blob": "9f4380bb7562e5af854a5539053a4da0b1180012",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar",
+        "Erdos488.Geometry.SeparatedDistances.Defs"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean",
+      "provenance": "git_object_at_source_commit"
+    },
+    {
+      "module": "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670",
+      "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.lean",
+      "sha256": "97cfb0df31070d64c6a48cac85de205745e7ab8a267a7c8720891893050ddd58",
+      "git_blob": "af9874d6097d73b7f3a4d2644b91801abed29729",
+      "imports": [
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualSeparation",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualDiameter",
+        "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding"
+      ],
+      "upstream_path": "erdos488-lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.lean",
+      "provenance": "git_object_at_source_commit"
+    }
+  ],
+  "external_dependencies": [
+    {
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "name": "mathlib",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "master",
+      "inherited": false,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/plausible",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "name": "plausible",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "name": "LeanSearchClient",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/import-graph",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "name": "importGraph",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "main",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "name": "proofwidgets",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v0.0.100",
+      "inherited": true,
+      "configFile": "lakefile.lean"
+    },
+    {
+      "url": "https://github.com/leanprover-community/aesop",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "name": "aesop",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.31.0-rc1",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/quote4",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "name": "Qq",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.31.0-rc1",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover-community/batteries",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover-community",
+      "rev": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "name": "batteries",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.31.0-rc1",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    },
+    {
+      "url": "https://github.com/leanprover/lean4-cli",
+      "type": "git",
+      "subDir": null,
+      "scope": "leanprover",
+      "rev": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "name": "Cli",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "v4.31.0-rc1",
+      "inherited": true,
+      "configFile": "lakefile.toml"
+    }
+  ]
+}

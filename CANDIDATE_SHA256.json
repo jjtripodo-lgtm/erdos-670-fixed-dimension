@@ -1,0 +1,593 @@
+{
+  "files": {
+    "CITATION.cff": {
+      "bytes": 864,
+      "sha256": "6cabb14327b0100aee2d01d8ea4e85ae79a375ce15fe53f87205971e2e0c0495"
+    },
+    "CITATIONS.md": {
+      "bytes": 4568,
+      "sha256": "c7dee2f14b12ea08080f6ecd1edc0ba9f48e6ebea236a43a53f1ccd42e43c268"
+    },
+    "LICENSE": {
+      "bytes": 1473,
+      "sha256": "ef508826545bc557875cdd544eccc3929fb01e1a83d322feedb9bc071b472e6a"
+    },
+    "LICENSE-PAPER": {
+      "bytes": 580,
+      "sha256": "1fd645ed69c35a4584582f84621c6be839df6630ee708521513f95658ff9c7b3"
+    },
+    "PRIOR_ART.md": {
+      "bytes": 4612,
+      "sha256": "068f4332c4dc830e3cfef16985caf00ac637637e96fafe52a37e9815424e276c"
+    },
+    "PROOF_CORRESPONDENCE.md": {
+      "bytes": 2843,
+      "sha256": "b497dc127c0c8eaee4f66f7f606fefe7da378fe1111ca0d9f16f946b17494fc7"
+    },
+    "PUBLIC_EXPORT.md": {
+      "bytes": 3450,
+      "sha256": "780f8b64c1eb0e2bde2374f6735e87b7ee85f4273808db587d703518b96fdcc5"
+    },
+    "README.md": {
+      "bytes": 5876,
+      "sha256": "e7e848d31dd84b8ea12d23121db343ce50a2a1829e5d195269c2da4eb8c8dc25"
+    },
+    "lean-fixed670/.gitignore": {
+      "bytes": 35,
+      "sha256": "83684c59dab0235aa05fa69ee833f890e54b45cef724f2d6043f394160489151"
+    },
+    "lean-fixed670/AxiomAudit.lean": {
+      "bytes": 723,
+      "sha256": "1c7b7499ab8d72a6f7efc0db21b9cb557f4a8797263c0eb057eaa5daba1f260f"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/ColexBase.lean": {
+      "bytes": 1248,
+      "sha256": "f4ef600ffb08f6357b8d0bf74428286ce2617a32d7e34353905dbfea36c61db4"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean": {
+      "bytes": 50492,
+      "sha256": "da4ea3133ef045bd76c06a2f956a67130889d2e2a532be23dbe02fb8aaf9a1b5"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/Defs.lean": {
+      "bytes": 2528,
+      "sha256": "9d696a0ba758b3ae236564116bf66b7462dcb4aac62c81cc000b9b8eb31ebaf3"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/EuclideanRealization.lean": {
+      "bytes": 7385,
+      "sha256": "d63bd7300d026ff27d52c67cfb471920b3edc316d31ac1d548d7e29266644314"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean": {
+      "bytes": 1298,
+      "sha256": "6ab22c6b16e3b4579b296c467c8faed2ddf200476d33a1c461b67b6267e98c71"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean": {
+      "bytes": 4219,
+      "sha256": "c84410052ab9f41e7b76de74d847d95739fef9256992266329937b9effb131ed"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.lean": {
+      "bytes": 10757,
+      "sha256": "62c7a55590ffffaf56632eab74bc544fea0125be8e5f07ba31a0367c255ad066"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.lean": {
+      "bytes": 6725,
+      "sha256": "e8bd7220e2962f0f9bc557b5dde7e35c7d5bdca4c147f1fa6ef14b692cb3b1d6"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean": {
+      "bytes": 4127,
+      "sha256": "f9388d8b9c89b89f34884bfb191e87caf969a96d3c1a813039556ae48a577a75"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean": {
+      "bytes": 2263,
+      "sha256": "85bd0cc75f49257c34843e31f6c4e4a5f4efd9df6f0d7ff8af39edbc0e260cb7"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean": {
+      "bytes": 7120,
+      "sha256": "98e65661665e8af0ec403e432957c395cca552ba2de057a5b7e3cff8995e96ac"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean": {
+      "bytes": 3223,
+      "sha256": "a1ac4e3af6c7e52b85bbc287ad1193b4d964e74236dae9fa0b50bd9e24060bab"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean": {
+      "bytes": 6885,
+      "sha256": "bf5d75e740bb0a5de06c8bd3c08b597b98fe09cebd8195a23bb2760084e48d2e"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.lean": {
+      "bytes": 4614,
+      "sha256": "472f31e05f95d14f809f746eda497a68c3f6cfad0f055cd2d345872a75c1474b"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.lean": {
+      "bytes": 1815,
+      "sha256": "6d8a8f8ca84755abf95f19bbdcce3eba4081c35ec00e2ca045eaf879d867cd7e"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.lean": {
+      "bytes": 5337,
+      "sha256": "d78635a29078698e85e4c8fdd247fe57553a2179a2c348aaeb9719b0ec3bc748"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.lean": {
+      "bytes": 10200,
+      "sha256": "765e4363c9a202b4e0f22b41bcb7f1d4b5f0bdd991eed661293e3f3c3002d836"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean": {
+      "bytes": 2969,
+      "sha256": "0c7d0187ab8c8e6265d37d349e6b7418ef069ebe70d95fc6455eb15d8df7131f"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.lean": {
+      "bytes": 2590,
+      "sha256": "1c09496199eb2ab1d25b80bf9f515041f5332cdeeaef5dbb7025a91152420a0a"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean": {
+      "bytes": 6096,
+      "sha256": "c01a5a7687cd79c1427d69325313a2ce7f7fb5c64819adc4763c08e88e6d1f5f"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean": {
+      "bytes": 11712,
+      "sha256": "0b1c811368a409e84d7f9dad718450fbf17a65120ce1782cd1ea52d627c547a3"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean": {
+      "bytes": 5169,
+      "sha256": "d0a107d3211626b35cb1c431f01b4fc7ec3fd3547afb6dc38a52bb1f466f5973"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean": {
+      "bytes": 6228,
+      "sha256": "a37fc6e7666681f9dfd57a8f476111c5e3cee0fc5664acf46186a9dbd829df76"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.lean": {
+      "bytes": 5920,
+      "sha256": "5d7ed3b800e6ce9f39b42896fd6126dea0e239fbd5e0fac24c6bde246cc8307d"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean": {
+      "bytes": 1416,
+      "sha256": "b2cbe478c30ec8b0391b4d02bca358f21633c3c0de7f8274578e2124dc17173c"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean": {
+      "bytes": 6292,
+      "sha256": "90fe75f807ce75a632b8f81ee0a8ae7266a08bc6ce02e78d675bef687d3ad1fb"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean": {
+      "bytes": 4424,
+      "sha256": "92b3a9fce9691a0e00f56e840a75fc7380e380979e88d9337e8231c65d953345"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.lean": {
+      "bytes": 13673,
+      "sha256": "ec85d75bb3a4a0cc23da237211f7ccdebecc52c05d73e547624eea4ffd69744d"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualDiameter.lean": {
+      "bytes": 7151,
+      "sha256": "542002fe6bbdb8510e2ae34af67246f1141c48d51ad22f1e9519bca8a450112c"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSeparation.lean": {
+      "bytes": 7437,
+      "sha256": "18bd0bbdb5127c157f26f6f4a3b3c47069af15f3fe9b11a2b552398fdcea20a8"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualSpectrum.lean": {
+      "bytes": 6361,
+      "sha256": "c74a71d6a4bb1752bfcebf95345fceef96dc6a0cc3919735771b64ff9283ce2d"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean": {
+      "bytes": 9739,
+      "sha256": "eef1bbd08fad3ab5c88b74ba2e2e25702b4f310a7148444a6bd789a6df1684b3"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean": {
+      "bytes": 4322,
+      "sha256": "c8af0b3d950ae0ea48f7057d23cac9814a5008f24a1a5f200a24864a18701ae4"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean": {
+      "bytes": 7146,
+      "sha256": "dcb41d4152296cb746eec3bd486a98e699d84c65579e1adbf489adc4518effae"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean": {
+      "bytes": 3184,
+      "sha256": "6ba2b52a98f627f24240280f91d062a7866ee31a52c295abbccdf4d613c58980"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.lean": {
+      "bytes": 3867,
+      "sha256": "97cfb0df31070d64c6a48cac85de205745e7ab8a267a7c8720891893050ddd58"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean": {
+      "bytes": 3803,
+      "sha256": "d549e36433886c0a53325ca77df65266ef298c155aaafaacb8840ea997a9bf5e"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean": {
+      "bytes": 5430,
+      "sha256": "83ccbc287deed29c4f510373b60a50f7523cb8a5865689f0fcb2b075631cc5e3"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean": {
+      "bytes": 5016,
+      "sha256": "a15e10e7b12b3bfb0de356d0f8539af79512feeb890d156c908f99fcf87e4841"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.lean": {
+      "bytes": 40254,
+      "sha256": "48e2913fe771254f5ba077de57bd35928d09a03ecc658c8a52ce328ea9d7d478"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.lean": {
+      "bytes": 6890,
+      "sha256": "53e88896bd605170c11d14f7a6fea42a761026d2d8076f2e68a09524f7a6626c"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.lean": {
+      "bytes": 897,
+      "sha256": "22569801afcc48f93b02178f3fe81d21efbb61a34b9c32abbc2c8f769aa90bb2"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.lean": {
+      "bytes": 19936,
+      "sha256": "427a7456c12dd2e4fda0dac6313e4e76b1945e3e1621a25756704a5152f8c7bd"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean": {
+      "bytes": 6322,
+      "sha256": "fc5a809c5d893f70f51423c57b6d1c8f9b431f3bb533f276dfed1588c0194c6f"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean": {
+      "bytes": 9198,
+      "sha256": "3d205d64de48c81103f68179657f79112a3d7befb41ceb0a5653b3ef0467ed29"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.lean": {
+      "bytes": 6066,
+      "sha256": "5dafad3ed1210e28eccc756f12a553312e07bd2fa1307502b565ec921636e377"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean": {
+      "bytes": 6050,
+      "sha256": "40570d8bad67aeab4c395e49ceaac063d75c5297c0a2a54721b15bd78a518de0"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean": {
+      "bytes": 5273,
+      "sha256": "c4a5baefade16bf942d30c3a0d5890601ee8a5793082f55d20caaf38ec44c436"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean": {
+      "bytes": 2643,
+      "sha256": "bcafead776d4d54b463da7f94bf0391d38a6443fc2cf25bfade3970ffe35d3b9"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean": {
+      "bytes": 2786,
+      "sha256": "2c14b164bb4a17236fe313608d0fdc8b7fb7a9ad63e8d851d9c845cda646a142"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/GramRealization.lean": {
+      "bytes": 5977,
+      "sha256": "a240a1ab49ccf582ad967a37b950ca6a6ef8e41d8fb4831868377b6eadbeec01"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/Labels.lean": {
+      "bytes": 12571,
+      "sha256": "5bd3ddb10a4e827497db3c9952210cd0c1232054c31c714ae406ea16d391b35f"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/Parameters.lean": {
+      "bytes": 3642,
+      "sha256": "39539a0b75eb74c86b8dafd93e6d40452b85cf9e6df1304c48787b6c1735088b"
+    },
+    "lean-fixed670/Erdos488/Geometry/SeparatedDistances/PrefixSums.lean": {
+      "bytes": 3345,
+      "sha256": "59679a3d8a59b3a1d2400dd97ae00e01ce86d37d4f1719a937ab99832c002782"
+    },
+    "lean-fixed670/lake-manifest.json": {
+      "bytes": 3555,
+      "sha256": "a6eaf4622922b9e2a9eba5b5f09cbabb721be6b85bca5184e2799ddbcfc1b302"
+    },
+    "lean-fixed670/lakefile.toml": {
+      "bytes": 310,
+      "sha256": "4de7b6d0c10b1d13ebf173fb05e0689f79d6789eecf6a8cc488989f880597061"
+    },
+    "lean-fixed670/lean-toolchain": {
+      "bytes": 28,
+      "sha256": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd"
+    },
+    "lean-fixed670/prepare_dependencies.py": {
+      "bytes": 2328,
+      "sha256": "01832f0ed045421290f505420c5918ef5491b22a216c6ebf8a67d97b3b2d3b1c"
+    },
+    "lean-fixed670/replay.py": {
+      "bytes": 4988,
+      "sha256": "70f7021e7060ded47932deb811bbe971219c05c6259e602023dba40e27fc4afc"
+    },
+    "lean-fixed670/replay_contract.py": {
+      "bytes": 4488,
+      "sha256": "55acb4320ce5b200408e747c905082c1f0fad24bee1dba1920d1da18edb186d1"
+    },
+    "lean-fixed670/verify_sources.py": {
+      "bytes": 3430,
+      "sha256": "80581f60cef5ae6da36e38c087d5ebd33bd553e153883aba3bf1621972ba40a3"
+    },
+    "paper/fixed_dimension_670.pdf": {
+      "bytes": 155470,
+      "sha256": "8b9c48959835386795b78e14ee200ca71413c0c31432c546179652b42ce403ea"
+    },
+    "paper/fixed_dimension_670.tex": {
+      "bytes": 40444,
+      "sha256": "d7faa1e6d5dc5f595655a3055371030b3ae05be7015c49d9672bc38eac520a11"
+    },
+    "verification/fixed670/FROZEN_FILES_SHA256.json": {
+      "bytes": 9919,
+      "sha256": "e090b7630ece050a47498bd8c084eb31ff2bc3f0f9ce689f2a021962c2b79326"
+    },
+    "verification/fixed670/REPLAY_STATUS.md": {
+      "bytes": 3000,
+      "sha256": "a4eb89131bc93aaf514da235ed4295ad71128c3701a82c3b0b07704f02e8fd78"
+    },
+    "verification/fixed670/SOURCE_MANIFEST.json": {
+      "bytes": 39037,
+      "sha256": "1060cb440d3a748a7bcb772e2e51980ef709b796bdc12ecd856b87ee9f858d12"
+    },
+    "verification/fixed670/SOURCE_PIN.md": {
+      "bytes": 2942,
+      "sha256": "c79e2508f808e4f9f8cd6662e70743dbca5e749f87f1e301e58dfb45fa8eb7fd"
+    },
+    "verification/fixed670/execution/00_TrigonometricChord.log": {
+      "bytes": 739,
+      "sha256": "2cc560ab22737738cff4d8cb6bffc6a1afdbdd9e7b4b3258fb10bf13ef8693ee"
+    },
+    "verification/fixed670/execution/01_SineDigits.log": {
+      "bytes": 828,
+      "sha256": "b0618bc23c9105d84888fbbc823fa829f3fcfa809a85a7dd06d31bb42836960c"
+    },
+    "verification/fixed670/execution/02_SpectrumSeparation.log": {
+      "bytes": 142,
+      "sha256": "15095930e105ae00e782907532dcfa806947b12fc22f620797f771fbbfd06d70"
+    },
+    "verification/fixed670/execution/03_DirectCrossSpectrum.log": {
+      "bytes": 143,
+      "sha256": "33f64cbded423257de2b39ad65465144664bec2efc28d0b4d59b39cd14916b5c"
+    },
+    "verification/fixed670/execution/04_SourceCrossGuards.log": {
+      "bytes": 835,
+      "sha256": "02e48ac1b11fe07af0879edd6ce8a0c5d8c5a00dd7fc97282245dadd8f5b2aa0"
+    },
+    "verification/fixed670/execution/05_Defs.log": {
+      "bytes": 649,
+      "sha256": "c0a886188a0fb252009171cfc30d2c57b88adcf7bc06048a7be0d8eb6d2400d2"
+    },
+    "verification/fixed670/execution/06_GlobalCompletion.log": {
+      "bytes": 139,
+      "sha256": "47bbf1253c7097325fe18374a8d6aafbc23fbf44936e23903dbe733baaba9132"
+    },
+    "verification/fixed670/execution/07_CompletionFactor.log": {
+      "bytes": 140,
+      "sha256": "c6627b42d5dddba6ad9d539e9461fe2a5f81477d8a14033dea97fa5b96d2ad97"
+    },
+    "verification/fixed670/execution/08_HarmonicLocalModel.log": {
+      "bytes": 836,
+      "sha256": "64b7cd296773927697217c987adcbee459205ffb8690f57c75513a3ac73c9b57"
+    },
+    "verification/fixed670/execution/09_TrigonometricFeatures.log": {
+      "bytes": 1158,
+      "sha256": "9a74f12dce0dab53dc658b883fe99add9d89583cbc7da4f2cbe043db1e3296e0"
+    },
+    "verification/fixed670/execution/10_CompletedTrigonometricFeatures.log": {
+      "bytes": 1805,
+      "sha256": "0bf7c0f3361162d5ace1305c0dc2a31011af6ec6e818ee490c4d7d761031bf56"
+    },
+    "verification/fixed670/execution/11_EuclideanClusterCoordinates.log": {
+      "bytes": 4061,
+      "sha256": "22935ecd06850e9b2dd94c8e3ab60af1136e99815ef9c83a5eae3f972199cb2b"
+    },
+    "verification/fixed670/execution/12_EuclideanCrossCoordinates.log": {
+      "bytes": 5200,
+      "sha256": "05ad66ff08b055591736c26d1d22f6e94eec12f0ba98016bc17b92ca6525a4d5"
+    },
+    "verification/fixed670/execution/13_SourceCrossSpectrum.log": {
+      "bytes": 5297,
+      "sha256": "a4939e46632eb56b4cffb23527459b91d2cf60d1dfa7515d35755ca62ce188b2"
+    },
+    "verification/fixed670/execution/14_PrimeRuler.log": {
+      "bytes": 134,
+      "sha256": "7c23d39e5d8ea3dce3a3fef412ffb954a0e3d9e707d3e73a798fd9cbbce0a19c"
+    },
+    "verification/fixed670/execution/15_PrimeRulerSeparation.log": {
+      "bytes": 144,
+      "sha256": "08ac72ae45dea29212d226abc9d37b48919ae8bee1efb2c794fed3c5fc193fcf"
+    },
+    "verification/fixed670/execution/16_LocalRulerSeparation.log": {
+      "bytes": 838,
+      "sha256": "60d5a9f7a7291af3218d4b46a449e79d5e5d9109684d812edaf21b1697c416c2"
+    },
+    "verification/fixed670/execution/17_SourceLocalGuards.log": {
+      "bytes": 5295,
+      "sha256": "e912d495454a255e636c5c334fa9a7a37d7415159df16dee548ea2f5b26c7d4b"
+    },
+    "verification/fixed670/execution/18_SourceLocalSpectrum.log": {
+      "bytes": 5297,
+      "sha256": "412509380536942219b12a6df2ff8a231c311abbf927f095de8f1314cd522729"
+    },
+    "verification/fixed670/execution/19_SourceMixedBands.log": {
+      "bytes": 5294,
+      "sha256": "eb047e55646f15d7338ea88e15496ea474caa77a2c8d950573fd84614519ad84"
+    },
+    "verification/fixed670/execution/20_SourceReserveBudgets.log": {
+      "bytes": 5298,
+      "sha256": "feca7667213c60518c80ecca5eca645622f4f2ab1965b975be0bd788c792d40a"
+    },
+    "verification/fixed670/execution/21_Flattening.log": {
+      "bytes": 134,
+      "sha256": "70da0d3033e57244fd39f2506767651e548122357b1b8d361ed5e0b72891a2d0"
+    },
+    "verification/fixed670/execution/22_GramRealization.log": {
+      "bytes": 1075,
+      "sha256": "ca0b22d2efc4c13ab2e03fc37aa792a4388a009dc2b597e1b4536fa798c0b064"
+    },
+    "verification/fixed670/execution/23_PrefixSums.log": {
+      "bytes": 1148,
+      "sha256": "dfc19f3ce2ddadf4e1ad8a79ee1b8eb50a7cc246378a88d5c44677e539161119"
+    },
+    "verification/fixed670/execution/24_EuclideanRealization.log": {
+      "bytes": 1158,
+      "sha256": "3d2296f2b20fcbacbed9f9e525e62b2c73515e34b582c0d3457b8f6821f24788"
+    },
+    "verification/fixed670/execution/25_Labels.log": {
+      "bytes": 718,
+      "sha256": "822f274f773102cb782073ae5348a8c0c926cd8d9d1f6cb83f1596c73f554b3e"
+    },
+    "verification/fixed670/execution/26_ColexBase.log": {
+      "bytes": 118,
+      "sha256": "af881ce420003c945b2ac7ff4c57f297f3a4c75b1f2de80ef0708a80759f41c7"
+    },
+    "verification/fixed670/execution/27_ColexPositivity.log": {
+      "bytes": 5923,
+      "sha256": "11c85865de581b2df31de1ee1d05a28d06ad5e0172f8fda7481d2b0ed854a1f1"
+    },
+    "verification/fixed670/execution/28_ColexReserve.log": {
+      "bytes": 6013,
+      "sha256": "731c24386ae17d9c7676bae86413361056503a2e57633724388a0976cd98213c"
+    },
+    "verification/fixed670/execution/29_ColexReserveDirectCS.log": {
+      "bytes": 6021,
+      "sha256": "96ae58de001ff387d8a70c578fca1047da32c6ecebe1d8d189ba76585978e782"
+    },
+    "verification/fixed670/execution/30_IncidenceBridge.log": {
+      "bytes": 10470,
+      "sha256": "046d08528574eeb4100a092f454f747437ca3229691d73b1e18447b760e7ab05"
+    },
+    "verification/fixed670/execution/31_PotentialSolve.log": {
+      "bytes": 10563,
+      "sha256": "d86ea095a456016e944550418e23158a1d0985917425a6bfb7d0e27665eaca04"
+    },
+    "verification/fixed670/execution/32_WeightedSchur.log": {
+      "bytes": 10914,
+      "sha256": "43e59cf51c80d56feec3a7239f68164c4d5f0d3b0cd2a68da8addc4429dbab5c"
+    },
+    "verification/fixed670/execution/33_HardyWeights.log": {
+      "bytes": 11004,
+      "sha256": "0634278669b30389778fb9f08268248777a7a8356f1a249e0512170a7068b2ab"
+    },
+    "verification/fixed670/execution/34_FiniteHardy.log": {
+      "bytes": 11003,
+      "sha256": "8727df4ce8f00e1a86e37e246b9e0795c964ae85e80c4df0328d963e9e8bc76f"
+    },
+    "verification/fixed670/execution/35_TriangularBounds.log": {
+      "bytes": 11008,
+      "sha256": "3c568d7f9f26fbf4da4553c52503d09878d5cc4c94c151eadf9c7da13e304cd1"
+    },
+    "verification/fixed670/execution/36_GeometricPotential.log": {
+      "bytes": 10567,
+      "sha256": "5ed0d17b1ea85460d703c26c02c59e2eb05b36f9786b98794106f2c9c43055e9"
+    },
+    "verification/fixed670/execution/37_LiteralIncidence.log": {
+      "bytes": 12115,
+      "sha256": "be8f649f0bbb190c0316c42adf73b0290a1ce2840b979dbbdbe8950ea6e4e34d"
+    },
+    "verification/fixed670/execution/38_SourceOperatorBridge.log": {
+      "bytes": 16764,
+      "sha256": "d55aed86d5eed0bd748f73823ce83af0013910da478ac61cb6a971ca29363a4f"
+    },
+    "verification/fixed670/execution/39_Parameters.log": {
+      "bytes": 722,
+      "sha256": "47cc0f34bc592821ef8a5909512b6f2114fcebd50bf56eb00f7a5c9dc7fe7299"
+    },
+    "verification/fixed670/execution/40_SourceParameterBounds.log": {
+      "bytes": 16765,
+      "sha256": "35e22694b6c4f87d401a2287e8ad7869b3731ca75ceb1d6fcec9790ed236a0c2"
+    },
+    "verification/fixed670/execution/41_SourceQuadraticMatrix.log": {
+      "bytes": 16765,
+      "sha256": "f731560aab9dac8992f90641bae7c5d1a29aa1fa7f8c80f1ecf3eb14056d0424"
+    },
+    "verification/fixed670/execution/42_GeometricLocalSeparation.log": {
+      "bytes": 4163,
+      "sha256": "1c9109e6be16998c3a2203e41089e5487fca36f35fbeef9f917f9a1a19685d6d"
+    },
+    "verification/fixed670/execution/43_SourceActualCrossMetric.log": {
+      "bytes": 16767,
+      "sha256": "bbd2052fb5dcbf09181b2b960c02bd5fe1b10959a31dbe3012b874ee0c3c5d1b"
+    },
+    "verification/fixed670/execution/44_SourceActualSpectrum.log": {
+      "bytes": 16764,
+      "sha256": "e1a4b17e9fd9903d75a9cc8a61ab78f2eb488943adebfd1629a2e253239f28d1"
+    },
+    "verification/fixed670/execution/45_UnorderedEdgeSeparation.log": {
+      "bytes": 927,
+      "sha256": "88a8e3979b810b4928934e6386300409851fb622aa634c0f4fa931449eb8fbea"
+    },
+    "verification/fixed670/execution/46_ClusterEdgeAssembly.log": {
+      "bytes": 1434,
+      "sha256": "718a550bce8890b1659c10facffac6c51bb40281d8a5c274d652e48f51fd4dec"
+    },
+    "verification/fixed670/execution/47_SourcePrime.log": {
+      "bytes": 135,
+      "sha256": "72a7ebb0a2d445f1b582cf2ef41e04883a791ebcd7a56a178cfd67954eacb2da"
+    },
+    "verification/fixed670/execution/48_SourceActualSeparation.log": {
+      "bytes": 17551,
+      "sha256": "0adf042636b824cc5f0f9e11a4b4903eb45bed2bb89266abfb7dd52ada590240"
+    },
+    "verification/fixed670/execution/49_SourceActualDiameter.log": {
+      "bytes": 16764,
+      "sha256": "68ae157a0d68cb36ee498d7c1bd4e949b0004627caa3285910038a789d4096ab"
+    },
+    "verification/fixed670/execution/50_AllNArithmetic.log": {
+      "bytes": 138,
+      "sha256": "a9c93077093d233ac3a39bf0956e0dd1b3007a15574a82237e51da0a7210da0b"
+    },
+    "verification/fixed670/execution/51_SourceFinalScalar.log": {
+      "bytes": 5295,
+      "sha256": "9132baee63f1f101157ac55817e2326e2c5542ca646f9ab68cca3724494cae11"
+    },
+    "verification/fixed670/execution/52_SourceAllNEmbedding.log": {
+      "bytes": 5532,
+      "sha256": "0ab1cd6dcc563e834fbb767cbf6724e722af34f757cb8a30b2dc83ae8e02370c"
+    },
+    "verification/fixed670/execution/53_SourceFixedDimension670.log": {
+      "bytes": 17884,
+      "sha256": "21d40278323380d04a0a893320a6fa99fbdc533d74d5587d04b1c5fd128a7ff1"
+    },
+    "verification/fixed670/execution/54_final_default_build.log": {
+      "bytes": 17779,
+      "sha256": "061a31f4daa4cd3f90b1c1bfc81e7a726440aeb11d288eb0bcd9a22450e2b4a8"
+    },
+    "verification/fixed670/execution/55_final_axiom_audit.log": {
+      "bytes": 933,
+      "sha256": "46bb3c1010a98bffdf47d009eacc464e9b735b8b803a4e95c4bdd226c0db434f"
+    },
+    "verification/fixed670/execution/RECEIPT.json": {
+      "bytes": 37234,
+      "sha256": "3d3267331443424cbbb61d70519de8f80c772cb8302dfacde20b1cd93f30be74"
+    },
+    "verification/fixed670/negative_tests.py": {
+      "bytes": 1874,
+      "sha256": "c69261349232a1111e089778cde28b8ad064b9431dd1e31a095f805dc60bb325"
+    },
+    "verification/fixed670/upstream-lake-manifest.json": {
+      "bytes": 3171,
+      "sha256": "b091eb307e6a7fe5a0d4bf3245aaa63d3f2810df242cc55cd017ffd1e06974a3"
+    },
+    "verification/fixed670/upstream-lean-toolchain": {
+      "bytes": 28,
+      "sha256": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd"
+    },
+    "verification/fixed670/verify_execution.py": {
+      "bytes": 5323,
+      "sha256": "8d43692a9997aba6c9f7ec048735cd2dd397edbbbe92896ffe91e5b67d44a6c7"
+    },
+    "verification/manuscript670/VALIDATION.md": {
+      "bytes": 3392,
+      "sha256": "97302fae71df1961407d6d3a47f3df94079a705f1b7284d0de3a2ccc925a9f12"
+    },
+    "verification/manuscript670/arithmetic_and_references.json": {
+      "bytes": 1358,
+      "sha256": "bad8fbc361bc47f5cbb4a38e7649b3b815f5e9986cfeee02df3ba80a12b85d1f"
+    },
+    "verification/manuscript670/check_manuscript.py": {
+      "bytes": 3321,
+      "sha256": "6d0cf8e2ec47effafbc1572f44e0e0c5f1b55fd0112e56dcfb8cd0c4d7effa9e"
+    },
+    "verification/manuscript670/tectonic-a.stderr.log": {
+      "bytes": 1007,
+      "sha256": "ee16621c2b9590d25d441126a0fe24f5e2e407259f7246ee6a561712f1038b42"
+    },
+    "verification/manuscript670/tectonic-a.stdout.log": {
+      "bytes": 423,
+      "sha256": "34fafa074f6bfdfe439e4c1e5fd906c77bd136c299b72e0232641154b27acadc"
+    },
+    "verification/manuscript670/tectonic-b.stderr.log": {
+      "bytes": 1007,
+      "sha256": "ee16621c2b9590d25d441126a0fe24f5e2e407259f7246ee6a561712f1038b42"
+    },
+    "verification/manuscript670/tectonic-b.stdout.log": {
+      "bytes": 423,
+      "sha256": "9dd3d88fcd26d3eb48b61d02aa8dd216792964578ec53f758c91924bc92de2b5"
+    },
+    "verification/manuscript670/tectonic-final.log": {
+      "bytes": 15390,
+      "sha256": "d0f7e9f6d0773ec74e0bed6db01109bd5345bd8eb89226d38d1304827b0d1d5e"
+    },
+    "verify_candidate.py": {
+      "bytes": 2156,
+      "sha256": "45fae225116042a82e89bb905a681e6210a674f8fc4bed281482d39704a79d5c"
+    }
+  },
+  "schema_version": 1
+}

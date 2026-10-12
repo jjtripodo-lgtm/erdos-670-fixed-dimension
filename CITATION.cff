@@ -1,0 +1,19 @@
+cff-version: "1.2.0"
+message: "Please cite the fixed-dimension manuscript in preferred-citation when discussing this result. Consult the paper and README for the author role, AI assistance, and verification scope."
+type: software
+title: "Separated Euclidean distances with diameter below 0.74n^2 in a fixed dimension"
+authors:
+  - family-names: "Tripodo"
+    given-names: "John"
+preferred-citation:
+  type: unpublished
+  title: "Separated Euclidean distances with diameter below 0.74n^2 in a fixed dimension"
+  authors:
+    - family-names: "Tripodo"
+      given-names: "John"
+  notes: "Manuscript dated 12 October 2026; no journal acceptance or arXiv deposit is asserted. See the manuscript for AI assistance and outstanding independent-review limitations."
+keywords:
+  - "Erdős Problem 670"
+  - "separated Euclidean distances"
+  - "fixed dimension"
+  - "Lean 4"

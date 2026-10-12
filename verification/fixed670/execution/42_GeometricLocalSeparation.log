@@ -1,0 +1,65 @@
+⚠ [2420/2444] Replayed Erdos488.Geometry.SeparatedDistances.Defs
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3229/3237] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:76:5: Variable name `hD₀` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:90:58: Variable name `hD` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3231/3237] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean:81:13: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  simp only [̵i̵f̵_̵p̵o̵s̵ ̵r̵f̵l̵]̵ ̵at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3232/3237] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean:13:47: This simp argument is unused:
+  Pi.mul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [̵M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵V̵e̵c̵_̵d̵i̵a̵g̵o̵n̵a̵l̵,̵d̵o̵t̵P̵r̵o̵d̵u̵c̵t̵,̵P̵i̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵]̵[̲M̲a̲t̲r̲i̲x̲.̲m̲u̲l̲V̲e̲c̲_̲d̲i̲a̲g̲o̲n̲a̲l̲,̲ ̲d̲o̲t̲P̲r̲o̲d̲u̲c̲t̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3233/3237] Replayed Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:57: This simp argument is unused:
+  zero_pow
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self,z̵e̵r̵o̵_̵p̵o̵w̵,̵ ̲Finset.sum_const_zero, ̲zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:66: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self, ̲zero_pow,F̵i̵n̵s̵e̵t̵.̵s̵u̵m̵_̵c̵o̵n̵s̵t̵_̵ ̲zero,̵z̵e̵r̵o̵_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:88: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  simp only [clusterPoint, ̲WithLp.ofLp_toLp, ̲Fintype.sum_sum_type, ̲Sum.elim_inl, ̲Sum.elim_inr,
+      Real.dist_eq, ̲sq_abs, ̲add_sub_add_left_eq_sub, ̲sub_self, ̲zero_pow, ̲Finset.sum_const_zero,̵z̵e̵r̵o̵_̵a̵d̵d̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3237/3237] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation (1.0s)
+Build completed successfully (3237 jobs).

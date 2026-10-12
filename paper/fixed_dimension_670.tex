@@ -1,0 +1,678 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{array}
+\numberwithin{equation}{section}
+\emergencystretch=3em
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\code}[1]{\texttt{#1}}
+\title[Separated distances in a fixed dimension]{Separated Euclidean distances with diameter below $0.74n^2$ in a fixed dimension}
+\author{John Tripodo}
+\date{12 October 2026}
+\subjclass[2020]{Primary 52C10; Secondary 51K05, 15A15}
+\keywords{separated distances, Erd\H{o}s diameter problem, Euclidean distance matrices, Gram completion, formal verification}
+\begin{document}
+\begin{abstract}
+For every integer $n\ge68000$, we construct $n$ points in the single Euclidean space $\R^{458999}$ whose distances on distinct unordered pairs differ by at least one and whose diameter is strictly less than $(37/50)n^2$. Every nonzero distance is also at least one. Thus the diameter lower bound $(1-o(1))n^2$ fails in a fixed dimension. The construction replaces the vertices of a bounded-size colexicographic metric by arbitrarily large clusters. Complementary Gram estimates control the entire matrix of deterministic perturbations; a global positive-semidefinite completion cancels interactions between clusters. Prime-based rulers separate the local distances, and direct polarization separates the cross distances. The proof is self-contained apart from classical finite-dimensional linear algebra and Bertrand's postulate. Its final existence theorem is formalized in Lean~4. The source-bound build and audit scope, AI assistance, and outstanding independent-review and priority checks are stated explicitly.
+\end{abstract}
+\maketitle
+
+\section{Statement and scope}
+
+Call a finite Euclidean set $X$ \emph{distance-separated} if
+\[
+\bigl|\norm{x-y}-\norm{u-v}\bigr|\ge1
+\quad\text{whenever }\{x,y\}\ne\{u,v\},\quad x\ne y,\ u\ne v.
+\]
+The edges here are non-diagonal unordered pairs. For $|X|\ge3$ the least nonzero distance is at least one: a closest pair $x,y$ and any third point $z$ satisfy
+$1\le|\norm{x-z}-\norm{y-z}|\le\norm{x-y}$.
+Consequently $\diam X\ge\binom{|X|}{2}$.
+
+The diameter question attributed to Erd\H{o}s~\cite[Problem~20]{Erdos} is reproduced by Ho~\cite{Ho} and the Erd\H{o}s Problems catalogue~\cite{Problem670}: does the stronger asymptotic lower bound $(1-o(1))n^2$ hold for distance-separated $n$-point sets in Euclidean space? The distinction between a fixed dimension and a dimension depending on $n$ is essential. Ho constructed counterexamples in dimension $n^2-n$ along a prime-power subsequence and explicitly left the fixed-dimensional question open. We prove the following fixed-dimensional statement.
+
+\begin{theorem}\label{thm:main}
+For every integer $n\ge68000$ there is an injective map
+$P:\{0,\ldots,n-1\}\to\R^{458999}$ such that
+\begin{align*}
+\norm{P(a)-P(b)}&\ge1 &&(a\ne b),\\
+\bigl|\norm{P(a)-P(b)}-\norm{P(c)-P(d)}\bigr|&\ge1
+&&\bigl(\{a,b\}\ne\{c,d\},\ a\ne b,\ c\ne d\bigr),\\
+\diam P(\{0,\ldots,n-1\})&<\frac{37}{50}n^2.
+\end{align*}
+\end{theorem}
+
+In particular, the assertion that the coefficient $1$ is a lower bound in every fixed dimension is false: take $d=458999$ and $\varepsilon=1/4$ in the proposed eventual lower bound $(1-\varepsilon)n^2$, since $37/50<3/4$. The theorem gives the same conclusion in every dimension at least $458999$ by zero-coordinate padding. It gives no conclusion about the conjectured bound in dimension two, or about the optimal constant in any fixed dimension.
+
+An earlier manuscript from this research program concerns a separate construction with growing dimension and an exact consecutive distance spectrum. No exact consecutive spectrum is asserted here. The present proof uses $mk$ points in dimension $9m-1$, where $34000\le m\le51000$ and $k$ grows with the requested number of points.
+
+\paragraph{Roadmap.}
+Start with $m$ macro points whose edge lengths have distinct colexicographic labels. Replace each macro point by a cluster of $k$ points. A global positive-semidefinite completion makes perturbations from different clusters orthogonal, so one literal family of points supports both the local and cross-distance calculations. A prime-residue ruler separates edges inside clusters. Fine, carry, and macro steps separate the cross edges in lexicographic order; a final mixed guard places every cross length above every local length. The scalar estimates pay for the perturbations and keep the diameter below the finite-source budget. Finally, select the requested $n$ points from a suitable $mk$-point family and pad their coordinates to the same ambient dimension $458999$.
+
+\section{A colex Gram matrix with two reserves}\label{sec:macro}
+
+We first record the linear algebra needed for the construction. All matrix inequalities in this paper are in the Loewner order. Sans-serif capitals such as $\mathsf A$ and $\mathsf T$ denote matrices; italic $A$ indexes a cluster, and italic $T$ below denotes a scalar radius budget. Let $m\ge4$, let $H_m=\sum_{j=1}^m1/j$, and suppose
+\begin{equation}\label{eq:macro-assumptions}
+K\ge10,\qquad K\ge16384H_m^2,\qquad K\ge m.
+\end{equation}
+For $0\le A<B<m$ put
+\[
+d_{AB}=K+\binom B2+A+1,
+\qquad p_j=K+\frac{j(j+1)}2\quad(1\le j<m).
+\]
+The labels $d_{AB}-K$ run once through $1,\ldots,\binom m2$.
+Let $\mathcal B$ be the $(m-1)\times m$ matrix with row $j$ equal to $e_{j-1}-e_j$, and let $\mathsf D$ have off-diagonal entries $d_{AB}^2$ and zero diagonal. Define
+\[
+\begin{gathered}
+\mathsf A=-\tfrac12\mathcal B\mathsf D\mathcal B^{\mathsf T},\qquad
+P_0=p_1,\quad P_j=p_j\ (1\le j<m),\\
+\mathsf W=\mathcal B\diag(P_0^2,\ldots,P_{m-1}^2)\mathcal B^{\mathsf T}.
+\end{gathered}
+\]
+
+\begin{lemma}\label{lem:macro}
+If $0\le\rho^2\le K^2/16$, the matrix
+$\mathsf A_\rho=\mathsf A-\rho^2\mathcal B\mathcal B^{\mathsf T}$ satisfies
+\begin{equation}\label{eq:two-reserves}
+\mathsf A_\rho\succeq\tfrac1{16}\mathsf W\succ0,
+\qquad
+\mathsf A_\rho\succeq\frac{\diag(p_1^2,\ldots,p_{m-1}^2)}{144(K+m)}.
+\end{equation}
+There are $m$ affinely independent points $q_A\in\R^{m-1}$ with
+$\norm{q_A-q_B}^2=d_{AB}^2-2\rho^2$ for $A\ne B$.
+For any family of vectors $V_A$ uniquely specified by the forward consecutive projections
+$Z_{jA}=\ip{q_j-q_{j-1}}{V_A}$ ($1\le j<m$), its column matrix $V$ satisfies
+\begin{equation}\label{eq:whole-solve}
+\norm{V}_{\mathrm{op}}\le12\sqrt{K+m}\,
+\norm{\diag(p_1^{-1},\ldots,p_{m-1}^{-1})Z}_{\mathrm{op}}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Direct second differences give
+\[
+\begin{gathered}
+\mathsf A_{jj}=p_j^2,\quad \mathsf A_{j,j+1}=-c_j,
+\quad c_j=\tfrac12(p_j+1)^2+j,\\
+\mathsf A_{ij}=-(\max(i,j)-1)\quad(|i-j|\ge2).
+\end{gathered}
+\]
+Write $\mathsf A=\mathsf T-\mathsf N$ with $\mathsf T$ tridiagonal. Its quadratic form is
+\begin{equation}\label{eq:T}
+\mathsf T[x]=\sum_{j=1}^{m-2}c_j(x_j-x_{j+1})^2+
+\sum_{j=1}^{m-1}V_jx_j^2+c_{m-1}x_{m-1}^2,
+\end{equation}
+where
+\[
+V_1=K^2/2-2,\qquad V_2=-4,\qquad
+V_j=(j-2)K+j^3/2-j^2-2j\quad(j\ge3).
+\]
+The terminal coefficient $c_{m-1}$ is defined by the same formula even though it is not a matrix off-diagonal entry.
+
+Put $w_1=w_2=K^2/24$, $w_j=(Kj+j^3)/24$ for $j\ge3$, and $\mathsf Q[x]=\sum w_jx_j^2$. The first two terms obey $c_1,V_1\ge K^2/4$ and
+$(a-b)^2+a^2\ge(a^2+b^2)/3$; after the term $-4b^2$ is absorbed, this is at least $K^2(a^2+b^2)/24$ for $K\ge10$. For $j\ge3$, direct expansion gives $V_j\ge w_j$. Thus $\mathsf T\succeq\mathsf Q$.
+With $S_0=\sum w_j^{-1}$ and $S_2=\sum j^2/w_j$,
+\[
+S_0\le\frac{48}{K^2}+\frac{24H_m}{K}\le\frac{29H_m}{K},
+\qquad S_2\le\frac{120}{K^2}+24H_m\le26H_m.
+\]
+If $a=\sum|x_j|$ and $b=\sum j|x_j|$, then $|\mathsf N[x]|\le2ab$, $a^2\le S_0\mathsf Q[x]$, and $b^2\le S_2\mathsf Q[x]$. Cauchy--Schwarz and $K\ge16384H_m^2$ give the shorter bound
+\[
+|\mathsf N[x]|\le2\sqrt{S_0S_2}\,\mathsf Q[x]
+\le\frac{\sqrt{754}}{64}\,\mathsf Q[x]
+\le\tfrac12\mathsf Q[x]\le\tfrac12\mathsf T[x].
+\]
+The coefficient $\sqrt{754}/64$ is strictly less than $1/2$; the
+corresponding product inequality is strict when $x\ne0$, since then
+$\mathsf Q[x]>0$. At $x=0$ all forms vanish, so the displayed non-strict
+comparison is exact.
+Hence $\mathsf A\succeq\mathsf T/2$.
+
+To retain the path energy, use
+$-4x_2^2\ge-8x_1^2-8(x_2-x_1)^2$ in \eqref{eq:T}.
+Since $V_1-8,c_1-8\ge p_1^2/4$, $c_j\ge p_j^2/4$, and the other potentials are nonnegative, $\mathsf T\succeq\mathsf W/4$. Also
+\[
+p_j^2\le36(K+m)w_j.
+\]
+For $j=1,2$ this follows directly from $K\ge10$; for $j\ge3$ use
+$p_j\le K+j^2\le(K+m)j$ and $p_j^2\le(K+m)(Kj+j^3)$.
+Thus $\mathsf T\succeq\diag(p_j^2)/(36(K+m))$.
+Now $\mathsf W\succeq K^2\mathcal B\mathcal B^{\mathsf T}$, so the radius subtraction costs at most $\mathsf W/16\preceq\mathsf T/4$. This is why the path-energy reserve $\mathsf W$ remains necessary even when the later vector solve uses the second reserve.
+The two estimates $\mathsf A_\rho\succeq\mathsf W/16$ and $\mathsf A_\rho\succeq\mathsf T/4$ follow, proving \eqref{eq:two-reserves}.
+
+The matrix $\mathsf D_\rho$ of squared distances with off-diagonal entries $d_{AB}^2-2\rho^2$ has conditional Gram $\mathsf A_\rho$: its diagonal remains zero. Factor $\mathsf A_\rho$ as the Gram matrix of consecutive increments and take cumulative sums to obtain the $q_A$. For $A<B$ put $t_{AB}=\sum_{j=A+1}^B e_j$. Then
+\[
+\mathcal B^{\mathsf T}t_{AB}=e_A-e_B,
+\qquad
+t_{AB}^{\mathsf T}\mathsf A_\rho t_{AB}
+=-\tfrac12(e_A-e_B)^{\mathsf T}\mathsf D_\rho(e_A-e_B)
+=d_{AB}^2-2\rho^2.
+\]
+This is the squared norm of the corresponding interval sum of increments, so the stated distances follow. Positive definiteness gives affine independence.
+
+The identity $V^{\mathsf T}V=Z^{\mathsf T}\mathsf A_\rho^{-1}Z$ and the second reserve prove \eqref{eq:whole-solve}. Affine independence ensures the specified projections determine each column uniquely. An overall sign in the consecutive projections has no effect on the energy identity.
+\end{proof}
+
+\section{Parameters and deterministic coefficient matrices}\label{sec:operator}
+
+Fix integers $m\ge34000$ and $k\ge2$ for now. Set
+\begin{equation}\label{eq:parameters}
+\begin{gathered}
+s=\tfrac98,\quad c=sk,\quad \theta=\frac1{\sqrt{32}\,k},\quad
+S=s^3k^2,\quad M=\binom m2,\quad K=\lceil M/32\rceil,\\
+R_y^2=17500m^2k^4,\qquad R^2=2R_y^2,\qquad \rho^2=R^2/S^2.
+\end{gathered}
+\end{equation}
+All square roots used below are nonnegative. The scalar checks in Section~\ref{sec:scalar} give the hypotheses of Lemma~\ref{lem:macro}. Choose one macro realization $q_A$ from that lemma.
+
+Define vectors $F_A,G_A$ by their anchored projections:
+\[
+\ip{q_A-q_J}{F_A}=\begin{cases}d_{AJ}&J<A,\\0&J>A,\end{cases}
+\qquad
+\ip{q_A-q_J}{G_A}=\begin{cases}0&J<A,\\d_{AJ}&J>A.\end{cases}
+\]
+Here $F_0=0$ and $G_{m-1}=0$.
+
+\begin{lemma}\label{lem:incidence}
+As matrices with columns indexed by $A$, these vectors satisfy
+\[
+\norm{F}_{\mathrm{op}}\le24\sqrt{K+m},\qquad
+\norm{G}_{\mathrm{op}}\le60\sqrt{K+m}.
+\]
+Consequently the columns $U_A=(s/\theta)(F_A+cG_A)$ satisfy
+\begin{equation}\label{eq:U}
+\norm{U}_{\mathrm{op}}\le\frac{84sc\sqrt{K+m}}\theta.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Before deleting endpoints, the anchored equations give the full-index forward projections
+\[
+\begin{aligned}
+Z^F_{jA}&=\ip{q_j-q_{j-1}}{F_A}
+=p_j\mathbf1_{A=j}-\mathbf1_{A>j},\\
+Z^G_{jA}&=\ip{q_j-q_{j-1}}{G_A}
+=-p_j\mathbf1_{A=j-1}-(j-1)\mathbf1_{A<j-1}.
+\end{aligned}
+\]
+Here $1\le j<m$ and $0\le A<m$. The fine matrix deletes the zero column $F_0$ and labels each remaining column by its anchor $A=j$; the coarse matrix deletes $G_{m-1}$ and labels its column at anchor $A$ by $A+1$. With reduced indices $1,\ldots,m-1$, the consecutive potential matrices are
+\[
+Z_f=\mathsf D_p-E,\qquad Z_c=-(\mathsf D_p+L),\qquad \mathsf D_p=\diag(p_j),
+\]
+where $E_{ij}=1$ for $i<j$ and $0$ otherwise, and $L_{ij}=i-1$ for $j<i$ and $0$ otherwise. These formulas are direct colex differences; the fine column $j$ belongs to anchor $j$, while coarse column $j$ belongs to anchor $j-1$.
+The Frobenius estimate gives $\norm{\mathsf D_p^{-1}E}_{\mathrm{op}}\le m/K\le1$.
+For the lower triangular part, $0\le(\mathsf D_p^{-1}L)_{ij}\le2/i$ when $j<i$.
+The matrix $H_{ij}=i^{-1}\mathbf1_{j<i}$ has norm at most $2$. Indeed, the Schur weights $v_j=j^{-1/2}$ obey
+\[
+\frac1i\sum_{j<i}\frac1{\sqrt j}\le\frac2{\sqrt i},\qquad
+\sum_{i>j}\frac1{i^{3/2}}\le\frac2{\sqrt j},
+\]
+by integral comparison, and weighted Cauchy--Schwarz proves the Schur bound.
+Thus $\norm{\mathsf D_p^{-1}L}_{\mathrm{op}}\le4$.
+Applying \eqref{eq:whole-solve} gives the constants $24$ and $60$. Finally $24+60c\le84c$ because $c\ge1$. Restoring the zero columns does not change the norms.
+\end{proof}
+
+For $A\ne J$ put $r_{AJ}=c$ if $A<J$ and $r_{AJ}=1$ if $J<A$. Affine independence gives a unique $B_A$ with
+\begin{equation}\label{eq:B}
+\ip{q_A-q_J}{B_A}=\frac{s^2r_{AJ}^2}{4S\theta^2}
+=\begin{cases}9k^2&A<J,\\64/9&J<A.\end{cases}
+\end{equation}
+Write $\mathsf B=[B_0\ \cdots\ B_{m-1}]$, $a_{\mathrm B}=64/9$, and $b_{\mathrm B}=9k^2$. Define the two coordinate-extraction matrices, with $1\le j<m$ and $0\le A<m$, by $\Pi_{jA}=\mathbf1_{A=j}$ and $\Xi_{jA}=\mathbf1_{A=j-1}$. Both have operator norm one. Taking the projections onto $q_{j-1}-q_j$ in \eqref{eq:B} gives the \emph{whole} consecutive-projection matrix
+\[
+Z_B=-a_{\mathrm B}\Pi+b_{\mathrm B}\Xi,
+\qquad
+\norm{\mathsf D_p^{-1}Z_B}_{\mathrm{op}}
+\le\frac{a_{\mathrm B}+b_{\mathrm B}}K
+\le\frac{18k^2}{K}.
+\]
+Here the sign is fixed by the geometric increment $q_{j-1}-q_j$; reversing all increments changes that sign but not the norm. Applying \eqref{eq:whole-solve} to the entire matrix and using $K+m\le m^2/63<m^2/36$ (Section~\ref{sec:scalar}) gives
+\begin{equation}\label{eq:B-whole}
+\norm{\mathsf B}_{\mathrm{op}}
+\le\frac{216\sqrt{K+m}\,k^2}{K}
+\le\frac{36mk^2}{K}.
+\end{equation}
+Set
+\begin{equation}\label{eq:reserves}
+\begin{gathered}
+b_0^2=b_2^2=\frac{3888m^2k^4}{K^2},\qquad
+b_1^2=3\left(\frac{84sc\sqrt{K+m}}\theta\right)^2,\\
+T^2=b_0^2+b_1^2+b_2^2,\qquad
+J^2=\theta^2(b_1^2+4b_2^2).
+\end{gathered}
+\end{equation}
+
+\section{One global Gram completion}\label{sec:completion}
+
+Put $h=(k-1)/2$, $z_i=\theta(i-h)$ and $f_i=\sin z_i/\theta$ for $0\le i<k$. Define
+\[
+\begin{gathered}
+\Phi_i=(1,\sin z_i,\cos z_i,\sin2z_i,\cos2z_i)\in\R^5,\\
+w_{Ai}=B_A+U_A\sin z_i-B_A\cos2z_i.
+\end{gathered}
+\]
+Let $\mathcal M:\R^{5m}\to\R^{m-1}$ be the coefficient matrix with five columns $(B_A,U_A,0,0,-B_A)$ in cluster $A$, and let $\mathcal D$ have identical diagonal blocks
+$\diag(b_0^2,b_1^2,b_1^2,b_2^2,b_2^2)$.
+
+\begin{lemma}\label{lem:completion}
+The auxiliary completion matrix $\mathcal G=\mathcal D-\mathcal M^{\mathsf T}\mathcal M$ is positive semidefinite. With
+$v_{Ai}=\mathcal G^{1/2}(e_A\otimes\Phi_i)\in\R^{5m}$,
+\begin{align}
+\ip{w_{Ai}}{w_{Bj}}+\ip{v_{Ai}}{v_{Bj}}&=0 &&(A\ne B),\label{eq:cancel}\\
+\norm{w_{Ai}}^2+\norm{v_{Ai}}^2&=T^2.\label{eq:norm}
+\end{align}
+Moreover,
+\begin{equation}\label{eq:harmonic}
+\begin{split}
+&\norm{w_{Ai}-w_{Aj}}^2+\norm{v_{Ai}-v_{Aj}}^2\\
+&\qquad=4b_1^2\sin^2\frac{\theta(j-i)}2+4b_2^2\sin^2(\theta(j-i)).
+\end{split}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The whole-matrix estimate \eqref{eq:B-whole} gives
+\[
+\norm{\sum_Ax_AB_A}^2
+\le\norm{\mathsf B}_{\mathrm{op}}^2\sum_Ax_A^2
+\le\frac{b_0^2}{3}\sum_Ax_A^2
+=\frac{b_2^2}{3}\sum_Ax_A^2.
+\]
+Thus the constant and second-harmonic coefficient groups each use at most one third of their respective diagonal budgets. Equation~\eqref{eq:U} gives the same bound for the first-harmonic group. The three-term inequality
+\[
+\norm{u+v+w}^2\le3(\norm u^2+\norm v^2+\norm w^2)
+\]
+now proves $\mathcal M^{\mathsf T}\mathcal M\preceq\mathcal D$ for every input vector. The identities follow from $\mathcal M^{\mathsf T}\mathcal M+\mathcal G=\mathcal D$ and the elementary circle formulas. This is one matrix completion across all clusters.
+\end{proof}
+
+Choose a prime $p$ with $2mk<p<4mk$, using Bertrand's postulate. The following is an Erd\H{o}s--Tur\'an-type quadratic-residue ruler~\cite{ErdosTuran}. For $0\le A<m$ and $0\le i<k$ define its nonnegative positions by
+\begin{equation}\label{eq:ruler}
+y_{Ai}=3\left(4pi+\bigl((i^2+2kAi)\bmod p\bigr)\right).
+\end{equation}
+The cluster-dependent linear term and enlarged spacing are used below; the required separation argument is included.
+The point indexed by $(A,i)$ is
+\begin{equation}\label{eq:point}
+x_{Ai}=\left(Sq_A+w_{Ai},\;
+R_y(\cos(y_{Ai}/R_y),\sin(y_{Ai}/R_y))_A,\;
+\sqrt{R_y^2-T^2}\,e_A,\;v_{Ai}\right).
+\end{equation}
+The subscript $A$ places the circle in the $A$th private coordinate plane.
+The four blocks have dimensions $m-1,2m,m,5m$, for a total of $9m-1$.
+Section~\ref{sec:scalar} proves $T^2\le R_y^2$, so all these coordinates exist.
+
+\begin{lemma}\label{lem:metric}
+For $i<j$ in the same cluster, with $\delta=j-i$ and $d=y_{Aj}-y_{Ai}$,
+\begin{equation}\label{eq:local}
+\norm{x_{Aj}-x_{Ai}}^2
+=\left(2R_y\sin\frac d{2R_y}\right)^2
++\left(2b_1\sin\frac{\theta\delta}2\right)^2
++\left(2b_2\sin(\theta\delta)\right)^2.
+\end{equation}
+For $A<B$, put $\nu=Sd_{AB}$, $\alpha=scf_i$, and $\beta=sf_j$. Then
+\begin{equation}\label{eq:cross}
+\norm{x_{Ai}-x_{Bj}}^2=(\nu+\alpha+\beta)^2-2\alpha\beta.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The local formula follows from \eqref{eq:harmonic} and the circle chord formula. Write $x_{Ai}=S(q_A,0,0,0)+\eta_{Ai}$, where $\eta_{Ai}$ comprises $w_{Ai}$ and the three non-macro blocks in \eqref{eq:point}. Equations~\eqref{eq:cancel}--\eqref{eq:norm} and the private coordinate supports give
+\[
+\norm{\eta_{Ai}}^2=T^2+R_y^2+(R_y^2-T^2)=R^2,
+\qquad
+\ip{\eta_{Ai}}{\eta_{Bj}}=0\quad(A\ne B).
+\]
+For a cross pair, its squared macro length and perturbation difference therefore contribute exactly
+\[
+S^2\norm{q_A-q_B}^2+\norm{\eta_{Ai}-\eta_{Bj}}^2
+=S^2(d_{AB}^2-2\rho^2)+2R^2=S^2d_{AB}^2,
+\]
+using $S^2\rho^2=R^2$. The remaining macro--perturbation projections from \eqref{eq:B} and the definition of $U_A$ give
+\[
+2S\ip{q_A-q_B}{w_{Ai}}=2\nu\alpha+\alpha^2,
+\quad
+2S\ip{q_B-q_A}{w_{Bj}}=2\nu\beta+\beta^2.
+\]
+Together these terms give
+$\nu^2+2\nu(\alpha+\beta)+\alpha^2+\beta^2$, which is \eqref{eq:cross}.
+\end{proof}
+
+\section{Separation of all local distances}\label{sec:local}
+
+Write $g_{Ai\delta}=(y_{A,i+\delta}-y_{Ai})/3$ for $1\le\delta$ and $i+\delta<k$. The definition of the ruler gives
+\begin{equation}\label{eq:ruler-windows}
+(4\delta-1)p<g_{Ai\delta}<(4\delta+1)p,
+\qquad
+g_{Ai\delta}\equiv\delta(2i+\delta+2kA)\pmod p.
+\end{equation}
+For a fixed lag $\delta$, the integers $2i+\delta+2kA$ lie in $[0,p)$ and are distinct as $(A,i)$ varies. Indeed, equality would give $i-j=k(B-A)$ with $|i-j|<k$. Since $0<\delta<p$ and $p$ is prime, multiplication by $\delta$ is invertible modulo $p$. Thus same-lag ruler gaps are distinct. Different lags have disjoint windows; increasing the lag increases the unscaled gap by more than $2p$. It follows that distinct ruler gaps, across all clusters, differ by at least $3$ after scaling. Also
+\begin{equation}\label{eq:ruler-bounds}
+9p\delta<y_{A,i+\delta}-y_{Ai}<15p\delta,
+\qquad 0\le y_{Ai}<Y:=48mk^2.
+\end{equation}
+
+Let
+\[
+\begin{aligned}
+C(d)&=2R_y\sin(d/(2R_y)),\\
+H(\delta)&=4b_1^2\sin^2(\theta\delta/2)+4b_2^2\sin^2(\theta\delta),\\
+D(\delta,d)&=\sqrt{C(d)^2+H(\delta)}.
+\end{aligned}
+\]
+The letter $H(\delta)$ here denotes harmonic energy, whereas $H_m$ in Section~\ref{sec:macro} denotes a harmonic sum.
+
+\begin{lemma}\label{lem:local-separation}
+All distances within clusters are at least one and are mutually at least one apart, including distances from different clusters.
+\end{lemma}
+\begin{proof}
+Section~\ref{sec:scalar} gives
+\[
+\frac{Y}{2R_y}\le\frac14,\qquad
+\gamma:=\cos(Y/(2R_y))\ge\frac9{10},\qquad
+J^2\le600m^2k^2.
+\]
+For $0\le d\le Y$, $C'(d)\ge\gamma$ and $C(d)\ge\gamma d$.
+For $0\le\delta\le k$, the energy $H(\delta)$ is increasing, since $0\le\theta\delta\le1/\sqrt{32}<\pi/2$, and
+$H(\delta)\le J^2\delta^2$ by $|\sin t|\le|t|$.
+For a fixed positive lag and $9p\delta\le d\le Y$,
+\begin{equation}\label{eq:derivative}
+\frac{\partial D}{\partial d}
+=\frac{C(d)C'(d)}{\sqrt{C(d)^2+H(\delta)}}
+\ge\lambda:=\frac{\gamma}{\sqrt{1+(J/(9p\gamma))^2}}.
+\end{equation}
+Since $p>2mk$ and $\gamma\ge9/10$, $9p\gamma\ge15mk$.
+Hence $(J/(9p\gamma))^2\le600/225<3$, the denominator in \eqref{eq:derivative} is at most $2$, and $3\lambda\ge27/20>1$.
+
+Every ruler gap in the comparisons below is at most $Y$; in the unequal-lag comparison, $d_2>9p\varepsilon>9p\delta$, so both endpoints also lie in the stated derivative interval for lag $\delta$. At equal lags, the distinct ruler gaps differ by at least $3$, so the mean value theorem proves the required metric separation. At unequal lags $\delta<\varepsilon$, the ruler windows give $d_2-d_1>6p\ge3$ and the monotonicity of $H$ gives
+\[
+D(\varepsilon,d_2)-D(\delta,d_1)
+\ge D(\delta,d_2)-D(\delta,d_1)\ge3\lambda\ge1.
+\]
+Finally every local distance is at least $C(d)\ge\gamma d>\gamma9p\ge1$.
+\end{proof}
+
+\section{Separation of cross distances}\label{sec:cross}
+
+Let
+\begin{equation}\label{eq:cross-budgets}
+\begin{gathered}
+r=\frac{255}{256},\quad
+\mathcal A=s(c+1)h,\quad \nu_0=S(K+1),\quad T_{\min}=\nu_0-\mathcal A,\\
+E=\frac{2s^3k^3}{T_{\min}}.
+\end{gathered}
+\end{equation}
+The sine digits satisfy
+\begin{equation}\label{eq:digits}
+|f_i|\le h,\qquad f_{i+1}-f_i\ge r.
+\end{equation}
+The first follows from $|\sin t|\le|t|$; the second follows by the mean value theorem and
+$\cos t\ge1-t^2/2\ge255/256$ for $|t|\le\theta h\le1/(2\sqrt{32})$.
+
+For any cross distance $D$ in \eqref{eq:cross}, put $u=\nu+\alpha+\beta$. Then $u\ge T_{\min}>0$, $|\alpha+\beta|\le\mathcal A$, and $|\alpha\beta|\le s^3k^3$.
+Rationalization gives
+\begin{equation}\label{eq:error}
+D-u=\frac{-2\alpha\beta}{D+u},\qquad |D-u|\le E.
+\end{equation}
+In particular $T_{\min}-E\le D\le\nu+\mathcal A+E$.
+
+\begin{lemma}\label{lem:cross-separation}
+All cross distances are mutually at least one apart.
+\end{lemma}
+\begin{proof}
+Order the macro edges $A<B$ by their colex label $a=\binom B2+A+1$, and within each macro edge order the digit pairs $(i,j)$ lexicographically. The baseline is $S(K+a)$. Section~\ref{sec:scalar} proves the three guards
+\begin{align}
+\nu_0+\mathcal A+E&\le sr(\nu_0-sh),\label{eq:fine-guard}\\
+s(cr-2h)-2E&\ge1,\label{eq:carry-guard}\\
+S-2\mathcal A-2E&\ge1.\label{eq:macro-guard}
+\end{align}
+There are exactly three types of successive transitions.
+
+For a fine step $j\mapsto j+1$, the coarse digit $\alpha$ is fixed. The exact square difference is
+\[
+D_1^2-D_0^2=(\beta_1-\beta_0)(2\nu+\beta_1+\beta_0).
+\]
+In particular the coarse digit cancels. By \eqref{eq:digits}, the right side is at least $2sr(\nu-sh)$, whereas $D_1+D_0\le2(\nu+\mathcal A+E)$. Inequality~\eqref{eq:fine-guard} propagates from $\nu_0$ to every $\nu\ge\nu_0$ since $sr>1$, so $D_1-D_0\ge1$.
+
+At the carry from $(i,k-1)$ to $(i+1,0)$, the nominal distance increases by at least $s(cr-2h)$. The two errors cost at most $2E$, so \eqref{eq:carry-guard} gives a gap at least one. At the transition to the next macro edge, the baseline increases by $S$, while the two digit sums and errors cost at most $2\mathcal A+2E$. This is \eqref{eq:macro-guard}.
+Telescoping along this finite total order separates every pair of cross distances.
+\end{proof}
+
+\begin{proposition}\label{prop:finite}
+For every $m\ge34000$ and $k\ge2$, the $mk$ points in \eqref{eq:point} form a distance-separated set in $\R^{9m-1}$, every nonzero distance is at least one, and
+\begin{equation}\label{eq:finite-cap}
+\diam\{x_{Ai}\}\le S(K+M)+\mathcal A+E<\frac{147}{200}(mk)^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The two previous lemmas handle comparisons within each class. A local distance is at most $3R_y$: its square in \eqref{eq:local} is at most
+$4R_y^2+4(b_1^2+b_2^2)\le8R_y^2<9R_y^2$.
+Section~\ref{sec:scalar} gives
+\begin{equation}\label{eq:mixed-guard}
+3R_y+1\le T_{\min}-E.
+\end{equation}
+Every cross distance therefore exceeds every local distance by at least one, and is itself at least one. These are all possible unordered-edge comparisons. The minimum-distance assertion also proves that all $mk$ points are distinct. Equation~\eqref{eq:error} gives the cross upper bound in \eqref{eq:finite-cap}; the local upper bound lies below it by \eqref{eq:mixed-guard}. The strict numerical inequality is proved next.
+\end{proof}
+
+\section{Uniform scalar checks}\label{sec:scalar}
+
+All estimates in this section hold for every $m\ge m_0:=34000$ and every $k\ge2$. They are inequalities in the unbounded parameters, not a finite numerical sample.
+
+\subsection{Macro hypotheses}
+The dyadic grouping of the harmonic sum gives $H_{34000}\le H_{65536}\le17$.
+Advancing by $H_{m+1}=H_m+1/(m+1)$ and $1/(m+1)\le1/2000$ shows $H_m\le m/2000$.
+The ceiling definition gives
+\begin{equation}\label{eq:K-bounds}
+\begin{gathered}
+\frac{m(m-1)}{64}\le K<\frac{m(m-1)}{64}+1,
+\quad K\ge K_0:=\frac{72247875}{4},\\
+K\ge500m,\qquad K+m\le\frac{m^2}{63}.
+\end{gathered}
+\end{equation}
+For the last inequality, multiply by $4032$ and use $m^2\ge34000m$; the other bounds follow directly from $m\ge34000$. Also
+\[
+16384H_m^2\le\frac{16384m^2}{2000^2}\le\frac{m(m-1)}{64}\le K.
+\]
+Finally $\rho^2=35000m^2/s^6$ and
+\[
+\frac{35000}{s^6}\le\frac{33999^2}{64^2\cdot16},\qquad
+K^2\ge\frac{m^2(m-1)^2}{64^2}
+\]
+give $\rho^2\le K^2/16$. These rational inequalities establish every assumption in Lemma~\ref{lem:macro}.
+
+\subsection{Completion and local slope}
+From \eqref{eq:reserves}, $K\ge10$, and $K+m\le m^2/63$,
+\[
+b_0^2=b_2^2\le\frac{972}{25}m^2k^4,\qquad
+b_1^2=21168s^4\cdot32\,(K+m)k^4\le\frac{137781}{8}m^2k^4.
+\]
+The explicit coefficient sums satisfy
+\[
+\frac{1944}{25}+\frac{137781}{8}<17500,
+\qquad
+\frac1{32}\left(\frac{137781}{8}+\frac{3888}{25}\right)<600.
+\]
+Thus $T^2\le R_y^2$ and $J^2\le600m^2k^2$.
+Also $R_y=\sqrt{17500}\,mk^2\ge96mk^2$, so $Y/(2R_y)\le1/4$. The inequality $\cos t\ge1-t^2/2$ yields $\gamma\ge31/32>9/10$.
+
+\subsection{Cross and mixed guards}
+Direct expansion and $k\ge2$ give
+\begin{equation}\label{eq:easy-cross}
+\mathcal A\le\frac{117}{128}k^2,\qquad
+T_{\min}\ge25000000k^2,\qquad
+0<E\le\frac{k}{10^6},\qquad \mathcal A+E\le k^2.
+\end{equation}
+For the second bound, insert $K\ge K_0$ and use
+$s^3(K_0+1)-117/128>25000000$.
+For the third, use the definition of $E$ and $2s^3<25$; the final bound follows from $k\le k^2/2$.
+
+Put $g=sr=2295/2048>11/10$. Since $gsh\le k^2$ and $\mathcal A+E\le k^2$,
+\[
+\mathcal A+E+gsh\le2k^2\le(g-1)\nu_0.
+\]
+Here $\nu_0\ge25000000k^2$. This proves \eqref{eq:fine-guard}.
+For the carry, expand
+\[
+s(cr-2h)-2E
+=s+\bigl(s(g-1)-2E/k\bigr)k\ge s\ge1.
+\]
+For the macro step, the exact identity
+\[
+S-2\mathcal A-2E=(s^3-s^2)k^2+\bigl(s(s-1)-2E/k\bigr)k+s
+\]
+has nonnegative first two terms, and $s\ge1$.
+Both coefficient assertions follow from $E/k\le10^{-6}$.
+
+By $K\ge500m$ and $s^3>7/5$, $\nu_0\ge700mk^2$.
+Consequently $T_{\min}-E\ge(700m-1)k^2\ge600mk^2$.
+On the other hand $R_y\le133mk^2$, so
+$3R_y+1\le400mk^2\le600mk^2$. This proves the mixed guard \eqref{eq:mixed-guard}.
+
+\subsection{Diameter}
+Use $K\le m^2/63$, $M\le m^2/2$, and $\mathcal A+E\le k^2$ to obtain
+\begin{equation}\label{eq:147}
+S(K+M)+\mathcal A+E
+\le\left[s^3\left(\frac1{63}+\frac12\right)+\frac1{34000^2}\right](mk)^2
+<\frac{147}{200}(mk)^2.
+\end{equation}
+The last step is one exact rational comparison. This completes the proof of Proposition~\ref{prop:finite}.
+
+\section{Every sufficiently large cardinality in one fixed dimension}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+For $n\ge68000$ choose
+\[
+k=\left\lfloor\frac n{34000}\right\rfloor\ge2,
+\qquad m=\left\lceil\frac nk\right\rceil.
+\]
+Then $34000k\le n<34000(k+1)$ and
+\[
+34000\le m\le51000,\quad n\le mk<n+k,
+\quad mk<\left(1+\frac1{34000}\right)n.
+\]
+For example, writing $n=34000k+r$ with $0\le r<34000$ gives
+$m=34000+\lceil r/k\rceil\le34000+17000$.
+Construct the $mk$ points from Proposition~\ref{prop:finite} and retain any $n$ of them. Deletion preserves each separation inequality and cannot increase diameter. Their ambient dimension is
+$9m-1\le9\cdot51000-1=458999$; pad with zero coordinates. Finally
+\[
+\diam X<\frac{147}{200}(mk)^2
+<\frac{147}{200}\left(\frac{34001}{34000}\right)^2n^2
+<\frac{37}{50}n^2,
+\]
+again by an exact rational comparison. The finite set's diameter is the maximum of its finitely many pairwise distances, so the strict pairwise bound is also a strict diameter bound.
+\end{proof}
+
+\section{Prior work and the contribution}\label{sec:prior}
+
+The primary question is the diameter problem in Erd\H{o}s's 1997 collection~\cite{Erdos}, catalogued as Problem~670~\cite{Problem670}. We directly inspected Problem~20 on printed p.~6 of a scanned reproduction of the chapter. Its prose does not specify the quantifier order or whether the error is uniform across dimensions. We use the maintained fixed-dimensional formulation as the precise target, in comparison with Ho's full text and the catalogue. The elementary $\binom n2$ lower bound leaves a factor of two between the counting scale and the proposed $n^2$ asymptotic scale.
+Brass studied the planar Erd\H{o}s-diameter under separation of distinct positive distance values~\cite{Brass}, a condition permitting repeated edge lengths; our hypothesis separates every distinct unordered edge. This comparison follows the publisher abstract; the full Brass article remains unread in the accompanying source-coverage note.
+Ho's Theorem~1~\cite{Ho} gives an asymptotic coefficient $1-1/\pi^2$ along $n=q+1$ with $q$ a prime power, in dimension $n^2-n$. His Remark~10 improves the proved asymptotic coefficient within that family to
+\[
+\frac{\pi+\sqrt{\pi^2-4}}{2\pi}=0.885589\ldots.
+\]
+The approximately $0.85411$ value mentioned there is a numerical observation, not the proved bound. Remark~9 explicitly distinguishes the open fixed-dimensional question. Theorem~\ref{thm:main} fixes the dimension once and works for every $n\ge68000$.
+
+The linear-algebraic realization step belongs to classical Euclidean distance matrix theory~\cite{Schoenberg}. The proof uses elementary finite Schur estimates, a prime residue ruler, and a positive-semidefinite Gram factorization. The specific contribution is their deterministic combination with two complementary reserves for the literal colex metric: the path-energy reserve absorbs the common-radius subtraction, and the other reserve controls the whole fine, coarse, and quadratic coefficient matrices. These estimates permit arbitrarily large clusters without increasing the number of macro coordinates.
+
+The paper makes a mathematical statement relative to the cited formulation, not a certification of historical priority. The accompanying \code{PRIOR\_ART.md} and \code{CITATIONS.md} record the dated source coverage and unresolved access limits. Specialist novelty review and independent mathematical review remain outstanding.
+
+\section{Formal statement and reproducibility}\label{sec:formal}
+
+The final formal declaration is
+\begin{center}
+\code{Erdos488.Geometry.SeparatedDistances.FixedDimension.}\\
+\code{fixed\_dimension\_erdos\_670}.
+\end{center}
+At the source checkpoint
+\begin{center}\code{35c67a69e009c9ca27267077608864987b7e2851}\end{center}
+the included final source file, listed below relative to \code{lean-fixed670/}, states, for $n\ge68000$, the existence of an injective
+\code{Fin n} family in \code{EuclideanSpace Real (Fin 458999)}.
+The family has minimum nonzero distance at least one, \code{Separated\allowbreak{}Configuration}, strict pairwise bound $(37/50)n^2$, and strict metric-diameter bound $(37/50)n^2$.
+The predicate \code{SeparatedConfiguration} uses distinct non-diagonal unordered edges. It does not quantify over repeated zero distances on diagonal pairs.
+
+The final source file is
+\begin{center}
+\code{Erdos488/Geometry/SeparatedDistances/FixedDimension/}\\
+\code{SourceFixedDimension670.lean}.
+\end{center}
+Its SHA-256 digest is
+\begin{center}
+\code{97cfb0df31070d64c6a48cac85de205745e7}\\
+\code{ab8a267a7c8720891893050ddd58}.
+\end{center}
+A source-bound standalone replay at that checkpoint started with zero project
+\code{.olean} files, built the 54-module project closure, and completed a
+six-declaration trust-zero axiom audit. Its 56 recorded processes exited zero.
+The replay reused preexisting compiled upstream imports, so it does not
+establish a cold upstream rebuild or independent human review. Exact commands,
+source and receipt hashes, cache boundary, audit scope, and the paper-to-module
+map are in Appendix~\ref{app:repro} and the included
+\code{verification/fixed670/REPLAY\_STATUS.md}.
+
+Formal verification establishes the encoded statements relative to the pinned environment and the declared axioms. It does not establish novelty, bibliographic completeness, or correctness of an independently rewritten human exposition. Those are separate review tasks.
+
+\section{Research provenance}
+
+This manuscript was prepared with substantial assistance from an OpenAI assistant for mathematical exposition, comparison with Lean source, proof checking, and drafting. The preceding research program's preserved manuscript records extensive use of OpenAI ChatGPT and Anthropic Claude during exploration and proof engineering. This paper does not assign particular steps of the present fixed-dimensional proof to Claude without a corresponding record.
+
+John Tripodo directed the research workflow and curated the private artifacts. No professional mathematical affiliation, credential, independent expert verification, or completed peer review is asserted. This AI-assisted research manuscript has not undergone independent mathematical or priority review. The author is responsible for decisions about release and submission.
+
+\appendix
+\section{Reproducibility details and source correspondence}\label{app:repro}
+
+The pinned environment is Lean \code{v4.31.0-rc1}, with mathlib commit
+\begin{center}\code{0ed37c9258f123a2c76a2175596f75c2bd50f941}.\end{center}
+
+The original source checkpoint had an older proof path. At the integrated checkpoint above, the direct Cauchy--Schwarz reserve and whole-$B$ completion have both been formalized and connected to the unchanged final theorem. A new standalone replay on 12 October 2026 started with zero project \code{.olean} files and freshly compiled all 54 modules in its extracted import closure. All 56 captured process invocations, including the final default build and a six-declaration \code{--trust=0} axiom audit, exited successfully. The audit includes both simplified lemmas, their completion consumer and the final theorem. Every audited declaration uses exactly \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; none uses \code{sorryAx}.
+
+The included execution receipt is
+\begin{center}\code{verification/fixed670/execution/RECEIPT.json}\end{center}
+with SHA-256 digest
+\begin{center}
+\code{3d3267331443424cbbb61d70519de8f8}\\
+\code{0c772cb8302dfacde20b1cd93f30be74}.
+\end{center}
+The replay reused compiled upstream dependency imports. It was not a full rebuild of mathlib, a build of the entire multi-project development repository, a successful hosted CI run, a second-machine reproduction, or independent human review. The receipt records the source hashes, all nine locked dependency checkout HEADs and their nonignored dirty states, commands, exit codes, output hashes, and dependency-cache boundary. Checkout identity does not authenticate the provenance of precompiled caches.
+
+For a read-only check or new replay of this \emph{integrated candidate package}, start at the parent of this paper directory. It contains \code{verify\_candidate.py} and \code{lean-fixed670/}. In a standalone extraction use the extracted root. Run the hash checks before attempting a replay:
+\begin{verbatim}
+python3 verify_candidate.py
+python3 lean-fixed670/verify_sources.py
+elan toolchain install leanprover/lean4:v4.31.0-rc1
+python3 lean-fixed670/prepare_dependencies.py --fetch
+replay_parent="$(mktemp -d)"
+python3 lean-fixed670/replay.py --output "$replay_parent/run"
+\end{verbatim}
+The \code{run} path must not already exist. Dependency acquisition uses only the nine public locked Git sources; the candidate includes all of its own source. An optional \code{lake exe cache get} in \code{lean-fixed670/} requests Mathlib's binary cache. Without it, upstream compilation can require substantial time and disk space. The first two hash commands do not compile Lean. The README gives the exact setup and cache options. An earlier packet had a distinct proof path and receipt.
+
+The proof correspondence is as follows; all paths in the right column are under the fixed-dimension source directory.
+\begin{center}\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{.34\textwidth}>{\raggedright\arraybackslash}p{.59\textwidth}}
+\hline
+Paper component & Principal source modules\\\hline
+Lemma~\ref{lem:macro} & \code{ColexReserveDirectCS}, \code{ColexReserve}, \code{Flattening}, \code{IncidenceBridge}\\
+Lemma~\ref{lem:incidence} & \code{FiniteHardy}, \code{LiteralIncidence}, \code{SourceQuadraticMatrix}\\
+Lemma~\ref{lem:completion} & \code{SourceQuadraticMatrix}, \code{GlobalCompletion}, \code{CompletionFactor}\\
+Lemma~\ref{lem:metric} & \code{SourceActualCrossMetric}, \code{EuclideanClusterCoordinates}\\
+Lemma~\ref{lem:local-separation} & \code{PrimeRulerSeparation}, \code{SourceLocalSpectrum}\\
+Lemma~\ref{lem:cross-separation} & \code{DirectCrossSpectrum}, \code{SourceCrossGuards}, \code{SourceCrossSpectrum}\\
+Proposition~\ref{prop:finite} & \code{SourceActualSeparation}, \code{SourceActualDiameter}, \code{SourceFinalScalar}\\
+Theorem~\ref{thm:main} & \code{AllNArithmetic}, \code{SourceAllNEmbedding}, \code{SourceFixedDimension670}\\\hline
+\end{tabular}
+\end{center}
+
+The exposition sometimes uses simpler consequences of the formal estimates; for instance, \eqref{eq:easy-cross} uses $E\le10^{-6}k$, while the source proves $E\le(648/5852077991)k$. It follows the formal direct-polarization route for fine digits and the formal $147/200$ diameter cap. The shorter Cauchy--Schwarz bound for $\mathsf N$ and the whole-matrix estimate \eqref{eq:B-whole} now have checked counterparts in the final theorem's dependency path: \code{IncidenceBridge} uses the direct reserve, and \code{SourceActualCrossMetric} uses the universal completion from \code{SourceQuadraticMatrix} in both consumer calls. The old weighted-Young and anchored-solve lemmas remain available, but these two simplified steps are the integrated route. The earlier written construction used a different error-variation argument and sharper optional scalar constants; those are not needed for this theorem.
+
+\begin{thebibliography}{99}
+\bibitem{Erdos} P. Erd\H{o}s, \emph{Some unsolved problems}, in \emph{Combinatorics, Geometry and Probability: A Tribute to Paul Erd\H{o}s}, B. Bollob\'as and A. Thomason, eds., Cambridge University Press, 1997, pp.~1--10, Problem~20. \url{https://doi.org/10.1017/CBO9780511662034.004}
+\bibitem{Problem670} T. F. Bloom, \emph{Erd\H{o}s Problem 670}, Erd\H{o}s Problems website, \url{https://www.erdosproblems.com/670}. Accessed 12 October 2026.
+\bibitem{Ho} B. S. Ho, \emph{Erd\H{o}s's diameter conjecture for separated distances fails in high dimensions}, arXiv:2604.15305v1, 16 April 2026. \url{https://arxiv.org/abs/2604.15305v1}
+\bibitem{Brass} P. Brass, \emph{On the Erd\H{o}s-diameter of sets}, Discrete Mathematics \textbf{150} (1996), 415--419. \url{https://doi.org/10.1016/0012-365X(95)00208-E}
+\bibitem{ErdosTuran} P. Erd\H{o}s and P. Tur\'an, \emph{On a Problem of Sidon in Additive Number Theory, and on some Related Problems}, Journal of the London Mathematical Society \textbf{16} (1941), 212--215. \url{https://doi.org/10.1112/jlms/s1-16.4.212}
+\bibitem{Schoenberg} I. J. Schoenberg, \emph{Remarks to Maurice Fr\'echet's article ``Sur la d\'efinition axiomatique d'une classe d'espace distanci\'es vectoriellement applicable sur l'espace de Hilbert''}, Annals of Mathematics (2) \textbf{36} (1935), no.~3, 724--732. \url{https://doi.org/10.2307/1968654}
+\end{thebibliography}
+\end{document}

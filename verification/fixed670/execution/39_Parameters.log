@@ -1,0 +1,13 @@
+⚠ [2420/2499] Replayed Erdos488.Geometry.SeparatedDistances.Defs
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [3347/3347] Built Erdos488.Geometry.SeparatedDistances.Parameters (2.3s)
+Build completed successfully (3347 jobs).
