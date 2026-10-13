@@ -2,6 +2,8 @@
 
 **Research manuscript prepared 12 October 2026.** This repository contains the manuscript and the complete 54-module Lean source closure at source commit `35c67a69e009c9ca27267077608864987b7e2851`. The included sources suffice for the checks and replay described below.
 
+Cite the archived manuscript and Lean formalization: version v1.0.0, [DOI: 10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194).
+
 **[Download paper (PDF)](https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/main/paper/fixed_dimension_670.pdf)** — direct download if GitHub's PDF preview does not render.
 
 The final unconditional theorem, `Erdos488.Geometry.SeparatedDistances.FixedDimension.fixed_dimension_erdos_670`, gives for every `n ≥ 68000` an injectively indexed set of `n` points in `EuclideanSpace Real (Fin 458999)`. Every nonzero pair distance is at least one, distances from distinct unordered non-diagonal pairs differ by at least one, and diameter is strictly below `(37/50)n²`. The historical `Erdos488` directory name is only a source identifier; this is the Problem 670 result.

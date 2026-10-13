@@ -2,16 +2,29 @@ cff-version: "1.2.0"
 message: "Please cite the fixed-dimension manuscript in preferred-citation when discussing this result. Consult the paper and README for the author role, AI assistance, and verification scope."
 type: software
 title: "Separated Euclidean distances with diameter below 0.74n^2 in a fixed dimension"
+version: "v1.0.0"
+date-released: "2026-10-12"
+doi: "10.5281/zenodo.23329194"
+url: "https://zenodo.org/records/23329194"
 authors:
   - family-names: "Tripodo"
     given-names: "John"
 preferred-citation:
-  type: unpublished
+  type: generic
+  status: preprint
   title: "Separated Euclidean distances with diameter below 0.74n^2 in a fixed dimension"
   authors:
     - family-names: "Tripodo"
       given-names: "John"
   notes: "Manuscript dated 12 October 2026; no journal acceptance or arXiv deposit is asserted. See the manuscript for AI assistance and outstanding independent-review limitations."
+  year: 2026
+  date-published: "2026-10-12"
+  version: "v1.0.0"
+  doi: "10.5281/zenodo.23329194"
+  url: "https://zenodo.org/records/23329194"
+  publisher:
+    name: "Zenodo"
+  license-url: "https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/1e73a12ff1076dd11affadbf619ddbbef587133e/LICENSE-PAPER"
 keywords:
   - "Erdős Problem 670"
   - "separated Euclidean distances"
