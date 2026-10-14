@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "date_utc": "2026-10-14",
+  "title": "Orthogonal circles and a fixed-dimensional separated-distance counterexample",
+  "author": "John Tripodo",
+  "manuscript_date": "14 October 2026",
+  "theorem_scope": "For every integer n >= 36354, a distance-separated n-point set in R^81794 with diameter < (147/200)n^2. The accompanying Lean theorem additionally states injectivity and minimum distinct-point distance >= 1.",
+  "source_sha256": "1061fd4ecf720a36612291eff14f56c0dce37e4dd4b46afd3625c73a2710d6f0",
+  "source_bytes": 74887,
+  "pdf_sha256": "25b802230e7fd49a478c589132726bcf743322a0126018e7c3e63dc89b509843",
+  "pdf_bytes": 602279,
+  "source_zip_sha256": "6c1e60bf484bafc708d20924b0543f25ff7848fc39b893825811891a32b7d6b7",
+  "source_zip_inventory": [
+    "orthogonal_circles.tex"
+  ],
+  "lean_proof_commit": "f1604c368efce996a9af4d46f581e676e49054f5",
+  "lean_theorem_git_blob": "5f07d2dc9ca59fe8a51f422b0796411bfb8163c7",
+  "build": {
+    "engine": "pdfLaTeX 1.40.26 (TeX Live 2025/dev/Debian)",
+    "source_date_epoch": 1791936000,
+    "command": "SOURCE_DATE_EPOCH=1791936000 pdflatex -interaction=nonstopmode -halt-on-error -output-directory=tmp/pdfs source/orthogonal_circles.tex",
+    "final_passes": 3,
+    "final_three_pdfs_byte_identical": true,
+    "pages": 17,
+    "all_pages_poppler_rendered": true,
+    "all_pages_contact_sheet_reviewed": true,
+    "individual_pages_inspected": [
+      1,
+      2,
+      9,
+      14,
+      17
+    ],
+    "undefined_references_or_citations": false,
+    "missing_glyphs": false,
+    "overfull_boxes": false,
+    "underfull_bibliography_boxes": 1
+  },
+  "source_checks": {
+    "unchanged_finite_arithmetic_normal_and_optimized": "PASS",
+    "exact_allowed_presentation_diff_normal_and_optimized": "PASS",
+    "negative_source_controls": 3,
+    "existing_labels_with_unchanged_numbers": 78,
+    "five_reference_type_annotations_corrected": true,
+    "exact_acknowledgment_once": true,
+    "no_private_urls_or_correspondence_in_source_zip": true,
+    "pdf_privacy_check": "PASS"
+  },
+  "limits": [
+    "No fresh Lean replay performed for this paper-only revision; existing scoped evidence applies to the exact unchanged proof inputs.",
+    "No independent specialist proof or priority review asserted.",
+    "This receipt is a paper/source-package build and inspection record, not proof of journal submission or acceptance."
+  ]
+}

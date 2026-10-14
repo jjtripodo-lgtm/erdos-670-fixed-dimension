@@ -1,13 +1,18 @@
-Copyright (c) 2026 John Tripodo. All rights reserved.
+Copyright (c) 2026 John Tripodo.
 
-The manuscript source and compiled manuscript in this repository are made
-available for reading, quotation, citation, scholarly criticism, and
-mathematical review. No broader license to republish, redistribute modified
-versions, or create derivative editions of the manuscript is granted by this
-file.
+The 14 October 2026 finite-result version of "Orthogonal circles and a
+fixed-dimensional separated-distance counterexample", consisting of
+paper/fixed_dimension_670.tex, paper/fixed_dimension_670.pdf, and the
+source-only archive paper/fixed_dimension_670_source.zip in this revision, is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
 
-The Lean source code and repository automation are separately licensed under
-the MIT License.
+License deed: https://creativecommons.org/licenses/by/4.0/
+Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
-A later arXiv deposit or journal publication may be distributed under a
-different license applicable to that specific version.
+This grant applies to this revised finite manuscript. It does not change
+the separate terms of the archived v1.0.0 manuscript, which remains available
+with its original LICENSE-PAPER at:
+https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/LICENSE-PAPER
+
+Code and formalization are separately licensed under MIT in LICENSE.
+Third-party dependencies retain their own licenses.
