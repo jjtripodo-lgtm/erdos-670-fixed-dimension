@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "receipt_utc": "2026-10-13T20:11:23.408503+00:00",
+  "lean_input_file_count": 70,
+  "lean_input_map_sha256": "c025a9ccf45b4710dc5eb853c675e2de2a5966c784b46cecb19fda126ac7aa3b",
+  "local_module_count": 66,
+  "initial_local_project_object_count": 0,
+  "fresh_local_modules_built": 66,
+  "lake_build": {
+    "relative_workdir": "lean/",
+    "command": "lake --no-cache build",
+    "trust_zero_for_local_modules": true,
+    "job_count": 3502,
+    "exit_code": 0
+  },
+  "axiom_audit": {
+    "relative_workdir": "lean/",
+    "command": "lake env lean --trust=0 AxiomAudit.lean",
+    "exit_code": 0
+  },
+  "final_endpoint_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_revisions_verified": 9,
+  "upstream_dependency_cache_reused": true,
+  "same_cloud_computer": true,
+  "clean_upstream_rebuild": "NOT_RUN",
+  "second_machine_replay": "NOT_RUN",
+  "independent_specialist_review": "NOT_PERFORMED",
+  "warning_count": 64,
+  "paper_pdf_build_covered": false,
+  "record_type": "Sanitized summary of a recorded source-bound build; original raw runtime logs are not distributed",
+  "source_manifest": "SOURCE_MANIFEST.json"
+}

@@ -1,0 +1,4 @@
+import Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5FixedDimension670
+
+#check Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670
+#print axioms Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670
