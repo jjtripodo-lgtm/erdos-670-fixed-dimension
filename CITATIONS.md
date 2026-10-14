@@ -1,4 +1,6 @@
-# Citations and exact access scope
+# Citations and dated source-access scope
+
+This is the retained source-access ledger from the initial fixed-dimension manuscript. The current paper's bibliography controls its current references; sources absent from this ledger carry no implied access claim here.
 
 Review date: 12 October 2026. Access descriptions concern the preserved review record and the final literature pass. They do not certify complete priority coverage. Original publisher and institutional PDFs are linked, not redistributed here.
 

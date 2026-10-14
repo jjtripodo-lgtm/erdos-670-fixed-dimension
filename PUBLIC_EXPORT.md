@@ -1,7 +1,32 @@
 # Public package provenance
 
-This repository contains the manuscript, the 54-module Lean closure of the final theorem, and its verification material. Its initial public commit has no private Git ancestry. `CANDIDATE_SHA256.json` inventories the exact selected files; `python3 verify_candidate.py` checks their hashes and byte counts.
+The current package contains the finite-result manuscript, its complete
+66-module local Lean proof closure, locked external dependencies, exact
+source inventories, reproducibility checks, and scoped validation summaries.
 
-`verification/fixed670/SOURCE_MANIFEST.json` records the development source commit, Git blob IDs, and SHA-256 hashes. It and one verbatim Lean source comment retain an owning-repository identifier for provenance. All source modules, locks, and scripts needed for the included checks and replay are present here; access to that development repository is not required. The macOS and Linux receipts record dependency checkout identities; neither authenticates source-to-binary correspondence for upstream compiled caches.
+The immutable finite proof source is
+[commit f1604c368efce996a9af4d46f581e676e49054f5](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean).
+Every one of its 70 Lean input files matches the source-bound recorded build
+input map
+`c025a9ccf45b4710dc5eb853c675e2de2a5966c784b46cecb19fda126ac7aa3b`.
+The [module inventory](verification/finite670/SOURCE_MANIFEST.json) records
+every source hash, Git blob, import, toolchain and dependency pin.
+Historical inert provenance comments are retained in the exact source bytes.
 
-The [MIT license](LICENSE) governs code and formalization. The manuscript source and PDF carry the [separate reserved-rights terms](LICENSE-PAPER).
+`SOURCE_MANIFEST.json` at the repository root inventories the complete
+current package. `python3 verify_release.py` checks its SHA-256 hashes and
+byte counts; the finite source verifier separately checks the exact import
+closure and build-summary consistency. No private repository, runtime path,
+external receipt, or credential is needed to run these checks.
+
+The build summary discloses cached upstream dependencies and one-machine
+scope. It is not an independently authenticated execution certificate.
+The paper's three byte-identical final build passes in one directory and
+visual checks are recorded separately; they are
+not Lean replay or independent mathematical review.
+
+The previous complete package remains available from its immutable
+[version-history links](VERSION_HISTORY.md). No existing tag or DOI record
+is replaced. The current manuscript's [CC BY 4.0 grant](LICENSE-PAPER)
+applies only to this revised finite version; software remains
+[MIT licensed](LICENSE).

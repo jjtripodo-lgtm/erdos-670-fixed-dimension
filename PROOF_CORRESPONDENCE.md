@@ -1,19 +1,36 @@
 # Paper-to-Lean proof correspondence
 
-The current manuscript source is `paper/fixed_dimension_670.tex` (SHA-256
-`d1740d28939baee4a8b3f8fdac255aa5f897ca1d37f7467731bb2945e893b8c0`).
-All 54 Lean modules in the final theorem's import closure are included from source
-commit `35c67a69e009c9ca27267077608864987b7e2851`.
+This correspondence concerns the finite result in
+[the current manuscript](paper/fixed_dimension_670.tex) and the exact
+[66-module proof source](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean).
+The source inventory is [here](verification/finite670/SOURCE_MANIFEST.json).
 
-| Paper step | Exact formal relationship |
+| Paper step | Formal source |
 | --- | --- |
-| Macro Gram reserve, Lemma 2: direct `|N[x]| ≤ 2√(S₀S₂)Q[x] ≤ (√754/64)Q[x] ≤ Q[x]/2`, strict in the middle product step only for `x≠0` | `ColexReserveDirectCS.lean` proves the actual-source direct bound and strict nonzero case. `IncidenceBridge.flattened_colex_two_reserves` calls `colex_incrementGram_ge_half_tridiagonal_direct`, so this route feeds the final theorem. `ColexReserve.lean` remains imported for other reserve lemmas. |
-| Whole B matrix and completion, Lemmas 3–4: `Z_B=−(64/9)Π+9k²Ξ`, `∥B∥≤36mk²/K`, then one-third coefficient budgets | `SourceBQuadraticCoefficients_source_budget` gives the actual two-diagonal whole-family bound. `SourceQuadraticMatrix.source_actual_operator_completion_universal_B_matrix` constructs the same actual macro points, coefficient vectors and global residual using that budget. Both relevant calls in `SourceActualCrossMetric.lean` use this theorem, so the route feeds the final theorem. |
-| All local and cross edges, finite diameter and all-n embedding | `SourceActualCrossMetric`, `SourceActualSpectrum`, `SourceActualSeparation`, `SourceActualDiameter`, `SourceAllNEmbedding`, and `SourceFixedDimension670` carry the construction to every `n≥68000` in fixed dimension `458999`. |
+| Colex macro distances and positive-semidefinite reserve | `ColexPositivity`, `ColexReserveDirectCS`, `IncidenceBridge`, and the inherited finite Hardy/operator estimates |
+| Whole-matrix completion and mutually orthogonal circle geometry | `Pass5CircleGeometry`, `Pass5CircleMacro`, `Pass5CircleConstruction` |
+| Concrete finite parameters and scalar bounds | `Pass5Parameters`, `Pass5GeometryParameters`, `Pass5SpectrumParameters`, `Pass5CrossScalar` |
+| Local ruler and within-cluster edge separation | `Pass5Ruler`, `Pass5Local`, `Pass5LocalEdges` |
+| Cross-cluster separation and actual Euclidean construction | `Pass5CrossSeparation`, `Pass5ActualCrossSeparation`, `Pass5ActualConfiguration`, `Pass5FiniteAssembly` |
+| Extension to every n ≥ 36354 in one fixed dimension | `Pass5Padding`, `Pass5FixedDimension670` |
 
-The macOS and independent Linux replays each built the 54-module closure from
-zero project `.olean` files and audited six declarations at `--trust=0`. The
-Linux run additionally passed a fresh transitive kernel check. The
-[Lean verification record](verification/fixed670/REPLAY_STATUS.md) gives their
-exact scope. This table maps the paper to the checked source; independent
-mathematical review of the exposition remains separate.
+All listed modules live under
+`lean/Erdos488/Geometry/SeparatedDistances/`, with the fixed-dimension
+modules in its `FixedDimension/` subdirectory. The historical directory name
+`Erdos488` is a source identifier; the endpoint here concerns Problem 670.
+
+The endpoint
+`Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670`
+has only the natural-number threshold hypothesis `36354 ≤ n`. It returns
+`P : Fin n → EuclideanSpace ℝ (Fin 81794)`, injectivity, unit minimum
+distance, `SeparatedConfiguration P`, a strict bound on every pair distance,
+and `Metric.diam (Set.range P) < (147/200) * n^2`.
+The separation predicate in `Defs.lean` compares genuinely distinct
+unordered non-diagonal edges.
+
+The [source-bound build summary](verification/finite670/LEAN_BUILD.json)
+covers all 66 local modules and the final trust-zero axiom audit. It uses
+cached upstream imports on one cloud computer; it does not transfer the
+earlier version's two-machine or independent-kernel results to this theorem.
+The [finite scalar audit](verification/finite670/validate_finite.py) is
+supplementary arithmetic, not a replacement for the geometric proof.

@@ -1,32 +1,35 @@
-# Current manuscript validation — 12 October 2026
+# Current manuscript validation
 
-This record covers the paired TeX and PDF after an appendix prose update that
-distinguishes the original macOS source replay from the completed independent
-Linux replay and fresh Lean kernel check. The prior [editorial validation](EDITORIAL_VALIDATION_20261012.md)
-and [original referee-revised validation](VALIDATION.md) remain unchanged as
-historical receipts; neither certifies the current PDF. The theorem statement,
-mathematical proof text, calculations, and Lean source files were not edited.
+The 14 October 2026 finite-result manuscript is
+`paper/fixed_dimension_670.tex`, with matching PDF and a source-only ZIP.
+All three files are included and their hashes appear in
+[PAPER_VALIDATION.json](PAPER_VALIDATION.json) and the root package manifest.
 
-| Current artifact | SHA-256 |
-| --- | --- |
-| `paper/fixed_dimension_670.tex` | `d1740d28939baee4a8b3f8fdac255aa5f897ca1d37f7467731bb2945e893b8c0` |
-| `paper/fixed_dimension_670.pdf` | `ac7a85b0301e334410006ae3d14598350700f96bbd03fabe4ca11e1f8eaf44ce` |
-| [Arithmetic and reference checks](verification-wording-20261012/arithmetic_and_references.json) | `35028eaf59484f3d370d37430fd7457beae552b77e321eb82ddb50ce9718529a` |
-| [Final TeX log](verification-wording-20261012/tectonic-final.log) | `aeb5662ff519916d9814a332d8976d6507b9444cdbf04467e148dee3fdeb7b0d` |
+- TeX SHA-256: `1061fd4ecf720a36612291eff14f56c0dce37e4dd4b46afd3625c73a2710d6f0`
+- PDF SHA-256: `25b802230e7fd49a478c589132726bcf743322a0126018e7c3e63dc89b509843`
+- Source ZIP SHA-256: `6c1e60bf484bafc708d20924b0543f25ff7848fc39b893825811891a32b7d6b7`
 
-Tectonic 0.17.0 built the revised TeX twice in separate clean output directories
-with `SOURCE_DATE_EPOCH=1791763200`, `--only-cached`, and `--keep-logs`. Both
-processes exited zero and produced byte-identical 15-page PDFs and TeX logs.
-The [first](verification-wording-20261012/tectonic-a.stdout.log) and
-[second](verification-wording-20261012/tectonic-b.stdout.log) build outputs,
-their corresponding stderr logs, and the final TeX log are included. The log
-has no TeX error, unresolved reference, missing character, or overfull box.
-Underfull spacing warnings remain. Pages 13 and 14, which contain the changed
-appendix prose, were rendered and visually inspected without clipping.
+The final three fixed-epoch pdfLaTeX passes produced byte-identical 17-page
+PDFs. All pages were rendered and reviewed in a contact sheet, and pages
+1, 2, 9, 14, and 17 were inspected individually. There were no undefined
+references or citations, missing glyphs, or overfull boxes. One harmless
+underfull bibliography box remains.
 
-The unchanged `check_manuscript.py` passed all 34 supplementary exact
-arithmetic, source-structure, label, reference, and citation checks on the
-current TeX. The [Lean verification record](../fixed670/REPLAY_STATUS.md)
-documents the macOS and Linux builds, axiom audits, fresh checker result, and
-upstream compiled-cache boundary. This PDF rebuild adds no new Lean execution,
-independent mathematical review, or priority review.
+The source comparison preserves the finite mathematics. Five reference-type
+annotations correct Lemma/Remark/Proposition display while preserving all 78
+existing label numbers. The exact approved acknowledgment appears once:
+
+> The author thanks Boon Suan Ho for helpful comments on an earlier draft of this manuscript.
+
+The paper links its finite Lean endpoint to immutable public proof commit
+`f1604c368efce996a9af4d46f581e676e49054f5`; its separate `1e73a12` citation
+identifies only the earlier manuscript. Exact-rational and source checks
+passed in normal and optimized Python modes, with three negative controls.
+The source ZIP contains exactly `orthogonal_circles.tex`, byte-identical to
+the published TeX despite the different archive filename.
+
+The build receipt retains the original relative build filenames for accurate
+reproduction. Published files have been renamed without changing their bytes.
+This paper-only validation is not a new Lean replay, independent specialist
+review, journal submission, or acceptance. The unchanged proof inputs have
+their own [scoped build record](../finite670/README.md).

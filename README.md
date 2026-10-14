@@ -1,74 +1,82 @@
-# Fixed-dimension Erdős 670: manuscript and Lean formalization
+# Fixed-dimensional separated Euclidean distances
 
-**Research manuscript prepared 12 October 2026.** This repository contains the manuscript and the complete 54-module Lean source closure at source commit `35c67a69e009c9ca27267077608864987b7e2851`. The included sources suffice for the checks and replay described below.
+## Current finite result
 
-Cite the archived manuscript and Lean formalization: version v1.0.0, [DOI: 10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194).
+For every integer **n ≥ 36354**, there is an injectively indexed configuration
+of n points in the single fixed Euclidean space **R^81794**. Distinct points
+are at least one unit apart; lengths of distinct unordered non-diagonal edges
+differ by at least one; and both every pair distance and the actual set
+diameter are strictly below **(147/200)n² = 0.735n²**.
 
-**[Download paper (PDF)](https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/main/paper/fixed_dimension_670.pdf)** — direct download if GitHub's PDF preview does not render.
+**[Read the paper](paper/fixed_dimension_670.pdf)** ·
+[TeX source](paper/fixed_dimension_670.tex) ·
+[exact Lean theorem](lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5FixedDimension670.lean)
 
-The final unconditional theorem, `Erdos488.Geometry.SeparatedDistances.FixedDimension.fixed_dimension_erdos_670`, gives for every `n ≥ 68000` an injectively indexed set of `n` points in `EuclideanSpace Real (Fin 458999)`. Every nonzero pair distance is at least one, distances from distinct unordered non-diagonal pairs differ by at least one, and diameter is strictly below `(37/50)n²`. The historical `Erdos488` directory name is only a source identifier; this is the Problem 670 result.
+The manuscript is *Orthogonal circles and a fixed-dimensional
+separated-distance counterexample*, by John Tripodo. It gives the finite
+construction and proof, with exact sufficient constants. No least-dimension,
+optimal-coefficient, or arbitrary-parameter extension is claimed.
 
-**Lean verification passed on two machines.** A recorded macOS run and an independent Linux run each rebuilt all 54 project modules from source with zero project `.olean` files and completed the 56-command replay, including six `--trust=0` axiom audits. The final theorem reported only `propext`, `Classical.choice`, and `Quot.sound`. The Linux run also passed a fresh kernel replay of the compiled transitive imports with the pinned Lean checker. The [verification record](verification/fixed670/REPLAY_STATUS.md) gives the exact receipts and upstream binary-cache scope.
+## Proof and verification
 
-| Read | Location |
-| --- | --- |
-| Manuscript | [PDF](https://raw.githubusercontent.com/jjtripodo-lgtm/erdos-670-fixed-dimension/main/paper/fixed_dimension_670.pdf), [TeX](paper/fixed_dimension_670.tex), [current validation](verification/manuscript670/CURRENT_VALIDATION.md) |
-| Final theorem and proof path | [Lean declaration](lean-fixed670/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFixedDimension670.lean), [paper-to-source correspondence](PROOF_CORRESPONDENCE.md) |
-| Source identity | [pin](verification/fixed670/SOURCE_PIN.md), [54-module manifest](verification/fixed670/SOURCE_MANIFEST.json) |
-| Lean verification | [status and scope](verification/fixed670/REPLAY_STATUS.md), [macOS receipt](verification/fixed670/execution/RECEIPT.json), [independent Linux evidence](verification/fixed670/independent-linux-20261012/README.md) |
-| Prior work and access limits | [prior-art note](PRIOR_ART.md), [citation/access ledger](CITATIONS.md), [citation metadata](CITATION.cff) |
+The complete local Lean source closure is included in [lean/](lean/):
+66 modules, with all nine external dependency revisions locked. The exact
+declaration is
+`Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670`.
 
-## Check the included evidence
+A [recorded source-bound build](verification/finite670/LEAN_BUILD.json)
+compiled all 66 local modules from zero local project objects at trust level
+zero and completed the endpoint axiom audit. Its only endpoint axioms were
+`propext`, `Classical.choice`, and `Quot.sound`. The 3,502-job build reused
+upstream dependency cache on one cloud computer. A clean upstream rebuild,
+second-machine replay, and independent specialist review have not been
+performed for this finite version. The distributed record is a sanitized
+summary, with the exact checked input hashes; raw runtime logs are not bundled.
 
-From the repository root, with Python 3 installed, run:
+- [Paper-to-Lean correspondence](PROOF_CORRESPONDENCE.md)
+- [Source inventory and reproduction instructions](verification/finite670/README.md)
+- [Current paper validation](verification/manuscript670/CURRENT_VALIDATION.md)
+- [Public package provenance](PUBLIC_EXPORT.md)
 
-```sh
-python3 verify_candidate.py
-python3 lean-fixed670/verify_sources.py
-python3 verification/fixed670/verify_execution.py
-python3 verification/fixed670/negative_tests.py
-python3 verification/fixed670/independent-linux-20261012/validate_bundle.py
-python3 verification/manuscript670/check_manuscript.py > /tmp/fixed670-manuscript-check.json
-```
-
-These commands check source identities, dependency locks, both recorded Lean runs and their logs, deliberately falsified receipt cases, and supplementary manuscript arithmetic and references. They read the included evidence; to run Lean yourself, follow the build steps below.
-
-## Reproduce the Lean build
-
-Install [elan, the official Lean toolchain manager](https://github.com/leanprover/elan) for your operating system. It selects the exact Lean version in `lean-fixed670/lean-toolchain` (`leanprover/lean4:v4.31.0-rc1`). Dependency fetching was exercised on the independent Linux machine; the earlier macOS run used existing checkouts:
-
-```sh
-cd lean-fixed670
-elan toolchain install leanprover/lean4:v4.31.0-rc1
-lake --version
-cd ..
-python3 lean-fixed670/prepare_dependencies.py --fetch
-python3 lean-fixed670/prepare_dependencies.py
-python3 lean-fixed670/verify_sources.py
-```
-
-`prepare_dependencies.py --fetch` clones only the nine public Lean dependencies in the committed lockfile, checks out their exact Git commits, and refuses to alter an existing checkout. The read-only form checks all nine HEADs and nonignored dirty states. Do **not** run `lake update`: it can upgrade the lock. Verify that the source checker still passes before building.
-
-For an upstream binary-cache route, run `cd lean-fixed670 && lake exe cache get && cd ..` after fetching dependencies. This asks Mathlib's cache tool for prebuilt imports when available. To attempt an upstream source build, start with dependency checkouts containing zero compiled upstream `.olean` files and omit the cache command; this can consume several gigabytes and many hours. Both recorded runs used upstream compiled imports, as detailed in the [verification record](verification/fixed670/REPLAY_STATUS.md). Network access is needed for public sources unless checkouts and artifacts are already present.
-
-In a **fresh extraction with zero project `.olean` files**, run the source-bound replay. Its output path must not exist:
+From the repository root:
 
 ```sh
-replay_parent="$(mktemp -d)"
-python3 lean-fixed670/replay.py --output "$replay_parent/run"
+python3 verify_release.py
+python3 verification/finite670/verify_sources.py
+python3 verification/finite670/validate_finite.py
 ```
 
-The replay checks the source and lock, the exact nine checkout HEADs, source cleanliness and the zero-project-output condition before its 56 fixed commands. It accepts success only after the six trust-zero axiom prints, exact 54 expected project `.olean` paths, and unchanged source and checkout identities. The [macOS](verification/fixed670/execution/RECEIPT.json) and [Linux](verification/fixed670/independent-linux-20261012/replay/RECEIPT.json) receipts record the two runs.
-
-After the project build, run the pinned toolchain's checker from `lean-fixed670` to replay the compiled import closure through Lean's kernel:
+These are offline identity, closure, recorded-scope, and exact-rational checks.
+To compile the proof, use the pinned toolchain and dependency lock:
 
 ```sh
-cd lean-fixed670
-lake env leanchecker --fresh Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFixedDimension670
+cd lean
+lake --no-cache build
+lake env lean --trust=0 AxiomAudit.lean
 ```
 
-The independent Linux run completed this command. Its [checker receipt](verification/fixed670/independent-linux-20261012/FRESH_KERNEL_REPLAY_RECEIPT.json) records the exact command and terminal result.
+The [reproduction guide](verification/finite670/README.md) explains clean local
+builds and upstream-cache scope. The public proof source is immutably pinned at
+[commit f1604c368efce996a9af4d46f581e676e49054f5](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean).
 
-## Public release and rights
+## Attribution, review, and rights
 
-The code and formalization carry the [MIT license](LICENSE); the manuscript source and PDF carry the [separate reserved-rights terms](LICENSE-PAPER). This AI-assisted research manuscript has not undergone independent mathematical or priority review, and no journal acceptance is claimed. The [Lean build record](verification/fixed670/REPLAY_STATUS.md) states its technical scope.
+The author thanks Boon Suan Ho for helpful comments on an earlier draft of this manuscript.
+
+This is AI-assisted research. See the manuscript's disclosure for the author's
+role and the limits of human review; the formal checks do not establish
+independent mathematical or priority review, journal acceptance, or platform
+endorsement. [Prior work](PRIOR_ART.md) and the
+[dated source-access ledger](CITATIONS.md) distinguish the fixed-dimensional
+claim from Ho's growing-dimensional result and identify classical ingredients.
+
+The current finite manuscript is licensed under
+[CC BY 4.0](LICENSE-PAPER). Code and formalization remain [MIT licensed](LICENSE);
+dependencies retain their own licenses. Use [CITATION.cff](CITATION.cff) for
+current-version citation metadata.
+
+## Version history
+
+[Version history](VERSION_HISTORY.md) links the immutable earlier v1.0.0
+manuscript, proof, verification records, and DOI archive. Their original
+claims, evidence, and manuscript license remain version-specific.

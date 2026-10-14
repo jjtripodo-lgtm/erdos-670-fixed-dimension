@@ -1,0 +1,371 @@
+{
+  "files": {
+    ".gitignore": {
+      "bytes": 62,
+      "sha256": "64c57aea634f21f164a2795e0c3a1b2adef59ceeb0373fff67d4affd17708741"
+    },
+    "CITATION.cff": {
+      "bytes": 1324,
+      "sha256": "c803ca66c62ede3e64d6c08a241300d10694d2c176d817f844c73ea8a33c2dab"
+    },
+    "CITATIONS.md": {
+      "bytes": 4797,
+      "sha256": "b22b47d0e07c511b1064d26d66783c0244c566c26f1e38fba43c9570ced9c364"
+    },
+    "LICENSE": {
+      "bytes": 1473,
+      "sha256": "ef508826545bc557875cdd544eccc3929fb01e1a83d322feedb9bc071b472e6a"
+    },
+    "LICENSE-PAPER": {
+      "bytes": 969,
+      "sha256": "c67bf7a010939e7f70a90f936b2c0ccf486340d78dcafb4ea28199a759656125"
+    },
+    "PRIOR_ART.md": {
+      "bytes": 4512,
+      "sha256": "9889b4a81b96e10b002bceb7b8d524b7012ceb61cd009ca3a20e5f04dc6a3336"
+    },
+    "PROOF_CORRESPONDENCE.md": {
+      "bytes": 2411,
+      "sha256": "d1b27e670b1e4affc9d40ece23798520c3eda469933946151236b04e2ffb00d3"
+    },
+    "PUBLIC_EXPORT.md": {
+      "bytes": 1806,
+      "sha256": "05b88ecb1d12618dc7d06ae68b6f597b5b625195e9eeb45d74929dbdf1f2d57e"
+    },
+    "README.md": {
+      "bytes": 3832,
+      "sha256": "004e403b43f365417fab7111270992e1b91ec2777ddbd9efecdcfd77991a0db7"
+    },
+    "VERSION_HISTORY.md": {
+      "bytes": 2215,
+      "sha256": "cac5419ab0affeaf8f07b94d5c1b2eca4d0a136e057bdaaf4f6b4a5511fdd04c"
+    },
+    "lean/AxiomAudit.lean": {
+      "bytes": 272,
+      "sha256": "d64567e5613fee9e0ccf014163b1b2fd30bda0397b699191ef5281252e8bf998"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/ColexBase.lean": {
+      "bytes": 1248,
+      "sha256": "f4ef600ffb08f6357b8d0bf74428286ce2617a32d7e34353905dbfea36c61db4"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean": {
+      "bytes": 50492,
+      "sha256": "da4ea3133ef045bd76c06a2f956a67130889d2e2a532be23dbe02fb8aaf9a1b5"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/Defs.lean": {
+      "bytes": 2528,
+      "sha256": "9d696a0ba758b3ae236564116bf66b7462dcb4aac62c81cc000b9b8eb31ebaf3"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/EuclideanRealization.lean": {
+      "bytes": 7385,
+      "sha256": "d63bd7300d026ff27d52c67cfb471920b3edc316d31ac1d548d7e29266644314"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean": {
+      "bytes": 1298,
+      "sha256": "6ab22c6b16e3b4579b296c467c8faed2ddf200476d33a1c461b67b6267e98c71"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean": {
+      "bytes": 4219,
+      "sha256": "c84410052ab9f41e7b76de74d847d95739fef9256992266329937b9effb131ed"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.lean": {
+      "bytes": 10757,
+      "sha256": "62c7a55590ffffaf56632eab74bc544fea0125be8e5f07ba31a0367c255ad066"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.lean": {
+      "bytes": 6725,
+      "sha256": "e8bd7220e2962f0f9bc557b5dde7e35c7d5bdca4c147f1fa6ef14b692cb3b1d6"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean": {
+      "bytes": 4127,
+      "sha256": "f9388d8b9c89b89f34884bfb191e87caf969a96d3c1a813039556ae48a577a75"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean": {
+      "bytes": 2263,
+      "sha256": "85bd0cc75f49257c34843e31f6c4e4a5f4efd9df6f0d7ff8af39edbc0e260cb7"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean": {
+      "bytes": 7120,
+      "sha256": "98e65661665e8af0ec403e432957c395cca552ba2de057a5b7e3cff8995e96ac"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean": {
+      "bytes": 3223,
+      "sha256": "a1ac4e3af6c7e52b85bbc287ad1193b4d964e74236dae9fa0b50bd9e24060bab"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean": {
+      "bytes": 6885,
+      "sha256": "bf5d75e740bb0a5de06c8bd3c08b597b98fe09cebd8195a23bb2760084e48d2e"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.lean": {
+      "bytes": 4614,
+      "sha256": "472f31e05f95d14f809f746eda497a68c3f6cfad0f055cd2d345872a75c1474b"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.lean": {
+      "bytes": 1815,
+      "sha256": "6d8a8f8ca84755abf95f19bbdcce3eba4081c35ec00e2ca045eaf879d867cd7e"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.lean": {
+      "bytes": 5337,
+      "sha256": "d78635a29078698e85e4c8fdd247fe57553a2179a2c348aaeb9719b0ec3bc748"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.lean": {
+      "bytes": 10200,
+      "sha256": "765e4363c9a202b4e0f22b41bcb7f1d4b5f0bdd991eed661293e3f3c3002d836"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean": {
+      "bytes": 2969,
+      "sha256": "0c7d0187ab8c8e6265d37d349e6b7418ef069ebe70d95fc6455eb15d8df7131f"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.lean": {
+      "bytes": 2590,
+      "sha256": "1c09496199eb2ab1d25b80bf9f515041f5332cdeeaef5dbb7025a91152420a0a"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean": {
+      "bytes": 6096,
+      "sha256": "c01a5a7687cd79c1427d69325313a2ce7f7fb5c64819adc4763c08e88e6d1f5f"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean": {
+      "bytes": 11712,
+      "sha256": "0b1c811368a409e84d7f9dad718450fbf17a65120ce1782cd1ea52d627c547a3"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean": {
+      "bytes": 5169,
+      "sha256": "d0a107d3211626b35cb1c431f01b4fc7ec3fd3547afb6dc38a52bb1f466f5973"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean": {
+      "bytes": 6228,
+      "sha256": "a37fc6e7666681f9dfd57a8f476111c5e3cee0fc5664acf46186a9dbd829df76"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5ActualConfiguration.lean": {
+      "bytes": 3034,
+      "sha256": "2b09ff9872557baae96359f9e971107ae2bf5ae776c9c4a70fa7adbb7b709d69"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5ActualCrossSeparation.lean": {
+      "bytes": 7623,
+      "sha256": "06557b04e9186a56942d7e46bfe6f1dda014997d94d4a649bf3fdc72504e8c79"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleConstruction.lean": {
+      "bytes": 2298,
+      "sha256": "d4eb301e5dc41f9876d086f8ba5b243fd42097d53cd36bda99be774ffd2cd89b"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleGeometry.lean": {
+      "bytes": 12371,
+      "sha256": "35f620a4954ecc15412ae989e306cd16581b48aaf7d630c540046cc58257b68b"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleMacro.lean": {
+      "bytes": 11583,
+      "sha256": "93694b5fcd247569d8afb848513387766ad34c01e5f3f372f5a362fdc9f5392e"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean": {
+      "bytes": 5394,
+      "sha256": "2c48eec2badbddf31b46e77f5d0a632786c09924966a4081cbe3f16db1347dbb"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossSeparation.lean": {
+      "bytes": 7691,
+      "sha256": "7d8f01f662c976c253ba9c0ed499bd7f812ba8adfe9052c6fe3d2c7db4dce5ab"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5FiniteAssembly.lean": {
+      "bytes": 5921,
+      "sha256": "1a11336a3c53ee3027404fb2b417a6b4f60b5803f81c0c2701ad7bea370477ce"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5FixedDimension670.lean": {
+      "bytes": 2679,
+      "sha256": "5748fbad5ea04373e6166d669f1ab4e8557bd21cf5c04d94d1fff298b1339a8d"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean": {
+      "bytes": 3113,
+      "sha256": "57aa561cfe692ef0cde6fefe90be279aec91e1684a080504c487398822b45e5c"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean": {
+      "bytes": 9896,
+      "sha256": "4198a991f1e1e6cff64b5ecc577a7b103b89434d95b9c94a2415276b7752c212"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5LocalEdges.lean": {
+      "bytes": 2646,
+      "sha256": "860954615648b1b6800f0b3712d3e61c8c85570d00c2b53c34863394456e02e4"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Padding.lean": {
+      "bytes": 5418,
+      "sha256": "32a45cb05896f9fe960745f0bf055fc4a802996ac12a6a7b87397665fae84bdf"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Parameters.lean": {
+      "bytes": 6546,
+      "sha256": "6906571b225d3828639fabac214c8b89431ccb180952d8deb7adc782ee9ea9a1"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean": {
+      "bytes": 11741,
+      "sha256": "27bda89b0df608414a5a016ee953c72f9a3a08145cc88627dd26c0d586e71f1e"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5SpectrumParameters.lean": {
+      "bytes": 6357,
+      "sha256": "1890c195bdb3957fcfe62693fb3aca3d0e89f59bf56af322479ebe6463f403db"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.lean": {
+      "bytes": 5920,
+      "sha256": "5d7ed3b800e6ce9f39b42896fd6126dea0e239fbd5e0fac24c6bde246cc8307d"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean": {
+      "bytes": 1416,
+      "sha256": "b2cbe478c30ec8b0391b4d02bca358f21633c3c0de7f8274578e2124dc17173c"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean": {
+      "bytes": 6292,
+      "sha256": "90fe75f807ce75a632b8f81ee0a8ae7266a08bc6ce02e78d675bef687d3ad1fb"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean": {
+      "bytes": 4424,
+      "sha256": "92b3a9fce9691a0e00f56e840a75fc7380e380979e88d9337e8231c65d953345"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.lean": {
+      "bytes": 13673,
+      "sha256": "ec85d75bb3a4a0cc23da237211f7ccdebecc52c05d73e547624eea4ffd69744d"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean": {
+      "bytes": 9739,
+      "sha256": "eef1bbd08fad3ab5c88b74ba2e2e25702b4f310a7148444a6bd789a6df1684b3"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean": {
+      "bytes": 4322,
+      "sha256": "c8af0b3d950ae0ea48f7057d23cac9814a5008f24a1a5f200a24864a18701ae4"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean": {
+      "bytes": 7146,
+      "sha256": "dcb41d4152296cb746eec3bd486a98e699d84c65579e1adbf489adc4518effae"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean": {
+      "bytes": 3184,
+      "sha256": "6ba2b52a98f627f24240280f91d062a7866ee31a52c295abbccdf4d613c58980"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean": {
+      "bytes": 3803,
+      "sha256": "d549e36433886c0a53325ca77df65266ef298c155aaafaacb8840ea997a9bf5e"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean": {
+      "bytes": 5430,
+      "sha256": "83ccbc287deed29c4f510373b60a50f7523cb8a5865689f0fcb2b075631cc5e3"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean": {
+      "bytes": 5016,
+      "sha256": "a15e10e7b12b3bfb0de356d0f8539af79512feeb890d156c908f99fcf87e4841"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.lean": {
+      "bytes": 40254,
+      "sha256": "48e2913fe771254f5ba077de57bd35928d09a03ecc658c8a52ce328ea9d7d478"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.lean": {
+      "bytes": 6890,
+      "sha256": "53e88896bd605170c11d14f7a6fea42a761026d2d8076f2e68a09524f7a6626c"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.lean": {
+      "bytes": 897,
+      "sha256": "22569801afcc48f93b02178f3fe81d21efbb61a34b9c32abbc2c8f769aa90bb2"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.lean": {
+      "bytes": 19936,
+      "sha256": "427a7456c12dd2e4fda0dac6313e4e76b1945e3e1621a25756704a5152f8c7bd"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean": {
+      "bytes": 6322,
+      "sha256": "fc5a809c5d893f70f51423c57b6d1c8f9b431f3bb533f276dfed1588c0194c6f"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean": {
+      "bytes": 9198,
+      "sha256": "3d205d64de48c81103f68179657f79112a3d7befb41ceb0a5653b3ef0467ed29"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.lean": {
+      "bytes": 6066,
+      "sha256": "5dafad3ed1210e28eccc756f12a553312e07bd2fa1307502b565ec921636e377"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean": {
+      "bytes": 6050,
+      "sha256": "40570d8bad67aeab4c395e49ceaac063d75c5297c0a2a54721b15bd78a518de0"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean": {
+      "bytes": 5273,
+      "sha256": "c4a5baefade16bf942d30c3a0d5890601ee8a5793082f55d20caaf38ec44c436"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean": {
+      "bytes": 2643,
+      "sha256": "bcafead776d4d54b463da7f94bf0391d38a6443fc2cf25bfade3970ffe35d3b9"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean": {
+      "bytes": 2786,
+      "sha256": "2c14b164bb4a17236fe313608d0fdc8b7fb7a9ad63e8d851d9c845cda646a142"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/GramRealization.lean": {
+      "bytes": 5977,
+      "sha256": "a240a1ab49ccf582ad967a37b950ca6a6ef8e41d8fb4831868377b6eadbeec01"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/Labels.lean": {
+      "bytes": 12571,
+      "sha256": "5bd3ddb10a4e827497db3c9952210cd0c1232054c31c714ae406ea16d391b35f"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/Parameters.lean": {
+      "bytes": 3642,
+      "sha256": "39539a0b75eb74c86b8dafd93e6d40452b85cf9e6df1304c48787b6c1735088b"
+    },
+    "lean/Erdos488/Geometry/SeparatedDistances/PrefixSums.lean": {
+      "bytes": 3345,
+      "sha256": "59679a3d8a59b3a1d2400dd97ae00e01ce86d37d4f1719a937ab99832c002782"
+    },
+    "lean/lake-manifest.json": {
+      "bytes": 3171,
+      "sha256": "b091eb307e6a7fe5a0d4bf3245aaa63d3f2810df242cc55cd017ffd1e06974a3"
+    },
+    "lean/lakefile.toml": {
+      "bytes": 316,
+      "sha256": "7d661aba282d087dbc1f9dbe4907df93bcaa73d60a527a9426e6cd5073dd7a5e"
+    },
+    "lean/lean-toolchain": {
+      "bytes": 28,
+      "sha256": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd"
+    },
+    "paper/fixed_dimension_670.pdf": {
+      "bytes": 602279,
+      "sha256": "25b802230e7fd49a478c589132726bcf743322a0126018e7c3e63dc89b509843"
+    },
+    "paper/fixed_dimension_670.tex": {
+      "bytes": 74887,
+      "sha256": "1061fd4ecf720a36612291eff14f56c0dce37e4dd4b46afd3625c73a2710d6f0"
+    },
+    "paper/fixed_dimension_670_source.zip": {
+      "bytes": 27027,
+      "sha256": "6c1e60bf484bafc708d20924b0543f25ff7848fc39b893825811891a32b7d6b7"
+    },
+    "verification/finite670/LEAN_BUILD.json": {
+      "bytes": 1176,
+      "sha256": "baff9575da25fc6eb24a942e7c5418bd4d488047223dfb73b92f04adb2c9d659"
+    },
+    "verification/finite670/README.md": {
+      "bytes": 2220,
+      "sha256": "2a51351e6da878a3b0a30ce1ffa7894db4169963fec42c845ad478231f5a50b9"
+    },
+    "verification/finite670/SOURCE_MANIFEST.json": {
+      "bytes": 43863,
+      "sha256": "bd7d1e0d7d6e2b6f7bf7bde3460695bec6765328821a24a90fed1681b12230e9"
+    },
+    "verification/finite670/validate_finite.py": {
+      "bytes": 3415,
+      "sha256": "ae77142b44e2b5eecfaa1aa716e0a1218446c8c2958e05596377c24ef0d8fce3"
+    },
+    "verification/finite670/verify_sources.py": {
+      "bytes": 4420,
+      "sha256": "aa980973c418be5681a91a2606e3b1acb4ba1a5d4ed1ed6d4c2a0cc8f1beafb4"
+    },
+    "verification/manuscript670/CURRENT_VALIDATION.md": {
+      "bytes": 1993,
+      "sha256": "a58773246a3e62f05ed624126bfc5a981f9bc5c60da99a0d071d64b641ce35cb"
+    },
+    "verification/manuscript670/PAPER_VALIDATION.json": {
+      "bytes": 2399,
+      "sha256": "c18db5d9ff95fd195a5f8b61c60f9022600c3c5499a774502ee85ba69c7b97d3"
+    },
+    "verify_release.py": {
+      "bytes": 2666,
+      "sha256": "db8f352d7e34ed1685f45dc7b5be04b326a7fd4d1b82ecd339b7cb1a006e8342"
+    }
+  },
+  "finite_proof_commit": "f1604c368efce996a9af4d46f581e676e49054f5",
+  "schema_version": 1,
+  "version": "2026-10-14"
+}

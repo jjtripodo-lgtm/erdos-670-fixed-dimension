@@ -1,0 +1,12 @@
+name = "erdos670_finite_pass5"
+version = "0.1.0"
+defaultTargets = ["Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5FixedDimension670"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "0ed37c9258f123a2c76a2175596f75c2bd50f941"
+
+[[lean_lib]]
+name = "Erdos488"
+moreLeanArgs = ["--trust=0"]
