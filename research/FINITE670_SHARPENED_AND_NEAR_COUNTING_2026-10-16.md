@@ -1,3 +1,5 @@
+> **Subsequent discovery (16 October 2026):** [An improved near-counting family and an optimal exponent within the current five-condition certificate](NEAR_COUNTING_SHARP_DIMENSION_TRADEOFF_2026-10-16.md) sharpen Theorem B below from `1/2+13/(5r^2)` to `1/2+4/(3r^2)` at the same dimension and threshold. The later note also proves that the exponent `5/2` is forced **within this certificate's stated diameter bound**. The new parameters are manuscript-level deductions, not part of the hardcoded Lean endpoint.
+
 # Discovery: 0.656 in the original fixed dimension, and near-counting asymptotics
 
 **16 October 2026 | paper-level corollaries of the existing finite criterion**
