@@ -10,6 +10,8 @@ build uses upstream dependency cache on one cloud computer.
 - [Current paper](paper/fixed_dimension_670.pdf)
 - [Immutable finite proof source](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean)
 - [Current verification scope](verification/finite670/README.md)
+- [Hexagon preprint hexagon:2610.00254v1](https://hexagonmath.org/2610.00254?version=1), deposited 15 October 2026, with the same finite theorem stated above
+- [Supplementary exact conjecture statement adapter](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/ce6a8d86f0da85af80e8f5b3752f7386a134e200/verification/statement_bridge/README.md), using the unchanged finite theorem
 
 This revision does not claim a new DOI deposit or a new registry verification.
 The current manuscript is CC BY 4.0 under [LICENSE-PAPER](LICENSE-PAPER).
