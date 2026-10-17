@@ -1,0 +1,25 @@
+{
+  "transformation": "Only replace the local absolute replay-root byte string with $WORKSPACE; no other changes. The original receipt is not rewritten.",
+  "logs": {
+    "verification/cache.log": {
+      "raw_sha256": "92fb8a0f0948bfbe22b7cf6de75f5334c36ab85883348b4ad5998c5a3887405e",
+      "published_sha256": "92fb8a0f0948bfbe22b7cf6de75f5334c36ab85883348b4ad5998c5a3887405e",
+      "replacement_occurrences": 0
+    },
+    "verification/build.log": {
+      "raw_sha256": "3ccf35f490fdd7d402fc8dde34041928b95c2ba98a1a41b242f441d8bfe64315",
+      "published_sha256": "6bb6f261e86ead951e98a7e967f6c2408b51331d8ad543074453f827ab9e61ab",
+      "replacement_occurrences": 1152
+    },
+    "verification/fresh-kernel.log": {
+      "raw_sha256": "80e38080765dcb05d7d88c40b3267e11df2f317c9a6afff8e71fc8930317e5ab",
+      "published_sha256": "80e38080765dcb05d7d88c40b3267e11df2f317c9a6afff8e71fc8930317e5ab",
+      "replacement_occurrences": 0
+    },
+    "verification/axioms.log": {
+      "raw_sha256": "4918893f3ab87d04c9a0fc365286003573df0644c65ac99074ca991f4dfaf013",
+      "published_sha256": "4918893f3ab87d04c9a0fc365286003573df0644c65ac99074ca991f4dfaf013",
+      "replacement_occurrences": 0
+    }
+  }
+}

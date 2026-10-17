@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-17T09:18:26Z",
+  "notes": "Execution scripts check_sources.py, check_axioms.py, fetch_dependencies.py, run_verification.py are unchanged from the complete prebuild commit 5b2e4de8949c7c9bc7c85841002e0ce02c474784. Bootstrap is an additive reproduction convenience, syntax checked but not used for this original installation. The frozen 72-input Lean manifest is separate.",
+  "sha256": {
+    "scripts/bootstrap.py": "9ffbc4b8338c9997c6900a74391f77d6a48afac7f0e79536f829c23701073f09",
+    "scripts/check_axioms.py": "6640678a47d6d83067797ee333e3351db7a2b99599ebd852118b2d07b52d8f43",
+    "scripts/check_sources.py": "56e27b5e2ecdd256591e021c5e8c785954b388455402b7208f037d9606f320d8",
+    "scripts/fetch_dependencies.py": "b093f8d6a80642e23626379317844a1b3416d03e3f81cdde02ada30142396823",
+    "scripts/run_verification.py": "ba4edc4e8c6863b232b85fc30363939024eed08ad141d7727be4cfcb99f6bac1"
+  }
+}
