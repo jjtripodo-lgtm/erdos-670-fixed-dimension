@@ -1,0 +1,8 @@
+{
+  "verified_utc": "2026-10-17T09:10:50Z",
+  "url": "https://github.com/leanprover/lean4/releases/download/v4.31.0-rc1/lean-4.31.0-rc1-linux.tar.zst",
+  "bytes": 557871462,
+  "sha256": "055f1780f20f9774bbe270d5d4cf7561fb26ee6734c0917ba6cfb867e33cb99e",
+  "installation_layout": "Full official Linux x86_64 distribution; no files omitted",
+  "version": "Lean (version 4.31.0-rc1, x86_64-unknown-linux-gnu, commit fd009949156901e6cf15b6d9bf1122294b8e697a, Release)"
+}

@@ -1,0 +1,16 @@
+name = "erdos670_statement_bridge"
+version = "0.1.0"
+defaultTargets = ["Erdos670Bridge.Bridge"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "0ed37c9258f123a2c76a2175596f75c2bd50f941"
+
+[[lean_lib]]
+name = "Erdos488"
+moreLeanArgs = ["--trust=0"]
+
+[[lean_lib]]
+name = "Erdos670Bridge"
+moreLeanArgs = ["--trust=0"]

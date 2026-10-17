@@ -1,0 +1,47 @@
+{
+  "distribution_commit": "fd009949156901e6cf15b6d9bf1122294b8e697a",
+  "files": {
+    "bin/lean": {
+      "sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "bytes": 9024
+    },
+    "bin/lake": {
+      "sha256": "60330ab6f07dce20f3fa9ebb08e8b984ea9549eac172afeb15d9d2227060e2b3",
+      "bytes": 13840
+    },
+    "bin/leanchecker": {
+      "sha256": "e14365bacbe81e495558ef4c64508e97416e699f6d62900be38c995f39fcb9b8",
+      "bytes": 50704
+    },
+    "lib/lean/libInit_shared.so": {
+      "sha256": "2f96493ac9046f64ec7bcb78102a4c1e7cd9a7042487f246af45eda8a96667f5",
+      "bytes": 6232
+    },
+    "lib/lean/libLake_shared.so": {
+      "sha256": "b980c041adb536fb92bc88f1d9267a88ab9aa2be9a6d5579d341c1bc68d4d5e5",
+      "bytes": 11879440
+    },
+    "lib/lean/libleanshared.so": {
+      "sha256": "28941e6b190dda027a5f53c21a9a2de09a3231bb5ad73ec4bd52594a969ada4b",
+      "bytes": 158116072
+    },
+    "lib/lean/libleanshared_1.so": {
+      "sha256": "2f96493ac9046f64ec7bcb78102a4c1e7cd9a7042487f246af45eda8a96667f5",
+      "bytes": 6232
+    },
+    "lib/lean/libleanshared_2.so": {
+      "sha256": "2f96493ac9046f64ec7bcb78102a4c1e7cd9a7042487f246af45eda8a96667f5",
+      "bytes": 6232
+    },
+    "src/lean/LeanChecker.lean": {
+      "sha256": "eb5dee411837629f09c5c18d63cc833d30335a46048bc586642742e90aa65d5f",
+      "bytes": 4785
+    },
+    "src/lean/Lean/Replay.lean": {
+      "sha256": "3e1ea55d20db328f6d9d5321fa2946ca3011efc9ceb2c25ff19162842809a4a2",
+      "bytes": 7689
+    }
+  },
+  "layout": "Full official distribution, no omissions",
+  "recorded_utc": "2026-10-17T09:23:21Z"
+}

@@ -1,0 +1,8 @@
+import Erdos670Bridge.Bridge
+
+#check Erdos670Bridge.erdos_670_negated
+#print axioms Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670
+#print axioms Erdos670Bridge.hasSeparatedDistances_image
+#print axioms Erdos670Bridge.finite_counterexample
+#print axioms Erdos670Bridge.not_fixedDimensionStatement
+#print axioms Erdos670Bridge.erdos_670_negated

@@ -59,6 +59,26 @@ The [reproduction guide](verification/finite670/README.md) explains clean local
 builds and upstream-cache scope. The public proof source is immutably pinned at
 [commit f1604c368efce996a9af4d46f581e676e49054f5](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean).
 
+## Exact conjecture statement adapter
+
+The supplementary [statement bridge and reproducibility package](verification/statement_bridge/README.md)
+proves the negation of the exact fixed-dimension proposition extracted from
+Formal Conjectures at its pinned revision. It uses the unchanged finite theorem
+above, with a finite-set translation and epsilon = 1/4.
+
+A new source-bound build of 68 local modules, official fresh-kernel replay, and
+transitive axiom audit passed; all five audited endpoints use only `propext`,
+`Classical.choice`, and `Quot.sound`. The package records dependency-cache reuse
+and the Lean/Mathlib version boundary. It is not a full build or accepted submission
+in the newer upstream Formal Conjectures project.
+
+```sh
+python3 verification/statement_bridge/verify_package.py
+```
+
+The package includes exact inputs, normalized execution logs, and instructions
+for a fresh replay. The original finite source closure and checks remain unchanged.
+
 ## Attribution, review, and rights
 
 The author thanks Boon Suan Ho for helpful comments on an earlier draft of this manuscript.

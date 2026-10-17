@@ -1,0 +1,56 @@
+[
+  {
+    "name": "mathlib",
+    "url": "https://github.com/leanprover-community/mathlib4",
+    "revision": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "plausible",
+    "url": "https://github.com/leanprover-community/plausible",
+    "revision": "9196a81145e1e291a1469288e77392b0e1b9a493",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "LeanSearchClient",
+    "url": "https://github.com/leanprover-community/LeanSearchClient",
+    "revision": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "importGraph",
+    "url": "https://github.com/leanprover-community/import-graph",
+    "revision": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "proofwidgets",
+    "url": "https://github.com/leanprover-community/ProofWidgets4",
+    "revision": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "aesop",
+    "url": "https://github.com/leanprover-community/aesop",
+    "revision": "fafca80479ff95e041d84373dda7122adf1295f2",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "Qq",
+    "url": "https://github.com/leanprover-community/quote4",
+    "revision": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "batteries",
+    "url": "https://github.com/leanprover-community/batteries",
+    "revision": "708b057842c4cd0845fba132bd94b08493f6fc42",
+    "tracked_worktree_clean": true
+  },
+  {
+    "name": "Cli",
+    "url": "https://github.com/leanprover/lean4-cli",
+    "revision": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+    "tracked_worktree_clean": true
+  }
+]
