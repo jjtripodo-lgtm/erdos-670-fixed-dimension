@@ -332,6 +332,90 @@
       "bytes": 27027,
       "sha256": "6c1e60bf484bafc708d20924b0543f25ff7848fc39b893825811891a32b7d6b7"
     },
+    "research/DIMENSION_EXPONENT_BARRIER_2026-10-16.md": {
+      "bytes": 2629,
+      "sha256": "79d5499d5dc9f8965ca5b1ea78857759c95039481e1b247857aae739ad68c196"
+    },
+    "research/FINE_DIGIT_BOTTLENECK_2026-10-16.md": {
+      "bytes": 2269,
+      "sha256": "c0c582b1875a3031e7823788abf376fd4eecfd606a850a19584b85d28ea6084b"
+    },
+    "research/FINITE670_6552_2026-10-16.md": {
+      "bytes": 2095,
+      "sha256": "45f74ba1eb8da7310fde5342876ce086ae3f3fc13c5fc01469c41dbcead41aef"
+    },
+    "research/FINITE670_6554_2026-10-16.md": {
+      "bytes": 2073,
+      "sha256": "c9f90bb2c45944441871b95c41846cce34247b85429389c64be05fead26e0ebe"
+    },
+    "research/FINITE670_SHARPENED_AND_NEAR_COUNTING_2026-10-16.md": {
+      "bytes": 6785,
+      "sha256": "ab6c85c99fa2b2507ca8a6b6d417e66e9262b8852b73fbc0f2de92696546d476"
+    },
+    "research/LOW_DIMENSION_PARETO_2026-10-16.md": {
+      "bytes": 6154,
+      "sha256": "20c64e15d734e2e190f2c40f8ef12ab0d295ce74fa42085c19c200852dd67777"
+    },
+    "research/MULTIHARMONIC_GLOBAL_CHORD_2026-10-16.md": {
+      "bytes": 9158,
+      "sha256": "113e839ec84eccd0a7050380eacf45beb390a31600fa4179a46050eb5da31e75"
+    },
+    "research/MULTIHARMONIC_NEAR_COUNTING_2026-10-16.md": {
+      "bytes": 10940,
+      "sha256": "4974fc55e6068e0fadaa3a0b7b16cc7b47547d555ad173b6f834e62a29e4d39a"
+    },
+    "research/NEAR_COUNTING_SHARP_DIMENSION_TRADEOFF_2026-10-16.md": {
+      "bytes": 8941,
+      "sha256": "9c8a00ce146d9b9fe48c89406ad471f2d4b3284e4247d598b56465dd04f5be31"
+    },
+    "research/SHARP_LEADING_CONSTANT_2026-10-16.md": {
+      "bytes": 6269,
+      "sha256": "acea0075850151b1512b3b33103defb7b69cbdbed5071da7469abcb9c88048db"
+    },
+    "research/SMOOTHED_TRIANGULAR_WAVE_NEAR_COUNTING_2026-10-16.md": {
+      "bytes": 11123,
+      "sha256": "456bce308a2ff5a6d7a4e70976bbd1c915c49359a77d79bfe464181e26c29f16"
+    },
+    "research/exact_parameter_certificate.py": {
+      "bytes": 3967,
+      "sha256": "23771f827034dd1669ef02d230004ac6a66deddb1940307a9a005165b1fa2751"
+    },
+    "research/finite670_6552_certificate.py": {
+      "bytes": 772,
+      "sha256": "639f905abeab3fcc31a29c2886b2319c34885255e4d8decfc49c650d380ac08f"
+    },
+    "research/finite670_6554_certificate.py": {
+      "bytes": 814,
+      "sha256": "adfe855617d15233cb598052e5f4d213c4a4afd607201ce59602679dd60c1907"
+    },
+    "research/low_dimension_pareto_certificate.py": {
+      "bytes": 4135,
+      "sha256": "688a003a02259d98bf8295b3b0149259a9c84e52fb6e625c878663888aa5ca1f"
+    },
+    "research/multiharmonic_global_chord_certificate.py": {
+      "bytes": 4446,
+      "sha256": "364868f1eb61d905e91fb032114b9317a514b16dca98f9c73abc30c24430da1d"
+    },
+    "research/multiharmonic_near_counting_certificate.py": {
+      "bytes": 4199,
+      "sha256": "41ce683a97c1ebfc9b3c8cf544c40825165d597e2fbf5852bffd409146220942"
+    },
+    "research/multiharmonic_numerical_reconstruction.py": {
+      "bytes": 3738,
+      "sha256": "9fe6579e5ff3fb298572ebe1626a76f702cd3f82778ed65c1661dc655a657ed7"
+    },
+    "research/near_counting_tradeoff_certificate.py": {
+      "bytes": 5118,
+      "sha256": "41d45fac51e66646ddd8e27c73b426f05f71539fa857387c70af79aa6c2f2544"
+    },
+    "research/sharp_constant_certificate.py": {
+      "bytes": 3197,
+      "sha256": "31f1ce6d19ad1ff8cb2cf3068a60bd242cdbc116b6e20b7b21d2378d7250f070"
+    },
+    "research/triangular_wave_near_counting_certificate.py": {
+      "bytes": 4333,
+      "sha256": "9e4088f37d9f96bc6b3f1b2e0c6af62e041b04fa3752fff634ca8b812e9fcb6e"
+    },
     "verification/finite670/LEAN_BUILD.json": {
       "bytes": 1176,
       "sha256": "baff9575da25fc6eb24a942e7c5418bd4d488047223dfb73b92f04adb2c9d659"
