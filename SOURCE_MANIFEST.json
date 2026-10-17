@@ -5,8 +5,8 @@
       "sha256": "64c57aea634f21f164a2795e0c3a1b2adef59ceeb0373fff67d4affd17708741"
     },
     "CITATION.cff": {
-      "bytes": 1324,
-      "sha256": "c803ca66c62ede3e64d6c08a241300d10694d2c176d817f844c73ea8a33c2dab"
+      "bytes": 1523,
+      "sha256": "141d3639f3d690f6da33949cefaf6a2f4dde97ea5d80dc8088e538a5f4f41ee3"
     },
     "CITATIONS.md": {
       "bytes": 4797,
@@ -37,8 +37,8 @@
       "sha256": "9699dd5c4f19150b796eb699350dcebd8476243ae981fb936afcd8f32f98d69f"
     },
     "VERSION_HISTORY.md": {
-      "bytes": 2215,
-      "sha256": "cac5419ab0affeaf8f07b94d5c1b2eca4d0a136e057bdaaf4f6b4a5511fdd04c"
+      "bytes": 2609,
+      "sha256": "ef53729b51c442896d27b8a1cf29a6026fe02f2fd535fc29c0cd7b7e9e1356e2"
     },
     "lean/AxiomAudit.lean": {
       "bytes": 272,
