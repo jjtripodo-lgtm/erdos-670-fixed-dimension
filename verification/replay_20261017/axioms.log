@@ -1,0 +1,14 @@
+Erdos670Bridge.erdos_670_negated :
+  ¬∀ (d : ℕ),
+      1 ≤ d →
+        ∀ ε > 0,
+          ∀ᶠ (n : ℕ) in Filter.atTop,
+            ∀ (A : Finset (EuclideanSpace ℝ (Fin d))),
+              A.card = n → Erdos670.HasSeparatedDistances A → (1 - ε) * ↑n ^ 2 ≤ Metric.diam ↑A
+'Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos670Bridge.hasSeparatedDistances_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670Bridge.finite_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670Bridge.not_fixedDimensionStatement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670Bridge.erdos_670_negated' depends on axioms: [propext, Classical.choice, Quot.sound]

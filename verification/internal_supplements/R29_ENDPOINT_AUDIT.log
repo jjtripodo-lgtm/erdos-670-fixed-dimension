@@ -1,0 +1,31 @@
+Erdos670R29.finite_configuration (k p : ℕ) (hk : 100 ≤ k) (hp : Nat.Prime p) (hsize : 6 * k < p)
+  (hpup : 100 * p ≤ 606 * k) :
+  ∃ P,
+    Function.Injective P ∧
+      (∀ (a b : Fin (6 * k)), a ≠ b → 1 ≤ dist (P a) (P b)) ∧
+        Erdos488.Geometry.SeparatedDistances.SeparatedConfiguration P ∧
+          ∀ (a b : Fin (6 * k)), dist (P a) (P b) < 499 / 500 * ↑(6 * k) ^ 2
+Erdos670R29.r29_unbounded_counterexamples (N : ℕ) :
+  ∃ n,
+    N ≤ n ∧
+      600 ≤ n ∧
+        ∃ P,
+          Function.Injective P ∧
+            (∀ (a b : Fin n), a ≠ b → 1 ≤ dist (P a) (P b)) ∧
+              Erdos488.Geometry.SeparatedDistances.SeparatedConfiguration P ∧
+                (∀ (a b : Fin n), dist (P a) (P b) < 499 / 500 * ↑n ^ 2) ∧
+                  Metric.diam (Set.range P) < 499 / 500 * ↑n ^ 2
+Erdos670R29.finite_set_counterexamples (N : ℕ) :
+  ∃ n, N ≤ n ∧ 600 ≤ n ∧ ∃ A, A.card = n ∧ Erdos670.HasSeparatedDistances A ∧ Metric.diam ↑A < 499 / 500 * ↑n ^ 2
+Erdos670R29.not_fixedDimensionStatement_r29 : ¬Erdos670.FixedDimensionStatement
+def Erdos670.FixedDimensionStatement : Prop :=
+∀ (d : ℕ),
+  1 ≤ d →
+    ∀ ε > 0,
+      ∀ᶠ (n : ℕ) in Filter.atTop,
+        ∀ (A : Finset (EuclideanSpace ℝ (Fin d))),
+          A.card = n → Erdos670.HasSeparatedDistances A → (1 - ε) * ↑n ^ 2 ≤ Metric.diam ↑A
+'Erdos670R29.finite_configuration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670R29.r29_unbounded_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670R29.finite_set_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670R29.not_fixedDimensionStatement_r29' depends on axioms: [propext, Classical.choice, Quot.sound]

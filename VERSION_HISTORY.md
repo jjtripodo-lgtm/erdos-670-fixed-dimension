@@ -1,5 +1,22 @@
 # Version history
 
+## Documentation and replay-evidence update, 19 October 2026
+
+[Current public status](PUBLIC_STATUS.md) explains the published fixed-dimensional
+counterexample, exact conjecture-statement negation, and later internal R29 and
+epsilon-family formalizations with their distinct quantifiers and source scopes.
+The later internal proof closures are not added to this public package.
+
+[The later public-adapter replay record](verification/replay_20261017/README.md)
+adds source-bound evidence for the unchanged public theorem: a 68-module build
+from zero local objects, full fresh official-kernel replay, and five standard-only
+endpoint axiom audits, reported from a separate provider. Cached upstream imports
+and unverified physical-host provenance remain explicit.
+
+The manuscript, original proof, original receipts, tags, citation metadata,
+Hexagon version, DOI archive, and licenses are unchanged. This update does not
+claim external mathematical review or a new platform acceptance.
+
 ## Current finite version, 14 October 2026
 
 *Orthogonal circles and a fixed-dimensional separated-distance counterexample*:

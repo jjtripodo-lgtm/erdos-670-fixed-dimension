@@ -1,0 +1,24 @@
+Exact declaration headers from internally checked Lean sources.
+Proof bodies and imported proof closures are omitted. This text is not a standalone Lean certificate.
+
+Namespace: Erdos670R29
+
+theorem r29_unbounded_counterexamples (N : ℕ) :
+    ∃ n : ℕ, N ≤ n ∧ 600 ≤ n ∧
+    ∃ P : Fin n → EuclideanSpace ℝ (Fin 29), Function.Injective P ∧
+      (∀ a b, a ≠ b → 1 ≤ dist (P a) (P b)) ∧ SeparatedConfiguration P ∧
+      (∀ a b, dist (P a) (P b) < (499/500 : ℝ)*(n : ℝ)^2) ∧
+      Metric.diam (Set.range P) < (499/500 : ℝ)*(n : ℝ)^2
+[proof body omitted]
+
+Namespace: Erdos670R29Minimal
+
+theorem finite_set_counterexamples (N : ℕ) :
+    ∃ n : ℕ, N ≤ n ∧ 600 ≤ n ∧
+    ∃ A : Finset (EuclideanSpace ℝ (Fin 29)), A.card=n ∧
+      Erdos670.HasSeparatedDistances A ∧
+      Metric.diam (A : Set (EuclideanSpace ℝ (Fin 29))) < (499/500 : ℝ)*(n : ℝ)^2
+[proof body omitted]
+
+theorem not_fixedDimensionStatement_r29 : ¬ Erdos670.FixedDimensionStatement
+[proof body omitted]

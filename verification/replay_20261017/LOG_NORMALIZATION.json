@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "normalization": "Only the absolute run-directory prefix is replaced by $WORKSPACE; original receipt retained unchanged.",
+  "logs": {
+    "BUILD_RECEIPT.json": {
+      "original_git_blob": "3af2f4aafc66d05667e9453923b4fd30534b1f38",
+      "original_sha256": "c5fc8e374954b4d46e1cdfe0fc42f326a8e4a4c98f079b506f419fd604143ee1",
+      "published_sha256": "c5fc8e374954b4d46e1cdfe0fc42f326a8e4a4c98f079b506f419fd604143ee1",
+      "original_bytes": 4752,
+      "published_bytes": 4752,
+      "replacements": 0
+    },
+    "cache.log": {
+      "original_git_blob": "1329d27d78c09c9d19c95b5ce8e325e98839f716",
+      "original_sha256": "abdd5aac1a11045d34a598b69f45df8ad61d09c50e5f06e2cb3062af4b7ac1b1",
+      "published_sha256": "abdd5aac1a11045d34a598b69f45df8ad61d09c50e5f06e2cb3062af4b7ac1b1",
+      "original_bytes": 5741,
+      "published_bytes": 5741,
+      "replacements": 0
+    },
+    "build.log": {
+      "original_git_blob": "863fee19b1e28ea0f84a001505e74564921f986f",
+      "original_sha256": "c5023507492ef2b81ec209f23d02096b69448c2a21874e72e864e4ed7fc50538",
+      "published_sha256": "4e57b7d94fffc5979569504ef8daab64bffee212f9d3d167cd3a1ae2f46c6430",
+      "original_bytes": 345580,
+      "published_bytes": 327148,
+      "replacements": 1152
+    },
+    "fresh-kernel.log": {
+      "original_git_blob": "26294a9cd1cddaf99bb942e73d0c046d4a34324f",
+      "original_sha256": "80e38080765dcb05d7d88c40b3267e11df2f317c9a6afff8e71fc8930317e5ab",
+      "published_sha256": "80e38080765dcb05d7d88c40b3267e11df2f317c9a6afff8e71fc8930317e5ab",
+      "original_bytes": 45,
+      "published_bytes": 45,
+      "replacements": 0
+    },
+    "axioms.log": {
+      "original_git_blob": "6668c94cb0529a238dcef2c0f0251fc975a73f21",
+      "original_sha256": "4918893f3ab87d04c9a0fc365286003573df0644c65ac99074ca991f4dfaf013",
+      "published_sha256": "4918893f3ab87d04c9a0fc365286003573df0644c65ac99074ca991f4dfaf013",
+      "original_bytes": 849,
+      "published_bytes": 849,
+      "replacements": 0
+    },
+    "runner_stdout.log": {
+      "original_git_blob": "09b44c9b1b2dba666d790a9e8f88b6ab95b0e13a",
+      "original_sha256": "0d742e22ca4d26e9aff0eb580186a44fa06058a62cca45db6408814ad3865ad9",
+      "published_sha256": "0d742e22ca4d26e9aff0eb580186a44fa06058a62cca45db6408814ad3865ad9",
+      "original_bytes": 2669,
+      "published_bytes": 2669,
+      "replacements": 0
+    },
+    "runner_stdout_FAILED_first_attempt_missing_zstd.log": {
+      "original_git_blob": "0b3c73c533e2878905143fe96fc30c00021f16f6",
+      "original_sha256": "d10aeded5ea7746b41b46d3b53c4440c108525d68b1e02664d8ed5b9da4660f3",
+      "published_sha256": "3b4549759dd86e3fc1fbebc879c7485a1680c870c426cbce85ba7705f711b9a9",
+      "original_bytes": 1087,
+      "published_bytes": 1055,
+      "replacements": 2
+    }
+  }
+}

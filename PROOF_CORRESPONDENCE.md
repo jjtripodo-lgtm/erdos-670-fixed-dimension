@@ -34,3 +34,17 @@ cached upstream imports on one cloud computer; it does not transfer the
 earlier version's two-machine or independent-kernel results to this theorem.
 The [finite scalar audit](verification/finite670/validate_finite.py) is
 supplementary arithmetic, not a replacement for the geometric proof.
+
+## Exact conjecture consequence and later evidence
+
+The [supplementary statement adapter](verification/statement_bridge/README.md)
+adds the indexed-to-finite-set translation and proves
+`Erdos670Bridge.erdos_670_negated` for the exact pinned upstream proposition.
+It uses the unchanged finite theorem at epsilon = 1/4. The
+[later public-adapter replay](verification/replay_20261017/README.md) has its
+own 68-module source-build, full fresh official-kernel and endpoint-axiom
+evidence; its separate-provider provenance is reported, not independently attested.
+
+[Later internal formalizations](PUBLIC_STATUS.md) have different dimensions,
+coefficients, size quantifiers and verification scopes. Their source closures
+are not part of this paper-to-Lean correspondence or this public proof package.

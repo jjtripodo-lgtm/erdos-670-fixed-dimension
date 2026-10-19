@@ -19,8 +19,13 @@ byte counts; the finite source verifier separately checks the exact import
 closure and build-summary consistency. No private repository, runtime path,
 external receipt, or credential is needed to run these checks.
 
-The build summary discloses cached upstream dependencies and one-machine
-scope. It is not an independently authenticated execution certificate.
+The original build summary discloses cached upstream dependencies and one-machine
+scope. It is not an independently authenticated execution certificate. The
+later [public-adapter replay export](verification/replay_20261017/README.md)
+preserves a separate receipt and normalized logs with explicit original-byte
+hashes. Separate-provider provenance is reported, not independently attested.
+The internal R29 and epsilon-family endpoints are summarized in
+[PUBLIC_STATUS.md](PUBLIC_STATUS.md); their proof closures are not distributed here.
 The paper's three byte-identical final build passes in one directory and
 visual checks are recorded separately; they are
 not Lean replay or independent mathematical review.

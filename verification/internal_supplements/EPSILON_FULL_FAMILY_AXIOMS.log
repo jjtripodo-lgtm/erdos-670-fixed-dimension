@@ -1,0 +1,3 @@
+'Erdos670EpsilonFamily.uniform_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670EpsilonFamily.epsilon_cluster_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos670EpsilonFamily.epsilon_family' depends on axioms: [propext, Classical.choice, Quot.sound]
