@@ -42,9 +42,11 @@ previous PASS was reused to certify these bytes. The frozen Lean manifest contai
 toolchain configuration files. The original finite verifier's 70-input snapshot is
 unchanged; this supplementary replay is assembled separately.
 
-Upstream compiled dependency caches were reused. This is not a clean upstream source
-rebuild, independently implemented kernel check, second-machine run or specialist
-review. The precise checker semantics and official executable/source hashes are in
+Upstream compiled dependency caches were reused. That original run is not a clean
+upstream source rebuild, independently implemented kernel check, second-machine run
+or specialist review. A [later replay record](../replay_20261017/README.md) adds a
+successful repeat build and full fresh replay, reported from a separate provider,
+with its own provenance limits. The precise checker semantics and official executable/source hashes are in
 `verification/LEAN_CHECKER_SCOPE.md` and `TOOLCHAIN_BINARY_HASHES.json`.
 
 Published logs replace the local absolute workspace prefix with `$WORKSPACE` only.

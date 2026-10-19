@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "documented_on": "2026-10-19",
+  "scope": "Exact statement excerpts and recorded audit outputs only. Proof closures are not distributed; these records are not independently replayable proof certificates.",
+  "statement_sources": [
+    {
+      "public_file": "R29_STATEMENTS.txt",
+      "source_file": "R29Endpoint.lean",
+      "source_git_blob": "8d09609eef219795b3dce076f3dc10c50a901ee0",
+      "declarations": [
+        "r29_unbounded_counterexamples"
+      ],
+      "original_full_source_sha256": "699a6d7546f67c954791182ae7065e1992575c590e06c13ee1ef1a278ecc684a",
+      "published_excerpt_sha256": "0263f71805ea12292cbe4dc8df3dd9bfcd367aa0422ec3e9624d0fa18f67ee2f",
+      "namespace": "Erdos670R29"
+    },
+    {
+      "public_file": "R29_STATEMENTS.txt",
+      "source_file": "R29MinimalBridge.lean",
+      "source_git_blob": "8ac23307f1491887b81d8a6edf67e80a709929fb",
+      "declarations": [
+        "finite_set_counterexamples",
+        "not_fixedDimensionStatement_r29"
+      ],
+      "original_full_source_sha256": "7f643730cac2f43fa3ebc95a359fc8b13d423a888943795a1557bccd46231ce5",
+      "published_excerpt_sha256": "0263f71805ea12292cbe4dc8df3dd9bfcd367aa0422ec3e9624d0fa18f67ee2f",
+      "namespace": "Erdos670R29Minimal"
+    },
+    {
+      "public_file": "EPSILON_STATEMENTS.txt",
+      "source_file": "FullFamily.lean",
+      "source_git_blob": "0670e6c3af874912519aacaa79dd6a9b77f16e22",
+      "declarations": [
+        "epsilon_family",
+        "uniform_family"
+      ],
+      "original_full_source_sha256": "51a6867434f0487fdae54b188abce4dac165926e855f9d498df7fe0be244d2bc",
+      "published_excerpt_sha256": "8c917e94160fd49b071b7c55fe7d3cffe07dadb12b7ac9fbfbedf59f5b19ebc6",
+      "namespace": "Erdos670EpsilonFamily"
+    }
+  ],
+  "audit_sources": [
+    {
+      "public_file": "R29_ENDPOINT_AUDIT.log",
+      "source_git_blob": "b3bf409661654d84520ca946569993c5b965a657",
+      "sha256": "97c21d68cbcf91fbc2e3bec10880ec38ed3ec55831f4ce9e369788e6048a290c",
+      "bytes": 1806
+    },
+    {
+      "public_file": "EPSILON_ENDPOINT_AUDIT.log",
+      "source_git_blob": "3acfa8feac901a7fdac36a2e00b5915de565f70d",
+      "sha256": "3e7427f1ac2f35c614e67974a20f9010d20ed834a085f159e45ee356678d7450",
+      "bytes": 2195
+    },
+    {
+      "public_file": "EPSILON_FULL_FAMILY_AXIOMS.log",
+      "source_git_blob": "08b3c84141bd38dae2ba8caf5e0fd5ec663aeab3",
+      "sha256": "853fee30521d6534be9554cf5eb9a6b0cec9c7478dcf3c8bc9139de975c882ca",
+      "bytes": 302
+    },
+    {
+      "public_file": "EPSILON_FINAL_RECEIPT.json",
+      "source_git_blob": "c9da317bc2550480b479e2c2c596d7f035feb2da",
+      "sha256": "f2ab9b2870d10ca923fbdcfc96f6f829ac7e7ed59e801afb4ddb4e4935b1305c",
+      "bytes": 2012
+    },
+    {
+      "public_file": "R29_MINIMAL_BUILD_RECEIPT.json",
+      "source_git_blob": "8d75b775569d3c8ba92c659aff2f57b7d5fdb7ea",
+      "sha256": "953a32c05d6f1e984fb0892a72f4239b58e51a2fad3b9b5846bb981dbf6e284c",
+      "bytes": 481
+    },
+    {
+      "public_file": "R29_LATER_BUILD.log",
+      "source_git_blob": "3241208aaf2eb3de8b8740b0955e3318ed4d98d6",
+      "sha256": "d431538c0d5b6bc771ebdd9dbb2e008e1f389077b3a454a2a37aee88089f32bf",
+      "bytes": 23700
+    },
+    {
+      "public_file": "R29_LATER_FRESH.log",
+      "source_git_blob": "74685713121e7dcf7ef9b23e0be57d4f41add178",
+      "sha256": "2e34bafbaf027b0190e37a21a8b2eaaa32ec2470bea774454f4cd143b58684df",
+      "bytes": 40
+    }
+  ],
+  "r29_later_replay_report": {
+    "original_report_git_blob": "b0d22d037e807cc63408b908766a555c522f5210",
+    "original_report_sha256": "55e3d032f3ce40885d531333a2a20389ce0c2d85b7e4e8b03a5be9c40a357881",
+    "reported_environment": "Claude-operated Anthropic Linux x86_64 cloud container, 2 vCPU, separate provider and machine",
+    "reported_completed_utc_window": "2026-10-17 18:21-19:06 UTC",
+    "reported_command": "lake env leanchecker --fresh --verbose R29MinimalBridge",
+    "reported_exit_code": 0,
+    "physical_host_identity_independently_attested": false,
+    "original_report_distributed": false,
+    "evidence_limit": "Report and retained logs, not independent physical-host attestation or a public proof closure."
+  }
+}

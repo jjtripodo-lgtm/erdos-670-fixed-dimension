@@ -1,0 +1,17 @@
+{
+  "command": [
+    "lake",
+    "--no-cache",
+    "build",
+    "R29MinimalBridge"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 241.18021284299903,
+  "initial_local_object_count": 0,
+  "local_module_count": 60,
+  "new_R29_modules": 25,
+  "cached_upstream_imports": true,
+  "same_cloud_machine": true,
+  "source_manifest_sha256": "f0fe81ccd3fde9d1962eb452066e74888e98f8f1f92353bfdca824f7c4ccccad",
+  "log_sha256": "891ef64538022394a1dde085373312aa156a5c381f6c4608bc219f5d42bd9157"
+}

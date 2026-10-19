@@ -1,0 +1,39 @@
+{
+  "status": "PASS_FULL_EPSILON_AND_UNIFORM_ENDPOINTS",
+  "utc": "2026-10-17T17:14:17.732429+00:00",
+  "base_main": "a5a16db4811c182519305857d6bc72e251dbd1d5",
+  "lean": "4.33.1",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "flags": [
+    "--trust=0",
+    "-DwarningAsError=true"
+  ],
+  "exit_code": 0,
+  "endpoints": [
+    "Erdos670EpsilonFamily.epsilon_family",
+    "Erdos670EpsilonFamily.uniform_family"
+  ],
+  "residual_hypotheses": "Only stated numeric admissibility; no source, configuration, macro or budget hypotheses.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "cached_historical_imports": true,
+  "source_git_blob": "63fdaf3adb4357e39781a9020d8815a4d0de4dca",
+  "sha256": {
+    "ExactNEmbedding.lean": "f3e5d1f87fd0763d801909d61180e23b8590956e1e470d7d514d49cbe99369e3",
+    "EpsilonEndpoint.lean": "f0a24e332c032ae13924709e239aa9c84aa8e3488c3d6d29fa5010c0a0bb75a1",
+    "MetricAssembly.lean": "167065b410ff3c356634ad8d7c3e5cfa6c78b6f6ba82efbd011c745d84338473",
+    "FullFamily.lean": "51a6867434f0487fdae54b188abce4dac165926e855f9d498df7fe0be244d2bc",
+    "FinalAudit.lean": "8c389d1243b47203b4853ff37fce32260bf658ac44c3f7804e5a93bc68caba50",
+    "MetricAssembly.log": "e9d0c44bc31046cf871ebc468123b6826478809bf54da1579b877de649776cf7",
+    "FullFamily.log": "853fee30521d6534be9554cf5eb9a6b0cec9c7478dcf3c8bc9139de975c882ca",
+    "FinalAudit.log": "3e7427f1ac2f35c614e67974a20f9010d20ed834a085f159e45ee356678d7450",
+    "FINAL_STATUS.md": "9087da6934417668977f4bddfe57015eb1931e10552559a40513b91c846cea9e",
+    "replay-followup.sh": "21174f8580c62600447df766bb5bf29ba8ddddbe201f3539e193d38b9de71a41",
+    "ExactNEmbedding.log": "e69e0155ee96d1db1be2bbb3cdb1c2284c0f74de590ca90f5421886c0fff1c88",
+    "EpsilonEndpoint.log": "23fae44a41ee7312196a2541c6a5c7deac8f444fc55a467a565424be8ab13a55"
+  },
+  "assembly_review": "Separate statement and assembly review passed; reviewer authored helper modules, so not a wholly independent whole-proof review."
+}

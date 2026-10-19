@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-17T17:58:11Z",
+  "reconstruction_after_lost_ephemeral_workspace": true,
+  "prior_pass_receipts_reused": false,
+  "source_manifest_sha256": "0908cd731253b100d0deb6d378b2df945380fae56f2941b6f55c0f3d0d2ea75b",
+  "initial_local_project_olean_count": 0,
+  "reserve_bytes": 536870912,
+  "upstream_dependency_cache_reused": true,
+  "same_cloud_computer": true,
+  "clean_upstream_source_rebuild": "NOT_RUN",
+  "independent_second_machine_replay": "NOT_RUN",
+  "independent_external_kernel": "NOT_RUN",
+  "current_formal_conjectures_full_project_build": "NOT_RUN",
+  "commands": [
+    {
+      "label": "cache",
+      "argv": [
+        "lake",
+        "--no-cache",
+        "exe",
+        "cache",
+        "get",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+        "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+        "Mathlib.Analysis.InnerProductSpace.GramMatrix",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.Matrix.LDL",
+        "Mathlib.Analysis.Matrix.Order",
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Analysis.Real.Sqrt",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Data.Matrix.Basic",
+        "Mathlib.Data.Nat.ModEq",
+        "Mathlib.Data.Nat.Prime.Defs",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.LinearAlgebra.Matrix.Block",
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.NumberTheory.Bertrand",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Tactic",
+        "Mathlib.Topology.MetricSpace.Bounded"
+      ],
+      "started_utc": "2026-10-17T17:58:11Z",
+      "log": "verification/cache.log",
+      "exit_code": 0,
+      "elapsed_seconds": 57.23050662200001,
+      "completed_utc": "2026-10-17T17:59:08Z",
+      "minimum_observed_free_bytes": 6662287360,
+      "log_sha256": "abdd5aac1a11045d34a598b69f45df8ad61d09c50e5f06e2cb3062af4b7ac1b1"
+    },
+    {
+      "label": "build",
+      "argv": [
+        "lake",
+        "--verbose",
+        "--no-cache",
+        "build"
+      ],
+      "started_utc": "2026-10-17T17:59:08Z",
+      "log": "verification/build.log",
+      "exit_code": 0,
+      "elapsed_seconds": 317.58700064699997,
+      "completed_utc": "2026-10-17T18:04:26Z",
+      "minimum_observed_free_bytes": 6395514880,
+      "log_sha256": "c5023507492ef2b81ec209f23d02096b69448c2a21874e72e864e4ed7fc50538"
+    },
+    {
+      "label": "fresh-kernel",
+      "argv": [
+        "lake",
+        "env",
+        "leanchecker",
+        "--fresh",
+        "--verbose",
+        "Erdos670Bridge.Bridge"
+      ],
+      "started_utc": "2026-10-17T18:04:26Z",
+      "log": "verification/fresh-kernel.log",
+      "exit_code": 0,
+      "elapsed_seconds": 873.574108631,
+      "completed_utc": "2026-10-17T18:19:00Z",
+      "minimum_observed_free_bytes": 5987393536,
+      "log_sha256": "80e38080765dcb05d7d88c40b3267e11df2f317c9a6afff8e71fc8930317e5ab"
+    },
+    {
+      "label": "axioms",
+      "argv": [
+        "lake",
+        "env",
+        "lean",
+        "--trust=0",
+        "AxiomAudit.lean"
+      ],
+      "started_utc": "2026-10-17T18:19:00Z",
+      "log": "verification/axioms.log",
+      "exit_code": 0,
+      "elapsed_seconds": 4.5084365459999844,
+      "completed_utc": "2026-10-17T18:19:04Z",
+      "minimum_observed_free_bytes": 5995741184,
+      "log_sha256": "4918893f3ab87d04c9a0fc365286003573df0644c65ac99074ca991f4dfaf013"
+    }
+  ],
+  "completed_utc": "2026-10-17T18:19:05Z",
+  "final_local_project_olean_count": 68,
+  "fresh_local_modules_built": 68,
+  "geometric_proof_modules_unchanged": 66,
+  "local_source_trust_level": 0,
+  "build_jobs": 3504,
+  "endpoint_transitive_axioms": {
+    "Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_fixed_dimension_erdos_670": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos670Bridge.hasSeparatedDistances_image": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos670Bridge.finite_counterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos670Bridge.not_fixedDimensionStatement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos670Bridge.erdos_670_negated": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "fresh_kernel_safe_declaration_closure_replay": "PASS",
+  "fresh_replay_scope": "Official same-kernel replay of final module and loaded imported safe, non-partial declarations into a fresh environment; unsafe/partial metaprograms skipped",
+  "record_type": "New source-bound local execution record after lost ephemeral workspace; not an independent certificate"
+}

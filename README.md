@@ -1,5 +1,10 @@
 # Fixed-dimensional separated Euclidean distances
 
+**Erdős #670, under the maintained fixed-dimension interpretation:** the
+published construction is a counterexample, with a Lean proof and an exact
+conjecture-statement adapter. [Current explanation and formalization status](PUBLIC_STATUS.md)
+separate the published theorem, later internal extensions, and review limits.
+
 ## Current finite result
 
 For every integer **n ≥ 36354**, there is an injectively indexed configuration
@@ -28,9 +33,12 @@ A [recorded source-bound build](verification/finite670/LEAN_BUILD.json)
 compiled all 66 local modules from zero local project objects at trust level
 zero and completed the endpoint axiom audit. Its only endpoint axioms were
 `propext`, `Classical.choice`, and `Quot.sound`. The 3,502-job build reused
-upstream dependency cache on one cloud computer. A clean upstream rebuild,
-second-machine replay, and independent specialist review have not been
-performed for this finite version. The distributed record is a sanitized
+upstream dependency cache on one cloud computer.
+A clean upstream source rebuild and independent specialist review are not
+established by that run. A [later replay of the exact public adapter](verification/replay_20261017/README.md)
+records another zero-local-object build and full fresh official-kernel replay,
+reported from a separate provider; physical host identity is not independently
+attested. The original distributed record is a sanitized
 summary, with the exact checked input hashes; raw runtime logs are not bundled.
 
 - [Paper-to-Lean correspondence](PROOF_CORRESPONDENCE.md)
@@ -96,6 +104,10 @@ dependencies retain their own licenses. Use [CITATION.cff](CITATION.cff) for
 current-version citation metadata.
 
 ## Version history
+
+[The 19 October documentation update](PUBLIC_STATUS.md) records the exact
+statement bridge, later replay evidence, and separately scoped internal
+dimension-29 and epsilon-family formalizations. It does not revise the manuscript.
 
 [Version history](VERSION_HISTORY.md) links the immutable earlier v1.0.0
 manuscript, proof, verification records, and DOI archive. Their original

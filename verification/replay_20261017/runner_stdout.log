@@ -1,0 +1,41 @@
+Lean (version 4.31.0-rc1, x86_64-unknown-linux-gnu, commit fd009949156901e6cf15b6d9bf1122294b8e697a, Release)
+From https://github.com/leanprover-community/mathlib4
+ * branch            0ed37c9258f123a2c76a2175596f75c2bd50f941 -> FETCH_HEAD
+PINNED mathlib 0ed37c9258f123a2c76a2175596f75c2bd50f941
+From https://github.com/leanprover-community/plausible
+ * branch            9196a81145e1e291a1469288e77392b0e1b9a493 -> FETCH_HEAD
+PINNED plausible 9196a81145e1e291a1469288e77392b0e1b9a493
+From https://github.com/leanprover-community/LeanSearchClient
+ * branch            c5d5b8fe6e5158def25cd28eb94e4141ad97c843 -> FETCH_HEAD
+PINNED LeanSearchClient c5d5b8fe6e5158def25cd28eb94e4141ad97c843
+From https://github.com/leanprover-community/import-graph
+ * branch            6db47de43aa7f516708053ae2fdadd29dd9baaaa -> FETCH_HEAD
+PINNED importGraph 6db47de43aa7f516708053ae2fdadd29dd9baaaa
+From https://github.com/leanprover-community/ProofWidgets4
+ * branch            85bb7e7637e84a7d9803be7d954579fdae42c64b -> FETCH_HEAD
+PINNED proofwidgets 85bb7e7637e84a7d9803be7d954579fdae42c64b
+From https://github.com/leanprover-community/aesop
+ * branch            fafca80479ff95e041d84373dda7122adf1295f2 -> FETCH_HEAD
+PINNED aesop fafca80479ff95e041d84373dda7122adf1295f2
+From https://github.com/leanprover-community/quote4
+ * branch            8d33324ee877e9735d2829bc6f1f439e60cf98b1 -> FETCH_HEAD
+PINNED Qq 8d33324ee877e9735d2829bc6f1f439e60cf98b1
+From https://github.com/leanprover-community/batteries
+ * branch            708b057842c4cd0845fba132bd94b08493f6fc42 -> FETCH_HEAD
+PINNED batteries 708b057842c4cd0845fba132bd94b08493f6fc42
+From https://github.com/leanprover/lean4-cli
+ * branch            48bdcff4c5fa27e09028f9f330e59baa0d4640cf -> FETCH_HEAD
+PINNED Cli 48bdcff4c5fa27e09028f9f330e59baa0d4640cf
+PASS: exact pinned definition/proposition/negation; 66 unchanged geometric modules; complete 68-module closure; no local proof holes or new axioms; exact 72 input files when frozen
+START cache 2026-10-17T17:58:11Z
+END cache exit 0 2026-10-17T17:59:08Z
+START build 2026-10-17T17:59:08Z
+END build exit 0 2026-10-17T18:04:26Z
+START fresh-kernel 2026-10-17T18:04:26Z
+END fresh-kernel exit 0 2026-10-17T18:19:00Z
+START axioms 2026-10-17T18:19:00Z
+END axioms exit 0 2026-10-17T18:19:04Z
+PASS: exact pinned definition/proposition/negation; 66 unchanged geometric modules; complete 68-module closure; no local proof holes or new axioms; exact 72 input files when frozen
+PASS: original endpoint and four adapter endpoints have only propext, Classical.choice, Quot.sound (transitive axiom report)
+PASS: NEW complete source-bound build, fresh-kernel replay and axiom audit
+EXIT=0

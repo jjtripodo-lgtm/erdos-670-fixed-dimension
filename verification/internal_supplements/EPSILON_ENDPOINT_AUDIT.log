@@ -1,0 +1,33 @@
+'EuclideanEpsilonResearch.exact_n_delete_pad' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EuclideanEpsilonResearch.epsilon_all_n_of_cluster_sources' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EuclideanEpsilonResearch.uniform_all_n_of_cluster_sources' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem Erdos670EpsilonFamily.epsilon_family : ∀ (ε : ℝ),
+  0 < ε →
+    ε ≤ 1 / 2 →
+      ∀ (n : ℕ),
+        4 * ⌈8192 / ε⌉₊ ≤ n →
+          ∃ Q,
+            Function.Injective Q ∧
+              (∀ (a b : Fin n), a ≠ b → 1 ≤ dist (Q a) (Q b)) ∧
+                EuclideanEpsilonResearch.StrictSeparatedConfiguration Q ∧
+                  (∀ (a b c d : Fin n),
+                      a ≠ b → c ≠ d → ¬(a = c ∧ b = d ∨ a = d ∧ b = c) → 1 < |dist (Q a) (Q b) - dist (Q c) (Q d)|) ∧
+                    (∀ (a b : Fin n), dist (Q a) (Q b) < (1 / 2 + ε) * ↑n ^ 2) ∧
+                      Metric.diam (Set.range Q) < (1 / 2 + ε) * ↑n ^ 2 :=
+fun ε hε hε2 n hn =>
+  EuclideanEpsilonResearch.epsilon_all_n_of_cluster_sources Erdos670EpsilonFamily.epsilon_cluster_source ε hε hε2 n hn
+'Erdos670EpsilonFamily.epsilon_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem Erdos670EpsilonFamily.uniform_family : ∀ (d n : ℕ),
+  163840 ≤ d →
+    65536 ≤ n →
+      ∃ Q,
+        Function.Injective Q ∧
+          (∀ (a b : Fin n), a ≠ b → 1 ≤ dist (Q a) (Q b)) ∧
+            EuclideanEpsilonResearch.StrictSeparatedConfiguration Q ∧
+              (∀ (a b c e : Fin n),
+                  a ≠ b → c ≠ e → ¬(a = c ∧ b = e ∨ a = e ∧ b = c) → 1 < |dist (Q a) (Q b) - dist (Q c) (Q e)|) ∧
+                (∀ (a b : Fin n), dist (Q a) (Q b) < (1 / 2 + 102400 / ↑d + 40960 / ↑n) * ↑n ^ 2) ∧
+                  Metric.diam (Set.range Q) < (1 / 2 + 102400 / ↑d + 40960 / ↑n) * ↑n ^ 2 :=
+fun d n hd hn =>
+  EuclideanEpsilonResearch.uniform_all_n_of_cluster_sources Erdos670EpsilonFamily.epsilon_cluster_source d n hd hn
+'Erdos670EpsilonFamily.uniform_family' depends on axioms: [propext, Classical.choice, Quot.sound]
