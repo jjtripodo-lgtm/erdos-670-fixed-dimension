@@ -1,0 +1,21 @@
+\section{Reconstructing the rational certificate}\label{app:certificate}
+The matrices in \eqref{eq:three-matrices} are determined entirely by the
+displayed rational parameters and label matrix. Starting with a symmetric
+matrix $A^{(0)}$, successive elimination uses
+\[
+ d_k=A^{(k-1)}_{kk},\qquad
+ A^{(k)}_{ij}=A^{(k-1)}_{ij}
+ -\frac{A^{(k-1)}_{ik}A^{(k-1)}_{jk}}{d_k}\quad(i,j>k).
+\]
+If every $d_k$ is positive, this is an $LDL^\T$ decomposition with positive
+diagonal, so the matrix is positive definite. All inputs and operations
+are rational. The following complete Python program reconstructs all
+three matrices, checks the fifteen positive pivots and the scalar guards,
+and prints exact fractions and the lower bounds in \cref{tab:pivots}.
+It uses only the Python standard library; checks are not removable
+\texttt{assert} statements. Running under \texttt{python3 -O} gives the
+same output. No finite sampling in $k$ or floating-point estimate enters
+this certificate. The passage to every $k\ge100$ is the operator-norm
+convexity argument in \eqref{eq:finite-k-operator}.
+\lstinputlisting[language=Python]{certificate_reconstruction.py}
+

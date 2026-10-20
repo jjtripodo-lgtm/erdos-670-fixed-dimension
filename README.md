@@ -5,7 +5,21 @@ published construction is a counterexample, with a Lean proof and an exact
 conjecture-statement adapter. [Current explanation and formalization status](PUBLIC_STATUS.md)
 separate the published theorem, later internal extensions, and review limits.
 
-## Current finite result
+## New paper, 20 October 2026
+
+**[Separated distances in fixed dimension](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf)**, by John Tripodo, gives a readable common proof framework for the later two-circle family and dimension-29 construction.
+
+- For each 0 < epsilon <= 1/2, set m = ceil(8192/epsilon). Every n >= 4m has a configuration in R^(10m-1) with diameter < (1/2+epsilon)n². Dimension depends on epsilon, not n.
+- In R^29, arbitrarily large selected sizes have diameter < 0.998n². This is the exact prime-first Lean endpoint.
+- A separate written corollary gives diameter < 0.999n² in R^29 for every n >= 400000, using Dusart's explicit prime-interval theorem. This all-size corollary is not a Lean endpoint.
+
+Every statement includes minimum point distance at least one and separation of genuinely different unordered edge lengths. The family and written all-size corollary have strict gaps > 1; the stated formal R29 subsequence endpoint has gaps >= 1.
+
+[Editable source and checks](paper/2026-10-20/README.md) · [Source ZIP](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension_source.zip) · [Exact scope and source map](paper/2026-10-20/SOURCE_MAP.md)
+
+The newer Lean proof closures remain private; their existing public statement excerpts and audit records are linked below. No new Lean run or independent specialist review is claimed. This GitHub paper is a new version, not a replacement of the Hexagon v1 manuscript or the archived DOI. Existing paper and proof URLs remain unchanged.
+
+## Earlier finite result, retained unchanged
 
 For every integer **n ≥ 36354**, there is an injectively indexed configuration
 of n points in the single fixed Euclidean space **R^81794**. Distinct points
@@ -13,7 +27,7 @@ are at least one unit apart; lengths of distinct unordered non-diagonal edges
 differ by at least one; and both every pair distance and the actual set
 diameter are strictly below **(147/200)n² = 0.735n²**.
 
-**[Read the paper](paper/fixed_dimension_670.pdf)** ·
+**[Read the 14 October finite paper](paper/fixed_dimension_670.pdf)** ·
 [TeX source](paper/fixed_dimension_670.tex) ·
 [exact Lean theorem](lean/Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5FixedDimension670.lean)
 
@@ -98,10 +112,10 @@ endorsement. [Prior work](PRIOR_ART.md) and the
 [dated source-access ledger](CITATIONS.md) distinguish the fixed-dimensional
 claim from Ho's growing-dimensional result and identify classical ingredients.
 
-The current finite manuscript is licensed under
+The 14 October finite manuscript is licensed under
 [CC BY 4.0](LICENSE-PAPER). Code and formalization remain [MIT licensed](LICENSE);
 dependencies retain their own licenses. Use [CITATION.cff](CITATION.cff) for
-current-version citation metadata.
+version-specific citation metadata.
 
 ## Version history
 

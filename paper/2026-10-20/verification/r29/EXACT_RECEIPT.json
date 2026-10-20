@@ -1,0 +1,61 @@
+{
+  "matrix_rows": [
+    {
+      "matrix_sha256": "82046e09061a65ce4fb331d3cfb537c8ad65a760ba4324a5e964c2e413202329",
+      "minimum_pivot": "79414622788493855785139/1175462984314400000000",
+      "name": "macro",
+      "pivots_sha256": "0e92c7fd83509dfee45644722cbaaf53409ba010ead82a81e54e8b71a277549b",
+      "positive_pivots": 5
+    },
+    {
+      "matrix_sha256": "12673c4e778ec10c5a6de1522b9905bd4cac63b75a7327db218c46cb0a988e30",
+      "minimum_pivot": "2857769742550140136253930920634931306700264567177/3178909004094110081469881257834479769519200000000",
+      "name": "completion_infinity",
+      "pivots_sha256": "ce27d1242697e6cb21f5f04b0520b07de7054d04e7436a9ff25faf20490e716c",
+      "positive_pivots": 5
+    },
+    {
+      "matrix_sha256": "05630ab7ef666983a3bfcc88ce220d299d56e2392e7743cad80d8c5b4bf8eccf",
+      "minimum_pivot": "14511543996807096861690871210606487595401269863065701/20996942252250885259923788328335306031731032212000000",
+      "name": "completion_k0",
+      "pivots_sha256": "d06f750aba456281e436650e20d3a5d0218a6cb7ebb8a169f14a6aca8b06311b",
+      "positive_pivots": 5
+    }
+  ],
+  "negative_controls": {
+    "ruler_radius_one_rejected": true
+  },
+  "parameters": {
+    "C": "101/100",
+    "H": "569/500",
+    "K": "457/25",
+    "a": "519/1000",
+    "b": "879/500",
+    "eta": "533/500",
+    "k0": "100",
+    "m": "6",
+    "r0": "507/100",
+    "r1": "1131/100",
+    "sigma": "138/125",
+    "t": "971/1000"
+  },
+  "scalar_positive_margins": {
+    "carry_constant": "17543/500000",
+    "carry_leading": "414091/500000000",
+    "cross_lower_18": "177439/500000",
+    "diameter_covers_local": "347977/19420",
+    "diameter_subsequence": "4619/17478000",
+    "fine_gap": "938099977/4000000000000",
+    "local_derivative_squared": "164317309185316765399415924631660804345020861757627522592467859050649/62528305677629524856117273600000000000000000000000000000000000000000000",
+    "local_upper_18": "54270790470607117859113777706237761071/4000000000000000000000000000000000000",
+    "macro_constant": "95/971",
+    "macro_leading": "499/485500",
+    "macro_linear": "38/971",
+    "minimum_local_at_k0": "1730257907497/2000000000",
+    "mixed_gap_at_k0": "4999",
+    "padding_at_n_10000": "3501/2000000000",
+    "tau_valid": "2956731/9709000000"
+  },
+  "scope": "Universal written argument plus exact finite rational macro and scalar obligations; no Lean or specialist review",
+  "status": "PASS_EXACT_SCOPED"
+}

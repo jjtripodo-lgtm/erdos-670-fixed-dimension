@@ -1,0 +1,12 @@
+{
+  "matrices": {
+    "git_blob": "0eea70459e28e7d23ea73f22edf202f37d6eea5c",
+    "sha256": "ad21bcd0f56a33680de1aa62bab9b66a53d307a5643db5675ecd0e2f461bcc15",
+    "retained_file": "verification/r29/MATRICES.json"
+  },
+  "r29checker": {
+    "git_blob": "b2ad16b30074bc80eccda015bcadbcf055f5ca71",
+    "sha256": "e7456b86d6ea39d402794b08a2eff12f494e40c16cba78465fe8adfc06eee4bf",
+    "retained_file": "verification/r29/check_all.py"
+  }
+}

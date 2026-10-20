@@ -1,0 +1,34 @@
+\section{Source correspondence}\label{app:sources}
+
+The written arguments and the formal endpoint sources have different roles.
+The prose proofs in \cref{sec:epsilon-proof,sec:r29-proof} reorganize the
+retained written construction notes; \cref{sec:formal} identifies the exact
+Lean conclusions. In particular, the R29 paper theorem uses the weak unit
+edge-separation inequality of the formal statement, although the written
+scalar estimates are strict.
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{.28\textwidth}X@{}}
+\toprule
+Source object & Immutable Git blob identity\\\midrule
+Two-circle written proof & \texttt{63fdaf3adb4357e39781a9020d8815a4d0de4dca}\\[3pt]
+Epsilon-family formal source & \texttt{0670e6c3af874912519aacaa79dd6a9b77f16e22}\\[3pt]
+R29 indexed formal source & \texttt{8d09609eef219795b3dce076f3dc10c50a901ee0}\\[3pt]
+R29 minimal exact adapter & \texttt{8ac23307f1491887b81d8a6edf67e80a709929fb}\\[3pt]
+R29 exact matrix inputs & \texttt{0eea70459e28e7d23ea73f22edf202f37d6eea5c}\\
+\bottomrule
+\end{tabularx}
+\caption{Selected exact source identities, retained for version matching.
+A blob identity identifies source bytes; it is not an execution receipt.}
+\end{table}
+
+The locked Mathlib revision for the newer endpoints is
+\begin{center}\small\texttt{0df444a360eaa60ab8c11dca51a86af692955474}.\end{center}
+The extracted Formal Conjectures statement is pinned at project revision
+\begin{center}\small\texttt{c77fdd446d23539302aa73bcfae4a9fa962b8382}.\end{center}
+Its source blob is \texttt{1ae473043edcd960c0b9eed81ccd6e82994f2a22}.
+The public repository preserves statement headers, audit output and build
+receipts separately from the paper source. These identities make the
+correspondence inspectable; they do not assert that this new typeset
+exposition has itself received independent proof or priority review.

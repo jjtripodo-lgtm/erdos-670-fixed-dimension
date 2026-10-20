@@ -1,5 +1,15 @@
 # Version history
 
+## New GitHub paper, 20 October 2026
+
+*Separated distances in fixed dimension: Two circles and a dimension-29 counterexample* combines the two-circle epsilon family, its uniform dimension/size corollary, and the prime-first R29 construction. A short written consequence gives R29 diameter < 0.999n² for every n >= 400000 using Dusart's prime-interval theorem. The latter is not a Lean endpoint.
+
+- [New PDF](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf)
+- [Editable source and reproduction instructions](paper/2026-10-20/README.md)
+- [Exact theorem scopes, sources, and verification limits](paper/2026-10-20/SOURCE_MAP.md)
+
+The new paper and its included supporting files are [CC BY 4.0](paper/2026-10-20/LICENSE.md), as approved by the author. This is an additive GitHub manuscript version. The old paper/PDF/ZIP paths, proof closures, tags, Hexagon version, DOI record, Palomar and Prove2Me references, and license files are retained. As of this GitHub release, no new external deposit, external acceptance, or Lean execution is asserted. The old DOI and Hexagon identifier identify their old versions, not this paper.
+
 ## Documentation and replay-evidence update, 19 October 2026
 
 [Current public status](PUBLIC_STATUS.md) explains the published fixed-dimensional
@@ -17,21 +27,21 @@ The manuscript, original proof, original receipts, tags, citation metadata,
 Hexagon version, DOI archive, and licenses are unchanged. This update does not
 claim external mathematical review or a new platform acceptance.
 
-## Current finite version, 14 October 2026
+## Finite version, 14 October 2026
 
 *Orthogonal circles and a fixed-dimensional separated-distance counterexample*:
 for every n ≥ 36354, a configuration in R^81794 with diameter strictly below
 (147/200)n². The complete proof has 66 local Lean modules. Its source-bound
 build uses upstream dependency cache on one cloud computer.
 
-- [Current paper](paper/fixed_dimension_670.pdf)
+- [14 October paper](paper/fixed_dimension_670.pdf)
 - [Immutable finite proof source](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/f1604c368efce996a9af4d46f581e676e49054f5/lean)
-- [Current verification scope](verification/finite670/README.md)
+- [Finite-version verification scope](verification/finite670/README.md)
 - [Hexagon preprint hexagon:2610.00254v1](https://hexagonmath.org/2610.00254?version=1), deposited 15 October 2026, with the same finite theorem stated above
 - [Supplementary exact conjecture statement adapter](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/ce6a8d86f0da85af80e8f5b3752f7386a134e200/verification/statement_bridge/README.md), using the unchanged finite theorem
 
 This revision does not claim a new DOI deposit or a new registry verification.
-The current manuscript is CC BY 4.0 under [LICENSE-PAPER](LICENSE-PAPER).
+The 14 October manuscript is CC BY 4.0 under [LICENSE-PAPER](LICENSE-PAPER).
 
 ## Archived v1.0.0, 12 October 2026
 

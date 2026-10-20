@@ -1,0 +1,24 @@
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,font=\small]
+\fill[mist,rounded corners=3pt] (0,0) rectangle (7.2,3.55);
+\fill[mist,rounded corners=3pt] (7.5,0) rectangle (14.7,3.55);
+\node[anchor=west,font=\small\bfseries,text=ink] at (.28,3.17) {Digit circle};
+\node[anchor=west,font=\small\bfseries,text=ink] at (7.78,3.17) {Ruler circle};
+\draw[teal!35,line width=.7pt] (3.4,1.45) ellipse (2.1 and .85);
+\draw[teal,line width=1.7pt] plot[domain=48:132,samples=70] ({3.4+2.1*cos(\x)},{1.45+.85*sin(\x)});
+\foreach \a in {50,64,78,92,106,120,130} {\fill[teal] ({3.4+2.1*cos(\a)},{1.45+.85*sin(\a)}) circle(1.8pt);}
+\draw[ink!55,->] (3.4,1.45)--(4.75,2.08) node[midway,below,font=\scriptsize] {$R_0$};
+\node[font=\scriptsize,align=center,text=slate] at (3.5,.35) {Uniform angles control coarse and fine digits\\small span $a$; exact cross-length formula};
+\draw[gold!45,line width=.7pt] (11.05,1.45) ellipse (2.1 and .85);
+\draw[gold,line width=1.7pt] plot[domain=15:150,samples=70] ({11.05+2.1*cos(\x)},{1.45+.85*sin(\x)});
+\foreach \a in {18,32,58,75,101,120,147} {\fill[gold] ({11.05+2.1*cos(\a)},{1.45+.85*sin(\a)}) circle(1.8pt);}
+\draw[ink!55,->] (11.05,1.45)--(12.75,1.95) node[midway,below,font=\scriptsize] {$R_1$};
+\node[font=\scriptsize,align=center,text=slate] at (11.1,.35) {Residue ruler controls all local gaps\\independent angular span};
+\end{tikzpicture}
+\caption{Two independent coordinate channels within each cluster, shown
+schematically. The ellipses depict circle planes; they are not a literal
+planar realization of the high-dimensional construction. Whole-matrix
+completion makes different clusters' perturbation spaces orthogonal.}
+\label{fig:architecture}
+\end{figure}

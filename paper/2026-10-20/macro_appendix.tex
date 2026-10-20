@@ -1,0 +1,243 @@
+\section{Proof of the macro input}\label{app:macro}
+
+We prove \cref{lem:macro}, following the first version's macro
+estimates~\cite[Lemmas~2--3]{Tripodo}. None of the cluster geometry of
+the main text is used here. The plan is as follows.
+\begin{enumerate}[leftmargin=2em,itemsep=1pt]
+\item Compute the Gram matrix $\Gamma$ of the \emph{increments}
+ $q_j-q_{j-1}$ that the colex distances would require
+ (\cref{sec:app-gram}).
+\item Show that $\Gamma$ is dominated by its tridiagonal part, and that
+ this part contains two ``reserves'' of positivity: one large
+ enough to pay for the shortening by $2\rho^2$, and one diagonal reserve
+ (\cref{sec:app-reserves}). This proves the Euclidean realization.
+\item Use the diagonal reserve to bound the vectors $F_A,G_A$ all at once,
+ through their projections on the increments (\cref{sec:app-projections}).
+ This proves the whole-matrix estimates.
+\end{enumerate}
+Throughout, $m\ge4$ and $K,\rho$ satisfy \eqref{eq:macro-gates}. Since
+$H_m\ge1$, the harmonic gate implies $K\ge16384>10$, as used below. Vectors
+$x\in\R^{m-1}$ are indexed $x_1,\dots,x_{m-1}$, and $e_A$ $(0\le A<m)$
+denotes the standard basis of $\R^m$.
+
+\subsection{The increment Gram matrix}\label{sec:app-gram}
+
+Let $\partial$ be the $(m-1)\times m$ matrix whose $j$-th row is
+$e_{j-1}^\T-e_j^\T$ $(1\le j<m)$. For a symmetric $m\times m$ matrix
+$\mathbf D$ with zero diagonal, the matrix $-\frac12\partial\mathbf
+D\partial^\T$ is the Gram matrix that the increments must have: if points
+$q_A$ satisfy $\norm{q_A-q_B}^2=\mathbf D_{AB}$, then
+$\ip{q_i-q_{i-1}}{q_j-q_{j-1}}=(-\frac12\partial\mathbf D\partial^\T)_{ij}$,
+by the polarization identity. This is Schoenberg's Euclidean-distance
+criterion in consecutive-increment coordinates~\cite[Theorem~1]{Schoenberg}.
+
+Let $\mathbf D$ have entries $D_{AB}^2$ off the diagonal, put
+$\Gamma=-\frac12\partial\mathbf D\partial^\T$, and write
+\[
+ D_j=D_{j-1,j}=K+\frac{j(j+1)}2\qquad(1\le j<m)
+\]
+for the lengths of the consecutive macro edges. Since
+$D_{j-1,j+1}=D_j+j$ and $D_{j,j+1}=D_j+j+1$, a direct computation gives
+\begin{equation}\label{eq:gram-entries}
+ \Gamma_{jj}=D_j^2,\qquad
+ \Gamma_{j,j+1}=-c_j,\quad\text{where }\ c_j=\tfrac12(D_j+1)^2+j.
+\end{equation}
+If $i\le j-2$, the four lengths $D_{i-1,j-1},D_{i-1,j},D_{i,j-1},D_{ij}$ have
+the form $\alpha,\beta,\alpha+1,\beta+1$ with $\beta-\alpha=j-1$, and
+therefore $\Gamma_{ij}=-(j-1)$. In other words, $\Gamma_{ij}=-(\max\{i,j\}-1)$
+whenever $|i-j|\ge2$.
+
+\subsection{Two reserves of positivity}\label{sec:app-reserves}
+
+Split $\Gamma=\mathsf B-\mathsf N$, where the \emph{band} $\mathsf B$
+keeps the diagonal and the two neighbouring diagonals of $\Gamma$, and the
+\emph{far part} $\mathsf N$ has entries $\max\{i,j\}-1$ for $|i-j|\ge2$
+and zero otherwise. Completing squares in $-2c_jx_jx_{j+1}$ gives
+\begin{equation}\label{eq:tridiagonal}
+ \mathsf B[x]=\sum_{j=1}^{m-2}c_j(x_j-x_{j+1})^2
+              +\sum_{j=1}^{m-1}\alpha_jx_j^2+c_{m-1}x_{m-1}^2,
+\end{equation}
+where $c_{m-1}$ is given by the same formula as the other $c_j$,
+$\alpha_j=D_j^2-c_j-c_{j-1}$ with $c_0=0$, and explicitly
+\[
+ \alpha_1=\frac{K^2}2-2,\qquad \alpha_2=-4,\qquad
+ \alpha_j=(j-2)K+\frac{j^3}2-j^2-2j\quad(j\ge3).
+\]
+
+\emph{The band dominates a diagonal form.} Define
+$\Omega=\diag(\omega_1,\dots,\omega_{m-1})$ by
+\[
+ \omega_1=\omega_2=\frac{K^2}{24},\qquad \omega_j=\frac{Kj+j^3}{24}\quad(j\ge3).
+\]
+We claim $\mathsf B\succeq\Omega$. The terms of \eqref{eq:tridiagonal}
+involving only $x_1,x_2$ are $c_1(u-v)^2+\alpha_1u^2-4v^2$, with
+$u=x_1$, $v=x_2$. Since $c_1,\alpha_1\ge K^2/4$ and
+$(u-v)^2+u^2\ge(u^2+v^2)/3$,
+\[
+ c_1(u-v)^2+\alpha_1u^2-4v^2
+ \ge\frac{K^2}{12}(u^2+v^2)-4v^2
+ \ge\frac{K^2}{24}(u^2+v^2)
+\]
+for $K\ge10$. For $j\ge3$ we have $\alpha_j\ge\omega_j$, because
+\[
+ 24(\alpha_j-\omega_j)=(23j-48)K+11j^3-24j^2-48j,
+\]
+which is positive at $j=3$ (it equals $21K-63$), and has both terms
+nonnegative for $j\ge4$. All remaining terms of \eqref{eq:tridiagonal}
+are nonnegative.
+
+\emph{The far part is small.} Put $\sigma_0=\sum_j\omega_j^{-1}$ and
+$\sigma_2=\sum_jj^2\omega_j^{-1}$. For $K\ge10$,
+\[
+ \sigma_0\le\frac{48}{K^2}+\frac{24H_m}{K}\le\frac{29H_m}{K},
+ \qquad
+ \sigma_2\le\frac{120}{K^2}+24H_m\le26H_m.
+\]
+With $b_0=\sum_j|x_j|$ and $b_1=\sum_jj|x_j|$ we have
+$|\mathsf N[x]|\le\sum_{i,j}\max\{i,j\}|x_i||x_j|\le2b_0b_1$, while
+weighted Cauchy--Schwarz gives $b_0^2\le\sigma_0\Omega[x]$ and
+$b_1^2\le\sigma_2\Omega[x]$. Therefore
+\begin{equation}\label{eq:remainder}
+ |\mathsf N[x]|
+ \le2\sqrt{\sigma_0\sigma_2}\,\Omega[x]
+ \le\frac{\sqrt{754}}{64}\,\Omega[x]
+ \le\tfrac12\Omega[x]\le\tfrac12\mathsf B[x],
+\end{equation}
+using $K\ge16384H_m^2$ (so that $\sqrt{29\cdot26}\,H_m/\sqrt K\le\sqrt{754}/128$)
+and $754<1024$. Hence
+\[
+ \Gamma\succeq\tfrac12\mathsf B.
+\]
+
+\emph{First reserve: a path energy.} Let $\Pi$ be the quadratic form
+\[
+ \Pi[x]=D_1^2x_1^2+\sum_{j=1}^{m-2}D_j^2(x_j-x_{j+1})^2+D_{m-1}^2x_{m-1}^2.
+\]
+In \eqref{eq:tridiagonal}, bound $-4x_2^2\ge-8x_1^2-8(x_2-x_1)^2$. Since
+$\alpha_1-8\ge D_1^2/4$, $c_1-8\ge D_1^2/4$, $c_j\ge D_j^2/4$ for all $j$,
+and $\alpha_j\ge0$ for $j\ge3$, this proves
+\begin{equation}\label{eq:path-reserve}
+ \mathsf B\succeq\tfrac14\Pi.
+\end{equation}
+
+\emph{Second reserve: a diagonal.} For every $j$,
+\begin{equation}\label{eq:diagonal-reserve}
+ D_j^2\le36(K+m)\,\omega_j,
+ \qquad\text{hence}\qquad
+ \mathsf B\succeq\Omega\succeq\frac{\diag(D_1^2,\ldots,D_{m-1}^2)}{36(K+m)}.
+\end{equation}
+For $j=1,2$ the first inequality is immediate. For $j\ge3$, use
+$D_j\le K+j^2\le(K+m)j$ to get the stronger bound
+$D_j^2\le(K+j^2)(K+m)j=(K+m)(Kj+j^3)$.
+
+\emph{Paying for the shortening.} Shortening every squared distance by
+$2\rho^2$ replaces $\mathbf D$ by $\mathbf D_\rho$, with entries
+$D_{AB}^2-2\rho^2$ off the diagonal. Since the rows of $\partial$ sum to
+zero, the new increment Gram matrix is
+\[
+ \Gamma_\rho=-\tfrac12\partial\mathbf D_\rho\partial^\T
+ =\Gamma-\rho^2\partial\partial^\T.
+\]
+Now $\partial\partial^\T[x]=x_1^2+\sum_j(x_j-x_{j+1})^2+x_{m-1}^2\le
+\Pi[x]/K^2$, because every $D_j\ge K$. As $\rho\le K/4$, the subtraction
+costs at most $\Pi/16\preceq\mathsf B/4$, by \eqref{eq:path-reserve}.
+Combining this with $\Gamma\succeq\mathsf B/2$ and the two reserves,
+\begin{equation}\label{eq:both-reserves}
+ \Gamma_\rho\succeq\tfrac14\mathsf B\succeq\tfrac1{16}\Pi\succ0,
+ \qquad
+ \Gamma_\rho\succeq
+     \frac{\diag(D_1^2,\ldots,D_{m-1}^2)}{144(K+m)}.
+\end{equation}
+Here $\Pi\succ0$ because $\Pi\succeq K^2\partial\partial^\T$ and $\partial$
+has full row rank.
+
+\emph{Euclidean realization.} Since $\Gamma_\rho\succ0$, we may write
+$\Gamma_\rho=\mathsf V^\T\mathsf V$ for an invertible
+$(m-1)\times(m-1)$ matrix $\mathsf V$ with columns $v_1,\dots,v_{m-1}$
+(for instance, by Cholesky factorization). Put $q_0=0$ and
+$q_A=v_1+\dots+v_A$. For $A<B$ let $u_{AB}=\sum_{j=A+1}^Be_j\in\R^{m-1}$;
+then $\partial^\T u_{AB}=e_A-e_B$, and so
+\[
+ \norm{q_B-q_A}^2
+ =\Gamma_\rho[u_{AB}]
+ =-\tfrac12(e_A-e_B)^\T\mathbf D_\rho(e_A-e_B)
+ =D_{AB}^2-2\rho^2.
+\]
+The increments $v_j=q_j-q_{j-1}$ are linearly independent, so the points
+$q_A$ are affinely independent.
+
+\subsection{Bounding all projections at once}\label{sec:app-projections}
+
+Let $Y_0,\dots,Y_{m-1}\in\R^{m-1}$ be vectors, and record their
+projections on the increments in the $(m-1)\times m$ matrix
+\[
+ Z_{jA}=\ip{q_j-q_{j-1}}{Y_A},\qquad\text{that is,}\qquad Z=\mathsf V^\T Y.
+\]
+As $\mathsf V$ is invertible, $Z$ determines $Y$, and
+$Y^\T Y=Z^\T(\mathsf V^\T\mathsf V)^{-1}Z=Z^\T\Gamma_\rho^{-1}Z$. Writing
+$\mathsf P=\diag(D_1,\dots,D_{m-1})$, the second inequality in
+\eqref{eq:both-reserves} gives
+$\Gamma_\rho^{-1}\preceq144(K+m)\mathsf P^{-2}$, and hence
+\begin{equation}\label{eq:whole-solve}
+ \opnorm Y\le12\sqrt{K+m}\,\opnorm{\mathsf P^{-1}Z}.
+\end{equation}
+So it suffices to show that the projection matrices of $F$ and $G$,
+normalized by $\mathsf P^{-1}$, have bounded operator norm.
+
+Taking consecutive differences of the defining equations
+\eqref{eq:anchored-projections} (with the convention that the right-hand
+sides vanish for $J=A$) gives, for $1\le j<m$ and $0\le A<m$,
+\begin{align*}
+ Z^F_{jA}&=D_j\,\one_{A=j}-\one_{A>j},\\
+ Z^G_{jA}&=-D_j\,\one_{A=j-1}-(j-1)\,\one_{A<j-1}.
+\end{align*}
+For example, for $A>j$ we get $Z^F_{jA}=D_{j-1,A}-D_{jA}=-1$, because the
+colex labels of $\{j-1,A\}$ and $\{j,A\}$ differ by one. The columns $F_0$
+and $G_{m-1}$ vanish. Delete them, and index the remaining columns by
+$1,\dots,m-1$ (column $A$ of $Z^F$, and column $A-1$ of $Z^G$, become
+column $A$). The two projection matrices become
+\[
+ Z_{\mathrm{fine}}=\mathsf P-\mathsf E_+,\qquad
+ Z_{\mathrm{coarse}}=-(\mathsf P+\mathsf E_-),
+\]
+where $(\mathsf E_+)_{ij}=\one_{i<j}$ and
+$(\mathsf E_-)_{ij}=(i-1)\one_{j<i}$.
+
+For the first matrix, the Frobenius norm gives
+$\opnorm{\mathsf P^{-1}\mathsf E_+}\le m/K\le1$, as all entries of
+$\mathsf P^{-1}\mathsf E_+$ are at most $1/K$. For the second,
+\[
+ 0\le(\mathsf P^{-1}\mathsf E_-)_{ij}
+ =\frac{i-1}{D_i}\one_{j<i}
+ \le\frac2i\one_{j<i}
+\]
+since $D_i\ge i(i+1)/2$. The finite Hardy matrix
+$\mathcal H_{ij}=i^{-1}\one_{j<i}$ has operator norm at most $2$ by the
+weighted Schur test~\cite{Schur,Sinnamon}. For completeness, take
+the weights $w_j=j^{-1/2}$; by comparison with integrals,
+\[
+ \sum_{j<i}\frac{w_j}{i}\le2w_i,
+ \qquad \sum_{i>j}\frac{w_i}{i}\le2w_j.
+\]
+For any real vector $x$, Cauchy--Schwarz with these weights then gives
+\[
+ \sum_i\Bigl(\sum_j \mathcal H_{ij}x_j\Bigr)^2
+ \le\sum_i\Bigl(\sum_j\mathcal H_{ij}w_j\Bigr)
+          \Bigl(\sum_j\mathcal H_{ij}\frac{x_j^2}{w_j}\Bigr)
+ \le\sum_j\frac{x_j^2}{w_j}\sum_i2w_i\mathcal H_{ij}
+ \le4\sum_jx_j^2.
+\]
+A matrix with nonnegative entries bounded by those of $2\mathcal H$ has
+operator norm at most $2\opnorm{\mathcal H}$ (apply it to $|x|$), so
+$\opnorm{\mathsf P^{-1}\mathsf E_-}\le4$.
+
+Thus $\opnorm{\mathsf P^{-1}Z_{\mathrm{fine}}}\le2$ and
+$\opnorm{\mathsf P^{-1}Z_{\mathrm{coarse}}}\le5$, and
+\eqref{eq:whole-solve} gives $\opnorm F\le24\sqrt{K+m}$ and
+$\opnorm G\le60\sqrt{K+m}$; restoring the zero columns does not change
+the norms. This proves \eqref{eq:FG} and completes the proof of
+\cref{lem:macro}.
+\qed
+
+
+
