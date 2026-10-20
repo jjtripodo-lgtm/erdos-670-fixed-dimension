@@ -1,0 +1,810 @@
+\section{The problem and the results}\label{sec:intro}
+
+How small can the diameter of a point configuration be if all of its edge
+lengths must stay at least one unit apart? The number of edges gives a
+quadratic lower bound. In a fixed Euclidean dimension, however, the geometry
+may impose a further loss. This paper gives two constructions that separate
+these questions: a uniform family approaching the counting coefficient as
+the dimension increases, and a counterexample to the coefficient-one bound
+in dimension~29.
+
+\begin{definition}
+An \emph{edge} of a finite set $X\subset\R^d$ is an unordered pair of distinct
+points. We call $X$ \emph{distance-separated} if
+\begin{equation}\label{eq:separated}
+ \bigl|\norm{x-y}-\norm{u-v}\bigr|\ge1
+ \quad\text{for any two different edges }\{x,y\},\{u,v\}.
+\end{equation}
+For $n\ge3$, let $\Delta_d(n)$ be the infimum of the diameters of all
+distance-separated $n$-point subsets of $\R^d$.
+\end{definition}
+
+The comparison in \eqref{eq:separated} is between edges, not merely between
+distinct values in a distance set: repeated edge lengths are forbidden.
+Every edge has length at least one. Indeed, if $z$ is a third point, then
+$1\le|\norm{x-z}-\norm{y-z}|\le\norm{x-y}$. Sorting the $\binom n2$ edge
+lengths therefore gives
+\begin{equation}\label{eq:counting}
+ \Delta_d(n)\ge\binom n2=\left(\frac12-o(1)\right)n^2.
+\end{equation}
+The class defining the infimum is nonempty: the positive differences between
+distinct powers of two are distinct integers, so a suitable set on a line
+already supplies an example.
+
+Erd\H{o}s asked whether the stronger lower bound $(1+o(1))n^2$ holds;
+see \cite[Problem~20]{Erdos}. His wording does not specify the quantifier
+order in the dimension. The maintained fixed-dimensional interpretation is
+\begin{equation}\label{eq:conjecture}
+ \forall d\ge1\ \forall\varepsilon>0\ \exists N\ \forall n\ge N:
+ \quad \Delta_d(n)\ge(1-\varepsilon)n^2.
+\end{equation}
+The threshold $N$ may depend on both $d$ and $\varepsilon$.
+
+Ho's earlier construction \cite{Ho} refutes a bound uniform in dimension:
+for infinitely many $n$, it gives configurations in $\R^{n^2-n}$ with
+diameter $(1-1/\pi^2+o(1))n^2$. His Remark~10 proves the improved coefficient
+$(\pi+\sqrt{\pi^2-4})/(2\pi)=0.885589\ldots$ in that construction, while
+Remark~9 leaves the fixed-dimensional question open. His proof also has a
+Lean formalization. The distinction addressed here is the dimension's
+independence from the number of points.
+
+The earlier unrestricted-dimensional construction \cite{GrowingDimension}
+achieves diameter $\binom n2+O(\sqrt{\log n})$ for every $n\ge3$, with
+dimension allowed to grow with $n$. Here the aim is to keep the dimension
+fixed while the number of points grows.
+
+\subsection{Dimension linear in the inverse tolerance}
+
+\begin{theorem}[The two-circle family]\label{thm:epsilon}
+Let $0<\varepsilon\le\tfrac12$ and put
+$m_0=\lceil8192/\varepsilon\rceil$. For every integer $n\ge4m_0$ there is an
+$n$-point set $X\subset\R^{10m_0-1}$ with minimum point
+distance at least one, with the lengths of different unordered edges
+\emph{strictly} more than one apart, and with
+\[
+ \diam X<\left(\frac12+\varepsilon\right)n^2.
+\]
+\end{theorem}
+
+For each fixed tolerance, both the ambient dimension and the size threshold
+are $O(\varepsilon^{-1})$. The same construction gives a useful statement
+when dimension and point count are specified in advance.
+
+\begin{corollary}[Uniform dimension and size]\label[corollary]{cor:uniform}
+If $d\ge163840$ and $n\ge65536$, there is a configuration in $\R^d$ with the
+same minimum-distance and strict edge-separation properties and
+\[
+ \diam X<\left(\frac12+\frac{102400}{d}+\frac{40960}{n}\right)n^2.
+\]
+\end{corollary}
+
+The dimension depends on $\varepsilon$ in \cref{thm:epsilon}. Consequently,
+neither statement constructs diameter $(1/2+o(1))n^2$ in one fixed dimension.
+The $O(1/d+1/n)$ order was already present in the earlier internal
+deterministic-incidence construction~\cite{IncidenceNote}; the contribution of the present
+organization is a simpler two-circle proof with explicit constants, together
+with its exact formal endpoint. No optimality of this dimension order is
+asserted.
+
+\subsection{A fixed witness in dimension 29}
+
+\begin{theorem}[Dimension 29]\label{thm:r29}
+For every natural number $N$, there exist an integer
+$n\ge\max\{N,600\}$ and a set $X\subset\R^{29}$
+of $n$ points such that the minimum point distance is at least one, different
+unordered edge lengths differ by at least one, and
+\[
+ \diam X<\frac{499}{500}n^2=0.998n^2.
+\]
+The sizes arise along an unbounded prime-first subsequence.
+\end{theorem}
+
+\begin{corollary}[All sufficiently large sizes in dimension 29]\label[corollary]{cor:r29-all}
+For every integer $n\ge400000$, there is an $n$-point set in $\R^{29}$
+with minimum point distance at least one, distinct unordered edge lengths
+strictly more than one apart, and diameter $<0.999n^2$.
+\end{corollary}
+This corollary uses an explicit prime-interval theorem in addition to the
+same geometry. Its written proof is given at the end of
+\cref{sec:r29-proof}; it is not one of the Lean endpoints listed in
+\cref{sec:formal}.
+
+\begin{corollary}[Negation of the fixed-dimensional statement]\label[corollary]{cor:negation}
+The proposition \eqref{eq:conjecture} is false. In fact,
+$\liminf_{n\to\infty}\Delta_{29}(n)/n^2\le499/500<1$.
+\end{corollary}
+\begin{proof}
+If \eqref{eq:conjecture} held, choose $d=29$ and $\varepsilon=1/1000$.
+Its eventual lower bound $0.999n^2$ contradicts \cref{thm:r29} at a selected
+size beyond that threshold.
+\end{proof}
+
+The dimension-29 theorem trades a weaker diameter coefficient for a much
+smaller dimension and different size quantifiers. The earlier published
+orthogonal-circle theorem \cite{PublishedFinite} gives diameter below
+$0.735n^2$ in $\R^{81794}$ for \emph{every} $n\ge36354$. That theorem remains
+valid; it is not superseded in every parameter by \cref{thm:r29}.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}p{.23\textwidth}p{.24\textwidth}X@{}}
+\toprule
+Construction & Ambient dimension & Diameter and size quantifier\\
+\midrule
+Published finite version & $81794$ & $<0.735n^2$ for every $n\ge36354$\\[4pt]
+\Cref{thm:r29} & $29$ & $<0.998n^2$ for arbitrarily large selected $n\ge600$\\[4pt]
+\Cref{cor:r29-all} & $29$ & $<0.999n^2$ for every $n\ge400000$ (written corollary)\\[4pt]
+\Cref{thm:epsilon} & $10\lceil8192/\varepsilon\rceil-1$ &
+$<(1/2+\varepsilon)n^2$ for every $n\ge4\lceil8192/\varepsilon\rceil$\\
+\bottomrule
+\end{tabularx}
+\caption{The results have different quantifiers. The dimension in the last
+row is fixed for each chosen tolerance, independently of $n$.}
+\label{tab:results}
+\end{table}
+
+\subsection{Why two circles help}
+
+Replace each of $m$ macro vertices by $k$ points. Distances within a cluster
+must all be distinct, while each pair of clusters contributes an ordered
+block of $k^2$ cross lengths. A tilted circle can encode the coarse and fine
+digits of those blocks. A second circle, in independent coordinates, can
+encode the local ruler without constraining its angular span to the digit
+circle's small arc. A whole-matrix Gram completion makes the perturbation
+spaces of different clusters orthogonal. The resulting cross lengths are
+\emph{exactly}
+\[
+ \Phi_\nu(T)=\sqrt{\nu^2+2\nu T}.
+\]
+This formula requires only a derivative bound. Its error relative to
+$\nu+T$ need not remain bounded as the clusters grow.
+
+\input{figures/architecture.tex}
+
+The general family uses a colex-labelled macro simplex with uniform
+operator estimates. The dimension-29 construction replaces that large
+simplex by six vertices with an explicit label pattern. Three exact
+$5\times5$ positivity checks then control \emph{all} cluster sizes in its
+admissible range. The proofs below retain these two distinct macro inputs.
+
+The common geometry and separation lemmas are proved in
+\cref{sec:mechanism}. The general family uses the colex input from
+\cref{sec:macro}; its proof, including the passage to every sufficiently
+large size, is in \cref{sec:epsilon-proof}. The dimension-29 proof in
+\cref{sec:r29-proof} replaces the macro input and numerical parameters.
+
+\section{The common geometric mechanism}\label{sec:mechanism}
+
+We use real Euclidean inner products, transpose $\T$, and the operator norm
+$\opnorm{\cdot}$. Matrices act on column vectors. For a prime $p$, write
+$[v]_p\in\{0,\ldots,p-1\}$ for the least nonnegative residue.
+
+\begin{lemma}[Two-circle completion]\label[lemma]{lem:completion}
+Let $R_0,R_1>0$, let $q_A\in\R^{m-1}$, $0\le A<m$, and let $U$ be an $(m-1)\times m$ matrix
+with $\opnorm U\le R_0$. Put
+$W=(R_0^2I-U^\T U)^{1/2}$. For real $z,w$, define
+\begin{align*}
+ \eta_A(z)&=(U_A\sin z,\,We_A\sin z,\,R_0e_A\cos z),\\
+ \zeta_A(w)&=(R_1e_A\sin w,\,R_1e_A\cos w).
+\end{align*}
+The vector $\eta_A(z)$ lies in $\R^{m-1}\oplus\R^m\oplus\R^m$ and has norm
+$R_0$; $\zeta_A(w)$ lies in two further $m$-dimensional blocks and has norm
+$R_1$. The perturbation spaces for different $A$ are orthogonal. Within one
+cluster the two chord lengths are respectively
+$2R_0|\sin((z-z')/2)|$ and $2R_1|\sin((w-w')/2)|$.
+\end{lemma}
+\begin{proof}
+The identity $U^\T U+W^\T W=R_0^2I$ gives both the norms of the sine
+directions and their mutual orthogonality; the cosine directions are
+orthogonal unit-coordinate directions in a separate block. The remaining
+claims are the elementary chord identity, applied in orthogonal blocks.
+The square root is the usual positive-semidefinite matrix square root.
+\end{proof}
+
+This elementary completion is a Gram-deficit construction, related to
+standard dilation arguments \cite{Robinson}. The required hypothesis is a
+bound on the \emph{whole} matrix $U$, not separate bounds on its columns.
+
+Write $R^2=R_0^2+R_1^2$, choose a scale $S>0$, and suppose that
+\begin{equation}\label{eq:macro-metric}
+ \norm{q_A-q_B}^2=D_{AB}^2-2(R/S)^2\quad(A\ne B).
+\end{equation}
+For $\theta>0$ and $0\le i<k$, put
+$z_i=\theta(i-(k-1)/2)$ and $f_i=\sin z_i/\theta$, and set
+\begin{equation}\label{eq:points}
+ x_{Ai}=(Sq_A,0,0,0,0)+(\eta_A(z_i),\zeta_A(w_{Ai})).
+\end{equation}
+There are $5m-1$ coordinates. Suppose also that, whenever $A<B$,
+\[
+ \ip{q_A-q_B}{U_A}=\frac{\alpha}{\theta}D_{AB},\qquad
+ \ip{q_B-q_A}{U_B}=\frac{\beta}{\theta}D_{AB}.
+\]
+Expanding the square, the constant $2R^2$ from the perturbations cancels
+the shortening in \eqref{eq:macro-metric}, leaving
+\begin{equation}\label{eq:cross-general}
+ \norm{x_{Ai}-x_{Bj}}=\Phi_{SD_{AB}}(\alpha f_i+\beta f_j),
+ \qquad \Phi_\nu(T)=\sqrt{\nu^2+2\nu T}.
+\end{equation}
+The ruler-circle blocks have zero macro projection and hence do not enter
+the digit sum. This decoupling is the central feature of the construction.
+
+\begin{lemma}[An ordered cross block]\label[lemma]{lem:cross-order}
+Let $k\ge2$ be an integer, $\alpha,\beta,\gamma>0$, and $0<\tau\le1$, with
+$\alpha\gamma>\beta(k-1)$. Suppose
+$\gamma\le f_{i+1}-f_i\le1$, $f_{k-1}-f_0\le k-1$, and
+$\tau\le\Phi_\nu'(T)\le1/\tau$ on the interval containing zero and all
+digit sums $\alpha f_i+\beta f_j$ in each block.
+Within one macro block, the lexicographic order of $(i,j)$ has fine and
+carry gaps at least
+\[
+ \tau\beta\gamma,\qquad
+ \tau\bigl(\alpha\gamma-\beta(k-1)\bigr),
+\]
+respectively. If $|T|\le T_{\max}$ in every block and successive macro
+baselines are at least $h$ apart, their lengths are separated by at least
+$h-2T_{\max}/\tau$.
+\end{lemma}
+\begin{proof}
+A fine step changes only $j$. A carry replaces $(i,k-1)$ by $(i+1,0)$.
+Apply the mean value theorem to the resulting changes in $T$. Finally,
+$\Phi_\nu(0)=\nu$ and the derivative bound imply
+$|\Phi_\nu(T)-\nu|\le T_{\max}/\tau$, which gives the inter-block bound.
+\end{proof}
+
+The derivative condition is easy to check uniformly. For $\nu>0$,
+\[
+ \Phi_\nu'(T)=(1+2T/\nu)^{-1/2}.
+\]
+If $|2T/\nu|\le1-\tau^2$, its upper bound is $1/\tau$ and its lower
+bound is at least $\tau$, since $\tau^2(2-\tau^2)\le1$.
+
+\begin{lemma}[A quadratic-residue ruler]\label[lemma]{lem:residue-ruler}
+Let $m,k,L\ge2$ be integers, and let $p>mk$ be prime.
+For $0\le A<m$ and $0\le i<k$, put
+\[
+ y_{Ai}=Lpi+[i^2+2kAi]_p.
+\]
+Every local edge $(A,i,i+d)$, where $1\le d<k$ and $0\le i<k-d$,
+has a different positive integer difference $g=y_{A,i+d}-y_{Ai}$.
+Moreover,
+\begin{equation}\label{eq:common-ruler-window}
+ (Ld-1)p<g<(Ld+1)p,
+\end{equation}
+so ordering these differences also orders their lags nondecreasingly.
+\end{lemma}
+\begin{proof}
+The residue terms differ by less than $p$ in absolute value, giving
+\eqref{eq:common-ruler-window}. The open windows for different lags are
+disjoint and ordered. At a fixed lag,
+\[
+ g\equiv d(2i+d+2kA)\pmod p.
+\]
+Equal differences would imply
+$2d[(i+kA)-(i'+kA')]=0\pmod p$. Since $p>mk\ge2k$, $2d$ is invertible
+modulo $p$. The integers $i+kA$ lie in $[0,mk)$, so they are distinct
+modulo $p$ unless $(A,i)=(A',i')$.
+\end{proof}
+
+\begin{lemma}[A monotone chord comparison]\label[lemma]{lem:local-comparison}
+Let $H_d\ge0$ be nondecreasing in $d$, and let $B(g)>0$ be differentiable.
+Consider $d_1\le d_2$ and $g_1<g_2$. If, throughout $[g_1,g_2]$,
+\[
+ H_{d_1}\le cB(g),\qquad B'(g)\ge v>0,
+\]
+where $c\ge0$, then for $L(d,g)=\sqrt{H_d^2+B(g)^2}$,
+\[
+ L(d_2,g_2)-L(d_1,g_1)\ge
+ \frac{v}{\sqrt{1+c^2}}(g_2-g_1).
+\]
+In particular, distinct integer ruler differences give length gaps
+greater than one if $v/\sqrt{1+c^2}>1$.
+\end{lemma}
+\begin{proof}
+Keep the smaller lag fixed. The function
+$F(g)=\sqrt{H_{d_1}^2+B(g)^2}$ has derivative
+$F'(g)=B'(g)/\sqrt{1+(H_{d_1}/B(g))^2}\ge v/\sqrt{1+c^2}$.
+Apply the mean value theorem on $[g_1,g_2]$, then use
+$L(d_2,g_2)\ge L(d_1,g_2)$.
+\end{proof}
+
+\section{The colex macro input}\label{sec:macro}
+
+For $0\le A<B<m$, put
+\begin{equation}\label{eq:colex}
+ D_{AB}=K+\binom B2+A+1,\qquad D_{BA}=D_{AB}.
+\end{equation}
+The edge labels run through $1,\ldots,\binom m2$ exactly once.
+Write $H_m=\sum_{j=1}^m1/j$.
+
+\begin{lemma}[Colex macro skeleton]\label[lemma]{lem:macro}
+Let $m\ge4$ and suppose
+\begin{equation}\label{eq:macro-gates}
+ K\ge m,\qquad K\ge16384H_m^2,\qquad 0\le\rho\le K/4.
+\end{equation}
+There are affinely independent $q_0,\ldots,q_{m-1}\in\R^{m-1}$ satisfying
+$\norm{q_A-q_B}^2=D_{AB}^2-2\rho^2$ for $A\ne B$. There are unique vectors
+$F_A,G_A$ satisfying
+\begin{equation}\label{eq:anchored-projections}
+ \ip{q_A-q_J}{F_A}=D_{AJ}\one_{J<A},\qquad
+ \ip{q_A-q_J}{G_A}=D_{AJ}\one_{J>A}\quad(J\ne A).
+\end{equation}
+Their whole column matrices obey
+\begin{equation}\label{eq:FG}
+ \opnorm F\le24\sqrt{K+m},\qquad\opnorm G\le60\sqrt{K+m}.
+\end{equation}
+\end{lemma}
+
+This input is inherited from the earlier fixed-dimensional construction
+\cite{Tripodo,PublishedFinite}. Its complete proof is reproduced in
+\cref{app:macro}. It uses an increment Gram matrix, a weighted diagonal
+reserve, and a finite Hardy inequality; neither cluster construction is
+used in that proof.
+
+\section{Proof of the inverse-tolerance dimension bound}\label{sec:epsilon-proof}
+
+\subsection{Parameters and the whole-matrix budget}
+
+Fix $0<\xi\le1/8$, an integer $m\ge1024/\xi$, and $k\ge2$. Define
+\begin{gather}\label{eq:epsilon-parameters}
+ s=1+\xi,\quad a=\sqrt\xi,\quad\theta=a/k,\quad
+ K=\lceil\xi m^2\rceil,\quad S=s^3k^2,\\
+ R_0=R_1=128mk^2,\quad R=\sqrt2R_0,\quad\rho=R/S,
+ \quad\tau=\sqrt{1-\frac1{s(K+1)}},\quad\gamma=1-\xi/8.\nonumber
+\end{gather}
+Then $m\ge8192$, $\xi m\ge1024$, and
+\[
+ K\ge1024m,\qquad K+m\le\xi m^2+2m\le\tfrac98\xi m^2.
+\]
+To check the harmonic gate, choose $r\ge13$ with $2^r\le m<2^{r+1}$.
+Dyadic grouping gives $H_m\le r+2$. The inequality
+$(r+2)^2\le2^r/16$ holds at $r=13$ and is preserved by induction since
+$(r+3)^2\le2(r+2)^2$. Thus $H_m^2\le m/16$ and
+$16384H_m^2\le1024m\le K$. Also
+$\rho=128\sqrt2m/s^3<K/4$. Hence \cref{lem:macro} applies.
+
+Set
+\[
+ U=\frac{s}{\theta}(F+skG).
+\]
+By \eqref{eq:FG},
+\begin{align*}
+ \opnorm U&\le\frac{84s^2k}{\theta}\sqrt{K+m}
+ \le84(9/8)^{5/2}mk^2<128mk^2=R_0.
+\end{align*}
+The last comparison is the rational inequality $84^2(9/8)^5<128^2$.
+Moreover $1/[s(K+1)]<\xi/8$, so $\tau>1-\xi/8$ and
+\begin{equation}\label{eq:epsilon-slack}
+ \tau s\gamma>(1-\xi/8)^2(1+\xi)>1.
+\end{equation}
+Indeed the last expression minus one is
+$\xi(3/4-15\xi/64+\xi^2/64)>0$.
+
+\subsection{Independent digits and ruler marks}
+
+The digits are uniform sine marks:
+\[
+ z_i=\theta\left(i-\frac{k-1}{2}\right),\qquad f_i=\sin z_i/\theta.
+\]
+They satisfy $|f_i|\le(k-1)/2$, $\gamma\le f_{i+1}-f_i\le1$, and
+$f_{k-1}-f_0\le k-1$, since $|z_i|<a/2$ and
+$\cos(a/2)\ge1-a^2/8=\gamma$.
+
+By Bertrand's postulate choose a prime $2mk<p<4mk$. Independently of the
+digits, put
+\begin{equation}\label{eq:ruler-epsilon}
+ y_{Ai}=3pi+[i^2+2kAi]_p,\qquad w_{Ai}=y_{Ai}/(3pk).
+\end{equation}
+Use these angles in \eqref{eq:points}. The resulting cross identity is
+\begin{equation}\label{eq:epsilon-cross}
+ \norm{x_{Ai}-x_{Bj}}=\Phi_\nu(s^2kf_i+sf_j),\qquad \nu=SD_{AB},\quad A<B.
+\end{equation}
+This follows from \eqref{eq:anchored-projections} and the common completion
+in \cref{lem:completion}.
+
+\subsection{All local lengths}
+
+For a local edge with $d=j-i\in\{1,\ldots,k-1\}$, let $g=y_{Aj}-y_{Ai}$.
+By \cref{lem:residue-ruler}, with $L=3$,
+\begin{equation}\label{eq:ruler-windows}
+ (3d-1)p<g<(3d+1)p,\qquad
+ g\equiv d(2i+d+2kA)\pmod p.
+\end{equation}
+These differences are distinct positive integers, and ordering them also
+orders their lags nondecreasingly.
+
+The exact local length is
+\[
+ L(d,g)=\sqrt{H_d^2+B(g)^2},\quad
+ H_d=2R_0\sin\frac{ad}{2k},\quad B(g)=2R_0\sin\frac{g}{6pk}.
+\]
+Order two local edges by $g_1<g_2$; then $d_1\le d_2$. Throughout their
+intervening $g$-interval, $g>(3d_1-1)p\ge2pd_1$ and $g<3pk$.
+For $0\le u\le1/2$, the elementary bounds $\sin u\ge(7/8)u$ and
+$\cos u\ge7/8$ give
+\[
+ B(g)\ge\frac7{12}\frac{R_0d_1}{k},\qquad
+ B'(g)\ge\frac78\frac{R_0}{3pk},\qquad
+ H_{d_1}\le\frac{R_0ad_1}{k}\le\frac{12a}{7}B(g).
+\]
+Since $a^2=\xi\le1/8$, we have $12a/7<1$. Also $p<4mk$ gives
+\[
+ B'(g)>\frac{28}{3},\qquad
+ \frac{28/3}{\sqrt{1+(12a/7)^2}}>\frac{14}{3}>1.
+\]
+The digit chords $H_d$ increase with $d$, so \cref{lem:local-comparison}
+proves strict unit separation of all local lengths.
+The smallest local length is greater than $7R_0/(12k)>1$, while every
+local length is less than $R_0\sqrt{1+a^2}<144mk^2$.
+
+\subsection{All cross and mixed lengths}
+
+Put $h=(k-1)/2$ and $T_{\max}=s(sk+1)h$. Then
+\[
+ 2T_{\max}=s^2k^2-s(s-1)k-s<s^2k^2.
+\]
+Since $\nu\ge S(K+1)$, we have
+$2|T|/\nu<1/[s(K+1)]=1-\tau^2$. Consequently
+$\tau\le\Phi_\nu'(T)\le1/\tau$ and
+$|\Phi_\nu(T)-\nu|\le T_{\max}/\tau$.
+
+In \cref{lem:cross-order}, fine steps have gap at least $\tau s\gamma>1$.
+At a carry the digit-sum increment is at least
+\[
+ s^2k\gamma-s(k-1)=s\bigl[(s\gamma-1)k+1\bigr]>s,
+\]
+so its length gap is also greater than one. Consecutive macro baselines
+are $S$ apart, and
+\[
+ S-\frac{2T_{\max}}\tau
+ =s^2(s-1/\tau)k^2+\frac{s(s-1)k}\tau+\frac s\tau>1
+\]
+by \eqref{eq:epsilon-slack}. Thus all cross lengths are mutually more
+than one apart.
+
+Every cross length is greater than $s^3Kk^2\ge1024mk^2$:
+indeed its lower bound $S(K+1)-T_{\max}/\tau$ exceeds $SK$ because
+$T_{\max}/\tau<s^2k^2/(2\tau)<S$. This leaves a mixed gap greater than
+$880mk^2>1$ above all local lengths. These estimates also prove injectivity
+and the minimum-distance assertion. The actual diameter is bounded by
+\begin{equation}\label{eq:epsilon-diameter}
+ \diam\{x_{Ai}\}\le
+ \left[s^3\left(K+\binom m2\right)+\frac{s^2}{2\tau}\right]k^2.
+\end{equation}
+
+\input{figures/spectrum.tex}
+
+\subsection{The coefficient and the arbitrary-size passage}
+
+We have $\tau>63/64$, $s\le9/8$, $K\le\xi m^2+1$, and
+$s^3\le1+4\xi$. Dividing \eqref{eq:epsilon-diameter} by $(mk)^2$ yields
+\begin{align*}
+ \frac{\diam\{x_{Ai}\}}{(mk)^2}
+ &\le(1+4\xi)(1/2+\xi)+3/m^2\\
+ &\le1/2+(7/2)\xi+3/m^2\le1/2+4\xi.
+\end{align*}
+For the last step use $m\ge1024/\xi$, which implies $3/m^2\le\xi/2$.
+
+Put $m_0=\lceil1024/\xi\rceil$. Given $n\ge4m_0$, choose
+$k=\lfloor n/m_0\rfloor$ and $m=\lceil n/k\rceil$. Then
+$k\ge4$. The inequalities $km_0\le n<(k+1)m_0$ give
+$m_0\le m\le m_0+\lceil m_0/k\rceil\le2m_0$, and
+\[
+ n\le mk<n+k\le(1+1/m_0)n.
+\]
+Delete points to obtain exactly $n$ and pad coordinates to dimension
+$10m_0-1$. Neither operation worsens the required estimates. Since
+$1/m_0\le\xi/1024$,
+\begin{equation}\label{eq:rounding-bound}
+ \diam X<(1/2+4\xi)(1+\xi/1024)^2n^2<(1/2+5\xi)n^2.
+\end{equation}
+For example, the last inequality follows from $1/2+4\xi\le1$ and
+$(1+\xi/1024)^2-1<\xi$. Choosing $\xi=\varepsilon/8$ proves
+\cref{thm:epsilon}, with strictly positive coefficient slack.
+
+For \cref{cor:uniform}, choose
+$\xi=\max\{20480/d,8192/n\}$. The hypotheses imply $0<\xi\le1/8$.
+Moreover $10\lceil1024/\xi\rceil-1\le d$ and
+$4\lceil1024/\xi\rceil\le n$: the respective left sides are at most
+$d/2+9$ and $n/2+4$. Apply \eqref{eq:rounding-bound}, use
+$\max\{u,v\}\le u+v$, and pad to dimension $d$.
+
+\section{Six macro vertices and dimension 29}\label{sec:r29-proof}
+
+The preceding uniform estimates favor a large number of clusters. To
+obtain a small fixed dimension, we instead keep $m=6$ and certify the
+entire macro completion directly. All parameters are rational:
+\begin{equation}\label{eq:r29-parameters}
+\begin{gathered}
+ K=457/25,\quad H=569/500,\quad\eta=533/500,\quad\sigma=138/125,\\
+ a=519/1000,\quad b=879/500,\quad r_0=507/100,\quad r_1=1131/100,\\
+ k_0=100,\qquad t=971/1000,\qquad C=101/100.
+\end{gathered}
+\end{equation}
+We work for every integer $k\ge100$ and every prime $p$ such that
+\begin{equation}\label{eq:admissible-prime}
+ 6k<p\le6Ck.
+\end{equation}
+
+\subsection{A finite macro certificate}
+
+Use the symmetric label matrix
+\begin{equation}\label{eq:labels29}
+ \ell=\begin{pmatrix}
+ 0&3&5&7&14&15\\3&0&2&4&13&12\\5&2&0&1&11&10\\
+ 7&4&1&0&9&8\\14&13&11&9&0&6\\15&12&10&8&6&0
+ \end{pmatrix}.
+\end{equation}
+Its upper-triangular labels are exactly $1,\ldots,15$. For $A\ne B$, put
+$D_{AB}=K+H\ell_{AB}$ and $E_{AB}=D_{AB}^2-2(r_0^2+r_1^2)$; put both
+diagonal entries equal to zero. Define the $5\times5$ anchored Gram matrix
+\[
+ B_{ij}=\frac{E_{0i}+E_{0j}-E_{ij}}2\qquad(1\le i,j\le5).
+\]
+Let $P^G_{AJ}=D_{AJ}$ for $A<J$ and zero otherwise, and set $P^F=D-P^G$.
+For $\star\in\{F,G\}$ define the $5\times6$ matrix
+\[
+ T^\star_{jA}=P^\star_{A0}-P^\star_{Aj}\qquad(1\le j\le5,\ 0\le A\le5).
+\]
+The three rational matrices to be checked are
+\begin{equation}\label{eq:three-matrices}
+ B,\qquad M(x)=B-\frac{(\sigma T^G+\eta xT^F)(\sigma T^G+\eta xT^F)^\T}{(ar_0)^2},
+ \quad x\in\{0,1/100\}.
+\end{equation}
+
+\begin{lemma}[Exact whole-matrix certificate]\label[lemma]{lem:matrix29}
+All three matrices in \eqref{eq:three-matrices} are positive definite.
+\end{lemma}
+\begin{proof}
+Substitute the rational parameters \eqref{eq:r29-parameters} and the
+integer matrix \eqref{eq:labels29}, then eliminate successively without
+pivoting. Every diagonal pivot in the resulting $LDL^\T$ factorization
+is a strictly positive rational. \Cref{tab:pivots} gives certified rational
+lower bounds for all fifteen pivots; the exact recurrence and a complete
+stand-alone reconstruction program are in \cref{app:certificate}.
+No floating-point positivity decision is used.
+\end{proof}
+
+\input{figures/pivots.tex}
+
+Choose $q_0=0$ and $q_1,\ldots,q_5\in\R^5$ with Gram matrix $B$. The
+polarization identity then gives $\norm{q_A-q_B}^2=E_{AB}$. Let $Q$ be the
+square matrix with columns $q_1,\ldots,q_5$ and define
+$F=Q^{-\T}T^F$, $G=Q^{-\T}T^G$. Subtracting their anchored inner products
+gives
+\[
+ \ip{q_A-q_J}{F_A}=P^F_{AJ},\qquad
+ \ip{q_A-q_J}{G_A}=P^G_{AJ}.
+\]
+By \cref{lem:matrix29}, both endpoint matrices
+$Q^{-\T}(\sigma T^G+\eta xT^F)$ have norm less than $ar_0$.
+Indeed, writing $A(x)=\sigma T^G+\eta xT^F$, congruence gives
+\[
+ Q^{-\T}M(x)Q^{-1}
+ =I-\frac{[Q^{-\T}A(x)][Q^{-\T}A(x)]^\T}{(ar_0)^2}\succ0.
+\]
+The matrix depends affinely on $x$, and the operator norm is convex.
+Thus the same strict bound holds for every $x\in[0,1/100]$. In particular,
+\begin{equation}\label{eq:finite-k-operator}
+ U=\frac{k}{a}(\eta F+\sigma kG)
+   =\frac{k^2}{a}Q^{-\T}A(1/k)
+ \quad\text{satisfies}\quad \opnorm U<r_0k^2
+ \qquad(k\ge100).
+\end{equation}
+This is why the two endpoint checks control every finite $k\ge100$.
+
+\subsection{Coordinates and cross lengths}
+
+Put $S=k^2$, $R_0=r_0k^2$, $R_1=r_1k^2$, and $\theta=a/k$. Use the same
+uniform digit marks $f_i$ as before, and the independent ruler marks
+\begin{equation}\label{eq:ruler29}
+ y_{Ai}=2pi+[i^2+2kAi]_p,\qquad w_{Ai}=\frac{b\,y_{Ai}}{2pk}.
+\end{equation}
+With $U$ from \eqref{eq:finite-k-operator}, construct the actual points by
+\eqref{eq:points}. Their coordinate blocks have dimensions $5,6,6,6,6$,
+so the ambient dimension is exactly~29. The cross identity becomes
+\begin{equation}\label{eq:r29-cross}
+ \norm{x_{Ai}-x_{Bj}}=\Phi_\nu(\sigma kf_i+\eta f_j),
+ \qquad\nu=k^2D_{AB},\quad A<B.
+\end{equation}
+
+Let $\gamma=1-a^2/8$ and $T_{\max}=(\sigma k+\eta)(k-1)/2$.
+Since $\sigma\ge\eta$, $2T_{\max}<\sigma k^2$. The rational inequalities
+\begin{equation}\label{eq:r29-cross-guards}
+\begin{gathered}
+ t^2<1-\frac{\sigma}{K+H},\quad t\eta\gamma>1,\quad
+ \sigma\gamma-\eta>0,\quad t\eta>1,\\
+ H-\sigma/t>0,\quad\sigma-\eta>0,\quad\eta/t>1
+\end{gathered}
+\end{equation}
+imply $t\le\Phi_\nu'(T)\le1/t$ on every digit interval. They are verified
+by direct rational substitution in the certificate accompanying
+\cref{lem:matrix29}.
+
+Fine steps have length gap at least $t\eta\gamma>1$. Carries have digit
+increment at least $(\sigma\gamma-\eta)k+\eta$, giving a length gap
+greater than one. Successive macro labels differ by one, so their
+baseline gap is $Hk^2$, and the separation between blocks is at least
+\[
+ Hk^2-2T_{\max}/t
+ =(H-\sigma/t)k^2+(\sigma-\eta)k/t+\eta/t>1.
+\]
+Thus all cross-edge lengths are mutually strictly separated.
+
+\subsection{Local lengths and the mixed gap}
+
+For a local edge, write $d=j-i$ and $g=y_{Aj}-y_{Ai}$. Then
+\[
+ (2d-1)p<g<(2d+1)p,\qquad g\equiv d(2i+d+2kA)\pmod p.
+\]
+By \cref{lem:residue-ruler}, now with $m=6$ and $L=2$, all these
+differences are distinct positive integers and their lags are nondecreasing
+in $g$.
+
+The local lengths are now
+\[
+ L(d,g)=\sqrt{H_d^2+B(g)^2},\quad
+ H_d=2R_0\sin\frac{ad}{2k},\quad B(g)=2R_1\sin\frac{bg}{4pk}.
+\]
+Both factors increase over their relevant ranges. In comparing two
+ordered ruler differences, keep the smaller lag $d_1$ fixed. Since
+$g\ge pd_1$ and the angle in $B$ lies in $(0,b/2)$, sine concavity gives
+\[
+ B(g)\ge r_1k\sin(b/2)d_1,\qquad
+ B'(g)\ge\frac{r_1b\cos(b/2)}{12C},\qquad
+ H_{d_1}\le r_0akd_1.
+\]
+It follows that
+\begin{equation}\label{eq:local-derivative29}
+ \frac{\partial L(d_1,g)}{\partial g}\ge
+ \frac{r_1b\cos(b/2)/(12C)}
+ {\sqrt{1+[r_0a/(r_1\sin(b/2))]^2}}>1.
+\end{equation}
+The last inequality is an exact rational consequence of the alternating
+Taylor bounds, with $z=b/2\in(0,1)$,
+\[
+ z-z^3/6\le\sin z\le z-z^3/6+z^5/120,\qquad
+ \cos z\ge1-z^2/2+z^4/24-z^6/720.
+\]
+The square of the lower bound in \eqref{eq:local-derivative29} exceeds
+one by a strictly positive rational, checked in the same certificate.
+Apply \cref{lem:local-comparison} with
+$c=r_0a/[r_1\sin(b/2)]$ and $v=r_1b\cos(b/2)/(12C)$.
+The integer gap in $g$ proves strict separation of all local lengths.
+
+The minimum local distance is at least $r_1k\sin(b/2)>1$. Using the same
+Taylor upper bound and $\sin u\le u$, every local length is less than
+$18k^2$. For cross lengths, $2|T|/\nu<\sigma/(K+H)<1-t^2$ gives
+$\Phi_\nu(T)>t\nu\ge t(K+H)k^2>(37/2)k^2$.
+Thus the mixed gap is greater than $k^2/2>1$.
+All pair distances are positive, so the indexing is injective.
+
+\subsection{Diameter and the prime-first sizes}
+
+The cross lengths, and hence all lengths, are less than
+\[
+ [K+15H+\sigma/(2t)]k^2.
+\]
+For $n=6k$, the corresponding coefficient is
+\begin{equation}\label{eq:diameter29}
+ \frac{K+15H+\sigma/(2t)}{36}
+ =\frac{697537}{699120}<\frac{499}{500}.
+\end{equation}
+The diameter is the largest of these finitely many edge lengths.
+
+For every sufficiently large prime $p$, let $k=\lfloor(p-1)/6\rfloor$.
+Then $6k<p\le6(k+1)\le6Ck$ whenever $k\ge100$. Infinitude of primes gives
+unbounded such $k$. Choosing a large enough prime makes $6k\ge N$ and
+proves \cref{thm:r29}. No prime number theorem or short-interval prime
+estimate is required for this theorem.
+
+\subsection{Every sufficiently large size}
+
+To prove \cref{cor:r29-all}, set $k=\lceil n/6\rceil$ and $x=6k$.
+Dusart's explicit bound \cite[Proposition~6.8]{Dusart} supplies a prime
+\[
+ x<p\le x\left(1+\frac{1}{25(\log x)^2}\right)
+ \quad(x\ge396738).
+\]
+Here $x\ge n\ge400000$ and $\log x>2$, so $6k<p<1.01(6k)$.
+Thus \eqref{eq:admissible-prime} holds and $k\ge100$. The preceding
+construction gives $6k$ points, with strict edge-length separation and
+diameter $<0.998(6k)^2$. Delete points until exactly $n$ remain.
+All separation properties persist and the diameter cannot increase.
+Since $6k\le n+5$ and
+\[
+ \frac{999}{1000}
+ -\frac{499}{500}\left(1+\frac{5}{400000}\right)^2
+ =\frac{3120159501}{3200000000000}>0,
+\]
+the diameter is $<0.999n^2$. This use of Dusart's unconditional theorem
+is a literature input, not a new proof or formal verification of the
+prime-interval bound. The threshold is deliberately conservative.
+
+\section{Formalization and provenance}\label{sec:formal}
+
+The two-circle family, its uniform form, and the prime-first dimension-29
+theorem have corresponding Lean~4 declarations, listed in
+\cref{tab:lean}. Both newer developments use Lean~4.33.1 and the same locked
+Mathlib revision; the exact source identities are in \cref{app:sources}.
+The recorded final transitive axiom reports contain only
+\code{propext}, \code{Classical.choice}, and \code{Quot.sound}.
+The epsilon-family endpoints have only the numerical hypotheses of
+\cref{thm:epsilon,cor:uniform}; the geometric and operator estimates are
+proved within the development.
+
+\begin{table}[ht]
+\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{.25\textwidth}X@{}}
+\toprule
+Mathematical conclusion & Exact Lean declaration\\\midrule
+Two-circle family & \code{Erdos670EpsilonFamily.epsilon\_family}\\[3pt]
+Uniform dimension bound & \code{Erdos670EpsilonFamily.uniform\_family}\\[3pt]
+R29 indexed configuration & \code{Erdos670R29.r29\_unbounded\_counterexamples}\\[3pt]
+R29 finite-set statement & \code{Erdos670R29Minimal.finite\_set\_counterexamples}\\[3pt]
+R29 conjecture negation & \code{Erdos670R29Minimal.not\_fixedDimensionStatement\_r29}\\
+\bottomrule
+\end{tabularx}
+\caption{The exact endpoint names. The finite-set translation and the indexed
+geometric theorem are distinct declarations.}
+\label{tab:lean}
+\end{table}
+
+The indexed R29 theorem and its finite-set adapter have different roles:
+the first constructs the points, and the second transports that result to
+the fixed-dimensional proposition \eqref{eq:conjecture}. The adapter uses
+the exact statement extracted from the pinned Formal Conjectures source.
+Its unit edge-separation inequality is weak, as in \cref{thm:r29}, although
+the written estimates above give strict separation. The earlier public
+$\R^{81794}$ theorem has a separate proof and statement adapter
+\cite{PublishedFinite,PublicStatus}.
+
+The existing epsilon-family compilation reused checked imports. The R29
+records additionally include a build from zero local project objects with
+pinned upstream caches and a later reported fresh official-kernel replay.
+These are source-specific execution records; preparing this exposition
+has not performed a new Lean build. The public repository preserves the
+statements and audit receipts, rather than the complete newer Lean proof
+closures. Those closures remain private. Formal checking and the
+arithmetic certificate in \cref{app:certificate} do not constitute
+independent human proof or priority review.
+
+The quadratic-residue ruler is classical in the Erd\H{o}s--Tur\'an
+tradition \cite{ErdosTuran}. Euclidean Gram realization,
+positive-semidefinite completion, and weighted Schur estimates are also
+classical \cite{Schoenberg,Schur,Sinnamon,Robinson}. Orthogonal-circle
+geometry has classical precedents in Lenz-type constructions
+\cite{ErdosLenz}. The colex macro estimates are inherited from the earlier
+manuscript. Here the digit and ruler circles are separated, and the
+small-dimensional construction uses the finite non-colex seed
+\eqref{eq:labels29}.
+
+This research and manuscript were developed with substantial AI assistance
+in mathematical exploration, proof engineering, source comparison, and
+writing. An AI-generated simplification and readability rewrite informed
+the earlier orthogonal-circle construction, with permission to use it.
+Independent mathematical review remains open. The earlier Palomar and
+Prove2Me records concern only the archived $0.74$ theorem
+\cite{PublicStatus}.
+
+\section{What remains open}\label{sec:open}
+
+The coefficient-one fixed-dimensional proposition is refuted by a single
+fixed dimension. Its failure does not determine the exact asymptotic
+diameter in each dimension. Three concrete questions remain:
+\begin{enumerate}[leftmargin=1.7em,itemsep=4pt]
+\item Does the coefficient-one bound fail in the plane, or in another
+ prescribed dimension below~29?
+\item Can one fixed dimension support genuine unit-separated edge lengths
+ with diameter $(1/2+o(1))n^2$? The dimension-dependent tolerance family does
+ not answer this question.
+\item What is the best tradeoff between dimension, the all-size threshold,
+ and the diameter coefficient? The finite macro certificate and uniform
+ colex estimates optimize different aspects of that tradeoff.
+\end{enumerate}
+No lower bound on the dimension required by an arbitrary construction is
+claimed here. Nor do the displayed constants establish optimality within
+all two-circle constructions.
+
+\section*{Acknowledgments}
+The author thanks Boon Suan Ho for helpful comments on an earlier draft of this manuscript.
+

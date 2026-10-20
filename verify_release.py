@@ -1,4 +1,4 @@
-"""Read-only verification of the complete current finite-result public package."""
+"""Read-only verification of the public package with version-specific paper checks."""
 import hashlib
 import json
 from pathlib import Path
@@ -25,7 +25,7 @@ def main():
         require(not path.is_symlink(), f'Unexpected symlink: {rel}')
         if not path.is_file() or rel.as_posix() == 'SOURCE_MANIFEST.json':
             continue
-        if rel.as_posix() in {'paper/fixed_dimension_670.aux', 'paper/fixed_dimension_670.log', 'paper/fixed_dimension_670.out'}:
+        if rel.as_posix() in {'paper/fixed_dimension_670.aux', 'paper/fixed_dimension_670.log', 'paper/fixed_dimension_670.out'} or (rel.parent.as_posix() == 'paper/2026-10-20' and rel.suffix in {'.aux', '.log', '.out'}):
             continue
         raw = path.read_bytes()
         actual[rel.as_posix()] = {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
@@ -43,7 +43,8 @@ def main():
     require('f1604c368efce996a9af4d46f581e676e49054f5' in text, 'Current proof pin missing')
     require('36354' in text and '81794' in text and r'\frac{147}{200}' in text, 'Finite theorem fields missing')
     subprocess.run([sys.executable, str(ROOT / 'verification/finite670/verify_sources.py')], check=True)
-    print(f'PASS: {len(actual)} public package files, exact paper/PDF/ZIP, acknowledgment and finite proof pin')
+    subprocess.run([sys.executable, str(ROOT / 'paper/2026-10-20/verification/verify_paper.py')], check=True)
+    print(f'PASS: {len(actual)} public package files, unchanged finite paper and new version-specific manuscript checks')
 
 
 if __name__ == '__main__':

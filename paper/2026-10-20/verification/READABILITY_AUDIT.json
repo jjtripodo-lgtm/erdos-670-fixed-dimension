@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SCOPED_REVIEW_CONTROLS",
+  "source_pivots_matched": 15,
+  "matrices": 3,
+  "scalar_guards": 12,
+  "normal_optimized_identical": true,
+  "universal_epsilon_estimate_lower_bounds": {
+    "completion_norm_squared_slack": "7513823/2048",
+    "epsilon_digit_slack_per_xi_lower": "369/512",
+    "cubic_scale_slack_per_xi_lower": "39/64",
+    "dyadic_base_at_r13": "287",
+    "dyadic_induction_at_r13": "194",
+    "shortening_gate_per_m": "32768",
+    "digit_to_ruler_ratio_squared_slack": "31/49",
+    "local_slope_squared_slack": "37813/603",
+    "coefficient_rounding_per_xi_slack": "8372223/8388608",
+    "small_term_absorption_per_xi_slack": "4194301/8388608"
+  },
+  "finite_ruler_regression_cases": 120,
+  "frozen_source_identities_matched": 2,
+  "all_n_padding_margin": "3120159501/3200000000000",
+  "scope": "Exact arithmetic controls and finite regression checks accompany the written proof review; no new Lean execution or independent proof review."
+}

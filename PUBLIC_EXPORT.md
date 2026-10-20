@@ -1,6 +1,6 @@
 # Public package provenance
 
-The current package contains the finite-result manuscript, its complete
+The package retains the finite-result manuscript, its complete
 66-module local Lean proof closure, locked external dependencies, exact
 source inventories, reproducibility checks, and scoped validation summaries.
 
@@ -24,14 +24,22 @@ scope. It is not an independently authenticated execution certificate. The
 later [public-adapter replay export](verification/replay_20261017/README.md)
 preserves a separate receipt and normalized logs with explicit original-byte
 hashes. Separate-provider provenance is reported, not independently attested.
-The internal R29 and epsilon-family endpoints are summarized in
+The internally formalized R29 and epsilon-family endpoints are summarized in
 [PUBLIC_STATUS.md](PUBLIC_STATUS.md); their proof closures are not distributed here.
-The paper's three byte-identical final build passes in one directory and
+The 14 October finite paper's three byte-identical final build passes in one directory and
 visual checks are recorded separately; they are
 not Lean replay or independent mathematical review.
 
 The previous complete package remains available from its immutable
 [version-history links](VERSION_HISTORY.md). No existing tag or DOI record
-is replaced. The current manuscript's [CC BY 4.0 grant](LICENSE-PAPER)
-applies only to this revised finite version; software remains
+is replaced. The 14 October finite manuscript's [CC BY 4.0 grant](LICENSE-PAPER)
+remains specific to that version; software remains
 [MIT licensed](LICENSE).
+
+## Additive manuscript version, 20 October 2026
+
+The new files under `paper/2026-10-20/` contain the readable two-circle/R29 paper, modular and assembled LaTeX, figures, exact arithmetic reconstruction/checks, and source/version maps. The finite macro appendix is inherited from the unchanged public finite manuscript. Only the source and certificate material needed for this paper is exported; complete private Lean closures and unrelated research are not included.
+
+The new written all-size R29 corollary relies on Dusart's published prime-interval theorem and exact padding arithmetic. It has no Lean endpoint. The new paper's local build/layout and arithmetic checks are recorded in its `verification/PAPER_VALIDATION.json`; these do not transfer old Lean receipts to new text.
+
+The owner approved CC BY 4.0 for the new paper and its included supporting files; the [new version-specific grant](paper/2026-10-20/LICENSE.md) records it. Existing licenses and grants remain unchanged, including `LICENSE-PAPER` for the 14 October finite version and MIT grants for software. No existing tag, DOI, Hexagon version or immutable archive is replaced.

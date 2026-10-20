@@ -1,13 +1,13 @@
 {
-  "documentation_updated": "2026-10-19",
+  "documentation_updated": "2026-10-20",
   "files": {
     ".gitignore": {
       "bytes": 62,
       "sha256": "64c57aea634f21f164a2795e0c3a1b2adef59ceeb0373fff67d4affd17708741"
     },
     "CITATION.cff": {
-      "bytes": 1523,
-      "sha256": "141d3639f3d690f6da33949cefaf6a2f4dde97ea5d80dc8088e538a5f4f41ee3"
+      "bytes": 2320,
+      "sha256": "b429865e1b5d62db22a86ddfbefa2b600c5ca3ba2b5e4203b796388a29330f1a"
     },
     "CITATIONS.md": {
       "bytes": 4797,
@@ -30,20 +30,20 @@
       "sha256": "cb2a0a833d0cd5ad6c3afc022528e64d5f0977919e662e8d42fa329610a00b6b"
     },
     "PUBLIC_EXPORT.md": {
-      "bytes": 2200,
-      "sha256": "0d2190668c5a6cd35dab509742497c1ee92a052981483a7fd02fdf9d5cdc575f"
+      "bytes": 3369,
+      "sha256": "537eea9a74d6ecd541d533f0c4dfc7cb556d9ceb7fc01ec606e9fc5938f9f808"
     },
     "PUBLIC_STATUS.md": {
-      "bytes": 7514,
-      "sha256": "cf02435c9b906008f04054ff46027693ae1403473b5e43b4f9552a9c7e1cbf18"
+      "bytes": 8325,
+      "sha256": "b1b1eb2b578fc411604c74cf4041303190ab1e5c12ca2820ebe6c98e38c54275"
     },
     "README.md": {
-      "bytes": 5578,
-      "sha256": "0b9bab766391dd70fca3b76285d9c62f595f86aa4b4bc1ad39259e6ecf883073"
+      "bytes": 7145,
+      "sha256": "a24d21006c6ae4d4c7a4bb6cf87c9f2329df53000e9f2bb33eb9c2c985516666"
     },
     "VERSION_HISTORY.md": {
-      "bytes": 3592,
-      "sha256": "78e0edc1ada6c4afa01cb7d9e25f91e66d2dcf6d7f506593331da940c1d5d9a1"
+      "bytes": 4735,
+      "sha256": "eab797a246cea9e790de1d2989bc41f4eb8cf2e277ade38b3f511178c37ac32c"
     },
     "lean/AxiomAudit.lean": {
       "bytes": 272,
@@ -324,6 +324,110 @@
     "lean/lean-toolchain": {
       "bytes": 28,
       "sha256": "52a0555f6c891a69354334fbbe324085f1045f02387b9b7cdb5124fab954b2cd"
+    },
+    "paper/2026-10-20/LICENSE.md": {
+      "bytes": 724,
+      "sha256": "67f6b6459e9184295c0cb526b11ff72ca935c063b597fea02b644b9997547a2c"
+    },
+    "paper/2026-10-20/README.md": {
+      "bytes": 2645,
+      "sha256": "b661a7e83c8f9fc2ed324b5d9eee7d2323948533c7a5004daa9224014783084d"
+    },
+    "paper/2026-10-20/SOURCE_MAP.md": {
+      "bytes": 4082,
+      "sha256": "466fb6dfc8e74dcfe3194d54d7bf81884d8e56b1b5b00c74d0a0e0c4661a8c9b"
+    },
+    "paper/2026-10-20/SOURCE_READSET.json": {
+      "bytes": 438,
+      "sha256": "8d88353bc443092d4c2f97e62bd84e68f32b40f944e01fe8c8c475b26185f493"
+    },
+    "paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf": {
+      "bytes": 412873,
+      "sha256": "4f9554bf29d122fad72cb5fad5a39488e32c1e3806ae7397a6b9c79e52c55fd1"
+    },
+    "paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.tex": {
+      "bytes": 56496,
+      "sha256": "bd46a8f48299c3e8791fb4741eab06d0bd9e6aa41b833eb821dd7f68dfa6c407"
+    },
+    "paper/2026-10-20/Separated_Distances_in_Fixed_Dimension_source.zip": {
+      "bytes": 61905,
+      "sha256": "05310b6c1a138e801cc7fcaa28f887cec1746b74db310390ad030f59ed2fb851"
+    },
+    "paper/2026-10-20/assemble_manuscript.py": {
+      "bytes": 784,
+      "sha256": "0bd9b7a7b4dcf0c50b69089428a00f8c4c21508ef4549a86be47fe222e7dc22e"
+    },
+    "paper/2026-10-20/certificate_appendix.tex": {
+      "bytes": 1145,
+      "sha256": "cd6811ff5df48a3c207015e526616b910573d817b52620ba536077fb35f4cc3a"
+    },
+    "paper/2026-10-20/certificate_reconstruction.py": {
+      "bytes": 2684,
+      "sha256": "eda34701e81aa1f5d25b714aefd04841ec1aaaa3d049066c3edcfe73aae19df5"
+    },
+    "paper/2026-10-20/figures/architecture.tex": {
+      "bytes": 1720,
+      "sha256": "171993acb9fec1463b6daa72b4d033179c24b766b7cee7cc8d6ee53b845c4325"
+    },
+    "paper/2026-10-20/figures/pivots.tex": {
+      "bytes": 556,
+      "sha256": "17ad6f9a0e9c890f8b14fc6606aaf5353bf04ba0b6c44e97d6ddf6a0eeac9590"
+    },
+    "paper/2026-10-20/figures/spectrum.tex": {
+      "bytes": 1697,
+      "sha256": "2dc7c509c8bfe88303a0f19495851895cf1950d51a4944844e365be53fd5fc85"
+    },
+    "paper/2026-10-20/macro_appendix.tex": {
+      "bytes": 10168,
+      "sha256": "f3b8fb6b59e8090c8147bed511df41f42e983921f123a0053003815586f6657b"
+    },
+    "paper/2026-10-20/main_body.tex": {
+      "bytes": 33832,
+      "sha256": "25ed58797ecc30ee5e37697ada4326c85355d53affff0b14ac5b0a00b99d9031"
+    },
+    "paper/2026-10-20/preamble.tex": {
+      "bytes": 5658,
+      "sha256": "832729a1c23c712130e6bf2224e8b580bffa9720d59ff062b1ef87c6770a382e"
+    },
+    "paper/2026-10-20/references.tex": {
+      "bytes": 3784,
+      "sha256": "f8ca9bad824e5182a2258c7586f18db43aad15afe47315eab19ffb276b30f911"
+    },
+    "paper/2026-10-20/source_correspondence.tex": {
+      "bytes": 1867,
+      "sha256": "9aca105c6bc30d2e0b7900130f5009163acaeb35a07265004635d43f5d3687d1"
+    },
+    "paper/2026-10-20/verification/PAPER_VALIDATION.json": {
+      "bytes": 2421,
+      "sha256": "b11d2161920cef05262791d42a0cb6d0885987bc0e55697493848b4ef507ba7e"
+    },
+    "paper/2026-10-20/verification/READABILITY_AUDIT.json": {
+      "bytes": 975,
+      "sha256": "36d59399d745cb8ebb43293c5d633f8250a9388394825195cd3d1aa5b95bfbc0"
+    },
+    "paper/2026-10-20/verification/RECONSTRUCTION.json": {
+      "bytes": 2356,
+      "sha256": "8df2a88d9598ad2e7c83c8619a2d7d4882e0cedc5643f83d8d80824d981f8e8a"
+    },
+    "paper/2026-10-20/verification/check_readability.py": {
+      "bytes": 3895,
+      "sha256": "868d86f5a3dac705af9366632007de61ea680d7dd2b8a7f0ff8dca1abe519ba4"
+    },
+    "paper/2026-10-20/verification/r29/EXACT_RECEIPT.json": {
+      "bytes": 2439,
+      "sha256": "378a70f448e0c3abb4a8f87fddc12cec6753259529df60f9e03177ae0e62bbde"
+    },
+    "paper/2026-10-20/verification/r29/MATRICES.json": {
+      "bytes": 3033,
+      "sha256": "ad21bcd0f56a33680de1aa62bab9b66a53d307a5643db5675ecd0e2f461bcc15"
+    },
+    "paper/2026-10-20/verification/r29/check_all.py": {
+      "bytes": 3764,
+      "sha256": "e7456b86d6ea39d402794b08a2eff12f494e40c16cba78465fe8adfc06eee4bf"
+    },
+    "paper/2026-10-20/verification/verify_paper.py": {
+      "bytes": 2184,
+      "sha256": "e928368e450a0fd06857f7596d7d46e5a3b8b1c7c09bb336dd346b982f80c9a3"
     },
     "paper/fixed_dimension_670.pdf": {
       "bytes": 602279,
@@ -650,11 +754,12 @@
       "sha256": "38104bcfb0563e48ba4dff248e3efca81114689c273e3ad38911ba01f2811c32"
     },
     "verify_release.py": {
-      "bytes": 2666,
-      "sha256": "db8f352d7e34ed1685f45dc7b5be04b326a7fd4d1b82ecd339b7cb1a006e8342"
+      "bytes": 2881,
+      "sha256": "2499580ce4b33927658d0ab9f068685547ec56846f4891d81227556594847a5b"
     }
   },
   "finite_proof_commit": "f1604c368efce996a9af4d46f581e676e49054f5",
+  "manuscript_version": "2026-10-20",
   "schema_version": 1,
   "version": "2026-10-14"
 }

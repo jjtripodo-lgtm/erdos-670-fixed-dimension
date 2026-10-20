@@ -1,34 +1,55 @@
-cff-version: "1.2.0"
-message: "Please cite the current finite manuscript in preferred-citation. The archived v1.0.0 DOI and its different theorem are listed in VERSION_HISTORY.md."
+cff-version: 1.2.0
+message: Please cite the 20 October GitHub paper in preferred-citation. The unchanged earlier finite manuscript
+  is listed under references; its Hexagon identifier and the archived v1.0.0 DOI do not identify the new
+  paper.
 type: software
-title: "Orthogonal circles and a fixed-dimensional separated-distance counterexample"
-version: "2026-10-14"
-date-released: "2026-10-14"
-url: "https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension"
+title: Separated distances in fixed dimension
+version: '2026-10-20'
+date-released: '2026-10-20'
+url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension
 authors:
-  - family-names: "Tripodo"
-    given-names: "John"
-    orcid: "https://orcid.org/0009-0006-9180-4953"
+- family-names: Tripodo
+  given-names: John
+  orcid: https://orcid.org/0009-0006-9180-4953
 preferred-citation:
   type: generic
   status: preprint
-  title: "Orthogonal circles and a fixed-dimensional separated-distance counterexample"
   authors:
-    - family-names: "Tripodo"
-      given-names: "John"
-      orcid: "https://orcid.org/0009-0006-9180-4953"
-  notes: "Finite-result revision dated 14 October 2026: n >= 36354, dimension 81794, diameter < (147/200)n^2. AI-assisted manuscript; see its disclosure and the scoped verification record. No new DOI deposit or journal acceptance is asserted."
+  - family-names: Tripodo
+    given-names: John
+    orcid: https://orcid.org/0009-0006-9180-4953
   year: 2026
-  date-published: "2026-10-14"
-  version: "2026-10-14"
-  url: "https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/main/paper/fixed_dimension_670.pdf"
-  identifiers:
-    - type: url
-      value: "https://hexagonmath.org/2610.00254?version=1"
-      description: "Hexagon preprint hexagon:2610.00254v1, deposited 15 October 2026; same finite theorem."
-  license: "CC-BY-4.0"
+  title: 'Separated distances in fixed dimension: Two circles and a dimension-29 counterexample'
+  notes: GitHub manuscript dated 20 October 2026. Two-circle epsilon family and R29 prime-first construction,
+    plus a separate written all-size R29 corollary. Source-specific internal Lean records are distinguished
+    from the written corollary. As of this GitHub release, no new DOI, Hexagon version or external acceptance
+    is asserted.
+  date-published: '2026-10-20'
+  version: '2026-10-20'
+  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/main/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf
+  license: CC-BY-4.0
 keywords:
-  - "Erdős Problem 670"
-  - "separated Euclidean distances"
-  - "fixed dimension"
-  - "Lean 4"
+- Erdős Problem 670
+- separated Euclidean distances
+- fixed dimension
+- Lean 4
+references:
+- type: generic
+  status: preprint
+  title: Orthogonal circles and a fixed-dimensional separated-distance counterexample
+  authors:
+  - family-names: Tripodo
+    given-names: John
+    orcid: https://orcid.org/0009-0006-9180-4953
+  notes: 'Finite-result revision dated 14 October 2026: n >= 36354, dimension 81794, diameter < (147/200)n^2.
+    AI-assisted manuscript; see its disclosure and the scoped verification record. No new DOI deposit
+    or journal acceptance is asserted.'
+  year: 2026
+  date-published: '2026-10-14'
+  version: '2026-10-14'
+  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/main/paper/fixed_dimension_670.pdf
+  identifiers:
+  - type: url
+    value: https://hexagonmath.org/2610.00254?version=1
+    description: Hexagon preprint hexagon:2610.00254v1, deposited 15 October 2026; same finite theorem.
+  license: CC-BY-4.0
