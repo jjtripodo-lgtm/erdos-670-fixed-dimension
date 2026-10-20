@@ -1,8 +1,14 @@
 # Version history
 
+## 20 October 2026: reader-first editorial revision
+
+Replaced the cover-style front matter and status box with a conventional title, author, date and abstract. The abstract and proof roadmap are more direct; local/cross-edge and colex terminology is defined before use. Repeated provenance qualifications are consolidated, and the truthful AI-assistance disclosure is retained in the acknowledgments. The results, displayed mathematics, proof arguments, citations and certificate are unchanged.
+
+The paper's title is *Separated distances in fixed dimension*; the former cover subtitle is omitted. The current PDF and source URLs are unchanged. The [initial 20 October release](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/15d1ff5b256459ac26c91fa078c35647998a7169/paper/2026-10-20) remains available at its immutable commit.
+
 ## New GitHub paper, 20 October 2026
 
-*Separated distances in fixed dimension: Two circles and a dimension-29 counterexample* combines the two-circle epsilon family, its uniform dimension/size corollary, and the prime-first R29 construction. A short written consequence gives R29 diameter < 0.999n² for every n >= 400000 using Dusart's prime-interval theorem. The latter is not a Lean endpoint.
+*Separated distances in fixed dimension* combines the two-circle epsilon family, its uniform dimension/size corollary, and the prime-first R29 construction. A short written consequence gives R29 diameter < 0.999n² for every n >= 400000 using Dusart's prime-interval theorem. The latter is not a Lean endpoint.
 
 - [New PDF](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf)
 - [Editable source and reproduction instructions](paper/2026-10-20/README.md)
