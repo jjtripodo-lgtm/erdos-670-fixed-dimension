@@ -6,7 +6,7 @@
 \usepackage{microtype}
 \usepackage[letterpaper,top=0.85in,bottom=0.87in,left=0.95in,right=0.95in,headheight=15pt,headsep=19pt]{geometry}
 \usepackage{booktabs,array,tabularx,enumitem}
-\usepackage{xcolor,tikz,titlesec,fancyhdr,listings}
+\usepackage{xcolor,tikz,listings}
 \usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
 \definecolor{ink}{HTML}{173B4D}
 \definecolor{teal}{HTML}{277D79}
@@ -39,10 +39,6 @@
 \newcommand{\code}[1]{{\ttfamily\small #1}}
 \newcommand{\TripodoCommit}{\texttt{1e73a12}}
 \DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\diag}{diag}
-\titleformat{\section}{\Large\bfseries\color{ink}}{\thesection}{.7em}{}
-\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{.65em}{}
-\titlespacing*{\section}{0pt}{22pt}{10pt}
-\titlespacing*{\subsection}{0pt}{16pt}{6pt}
 \setlength{\parindent}{1.15em}
 \setlength{\parskip}{2pt}
 \setlength{\tabcolsep}{5pt}
@@ -51,60 +47,37 @@
 \emergencystretch=2em
 \setlength{\abovecaptionskip}{7pt}
 \setlength{\belowcaptionskip}{5pt}
-\pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\scriptsize\scshape\color{slate}Separated distances in fixed dimension}
-\fancyhead[R]{\scriptsize\color{slate}John Tripodo}
-\fancyfoot[L]{\scriptsize\color{slate}20 October 2026}
-\fancyfoot[R]{\small\color{ink}\thepage}
-\renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0pt}
+\pagestyle{plain}
 \lstset{basicstyle=\ttfamily\scriptsize,keywordstyle=\color{ink}\bfseries,commentstyle=\color{slate},stringstyle=\color{teal},breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,rulecolor=\color{teal!35},backgroundcolor=\color{mist},xleftmargin=5pt,xrightmargin=5pt,aboveskip=10pt,belowskip=10pt}
+\title{Separated distances in fixed dimension}
+\author{John Tripodo\thanks{ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}.}}
+\date{20 October 2026}
 \begin{document}
-\thispagestyle{fancy}
-\noindent{\sffamily\small\bfseries\color{teal}METRIC GEOMETRY\quad /\quad ERD\H{O}S PROBLEM 670}\par
-\vspace{18pt}
-\noindent{\fontsize{30}{34}\selectfont\bfseries\color{ink}Separated distances\\[3pt]in fixed dimension}\par
-\vspace{10pt}
-\noindent{\Large\color{slate}Two circles and a\\[2pt]dimension-29 counterexample}\par
-\vspace{15pt}
-\noindent{\large John Tripodo}\hfill{\small 20 October 2026}\par
-\vspace{3pt}
-\noindent{\small\color{slate}\href{https://orcid.org/0009-0006-9180-4953}{ORCID 0009-0006-9180-4953}}\par
-\vspace{13pt}\noindent{\color{gold}\rule{\textwidth}{1pt}}\par
-\vspace{8pt}
-\noindent\textbf{Abstract.}
-A finite Euclidean point set is distance-separated when the lengths of any
-two different unordered edges differ by at least one. The counting bound
-for its diameter is asymptotically $n^2/2$, whereas Erd\H{o}s asked for a
-coefficient-one lower bound. We give a two-circle construction: for every
-$0<\varepsilon\le1/2$ and every $n\ge4\lceil8192/\varepsilon\rceil$, there
-is a distance-separated $n$-point set in
-$\R^{10\lceil8192/\varepsilon\rceil-1}$ with diameter
-$<(1/2+\varepsilon)n^2$. A uniform form has coefficient
-$1/2+102400/d+40960/n$. Independently, an explicit six-vertex macro seed
-gives arbitrarily large configurations in the single space $\R^{29}$
-with diameter $<0.998n^2$, refuting the maintained fixed-dimensional
-coefficient-one statement. A short-prime-interval theorem also gives
-diameter $<0.999n^2$ in $\R^{29}$ for every $n\ge400000$. Two orthogonal circle channels separate local
-ruler gaps from cross-edge digits; the latter have an exact monotone
-square-root formula. The small-dimensional proof uses three rational
-matrix certificates valid for all admissible finite cluster sizes.
-The two-circle family and the prime-first dimension-29 theorem have
-corresponding Lean~4 proofs; the all-size corollary is a written consequence. The general family
-uses uniform colex estimates; the dimension-29 construction replaces them
-with a finite rational certificate.
-\vspace{12pt}
-\begin{center}
-\fcolorbox{teal!30}{mist}{\parbox{.92\textwidth}{\small\color{ink}
-\textbf{GitHub manuscript, 20 October 2026.}
-The prime-first theorem and its all-size corollary have different bounds
-and verification scopes. The near-counting family fixes the dimension
-separately for each tolerance.}}
-\end{center}
-\vspace{5pt}
-\noindent{\footnotesize\textbf{Keywords:} separated distances, Euclidean diameter,
-Gram completion, quadratic-residue rulers, Lean formalization.}
-\clearpage
+\maketitle
+
+\begin{abstract}
+A finite Euclidean point set is distance-separated if the lengths of any
+two distinct unordered edges differ by at least one. Counting gives a
+diameter lower bound of $\binom n2$, whereas Erd\H{o}s asked for a lower
+bound with leading term $n^2$. We give two constructions in fixed dimension.
+For every $0<\varepsilon\le1/2$, put $m_0=\lceil8192/\varepsilon\rceil$.
+For every $n\ge4m_0$ there is a distance-separated $n$-point set in
+$\R^{10m_0-1}$ with diameter $<(1/2+\varepsilon)n^2$.
+A six-cluster construction gives arbitrarily large configurations in
+$\R^{29}$ with diameter $<0.998n^2$, and an explicit prime-interval bound
+gives diameter $<0.999n^2$ for every $n\ge400000$.
+The constructions use two orthogonal circle families to control distances
+within and between clusters separately. Their common geometric argument
+reduces to a uniform operator estimate for the first result and three
+rational positive-definiteness certificates for the second.
+Lean~4 formalizations accompany the tolerance family and the
+dimension-29 result for arbitrarily large sizes; the all-size corollary is a
+written consequence.
+\end{abstract}
+
+\noindent{\small\textbf{Keywords:} separated distances, Euclidean diameter,
+Gram completion, quadratic-residue rulers.}
+\medskip
 
 \section{The problem and the results}\label{sec:intro}
 
@@ -141,7 +114,7 @@ already supplies an example.
 
 Erd\H{o}s asked whether the stronger lower bound $(1+o(1))n^2$ holds;
 see \cite[Problem~20]{Erdos}. His wording does not specify the quantifier
-order in the dimension. The maintained fixed-dimensional interpretation is
+order in the dimension. The fixed-dimensional question asks whether
 \begin{equation}\label{eq:conjecture}
  \forall d\ge1\ \forall\varepsilon>0\ \exists N\ \forall n\ge N:
  \quad \Delta_d(n)\ge(1-\varepsilon)n^2.
@@ -188,11 +161,10 @@ same minimum-distance and strict edge-separation properties and
 
 The dimension depends on $\varepsilon$ in \cref{thm:epsilon}. Consequently,
 neither statement constructs diameter $(1/2+o(1))n^2$ in one fixed dimension.
-The $O(1/d+1/n)$ order was already present in the earlier internal
-deterministic-incidence construction~\cite{IncidenceNote}; the contribution of the present
-organization is a simpler two-circle proof with explicit constants, together
-with its exact formal endpoint. No optimality of this dimension order is
-asserted.
+An earlier unpublished deterministic-incidence construction
+\cite{IncidenceNote} also gave an $O(1/d+1/n)$ error. The two-circle
+construction gives this order with explicit constants and a simpler
+geometric proof. We do not claim that the dimension order is optimal.
 
 \subsection{A fixed witness in dimension 29}
 
@@ -204,7 +176,8 @@ unordered edge lengths differ by at least one, and
 \[
  \diam X<\frac{499}{500}n^2=0.998n^2.
 \]
-The sizes arise along an unbounded prime-first subsequence.
+The sizes are obtained by first choosing a prime and then choosing the
+number of points from it.
 \end{theorem}
 
 \begin{corollary}[All sufficiently large sizes in dimension 29]\label[corollary]{cor:r29-all}
@@ -253,9 +226,11 @@ row is fixed for each chosen tolerance, independently of $n$.}
 
 \subsection{Why two circles help}
 
-Replace each of $m$ macro vertices by $k$ points. Distances within a cluster
-must all be distinct, while each pair of clusters contributes an ordered
-block of $k^2$ cross lengths. A tilted circle can encode the coarse and fine
+Replace each of $m$ cluster centres, called \emph{macro vertices}, by
+$k$ nearby points. Call an edge \emph{local} if its endpoints lie in the
+same cluster and \emph{cross} otherwise. The local lengths must all be
+distinct, while each pair of clusters contributes a block of $k^2$ cross
+lengths. A tilted circle can encode the coarse and fine
 digits of those blocks. A second circle, in independent coordinates, can
 encode the local ruler without constraining its angular span to the digit
 circle's small arc. A whole-matrix Gram completion makes the perturbation
@@ -264,13 +239,16 @@ spaces of different clusters orthogonal. The resulting cross lengths are
 \[
  \Phi_\nu(T)=\sqrt{\nu^2+2\nu T}.
 \]
-This formula requires only a derivative bound. Its error relative to
+Here $\nu$ is the central distance of a cross block and $T$ orders the
+$k^2$ lengths within it. A derivative bound controls their gaps directly;
+the error relative to
 $\nu+T$ need not remain bounded as the clusters grow.
 
 \input{figures/architecture.tex}
 
-The general family uses a colex-labelled macro simplex with uniform
-operator estimates. The dimension-29 construction replaces that large
+The general family labels macro edges in colexicographic order: first by
+the larger endpoint and then by the smaller one. Uniform operator
+estimates control the resulting simplex. The dimension-29 construction replaces that large
 simplex by six vertices with an explicit label pattern. Three exact
 $5\times5$ positivity checks then control \emph{all} cluster sizes in its
 admissible range. The proofs below retain these two distinct macro inputs.
@@ -452,7 +430,8 @@ used in that proof.
 
 \subsection{Parameters and the whole-matrix budget}
 
-Fix $0<\xi\le1/8$, an integer $m\ge1024/\xi$, and $k\ge2$. Define
+We first work with an auxiliary tolerance $0<\xi\le1/8$; at the end we
+choose $\xi=\varepsilon/8$. Fix integers $m\ge1024/\xi$ and $k\ge2$. Define
 \begin{gather}\label{eq:epsilon-parameters}
  s=1+\xi,\quad a=\sqrt\xi,\quad\theta=a/k,\quad
  K=\lceil\xi m^2\rceil,\quad S=s^3k^2,\\
@@ -544,7 +523,7 @@ proves strict unit separation of all local lengths.
 The smallest local length is greater than $7R_0/(12k)>1$, while every
 local length is less than $R_0\sqrt{1+a^2}<144mk^2$.
 
-\subsection{All cross and mixed lengths}
+\subsection{Cross lengths and the local--cross gap}
 
 Put $h=(k-1)/2$ and $T_{\max}=s(sk+1)h$. Then
 \[
@@ -824,17 +803,15 @@ Since $6k\le n+5$ and
  -\frac{499}{500}\left(1+\frac{5}{400000}\right)^2
  =\frac{3120159501}{3200000000000}>0,
 \]
-the diameter is $<0.999n^2$. This use of Dusart's unconditional theorem
-is a literature input, not a new proof or formal verification of the
-prime-interval bound. The threshold is deliberately conservative.
+the diameter is $<0.999n^2$. The threshold is deliberately conservative.
 
 \section{Formalization and provenance}\label{sec:formal}
 
 The two-circle family, its uniform form, and the prime-first dimension-29
 theorem have corresponding Lean~4 declarations, listed in
-\cref{tab:lean}. Both newer developments use Lean~4.33.1 and the same locked
+\cref{tab:lean}. Both formalizations use Lean~4.33.1 and the same locked
 Mathlib revision; the exact source identities are in \cref{app:sources}.
-The recorded final transitive axiom reports contain only
+Their recorded transitive axiom reports contain only
 \code{propext}, \code{Classical.choice}, and \code{Quot.sound}.
 The epsilon-family endpoints have only the numerical hypotheses of
 \cref{thm:epsilon,cor:uniform}; the geometric and operator estimates are
@@ -866,33 +843,21 @@ the written estimates above give strict separation. The earlier public
 $\R^{81794}$ theorem has a separate proof and statement adapter
 \cite{PublishedFinite,PublicStatus}.
 
-The existing epsilon-family compilation reused checked imports. The R29
-records additionally include a build from zero local project objects with
-pinned upstream caches and a later reported fresh official-kernel replay.
-These are source-specific execution records; preparing this exposition
-has not performed a new Lean build. The public repository preserves the
-statements and audit receipts, rather than the complete newer Lean proof
-closures. Those closures remain private. Formal checking and the
-arithmetic certificate in \cref{app:certificate} do not constitute
-independent human proof or priority review.
+The public repository records the statement headers, axiom audits and
+source-specific build receipts; the complete newer Lean proof closures
+remain private. This paper reports those existing records and does not
+claim a new Lean execution or independent mathematical review. The
+Palomar and Prove2Me records apply only to the archived $0.74$ theorem
+\cite{PublicStatus}.
 
 The quadratic-residue ruler is classical in the Erd\H{o}s--Tur\'an
-tradition \cite{ErdosTuran}. Euclidean Gram realization,
-positive-semidefinite completion, and weighted Schur estimates are also
-classical \cite{Schoenberg,Schur,Sinnamon,Robinson}. Orthogonal-circle
-geometry has classical precedents in Lenz-type constructions
-\cite{ErdosLenz}. The colex macro estimates are inherited from the earlier
-manuscript. Here the digit and ruler circles are separated, and the
-small-dimensional construction uses the finite non-colex seed
-\eqref{eq:labels29}.
-
-This research and manuscript were developed with substantial AI assistance
-in mathematical exploration, proof engineering, source comparison, and
-writing. An AI-generated simplification and readability rewrite informed
-the earlier orthogonal-circle construction, with permission to use it.
-Independent mathematical review remains open. The earlier Palomar and
-Prove2Me records concern only the archived $0.74$ theorem
-\cite{PublicStatus}.
+tradition \cite{ErdosTuran}. Gram realization, positive-semidefinite
+completion and the operator estimates use classical methods
+\cite{Schoenberg,Schur,Sinnamon,Robinson}; orthogonal-circle geometry also
+appears in Lenz-type constructions \cite{ErdosLenz}. The colex estimates
+are inherited from the earlier paper. The present construction separates
+the digit and ruler circles and uses an explicit six-vertex label pattern
+for the dimension-29 result.
 
 \section{What remains open}\label{sec:open}
 
@@ -902,7 +867,7 @@ diameter in each dimension. Three concrete questions remain:
 \begin{enumerate}[leftmargin=1.7em,itemsep=4pt]
 \item Does the coefficient-one bound fail in the plane, or in another
  prescribed dimension below~29?
-\item Can one fixed dimension support genuine unit-separated edge lengths
+\item Can one fixed dimension support unit-separated edge lengths
  with diameter $(1/2+o(1))n^2$? The dimension-dependent tolerance family does
  not answer this question.
 \item What is the best tradeoff between dimension, the all-size threshold,
@@ -915,6 +880,11 @@ all two-circle constructions.
 
 \section*{Acknowledgments}
 The author thanks Boon Suan Ho for helpful comments on an earlier draft of this manuscript.
+
+This research and manuscript were developed with substantial AI assistance
+in mathematical exploration, proof engineering, source comparison, and
+writing. An AI-generated simplification of the earlier orthogonal-circle
+argument was used with permission.
 
 
 \appendix
@@ -1186,12 +1156,9 @@ convexity argument in \eqref{eq:finite-k-operator}.
 
 \section{Source correspondence}\label{app:sources}
 
-The written arguments and the formal endpoint sources have different roles.
-The prose proofs in \cref{sec:epsilon-proof,sec:r29-proof} reorganize the
-retained written construction notes; \cref{sec:formal} identifies the exact
-Lean conclusions. In particular, the R29 paper theorem uses the weak unit
-edge-separation inequality of the formal statement, although the written
-scalar estimates are strict.
+The following source identities specify the written construction and
+formal declarations used in this paper; their mathematical correspondence
+is described in \cref{sec:formal}.
 
 \begin{table}[ht]
 \centering\footnotesize
@@ -1214,10 +1181,8 @@ The locked Mathlib revision for the newer endpoints is
 The extracted Formal Conjectures statement is pinned at project revision
 \begin{center}\small\texttt{c77fdd446d23539302aa73bcfae4a9fa962b8382}.\end{center}
 Its source blob is \texttt{1ae473043edcd960c0b9eed81ccd6e82994f2a22}.
-The public repository preserves statement headers, audit output and build
-receipts separately from the paper source. These identities make the
-correspondence inspectable; they do not assert that this new typeset
-exposition has itself received independent proof or priority review.
+The public repository preserves the corresponding statement headers,
+axiom audits and build receipts separately from the paper source.
 
 \clearpage
 \begin{thebibliography}{12}

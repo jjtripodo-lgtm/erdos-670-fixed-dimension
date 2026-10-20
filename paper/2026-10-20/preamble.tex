@@ -6,7 +6,7 @@
 \usepackage{microtype}
 \usepackage[letterpaper,top=0.85in,bottom=0.87in,left=0.95in,right=0.95in,headheight=15pt,headsep=19pt]{geometry}
 \usepackage{booktabs,array,tabularx,enumitem}
-\usepackage{xcolor,tikz,titlesec,fancyhdr,listings}
+\usepackage{xcolor,tikz,listings}
 \usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
 \definecolor{ink}{HTML}{173B4D}
 \definecolor{teal}{HTML}{277D79}
@@ -39,10 +39,6 @@
 \newcommand{\code}[1]{{\ttfamily\small #1}}
 \newcommand{\TripodoCommit}{\texttt{1e73a12}}
 \DeclareMathOperator{\diam}{diam}\DeclareMathOperator{\diag}{diag}
-\titleformat{\section}{\Large\bfseries\color{ink}}{\thesection}{.7em}{}
-\titleformat{\subsection}{\normalsize\bfseries\color{ink}}{\thesubsection}{.65em}{}
-\titlespacing*{\section}{0pt}{22pt}{10pt}
-\titlespacing*{\subsection}{0pt}{16pt}{6pt}
 \setlength{\parindent}{1.15em}
 \setlength{\parskip}{2pt}
 \setlength{\tabcolsep}{5pt}
@@ -51,57 +47,34 @@
 \emergencystretch=2em
 \setlength{\abovecaptionskip}{7pt}
 \setlength{\belowcaptionskip}{5pt}
-\pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\scriptsize\scshape\color{slate}Separated distances in fixed dimension}
-\fancyhead[R]{\scriptsize\color{slate}John Tripodo}
-\fancyfoot[L]{\scriptsize\color{slate}20 October 2026}
-\fancyfoot[R]{\small\color{ink}\thepage}
-\renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0pt}
+\pagestyle{plain}
 \lstset{basicstyle=\ttfamily\scriptsize,keywordstyle=\color{ink}\bfseries,commentstyle=\color{slate},stringstyle=\color{teal},breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,rulecolor=\color{teal!35},backgroundcolor=\color{mist},xleftmargin=5pt,xrightmargin=5pt,aboveskip=10pt,belowskip=10pt}
+\title{Separated distances in fixed dimension}
+\author{John Tripodo\thanks{ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}.}}
+\date{20 October 2026}
 \begin{document}
-\thispagestyle{fancy}
-\noindent{\sffamily\small\bfseries\color{teal}METRIC GEOMETRY\quad /\quad ERD\H{O}S PROBLEM 670}\par
-\vspace{18pt}
-\noindent{\fontsize{30}{34}\selectfont\bfseries\color{ink}Separated distances\\[3pt]in fixed dimension}\par
-\vspace{10pt}
-\noindent{\Large\color{slate}Two circles and a\\[2pt]dimension-29 counterexample}\par
-\vspace{15pt}
-\noindent{\large John Tripodo}\hfill{\small 20 October 2026}\par
-\vspace{3pt}
-\noindent{\small\color{slate}\href{https://orcid.org/0009-0006-9180-4953}{ORCID 0009-0006-9180-4953}}\par
-\vspace{13pt}\noindent{\color{gold}\rule{\textwidth}{1pt}}\par
-\vspace{8pt}
-\noindent\textbf{Abstract.}
-A finite Euclidean point set is distance-separated when the lengths of any
-two different unordered edges differ by at least one. The counting bound
-for its diameter is asymptotically $n^2/2$, whereas Erd\H{o}s asked for a
-coefficient-one lower bound. We give a two-circle construction: for every
-$0<\varepsilon\le1/2$ and every $n\ge4\lceil8192/\varepsilon\rceil$, there
-is a distance-separated $n$-point set in
-$\R^{10\lceil8192/\varepsilon\rceil-1}$ with diameter
-$<(1/2+\varepsilon)n^2$. A uniform form has coefficient
-$1/2+102400/d+40960/n$. Independently, an explicit six-vertex macro seed
-gives arbitrarily large configurations in the single space $\R^{29}$
-with diameter $<0.998n^2$, refuting the maintained fixed-dimensional
-coefficient-one statement. A short-prime-interval theorem also gives
-diameter $<0.999n^2$ in $\R^{29}$ for every $n\ge400000$. Two orthogonal circle channels separate local
-ruler gaps from cross-edge digits; the latter have an exact monotone
-square-root formula. The small-dimensional proof uses three rational
-matrix certificates valid for all admissible finite cluster sizes.
-The two-circle family and the prime-first dimension-29 theorem have
-corresponding Lean~4 proofs; the all-size corollary is a written consequence. The general family
-uses uniform colex estimates; the dimension-29 construction replaces them
-with a finite rational certificate.
-\vspace{12pt}
-\begin{center}
-\fcolorbox{teal!30}{mist}{\parbox{.92\textwidth}{\small\color{ink}
-\textbf{GitHub manuscript, 20 October 2026.}
-The prime-first theorem and its all-size corollary have different bounds
-and verification scopes. The near-counting family fixes the dimension
-separately for each tolerance.}}
-\end{center}
-\vspace{5pt}
-\noindent{\footnotesize\textbf{Keywords:} separated distances, Euclidean diameter,
-Gram completion, quadratic-residue rulers, Lean formalization.}
-\clearpage
+\maketitle
+
+\begin{abstract}
+A finite Euclidean point set is distance-separated if the lengths of any
+two distinct unordered edges differ by at least one. Counting gives a
+diameter lower bound of $\binom n2$, whereas Erd\H{o}s asked for a lower
+bound with leading term $n^2$. We give two constructions in fixed dimension.
+For every $0<\varepsilon\le1/2$, put $m_0=\lceil8192/\varepsilon\rceil$.
+For every $n\ge4m_0$ there is a distance-separated $n$-point set in
+$\R^{10m_0-1}$ with diameter $<(1/2+\varepsilon)n^2$.
+A six-cluster construction gives arbitrarily large configurations in
+$\R^{29}$ with diameter $<0.998n^2$, and an explicit prime-interval bound
+gives diameter $<0.999n^2$ for every $n\ge400000$.
+The constructions use two orthogonal circle families to control distances
+within and between clusters separately. Their common geometric argument
+reduces to a uniform operator estimate for the first result and three
+rational positive-definiteness certificates for the second.
+Lean~4 formalizations accompany the tolerance family and the
+dimension-29 result for arbitrarily large sizes; the all-size corollary is a
+written consequence.
+\end{abstract}
+
+\noindent{\small\textbf{Keywords:} separated distances, Euclidean diameter,
+Gram completion, quadratic-residue rulers.}
+\medskip

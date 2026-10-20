@@ -2,9 +2,9 @@
   "schema_version": 1,
   "version": "2026-10-20",
   "pages": 20,
-  "source_sha256": "bd46a8f48299c3e8791fb4741eab06d0bd9e6aa41b833eb821dd7f68dfa6c407",
-  "pdf_sha256": "4f9554bf29d122fad72cb5fad5a39488e32c1e3806ae7397a6b9c79e52c55fd1",
-  "source_zip_sha256": "05310b6c1a138e801cc7fcaa28f887cec1746b74db310390ad030f59ed2fb851",
+  "source_sha256": "5b5d31204d899f4b9f9cea148fc691f66a67a16f9261be5f6278bfdea9e59b19",
+  "pdf_sha256": "22e4d66fa882dbe11aac26ac591dc219e9981139f28b0dc3ff2022dd2769961a",
+  "source_zip_sha256": "3768be4119b0361bee3dc38b401a6f50b1e6450926832e598e9c7cca27ee511b",
   "source_zip_files": [
     "LICENSE.md",
     "README.md",
@@ -73,5 +73,13 @@
     "all_n_padding_margin": "3120159501/3200000000000"
   },
   "formal_scope": "Existing exact declarations and source-specific records only; no new Lean execution. The all-size R29 corollary is written/source-reviewed, not a Lean endpoint.",
-  "changes_from_19_october": "Add the existing all-size R29 corollary with primary Dusart citation; replace internal-draft labels; correct lemma/corollary cross-reference types; remove a near-empty forced page; retain theorem constants, original formal endpoints and acknowledgment."
+  "changes_from_19_october": "Add the existing all-size R29 corollary with primary Dusart citation; replace internal-draft labels; correct lemma/corollary cross-reference types; remove a near-empty forced page; retain theorem constants, original formal endpoints and acknowledgment.",
+  "editorial_revision": "reader-first-2026-10-20",
+  "previous_public_commit": "15d1ff5b256459ac26c91fa078c35647998a7169",
+  "editorial_invariants": {
+    "displayed_mathematical_blocks_byte_identical": 64,
+    "proof_environments_byte_identical": 6,
+    "retained_proof_appendices_certificate_citations_figures": true,
+    "scope": "Editorial changes only; no new theorem or proof claim."
+  }
 }

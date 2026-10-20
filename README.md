@@ -121,7 +121,8 @@ version-specific citation metadata.
 
 [The 19 October documentation update](PUBLIC_STATUS.md) records the exact
 statement bridge, later replay evidence, and separately scoped internal
-dimension-29 and epsilon-family formalizations. It does not revise the manuscript.
+dimension-29 and epsilon-family formalizations. That update did not revise the
+14 October finite manuscript.
 
 [Version history](VERSION_HISTORY.md) links the immutable earlier v1.0.0
 manuscript, proof, verification records, and DOI archive. Their original

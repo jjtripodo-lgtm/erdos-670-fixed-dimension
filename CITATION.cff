@@ -19,7 +19,7 @@ preferred-citation:
     given-names: John
     orcid: https://orcid.org/0009-0006-9180-4953
   year: 2026
-  title: 'Separated distances in fixed dimension: Two circles and a dimension-29 counterexample'
+  title: Separated distances in fixed dimension
   notes: GitHub manuscript dated 20 October 2026. Two-circle epsilon family and R29 prime-first construction,
     plus a separate written all-size R29 corollary. Source-specific internal Lean records are distinguished
     from the written corollary. As of this GitHub release, no new DOI, Hexagon version or external acceptance
