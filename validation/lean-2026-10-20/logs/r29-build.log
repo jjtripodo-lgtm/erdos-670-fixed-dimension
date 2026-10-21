@@ -1,0 +1,336 @@
+⚠ [3016/3021] Built SchurTransfer (7.6s)
+warning: SchurTransfer.lean:14:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: SchurTransfer.lean:15:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: SchurTransfer.lean:23:0: 'Erdos670R29.schur_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3017/3021] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion (7.9s)
+ℹ [3018/3025] Built MatrixInterpolation (3.1s)
+info: MatrixInterpolation.lean:40:0: 'Erdos670R29.completion_interpolation' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3247/3256] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor (3.3s)
+ℹ [3249/3256] Built GramCompletion (4.1s)
+info: GramCompletion.lean:39:0: 'Erdos670R29.gram_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3252/3263] Built Erdos488.Geometry.SeparatedDistances.Defs (2.2s)
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:46: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/Defs.lean:50:48: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3295/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord (5.8s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:76:5: Variable name `hD₀` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD₀
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean:90:58: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [3296/3311] Built MatrixCertificates (31s)
+info: MatrixCertificates.lean:59:0: 'Erdos670R29.completion_infinity_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixCertificates.lean:108:0: 'Erdos670R29.completion_k0_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MatrixCertificates.lean:157:0: 'Erdos670R29.macroGram_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3297/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler (13s)
+✔ [3298/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits (4.4s)
+✔ [3299/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel (6.3s)
+⚠ [3300/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Ruler (7.9s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean:127:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean:148:74: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean:148:74: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3301/3311] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures (6.0s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean:81:13: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3302/3312] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures (3.6s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean:13:47: This simp argument is unused:
+  Pi.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.mulVec_diagonal, dotProduct]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3303/3312] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates (4.7s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:57: This simp argument is unused:
+  zero_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [clusterPoint, WithLp.ofLp_toLp, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Real.dist_eq,
+    sq_abs, add_sub_add_left_eq_sub, sub_self, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:66: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [clusterPoint, WithLp.ofLp_toLp, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Real.dist_eq,
+    sq_abs, add_sub_add_left_eq_sub, sub_self, zero_pow, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean:50:88: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [clusterPoint, WithLp.ofLp_toLp, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Real.dist_eq,
+    sq_abs, add_sub_add_left_eq_sub, sub_self, zero_pow, Finset.sum_const_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3305/3312] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates (5.8s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:65:15: This simp argument is unused:
+  hb
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hAB, Ne.symm hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:65:22: This simp argument is unused:
+  Ne.symm hAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hb, hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean:66:40: This simp argument is unused:
+  hAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ha, hb, Ne.symm hAB]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3306/3312] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CircleGeometry (6.8s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleGeometry.lean:109:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleGeometry.lean:244:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3307/3320] Built TwoCircleGeometry (3.3s)
+warning: TwoCircleGeometry.lean:19:52: This simp argument is unused:
+  WithLp.ofLp_toLp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [EuclideanSpace.dist_sq_eq, joinPoints, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: TwoCircleGeometry.lean:70:0: 'Erdos670R29.twoCircle_same_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TwoCircleGeometry.lean:71:0: 'Erdos670R29.twoCircle_cross_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TwoCircleGeometry.lean:72:0: 'Erdos670R29.coordinate_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3516/3534] Built SourceMatrices (42s)
+info: SourceMatrices.lean:93:0: 'Erdos670R29.sourceMacro_posDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: SourceMatrices.lean:94:0: 'Erdos670R29.sourceCompletion_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3518/3537] Built FiniteKCompletion (4.6s)
+warning: FiniteKCompletion.lean:59:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteKCompletion.lean:59:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+info: FiniteKCompletion.lean:61:0: 'Erdos670R29.finite_k_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3520/3540] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation (3.2s)
+ℹ [3521/3542] Built SharpRulerNext (12s)
+info: SharpRulerNext.lean:54:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.same_lag_residue_injective_sharp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: SharpRulerNext.lean:55:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.rulerGap_same_lag_injective_sharp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3522/3542] Built AnchorInterface (7.2s)
+info: AnchorInterface.lean:62:0: 'Erdos670R29.anchor_distance_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AnchorInterface.lean:63:0: 'Erdos670R29.anchored_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3524/3542] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossScalar (5.5s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean:28:5: Variable name `hτ1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hτ1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean:105:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5Phi_secant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean:106:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5Phi_displacement' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ℹ [3525/3544] Built ActualCoordinates (7.4s)
+info: ActualCoordinates.lean:59:0: 'Erdos670R29.actual_cross_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3527/3544] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossSeparation (4.9s)
+info: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossSeparation.lean:144:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_cross_pairs_separated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossSeparation.lean:145:0: 'Erdos488.Geometry.SeparatedDistances.FixedDimension.pass5_integer_baselines_separated' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+✔ [3528/3544] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Parameters (7.4s)
+⚠ [3529/3544] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation (2.7s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean:12:39: `Sym2.isDiag_iff_proj_eq` has been deprecated: Use `Sym2.mk_isDiag_iff` instead
+ℹ [3530/3544] Built CrossGeneric (4.8s)
+info: CrossGeneric.lean:81:0: 'Erdos670R29.one_macro_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3531/3545] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5GeometryParameters (5.6s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean:33:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean:33:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean:64:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3532/3545] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly (4.4s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean:53:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean:69:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3533/3545] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Local (5.3s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:14:54: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:14:54: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:43:61: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:43:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:65:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:92:19: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:92:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:125:19: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean:125:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ℹ [3534/3545] Built MacroLabels (44s)
+info: MacroLabels.lean:16:0: 'Erdos670R29.sourceD_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: MacroLabels.lean:17:0: 'Erdos670R29.sourceD_spacing' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3535/3548] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic (5.3s)
+ℹ [3536/3558] Built TrigBounds (19s)
+info: TrigBounds.lean:30:0: 'Erdos670R29.cos_ruler_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TrigBounds.lean:31:0: 'Erdos670R29.sin_ruler_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TrigBounds.lean:32:0: 'Erdos670R29.sin_ruler_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3537/3560] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum (16s)
+✔ [3538/3560] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation (4.3s)
+ℹ [3540/3562] Built LocalNorm (8.7s)
+info: LocalNorm.lean:46:0: 'Erdos670R29.norm_secant_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LocalNorm.lean:47:0: 'Erdos670R29.sin_ruler_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3541/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards (4.2s)
+ℹ [3542/3562] Built PrimeFirst (2.6s)
+info: PrimeFirst.lean:12:0: 'Erdos670R29.admissible_prime_sizes_unbounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3543/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation (6.2s)
+⚠ [3544/3562] Built LocalScalar (4.6s)
+warning: LocalScalar.lean:36:73: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: LocalScalar.lean:36:73: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: LocalScalar.lean:40:50: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LocalScalar.lean:68:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: LocalScalar.lean:76:53: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: LocalScalar.lean:83:0: 'Erdos670R29.localB_slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LocalScalar.lean:84:0: 'Erdos670R29.localH_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LocalScalar.lean:85:0: 'Erdos670R29.localB_ray' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3545/3562] Built Erdos670Bridge.Statement (2.3s)
+✔ [3546/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum (4.4s)
+⚠ [3547/3562] Built LocalSeparation (3.9s)
+warning: LocalSeparation.lean:41:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: LocalSeparation.lean:64:0: 'Erdos670R29.local_ordered_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3548/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards (5.6s)
+⚠ [3549/3562] Built LocalBounds (5.3s)
+warning: LocalBounds.lean:10:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: LocalBounds.lean:54:0: 'Erdos670R29.localLength_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: LocalBounds.lean:55:0: 'Erdos670R29.localLength_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3550/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum (5.6s)
+ℹ [3551/3562] Built LocalRuler (4.0s)
+info: LocalRuler.lean:86:0: 'Erdos670R29.local_edges_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3552/3562] Built PointFamily (3.5s)
+info: PointFamily.lean:71:0: 'Erdos670R29.pointFamily_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: PointFamily.lean:72:0: 'Erdos670R29.pointFamily_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3553/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands (6.1s)
+⚠ [3554/3562] Built CrossDigits (3.5s)
+warning: CrossDigits.lean:22:15: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: CrossDigits.lean:48:0: 'Erdos670R29.digit_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CrossDigits.lean:49:0: 'Erdos670R29.concrete_digit_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CrossDigits.lean:50:0: 'Erdos670R29.concrete_macro_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3555/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets (5.1s)
+ℹ [3556/3562] Built CrossSpectrum (4.9s)
+info: CrossSpectrum.lean:86:0: 'Erdos670R29.cross_edges_separated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CrossSpectrum.lean:87:0: 'Erdos670R29.cross_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CrossSpectrum.lean:88:0: 'Erdos670R29.cross_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [3557/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar (6.8s)
+⚠ [3558/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding (4.6s)
+warning: Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean:51:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [3559/3562] Built Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Padding (6.4s)
+ℹ [3560/3562] Built FiniteAssembly (4.3s)
+info: FiniteAssembly.lean:82:0: 'Erdos670R29.metric_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3561/3562] Built R29Endpoint (3.1s)
+warning: R29Endpoint.lean:71:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: R29Endpoint.lean:74:0: 'Erdos670R29.finite_configuration' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: R29Endpoint.lean:75:0: 'Erdos670R29.r29_unbounded_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3562/3562] Built R29MinimalBridge (3.5s)
+warning: R29MinimalBridge.lean:26:52: `Sym2.isDiag_iff_proj_eq` has been deprecated: Use `Sym2.mk_isDiag_iff` instead
+warning: R29MinimalBridge.lean:27:52: `Sym2.isDiag_iff_proj_eq` has been deprecated: Use `Sym2.mk_isDiag_iff` instead
+info: R29MinimalBridge.lean:55:0: 'Erdos670R29Minimal.finite_set_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: R29MinimalBridge.lean:56:0: 'Erdos670R29Minimal.not_fixedDimensionStatement_r29' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3562 jobs).

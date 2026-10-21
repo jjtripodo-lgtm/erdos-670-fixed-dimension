@@ -1,0 +1,4 @@
+import R29MinimalBridge
+#print axioms Erdos670R29.r29_unbounded_counterexamples
+#print axioms Erdos670R29Minimal.finite_set_counterexamples
+#print axioms Erdos670R29Minimal.not_fixedDimensionStatement_r29

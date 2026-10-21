@@ -1,0 +1,17 @@
+name = "erdos670_epsilon"
+version = "0.1.0"
+defaultTargets = ["FullFamily"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "Erdos488"
+moreLeanArgs = ["--trust=0"]
+
+[[lean_lib]]
+name = "Endpoints"
+roots = ["ActualGeometry", "CrossBounds", "CrossGeometry", "CrossParameters", "CrossSpectrum", "DiameterCoefficient", "EpsilonEndpoint", "ExactNEmbedding", "FullFamily", "HarmonicGuard", "LocalLengths", "LocalSecantSpecialization", "MetricAssembly", "ReciprocalRounding", "ScalarGuards", "StrictCrossSeparation", "TauGuards", "TwoCircleGeometry", "TwoCircleMacro", "TwoCircleSecant", "UniformMacro"]
+moreLeanArgs = ["--trust=0"]
