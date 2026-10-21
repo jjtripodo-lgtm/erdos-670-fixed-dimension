@@ -1,0 +1,714 @@
+{
+  "r29": {
+    "target": "R29MinimalBridge",
+    "module_count": 60,
+    "sources": {
+      "ActualCoordinates": {
+        "path": "ActualCoordinates.lean",
+        "sha256": "8319ece85eafc3397a34402557f5d168beaa810578be685aa904f13e66ec44b5",
+        "git_blob": "6e469ae66b4236b1a19ec29c42f81c171918e9c7"
+      },
+      "AnchorInterface": {
+        "path": "AnchorInterface.lean",
+        "sha256": "9380a91ac84c4de3372f516e459a10606af74d90c161b3c66357068b3cac2727",
+        "git_blob": "417f25291ba64cf420db53c621c572be66b62b95"
+      },
+      "CrossDigits": {
+        "path": "CrossDigits.lean",
+        "sha256": "81d10dd8711b9da4e5c8b250965c3e43308d0be4d3144f09e785d98d1d94d29d",
+        "git_blob": "33cd8a77925b6bad98f8d31588fc9926185b15d3"
+      },
+      "CrossGeneric": {
+        "path": "CrossGeneric.lean",
+        "sha256": "5a778e42cc801cad4ba374eb77535e337dafc04d14d77280ed259ab0ca7e2bea",
+        "git_blob": "9c36797524fd9b4b9f10d0170ae6a9c38039a20c"
+      },
+      "CrossSpectrum": {
+        "path": "CrossSpectrum.lean",
+        "sha256": "da88ccd1571a50a3a06cdfca761a4df3985f8dd3def56e7204ca71c0a0f3c3ce",
+        "git_blob": "8c11ec6125201288ca69593c3061e6f97228ea47"
+      },
+      "Erdos488.Geometry.SeparatedDistances.Defs": {
+        "path": "Erdos488/Geometry/SeparatedDistances/Defs.lean",
+        "sha256": "9d696a0ba758b3ae236564116bf66b7462dcb4aac62c81cc000b9b8eb31ebaf3",
+        "git_blob": "de9341403c0f9e36b935f153077095b70ddb5bb1"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean",
+        "sha256": "6ab22c6b16e3b4579b296c467c8faed2ddf200476d33a1c461b67b6267e98c71",
+        "git_blob": "12bacd7e9f4a82f4bd29d52e3752fa4101005fc4"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean",
+        "sha256": "c84410052ab9f41e7b76de74d847d95739fef9256992266329937b9effb131ed",
+        "git_blob": "52fafbc58c90426c781f053ba6e978fbe6b3cb3e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean",
+        "sha256": "f9388d8b9c89b89f34884bfb191e87caf969a96d3c1a813039556ae48a577a75",
+        "git_blob": "ba75a6f670572fcf11bb87c211fe55949e2222cb"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean",
+        "sha256": "85bd0cc75f49257c34843e31f6c4e4a5f4efd9df6f0d7ff8af39edbc0e260cb7",
+        "git_blob": "7bcf0e1afa553aaecb59dd256d53581b91b5292e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean",
+        "sha256": "98e65661665e8af0ec403e432957c395cca552ba2de057a5b7e3cff8995e96ac",
+        "git_blob": "aac7a5c7ae7953c8230c9a68b2dc6b10a69a7310"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean",
+        "sha256": "a1ac4e3af6c7e52b85bbc287ad1193b4d964e74236dae9fa0b50bd9e24060bab",
+        "git_blob": "6e89c71aad04dfb41aeaae8ff171294bfd4fe15c"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean",
+        "sha256": "bf5d75e740bb0a5de06c8bd3c08b597b98fe09cebd8195a23bb2760084e48d2e",
+        "git_blob": "127fc698f39f7db10358523dd2cee0ac8287a37d"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean",
+        "sha256": "0c7d0187ab8c8e6265d37d349e6b7418ef069ebe70d95fc6455eb15d8df7131f",
+        "git_blob": "6b1dcbaee949dd974e7361f970986a3835344e0e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean",
+        "sha256": "c01a5a7687cd79c1427d69325313a2ce7f7fb5c64819adc4763c08e88e6d1f5f",
+        "git_blob": "1993cfca0996d500fff47949c8b454140766faa5"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean",
+        "sha256": "a37fc6e7666681f9dfd57a8f476111c5e3cee0fc5664acf46186a9dbd829df76",
+        "git_blob": "764500d0f5cf31e99d741fc23eef8830629f8ec9"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CircleGeometry": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleGeometry.lean",
+        "sha256": "35f620a4954ecc15412ae989e306cd16581b48aaf7d630c540046cc58257b68b",
+        "git_blob": "5ad3aac19de2a08545605f1c2822fc56f140414f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossScalar": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean",
+        "sha256": "2c48eec2badbddf31b46e77f5d0a632786c09924966a4081cbe3f16db1347dbb",
+        "git_blob": "fc0f6d56e5e4f6e7ed9db54a4a3a4ad249516e69"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossSeparation.lean",
+        "sha256": "7d8f01f662c976c253ba9c0ed499bd7f812ba8adfe9052c6fe3d2c7db4dce5ab",
+        "git_blob": "7087ec47c06e8780553d422c87baa81c6c35487f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5GeometryParameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean",
+        "sha256": "57aa561cfe692ef0cde6fefe90be279aec91e1684a080504c487398822b45e5c",
+        "git_blob": "ba3b7e9be5abf62c2e3e1b309438825a7e05abd3"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Local": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Local.lean",
+        "sha256": "4198a991f1e1e6cff64b5ecc577a7b103b89434d95b9c94a2415276b7752c212",
+        "git_blob": "f3ce5705a36158c86c4a1b8fe7c0ba1c4fb2ce37"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Padding": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Padding.lean",
+        "sha256": "32a45cb05896f9fe960745f0bf055fc4a802996ac12a6a7b87397665fae84bdf",
+        "git_blob": "485775dac499db3dee2404b3a285474eb34d9f80"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Parameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Parameters.lean",
+        "sha256": "6906571b225d3828639fabac214c8b89431ccb180952d8deb7adc782ee9ea9a1",
+        "git_blob": "f3dc7e1afc65a181cf3627039d654871453209a1"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Ruler": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean",
+        "sha256": "27bda89b0df608414a5a016ee953c72f9a3a08145cc88627dd26c0d586e71f1e",
+        "git_blob": "55b0d15d2f19dc7ec500aa737fcc31841f40be54"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean",
+        "sha256": "b2cbe478c30ec8b0391b4d02bca358f21633c3c0de7f8274578e2124dc17173c",
+        "git_blob": "336918301d3c5ae68bce4488172ca015725b8c0f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean",
+        "sha256": "90fe75f807ce75a632b8f81ee0a8ae7266a08bc6ce02e78d675bef687d3ad1fb",
+        "git_blob": "bb723a0e0916fce5077cd942ca4599bfe4b33e35"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean",
+        "sha256": "92b3a9fce9691a0e00f56e840a75fc7380e380979e88d9337e8231c65d953345",
+        "git_blob": "62a83de58e4d3a025bbf044cf30a5d5686f32355"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean",
+        "sha256": "eef1bbd08fad3ab5c88b74ba2e2e25702b4f310a7148444a6bd789a6df1684b3",
+        "git_blob": "9f4380bb7562e5af854a5539053a4da0b1180012"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean",
+        "sha256": "c8af0b3d950ae0ea48f7057d23cac9814a5008f24a1a5f200a24864a18701ae4",
+        "git_blob": "526055d2ba7447dd8554011632dd4eda180f698d"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean",
+        "sha256": "dcb41d4152296cb746eec3bd486a98e699d84c65579e1adbf489adc4518effae",
+        "git_blob": "45ac530f2f6ec4b1b529018a14717400ab974d82"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean",
+        "sha256": "6ba2b52a98f627f24240280f91d062a7866ee31a52c295abbccdf4d613c58980",
+        "git_blob": "5fadf638570674ae732db96235143dc4c8859535"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean",
+        "sha256": "d549e36433886c0a53325ca77df65266ef298c155aaafaacb8840ea997a9bf5e",
+        "git_blob": "6366f3768846476f713edf4322bfa1bd4ff59d62"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean",
+        "sha256": "83ccbc287deed29c4f510373b60a50f7523cb8a5865689f0fcb2b075631cc5e3",
+        "git_blob": "4be01e7168b083ea6147c84383a413dcce64228e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean",
+        "sha256": "a15e10e7b12b3bfb0de356d0f8539af79512feeb890d156c908f99fcf87e4841",
+        "git_blob": "39de28ed9340b95f6535b98178c8c9e3864685b0"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean",
+        "sha256": "fc5a809c5d893f70f51423c57b6d1c8f9b431f3bb533f276dfed1588c0194c6f",
+        "git_blob": "1a9f9d3ced4f5aba64f3199a46d2f2136ea89f53"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean",
+        "sha256": "3d205d64de48c81103f68179657f79112a3d7befb41ceb0a5653b3ef0467ed29",
+        "git_blob": "89b8a8de0b0c519a8b3ca4f5be3e275598f92ed8"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean",
+        "sha256": "40570d8bad67aeab4c395e49ceaac063d75c5297c0a2a54721b15bd78a518de0",
+        "git_blob": "a47d9d242bab1861350c3ec68170d1f8bd431bcd"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean",
+        "sha256": "c4a5baefade16bf942d30c3a0d5890601ee8a5793082f55d20caaf38ec44c436",
+        "git_blob": "0b6ddccad8e2d521e3fd3c505291e7936c74333b"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean",
+        "sha256": "bcafead776d4d54b463da7f94bf0391d38a6443fc2cf25bfade3970ffe35d3b9",
+        "git_blob": "cbf3b27d88c9329b3c1dd2b87d5260cb08198747"
+      },
+      "Erdos670Bridge.Statement": {
+        "path": "Erdos670Bridge/Statement.lean",
+        "sha256": "7947dd9d1e926b75408b1a9c48e15fc2666df69c0647860c9f6cbb13f9e66b12",
+        "git_blob": "27067693027e2726191b6cc1d241adb71a310ef4"
+      },
+      "FiniteAssembly": {
+        "path": "FiniteAssembly.lean",
+        "sha256": "584200fa0f497876e3ab8d3a3898d07e12696db311981e0b4f7575aa10406971",
+        "git_blob": "16e7708c60bac8b2aad10fdf48aacd9df285dc16"
+      },
+      "FiniteKCompletion": {
+        "path": "FiniteKCompletion.lean",
+        "sha256": "bc30ab813fb9cd45ff6080b3661fba019a3278482144f9f10cd020d389ef569f",
+        "git_blob": "8413eb9b592fb37ecb3c5dd7ef50cfbe858ac849"
+      },
+      "GramCompletion": {
+        "path": "GramCompletion.lean",
+        "sha256": "bd54cc99201d2a00dae0e3b6944aec0cb66fd5b0375a59dd58af6014b5ac35b3",
+        "git_blob": "590d7092c6590b8c69a1aa8f9626b30f9053ec7a"
+      },
+      "LocalBounds": {
+        "path": "LocalBounds.lean",
+        "sha256": "54b1470311d9dbd715bcb2e2a32c9725b139ec6f1d09bf16889a39c8f71a7e6b",
+        "git_blob": "9dc77b203015db27c0f4b154547e570d2ca3d465"
+      },
+      "LocalNorm": {
+        "path": "LocalNorm.lean",
+        "sha256": "236576c731f26137eb4e90ed8e45a468c7511beb3f716ed1819378d3d6df5574",
+        "git_blob": "b40174e19a0b771cfb9d3ae1c8e3fc5d3e37d1fc"
+      },
+      "LocalRuler": {
+        "path": "LocalRuler.lean",
+        "sha256": "201f63c7f32ada94bc242933298cc9d83b91a0ea12a22fe8d12015f97c2c44dc",
+        "git_blob": "6d121fbdb013c73da8890489b5c2f338482e28b7"
+      },
+      "LocalScalar": {
+        "path": "LocalScalar.lean",
+        "sha256": "0907c1213423d05620c64e2bf1364266b4cba72274a914b0b102f422532aac55",
+        "git_blob": "83c477bc3fd4efff9d3cf5e129d7ec7265d31739"
+      },
+      "LocalSeparation": {
+        "path": "LocalSeparation.lean",
+        "sha256": "69b3a155608d25f9ae78168db2ff6badbbdaa2f16da645c8d0bdef02478df7c8",
+        "git_blob": "4a85472d0c427b2c4f9baf15c6495dad987e1a25"
+      },
+      "MacroLabels": {
+        "path": "MacroLabels.lean",
+        "sha256": "1db838a066ef60266568c90d964b65a630622e83869208bc66164dfd6f138b37",
+        "git_blob": "b8172488df766f1a973622b485eaa6f3dc2010cd"
+      },
+      "MatrixCertificates": {
+        "path": "MatrixCertificates.lean",
+        "sha256": "ff9521dc2f83f32c0ecd254ebdd36a2ec3b5d85029cf5beead1c5eeb3c1a843b",
+        "git_blob": "9aae5ac68b6e56cb73e5cd30f50005a40ce2e3b0"
+      },
+      "MatrixInterpolation": {
+        "path": "MatrixInterpolation.lean",
+        "sha256": "d8a81eb922a35689f5ee72ab3b32bd9170db8cc0baf46f2cad101a00dd19d130",
+        "git_blob": "e81e57fb95e4586aab0c01fa4e2239ac04e30302"
+      },
+      "PointFamily": {
+        "path": "PointFamily.lean",
+        "sha256": "b259a20e9eaaeab70ebe515e02a615be8e1d9a950627892159c8c793ef088ccb",
+        "git_blob": "4a86d688724ee6de715b0963aea10c7f71660e1c"
+      },
+      "PrimeFirst": {
+        "path": "PrimeFirst.lean",
+        "sha256": "b0b6566f48fcd78fb65c006a12cba580915a7d2bbbeec014f6b55b42cece36cb",
+        "git_blob": "da5e28e01bef7651fb120f1368e53573cc6c4433"
+      },
+      "R29Endpoint": {
+        "path": "R29Endpoint.lean",
+        "sha256": "699a6d7546f67c954791182ae7065e1992575c590e06c13ee1ef1a278ecc684a",
+        "git_blob": "8d09609eef219795b3dce076f3dc10c50a901ee0"
+      },
+      "R29MinimalBridge": {
+        "path": "R29MinimalBridge.lean",
+        "sha256": "7f643730cac2f43fa3ebc95a359fc8b13d423a888943795a1557bccd46231ce5",
+        "git_blob": "8ac23307f1491887b81d8a6edf67e80a709929fb"
+      },
+      "SchurTransfer": {
+        "path": "SchurTransfer.lean",
+        "sha256": "da17d1a979ac85b56b15d1373dfb2afcfefd2bbffe598da599d6b9e8a546bf45",
+        "git_blob": "9f2a7203d7e37bd1e5e6f18643b6d860d5f82ccb"
+      },
+      "SharpRulerNext": {
+        "path": "SharpRulerNext.lean",
+        "sha256": "0ccb1ea20d2baf11c48e421fb334a9fc5734dee56329830d2bdc52e9b3a1b421",
+        "git_blob": "5aeb8f9e9ab490ebb8899502e50e253fc9a3723f"
+      },
+      "SourceMatrices": {
+        "path": "SourceMatrices.lean",
+        "sha256": "d86f495046d4355f097c51456a0344fd1b692812937d91e6433cb076e212a143",
+        "git_blob": "e8710dba33cfc151df85f2152b4ee535b9852b0a"
+      },
+      "TrigBounds": {
+        "path": "TrigBounds.lean",
+        "sha256": "d4f8bf677609cbac1db46664f56072f71a4989f560dc1af6335fcf9f3e3cbbfb",
+        "git_blob": "7a93babd7589783e4e111901de523cf27900e957"
+      },
+      "TwoCircleGeometry": {
+        "path": "TwoCircleGeometry.lean",
+        "sha256": "59816f7ce9c6bd3b6008b6e2263fb3b8091ee6f02f246e92753f31a3cb55d5d6",
+        "git_blob": "4bfc7ae776e5a926362b904ff4b86c724a40f200"
+      }
+    }
+  },
+  "epsilon": {
+    "target": "FullFamily",
+    "module_count": 80,
+    "sources": {
+      "ActualGeometry": {
+        "path": "ActualGeometry.lean",
+        "sha256": "e0c5acfcc2d9bd25197c69317b7b7a4ac6147b20671cf8a0622b5a347f86a906",
+        "git_blob": "0d1ffb4e35208ba6533c6d9a10c44003333ce81b"
+      },
+      "CrossBounds": {
+        "path": "CrossBounds.lean",
+        "sha256": "f6f138512c6bad6801a046b164a85a80115a07eae1a807036a5dd51093ac8ecd",
+        "git_blob": "73b4e43e5bdf3a70d9516ce08315a27276262bdd"
+      },
+      "CrossGeometry": {
+        "path": "CrossGeometry.lean",
+        "sha256": "d429df80fbfdd436160f43aa7de8a8080dcb170dcf322a3f59d2f185146e823b",
+        "git_blob": "498f3353e4012e7b4221ce3ebdb96c841a02e678"
+      },
+      "CrossParameters": {
+        "path": "CrossParameters.lean",
+        "sha256": "7a6b6bd2031ad5e69d53450e62a0d4bc3f43c6ffc05eb826f8b71a54b9d63ad1",
+        "git_blob": "93d655353972fdd156ed1a340a1dedabc9322bc4"
+      },
+      "CrossSpectrum": {
+        "path": "CrossSpectrum.lean",
+        "sha256": "91b01d5f3cde893541ec45cd8389278506dcd5c964159016bfc3b349d6a3a8d4",
+        "git_blob": "2a7ed700d7ee5137f7b6bc45b871a2e38bc16c01"
+      },
+      "DiameterCoefficient": {
+        "path": "DiameterCoefficient.lean",
+        "sha256": "774d1b39d6c887e19c2670f0fa5865c761f32c46c457f5a1dfd6f9d52b54b250",
+        "git_blob": "aaf805687d6d9d1c7763dfe559c267821d997b71"
+      },
+      "EpsilonEndpoint": {
+        "path": "EpsilonEndpoint.lean",
+        "sha256": "f0a24e332c032ae13924709e239aa9c84aa8e3488c3d6d29fa5010c0a0bb75a1",
+        "git_blob": "13bf04688861e83570a287723a13bc2590c3d931"
+      },
+      "Erdos488.Geometry.SeparatedDistances.ColexBase": {
+        "path": "Erdos488/Geometry/SeparatedDistances/ColexBase.lean",
+        "sha256": "f4ef600ffb08f6357b8d0bf74428286ce2617a32d7e34353905dbfea36c61db4",
+        "git_blob": "17686d5e666e64a32cd27ca3e098972ca3da006f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.ColexPositivity": {
+        "path": "Erdos488/Geometry/SeparatedDistances/ColexPositivity.lean",
+        "sha256": "da4ea3133ef045bd76c06a2f956a67130889d2e2a532be23dbe02fb8aaf9a1b5",
+        "git_blob": "8d62b42bc6da2281fbc54ba4659b7a9265964b76"
+      },
+      "Erdos488.Geometry.SeparatedDistances.Defs": {
+        "path": "Erdos488/Geometry/SeparatedDistances/Defs.lean",
+        "sha256": "9d696a0ba758b3ae236564116bf66b7462dcb4aac62c81cc000b9b8eb31ebaf3",
+        "git_blob": "de9341403c0f9e36b935f153077095b70ddb5bb1"
+      },
+      "Erdos488.Geometry.SeparatedDistances.EuclideanRealization": {
+        "path": "Erdos488/Geometry/SeparatedDistances/EuclideanRealization.lean",
+        "sha256": "d63bd7300d026ff27d52c67cfb471920b3edc316d31ac1d548d7e29266644314",
+        "git_blob": "e97ff9ba569225ae87126ab30a20283f31cc8b7a"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.AllNArithmetic": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/AllNArithmetic.lean",
+        "sha256": "6ab22c6b16e3b4579b296c467c8faed2ddf200476d33a1c461b67b6267e98c71",
+        "git_blob": "12bacd7e9f4a82f4bd29d52e3752fa4101005fc4"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.ClusterEdgeAssembly": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ClusterEdgeAssembly.lean",
+        "sha256": "c84410052ab9f41e7b76de74d847d95739fef9256992266329937b9effb131ed",
+        "git_blob": "52fafbc58c90426c781f053ba6e978fbe6b3cb3e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserve": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserve.lean",
+        "sha256": "62c7a55590ffffaf56632eab74bc544fea0125be8e5f07ba31a0367c255ad066",
+        "git_blob": "ae988fe1de676ce81f048637dcb1aeea9f93185b"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.ColexReserveDirectCS": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/ColexReserveDirectCS.lean",
+        "sha256": "e8bd7220e2962f0f9bc557b5dde7e35c7d5bdca4c147f1fa6ef14b692cb3b1d6",
+        "git_blob": "2ee8ccfc066291ed4ab66851b0b3be8149b8b940"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletedTrigonometricFeatures": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletedTrigonometricFeatures.lean",
+        "sha256": "f9388d8b9c89b89f34884bfb191e87caf969a96d3c1a813039556ae48a577a75",
+        "git_blob": "ba75a6f670572fcf11bb87c211fe55949e2222cb"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.CompletionFactor": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/CompletionFactor.lean",
+        "sha256": "85bd0cc75f49257c34843e31f6c4e4a5f4efd9df6f0d7ff8af39edbc0e260cb7",
+        "git_blob": "7bcf0e1afa553aaecb59dd256d53581b91b5292e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.DirectCrossSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/DirectCrossSpectrum.lean",
+        "sha256": "98e65661665e8af0ec403e432957c395cca552ba2de057a5b7e3cff8995e96ac",
+        "git_blob": "aac7a5c7ae7953c8230c9a68b2dc6b10a69a7310"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanClusterCoordinates": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanClusterCoordinates.lean",
+        "sha256": "a1ac4e3af6c7e52b85bbc287ad1193b4d964e74236dae9fa0b50bd9e24060bab",
+        "git_blob": "6e89c71aad04dfb41aeaae8ff171294bfd4fe15c"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.EuclideanCrossCoordinates": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/EuclideanCrossCoordinates.lean",
+        "sha256": "bf5d75e740bb0a5de06c8bd3c08b597b98fe09cebd8195a23bb2760084e48d2e",
+        "git_blob": "127fc698f39f7db10358523dd2cee0ac8287a37d"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.FiniteHardy": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/FiniteHardy.lean",
+        "sha256": "472f31e05f95d14f809f746eda497a68c3f6cfad0f055cd2d345872a75c1474b",
+        "git_blob": "f7de2697907d8ce6baa99ae401daa054af99f651"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Flattening": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Flattening.lean",
+        "sha256": "6d8a8f8ca84755abf95f19bbdcce3eba4081c35ec00e2ca045eaf879d867cd7e",
+        "git_blob": "f455b8f4b9c1be7d749dd68a91100807a5f11101"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricLocalSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricLocalSeparation.lean",
+        "sha256": "d78635a29078698e85e4c8fdd247fe57553a2179a2c348aaeb9719b0ec3bc748",
+        "git_blob": "9ac816510b2d4d21904179cc6e126b6482a064b6"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.GeometricPotential": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GeometricPotential.lean",
+        "sha256": "765e4363c9a202b4e0f22b41bcb7f1d4b5f0bdd991eed661293e3f3c3002d836",
+        "git_blob": "b446c81b7c3f6566e61dbe4e3131af281c8177f7"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.GlobalCompletion": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/GlobalCompletion.lean",
+        "sha256": "0c7d0187ab8c8e6265d37d349e6b7418ef069ebe70d95fc6455eb15d8df7131f",
+        "git_blob": "6b1dcbaee949dd974e7361f970986a3835344e0e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.HardyWeights": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/HardyWeights.lean",
+        "sha256": "1c09496199eb2ab1d25b80bf9f515041f5332cdeeaef5dbb7025a91152420a0a",
+        "git_blob": "1fa78fc756431d99fd25526bbe48f5c36351e5a9"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.HarmonicLocalModel": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/HarmonicLocalModel.lean",
+        "sha256": "c01a5a7687cd79c1427d69325313a2ce7f7fb5c64819adc4763c08e88e6d1f5f",
+        "git_blob": "1993cfca0996d500fff47949c8b454140766faa5"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.IncidenceBridge": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/IncidenceBridge.lean",
+        "sha256": "0b1c811368a409e84d7f9dad718450fbf17a65120ce1782cd1ea52d627c547a3",
+        "git_blob": "8870031bb399af4a279f8afcf8e447c43b6bca3f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.LiteralIncidence": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/LiteralIncidence.lean",
+        "sha256": "d0a107d3211626b35cb1c431f01b4fc7ec3fd3547afb6dc38a52bb1f466f5973",
+        "git_blob": "fe7cd78c948c5d08d9dc2cad78444c440db1ae0d"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.LocalRulerSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/LocalRulerSeparation.lean",
+        "sha256": "a37fc6e7666681f9dfd57a8f476111c5e3cee0fc5664acf46186a9dbd829df76",
+        "git_blob": "764500d0f5cf31e99d741fc23eef8830629f8ec9"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5ActualCrossSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5ActualCrossSeparation.lean",
+        "sha256": "06557b04e9186a56942d7e46bfe6f1dda014997d94d4a649bf3fdc72504e8c79",
+        "git_blob": "dc71b8ee922035120ed13e9dd867ab61b997f0d4"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CircleGeometry": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleGeometry.lean",
+        "sha256": "35f620a4954ecc15412ae989e306cd16581b48aaf7d630c540046cc58257b68b",
+        "git_blob": "5ad3aac19de2a08545605f1c2822fc56f140414f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CircleMacro": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CircleMacro.lean",
+        "sha256": "93694b5fcd247569d8afb848513387766ad34c01e5f3f372f5a362fdc9f5392e",
+        "git_blob": "7ca0efe0c59ea2313f9e78e49f3cf0351d1332f7"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossScalar": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossScalar.lean",
+        "sha256": "2c48eec2badbddf31b46e77f5d0a632786c09924966a4081cbe3f16db1347dbb",
+        "git_blob": "fc0f6d56e5e4f6e7ed9db54a4a3a4ad249516e69"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5CrossSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5CrossSeparation.lean",
+        "sha256": "7d8f01f662c976c253ba9c0ed499bd7f812ba8adfe9052c6fe3d2c7db4dce5ab",
+        "git_blob": "7087ec47c06e8780553d422c87baa81c6c35487f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5GeometryParameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5GeometryParameters.lean",
+        "sha256": "57aa561cfe692ef0cde6fefe90be279aec91e1684a080504c487398822b45e5c",
+        "git_blob": "ba3b7e9be5abf62c2e3e1b309438825a7e05abd3"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Parameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Parameters.lean",
+        "sha256": "6906571b225d3828639fabac214c8b89431ccb180952d8deb7adc782ee9ea9a1",
+        "git_blob": "f3dc7e1afc65a181cf3627039d654871453209a1"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5Ruler": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5Ruler.lean",
+        "sha256": "27bda89b0df608414a5a016ee953c72f9a3a08145cc88627dd26c0d586e71f1e",
+        "git_blob": "55b0d15d2f19dc7ec500aa737fcc31841f40be54"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.Pass5SpectrumParameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/Pass5SpectrumParameters.lean",
+        "sha256": "1890c195bdb3957fcfe62693fb3aca3d0e89f59bf56af322479ebe6463f403db",
+        "git_blob": "f69dd276170b577b3d1e30d1f5df13e69ea39646"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.PotentialSolve": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PotentialSolve.lean",
+        "sha256": "5d7ed3b800e6ce9f39b42896fd6126dea0e239fbd5e0fac24c6bde246cc8307d",
+        "git_blob": "d83cfc0af30d50fa980c1a60276f8fb0115d8483"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRuler": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRuler.lean",
+        "sha256": "b2cbe478c30ec8b0391b4d02bca358f21633c3c0de7f8274578e2124dc17173c",
+        "git_blob": "336918301d3c5ae68bce4488172ca015725b8c0f"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.PrimeRulerSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/PrimeRulerSeparation.lean",
+        "sha256": "90fe75f807ce75a632b8f81ee0a8ae7266a08bc6ce02e78d675bef687d3ad1fb",
+        "git_blob": "bb723a0e0916fce5077cd942ca4599bfe4b33e35"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SineDigits": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SineDigits.lean",
+        "sha256": "92b3a9fce9691a0e00f56e840a75fc7380e380979e88d9337e8231c65d953345",
+        "git_blob": "62a83de58e4d3a025bbf044cf30a5d5686f32355"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceActualCrossMetric": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceActualCrossMetric.lean",
+        "sha256": "ec85d75bb3a4a0cc23da237211f7ccdebecc52c05d73e547624eea4ffd69744d",
+        "git_blob": "c9a85956c26b19f61f925667c8044ce21ef5899b"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceAllNEmbedding": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceAllNEmbedding.lean",
+        "sha256": "eef1bbd08fad3ab5c88b74ba2e2e25702b4f310a7148444a6bd789a6df1684b3",
+        "git_blob": "9f4380bb7562e5af854a5539053a4da0b1180012"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossGuards": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossGuards.lean",
+        "sha256": "c8af0b3d950ae0ea48f7057d23cac9814a5008f24a1a5f200a24864a18701ae4",
+        "git_blob": "526055d2ba7447dd8554011632dd4eda180f698d"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceCrossSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceCrossSpectrum.lean",
+        "sha256": "dcb41d4152296cb746eec3bd486a98e699d84c65579e1adbf489adc4518effae",
+        "git_blob": "45ac530f2f6ec4b1b529018a14717400ab974d82"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceFinalScalar": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceFinalScalar.lean",
+        "sha256": "6ba2b52a98f627f24240280f91d062a7866ee31a52c295abbccdf4d613c58980",
+        "git_blob": "5fadf638570674ae732db96235143dc4c8859535"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalGuards": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalGuards.lean",
+        "sha256": "d549e36433886c0a53325ca77df65266ef298c155aaafaacb8840ea997a9bf5e",
+        "git_blob": "6366f3768846476f713edf4322bfa1bd4ff59d62"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceLocalSpectrum": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceLocalSpectrum.lean",
+        "sha256": "83ccbc287deed29c4f510373b60a50f7523cb8a5865689f0fcb2b075631cc5e3",
+        "git_blob": "4be01e7168b083ea6147c84383a413dcce64228e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceMixedBands": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceMixedBands.lean",
+        "sha256": "a15e10e7b12b3bfb0de356d0f8539af79512feeb890d156c908f99fcf87e4841",
+        "git_blob": "39de28ed9340b95f6535b98178c8c9e3864685b0"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceOperatorBridge": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceOperatorBridge.lean",
+        "sha256": "48e2913fe771254f5ba077de57bd35928d09a03ecc658c8a52ce328ea9d7d478",
+        "git_blob": "018b3edfb48065f5a3a7766fd77ca91addd3b06e"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceParameterBounds": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceParameterBounds.lean",
+        "sha256": "53e88896bd605170c11d14f7a6fea42a761026d2d8076f2e68a09524f7a6626c",
+        "git_blob": "6662427d55ad7408747e8ab693f8a36d5ca10307"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourcePrime": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourcePrime.lean",
+        "sha256": "22569801afcc48f93b02178f3fe81d21efbb61a34b9c32abbc2c8f769aa90bb2",
+        "git_blob": "03e553d7173bff683cad6c6cc913ec4142e61856"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceQuadraticMatrix": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceQuadraticMatrix.lean",
+        "sha256": "427a7456c12dd2e4fda0dac6313e4e76b1945e3e1621a25756704a5152f8c7bd",
+        "git_blob": "dee40080d6ebdfe699a660f2b1704053cd26d813"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SourceReserveBudgets": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SourceReserveBudgets.lean",
+        "sha256": "fc5a809c5d893f70f51423c57b6d1c8f9b431f3bb533f276dfed1588c0194c6f",
+        "git_blob": "1a9f9d3ced4f5aba64f3199a46d2f2136ea89f53"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.SpectrumSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/SpectrumSeparation.lean",
+        "sha256": "3d205d64de48c81103f68179657f79112a3d7befb41ceb0a5653b3ef0467ed29",
+        "git_blob": "89b8a8de0b0c519a8b3ca4f5be3e275598f92ed8"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.TriangularBounds": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TriangularBounds.lean",
+        "sha256": "5dafad3ed1210e28eccc756f12a553312e07bd2fa1307502b565ec921636e377",
+        "git_blob": "af2315d39869ff1fd602c96326c70c7935eeb9e7"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricChord": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricChord.lean",
+        "sha256": "40570d8bad67aeab4c395e49ceaac063d75c5297c0a2a54721b15bd78a518de0",
+        "git_blob": "a47d9d242bab1861350c3ec68170d1f8bd431bcd"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.TrigonometricFeatures": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/TrigonometricFeatures.lean",
+        "sha256": "c4a5baefade16bf942d30c3a0d5890601ee8a5793082f55d20caaf38ec44c436",
+        "git_blob": "0b6ddccad8e2d521e3fd3c505291e7936c74333b"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.UnorderedEdgeSeparation": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/UnorderedEdgeSeparation.lean",
+        "sha256": "bcafead776d4d54b463da7f94bf0391d38a6443fc2cf25bfade3970ffe35d3b9",
+        "git_blob": "cbf3b27d88c9329b3c1dd2b87d5260cb08198747"
+      },
+      "Erdos488.Geometry.SeparatedDistances.FixedDimension.WeightedSchur": {
+        "path": "Erdos488/Geometry/SeparatedDistances/FixedDimension/WeightedSchur.lean",
+        "sha256": "2c14b164bb4a17236fe313608d0fdc8b7fb7a9ad63e8d851d9c845cda646a142",
+        "git_blob": "503d44808b46b29a20ffc489bc8c2f88005f1088"
+      },
+      "Erdos488.Geometry.SeparatedDistances.GramRealization": {
+        "path": "Erdos488/Geometry/SeparatedDistances/GramRealization.lean",
+        "sha256": "a240a1ab49ccf582ad967a37b950ca6a6ef8e41d8fb4831868377b6eadbeec01",
+        "git_blob": "d516cc771e351a16400c9caca3c298973f579482"
+      },
+      "Erdos488.Geometry.SeparatedDistances.Labels": {
+        "path": "Erdos488/Geometry/SeparatedDistances/Labels.lean",
+        "sha256": "5bd3ddb10a4e827497db3c9952210cd0c1232054c31c714ae406ea16d391b35f",
+        "git_blob": "263a1799e6d5f13e5a82e72a7a1e17e9a179d539"
+      },
+      "Erdos488.Geometry.SeparatedDistances.Parameters": {
+        "path": "Erdos488/Geometry/SeparatedDistances/Parameters.lean",
+        "sha256": "39539a0b75eb74c86b8dafd93e6d40452b85cf9e6df1304c48787b6c1735088b",
+        "git_blob": "427525e3a4a765d187061ae7575cca632129b0ab"
+      },
+      "Erdos488.Geometry.SeparatedDistances.PrefixSums": {
+        "path": "Erdos488/Geometry/SeparatedDistances/PrefixSums.lean",
+        "sha256": "84db2a32dbd0025b426f216ff84a0180ed3bb27ed5e5b18c069ac95ba8ac32ee",
+        "git_blob": "aef12c12d5a745cb1d344a8b4c78a67b9020ffed"
+      },
+      "ExactNEmbedding": {
+        "path": "ExactNEmbedding.lean",
+        "sha256": "f3e5d1f87fd0763d801909d61180e23b8590956e1e470d7d514d49cbe99369e3",
+        "git_blob": "9edf620cb72a69f5c9ac98fce117883140628dc8"
+      },
+      "FullFamily": {
+        "path": "FullFamily.lean",
+        "sha256": "51a6867434f0487fdae54b188abce4dac165926e855f9d498df7fe0be244d2bc",
+        "git_blob": "0670e6c3af874912519aacaa79dd6a9b77f16e22"
+      },
+      "HarmonicGuard": {
+        "path": "HarmonicGuard.lean",
+        "sha256": "f2d8c0d3348e78960bbaa51e23475e37305d8f726e56f6d956a6eb75dad11ace",
+        "git_blob": "74b8d94877f253fbcc2e43e7064152f0c87dea73"
+      },
+      "LocalLengths": {
+        "path": "LocalLengths.lean",
+        "sha256": "13097945ce83eff30952aaecc65461dc7eba548d9dde708cd7656069fe8f0c23",
+        "git_blob": "4e63f543d18bbf5d9f6a3851d57a6d72ea8918aa"
+      },
+      "LocalSecantSpecialization": {
+        "path": "LocalSecantSpecialization.lean",
+        "sha256": "02f458bd6687a89ccb24196c68af0ea4cf095162a7d43e5f2753012a9421a983",
+        "git_blob": "d9a93f1d2590691fe35f1e3faf91caad83e15d69"
+      },
+      "MetricAssembly": {
+        "path": "MetricAssembly.lean",
+        "sha256": "167065b410ff3c356634ad8d7c3e5cfa6c78b6f6ba82efbd011c745d84338473",
+        "git_blob": "a28f3b6a2c7550bc096ed621fb8c2215e312915e"
+      },
+      "ReciprocalRounding": {
+        "path": "ReciprocalRounding.lean",
+        "sha256": "a68118d07aef2a3ca2c29110c8ccdc4002cecf80a7e060a0a61ad44081798e0b",
+        "git_blob": "2ae3024b678160f539e533bb83b5047591ea315d"
+      },
+      "ScalarGuards": {
+        "path": "ScalarGuards.lean",
+        "sha256": "b6bad1a9588fb58f1cf4b1b1ea761f014b33b90f5268f7ae48edbd91f66d1c52",
+        "git_blob": "5bdd9215b23f2e81087c3f12032698657fa4248e"
+      },
+      "StrictCrossSeparation": {
+        "path": "StrictCrossSeparation.lean",
+        "sha256": "d0257eb0b91913823f39b23437c33ba7105f4a35af25da48674c308fc31f9b1d",
+        "git_blob": "9fee332b643a991272597223a9c218d7b40131e5"
+      },
+      "TauGuards": {
+        "path": "TauGuards.lean",
+        "sha256": "b1e4be44070858534542295c06f0792421aaf6f7b665f08d937f445557fd5ad3",
+        "git_blob": "a296107d0cfabb91d27d8158747db6d97818a26d"
+      },
+      "TwoCircleGeometry": {
+        "path": "TwoCircleGeometry.lean",
+        "sha256": "558cd02557dace10de129cf0c5262b6968074a55c2a4208b40872bb8d0cad1ac",
+        "git_blob": "83cbe29502b750b1421f2a813bb6efa04ac8fd45"
+      },
+      "TwoCircleMacro": {
+        "path": "TwoCircleMacro.lean",
+        "sha256": "3b88ae9033debfc16601aa368564a6c7448cfba449d84251b977b9e24a88336b",
+        "git_blob": "14d54eebfe32ddf594218fa32fbe91460bb04d67"
+      },
+      "TwoCircleSecant": {
+        "path": "TwoCircleSecant.lean",
+        "sha256": "00b5ca8eb2aefbe6e83d1f3555da8a0989ca1c17fc6ebae65f7ea6133b45f6df",
+        "git_blob": "45e9f25c09753a2b47f40044e7737aac43409c17"
+      },
+      "UniformMacro": {
+        "path": "UniformMacro.lean",
+        "sha256": "41ef59fb7c0d05ae397dae0391a148de26cdb42bb1ed7999a2cb85e7a365f9bf",
+        "git_blob": "051f6555479c9e3c11cb0bcbf154c7ddfce4a559"
+      }
+    }
+  }
+}

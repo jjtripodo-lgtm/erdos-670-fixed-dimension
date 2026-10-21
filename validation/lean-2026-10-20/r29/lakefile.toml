@@ -1,0 +1,21 @@
+name = "erdos670_r29"
+version = "0.1.0"
+defaultTargets = ["R29MinimalBridge"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "0df444a360eaa60ab8c11dca51a86af692955474"
+
+[[lean_lib]]
+name = "Erdos488"
+moreLeanArgs = ["--trust=0"]
+
+[[lean_lib]]
+name = "Erdos670Bridge"
+moreLeanArgs = ["--trust=0"]
+
+[[lean_lib]]
+name = "Endpoints"
+roots = ["ActualCoordinates", "AnchorInterface", "CrossDigits", "CrossGeneric", "CrossSpectrum", "FiniteAssembly", "FiniteKCompletion", "GramCompletion", "LocalBounds", "LocalNorm", "LocalRuler", "LocalScalar", "LocalSeparation", "MacroLabels", "MatrixCertificates", "MatrixInterpolation", "PointFamily", "PrimeFirst", "R29Endpoint", "R29MinimalBridge", "SchurTransfer", "SharpRulerNext", "SourceMatrices", "TrigBounds", "TwoCircleGeometry"]
+moreLeanArgs = ["--trust=0"]

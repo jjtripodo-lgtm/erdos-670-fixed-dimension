@@ -1,0 +1,75 @@
+{
+  "status": "PASS_CLEAN_LOCAL_BUILD_AXIOMS_AND_FRESH_KERNEL_REPLAY",
+  "observed_complete_utc": "2026-10-21T00:00:34.267792+00:00",
+  "lean": "4.33.1",
+  "official_toolchain_archive_sha256": "890afd185370f85666025b883914ab4f4b339136f8c96167b69cfb62aecaf235",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "environment": "Linux x86_64 cloud container; both projects on same machine",
+  "source_manifest_sha256": "dfa3b0920433fcd940bb6ba8e53a05e9ea9b0e9badfb5fe37df41df2a5c03bf5",
+  "projects": {
+    "r29": {
+      "local_module_count": 60,
+      "initial_local_objects": 0,
+      "cached_upstream_imports": true,
+      "checks": {
+        "build": {
+          "command": "lake --no-cache build R29MinimalBridge",
+          "exit_code": 0,
+          "log": "logs/r29-build.log",
+          "log_sha256": "8ff91fc2721bc24628c97eee1a689b97b83c5d39d44c906aa496d722badd6fc9"
+        },
+        "axioms": {
+          "command": "lake env lean --trust=0 AxiomAudit.lean",
+          "exit_code": 0,
+          "log": "logs/r29-axioms.log",
+          "log_sha256": "047683e3d4b996ae21359f85f0d2182d671ac8c37b467e7dc6f0f67e48fcca70"
+        },
+        "fresh": {
+          "command": "lake env leanchecker --fresh --verbose R29MinimalBridge",
+          "exit_code": 0,
+          "log": "logs/r29-fresh.log",
+          "log_sha256": "2e34bafbaf027b0190e37a21a8b2eaaa32ec2470bea774454f4cd143b58684df"
+        }
+      },
+      "local_objects_after_build": 60
+    },
+    "epsilon": {
+      "local_module_count": 80,
+      "initial_local_objects": 0,
+      "cached_upstream_imports": true,
+      "checks": {
+        "build": {
+          "command": "lake --no-cache build FullFamily",
+          "exit_code": 0,
+          "log": "logs/epsilon-build.log",
+          "log_sha256": "97bc8ced3a8bea4a2b49e166dad9db0095e11c230c9a0c78f0ac0e3247148062"
+        },
+        "axioms": {
+          "command": "lake env lean --trust=0 AxiomAudit.lean",
+          "exit_code": 0,
+          "log": "logs/epsilon-axioms.log",
+          "log_sha256": "d895680f08a3c3cdc5b8a10fceaf0d6dc59cc5e91df9b0317bd96e71e25c617e"
+        },
+        "fresh": {
+          "command": "lake env leanchecker --fresh --verbose FullFamily",
+          "exit_code": 0,
+          "log": "logs/epsilon-fresh.log",
+          "log_sha256": "0481cd9a756781d22490d9628b143bdd104d4bf0329dae216f2159604785c067"
+        }
+      },
+      "local_objects_after_build": 80
+    }
+  },
+  "limits": [
+    "Upstream compilation uses public cached objects; not a clean upstream source rebuild.",
+    "Fresh kernel replay checks imported and local constants; not an independently implemented kernel.",
+    "The Dusart every-n >= 400000 result remains written-only.",
+    "No new scholarly priority, external acceptance, or human proof-review claim."
+  ],
+  "earlier_environment_failure": "Initial Mathlib cache fetch could not write its default home cache; rerun with writable XDG_CACHE_HOME succeeded. No Lean proof failure occurred.",
+  "offline_integrity_checks": [
+    "verify_sources.py normal and Python -O",
+    "Mutation control rejected changed source",
+    "Unchanged public verify_release.py"
+  ]
+}
