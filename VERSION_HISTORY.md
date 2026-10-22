@@ -1,5 +1,9 @@
 # Version history
 
+## 22 October 2026: Hexagon v2 publication confirmation
+
+Hexagon's 20 October 2026 publication notification confirms a second version of the earlier *Orthogonal circles and a fixed-dimensional separated-distance counterexample*: [hexagon:2610.00254v2](https://hexagonmath.org/2610.00254?version=2). The older [v1 record](https://hexagonmath.org/2610.00254?version=1) remains version-specific. This v2 record must not be conflated with the separately titled 20 October GitHub manuscript *Separated distances in fixed dimension*. The mathematical/document byte differences between the Hexagon versions were not independently compared in this metadata update. Hexagon moderation is not peer review; no DOI is claimed.
+
 ## 22 October 2026: Zenodo hosting update
 
 Following review of repository eligibility, the author voluntarily withdrew the original v1.0.0 Zenodo deposit, DOI [10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194). The original manuscript and proof remain available at the immutable links below. The DOI is retained here as historical provenance, not an active archive destination. No theorem, manuscript, license, Git tag or immutable release was changed or withdrawn by this metadata update. The later 20 October manuscript also had a distinct Zenodo deposit, DOI [10.5281/zenodo.23490573](https://doi.org/10.5281/zenodo.23490573), voluntarily withdrawn on 22 October 2026. That former DOI is historical provenance for the [20 October manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf), not for the original v1.0.0 theorem. Earlier dated entries record the state at their release dates.
