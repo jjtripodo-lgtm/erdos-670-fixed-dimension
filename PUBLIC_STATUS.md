@@ -1,6 +1,6 @@
 # Erdős #670: result and formalization status
 
-Updated 20 October 2026. The [new GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the later two-circle and R29 constructions. The earlier finite paper, Hexagon version, DOI archive, and all existing proof records remain unchanged. This update does not claim a new external deposit or acceptance.
+Mathematical scope updated 20 October 2026; archival status corrected 22 October 2026. The [new GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the later two-circle and R29 constructions. The earlier finite paper, Hexagon version, and existing proof records remain available. Both the original and 20 October Zenodo deposits were voluntarily withdrawn on 22 October; their identifiers now serve as historical provenance, not active archive or preferred citation links. See [version history](VERSION_HISTORY.md). This update does not claim a new external deposit or acceptance.
 
 ## What the 14 October finite result establishes
 
