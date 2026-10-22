@@ -47,7 +47,7 @@ references:
   year: 2026
   date-published: '2026-10-14'
   version: '2026-10-14'
-  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/main/paper/fixed_dimension_670.pdf
+  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/52917443f6e0aacc9650616859b3f8cf36e735a1/paper/fixed_dimension_670.pdf
   identifiers:
   - type: url
     value: https://hexagonmath.org/2610.00254?version=1
