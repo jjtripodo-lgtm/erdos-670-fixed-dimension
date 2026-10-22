@@ -25,6 +25,6 @@ The [recorded validation](verification/PAPER_VALIDATION.json) describes this rel
 
 ## Versions and rights
 
-This is a new GitHub manuscript. The [Hexagon v1 paper](https://hexagonmath.org/2610.00254?version=1) and [archived DOI](https://doi.org/10.5281/zenodo.23329194) retain their different theorem scopes; neither identifier is assigned to this paper. See the repository [version history](../../VERSION_HISTORY.md).
+This is a new GitHub manuscript. The [Hexagon v1 paper](https://hexagonmath.org/2610.00254?version=1) identifies the earlier finite-result version, not this 20 October paper. The original Zenodo deposit (DOI `10.5281/zenodo.23329194`) and the separate 20 October deposit (DOI `10.5281/zenodo.23490573`) were voluntarily withdrawn on 22 October 2026; these identifiers are retained only as historical provenance and are not active archive or preferred citation destinations. See the repository [version history](../../VERSION_HISTORY.md).
 
 The paper and its included supporting files are [CC BY 4.0](LICENSE.md). Existing versions retain their own grants; see [public package provenance](../../PUBLIC_EXPORT.md).
