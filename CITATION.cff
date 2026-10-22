@@ -26,7 +26,7 @@ preferred-citation:
     is asserted.
   date-published: '2026-10-20'
   version: '2026-10-20'
-  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/main/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf
+  url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf
   license: CC-BY-4.0
 keywords:
 - Erdős Problem 670
