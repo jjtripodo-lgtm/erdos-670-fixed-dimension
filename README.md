@@ -5,6 +5,12 @@ published construction is a counterexample, with a Lean proof and an exact
 conjecture-statement adapter. [Current explanation and formalization status](PUBLIC_STATUS.md)
 separate the published theorem, later internal extensions, and review limits.
 
+## Hosting update, 22 October 2026
+
+Following review of repository eligibility, the author voluntarily withdrew the original 12 October Zenodo deposit, DOI [10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194). That identifier remains historical provenance for the original v1.0.0 theorem; read its [unchanged original manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/paper/fixed_dimension_670.pdf). The later Zenodo deposit, DOI [10.5281/zenodo.23490573](https://doi.org/10.5281/zenodo.23490573), was also voluntarily withdrawn on 22 October 2026. Its matching [20 October manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) remains available. The later GitHub manuscripts and their distinct theorem scopes remain available. This hosting change does not withdraw the scientific papers.
+
+The archived 20 October source ZIP and its matching package README retain their original historical DOI wording. Their bytes are preserved; use this dated notice and [version history](VERSION_HISTORY.md) for current hosting status.
+
 ## New paper, 20 October 2026
 
 **[Separated distances in fixed dimension](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf)**, by John Tripodo, gives a readable common proof framework for the later two-circle family and dimension-29 construction.

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: Please cite the 20 October GitHub paper in preferred-citation. The unchanged earlier finite manuscript
-  is listed under references; its Hexagon identifier and the archived v1.0.0 DOI do not identify the new
+  is listed under references; its Hexagon identifier and the former v1.0.0 DOI (whose Zenodo deposit was withdrawn on 22 October 2026) do not identify the new
   paper.
 type: software
 title: Separated distances in fixed dimension

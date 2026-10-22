@@ -1,5 +1,9 @@
 # Version history
 
+## 22 October 2026: Zenodo hosting update
+
+Following review of repository eligibility, the author voluntarily withdrew the original v1.0.0 Zenodo deposit, DOI [10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194). The original manuscript and proof remain available at the immutable links below. The DOI is retained here as historical provenance, not an active archive destination. No theorem, manuscript, license, Git tag or immutable release was changed or withdrawn by this metadata update. The later 20 October manuscript also had a distinct Zenodo deposit, DOI [10.5281/zenodo.23490573](https://doi.org/10.5281/zenodo.23490573), voluntarily withdrawn on 22 October 2026. That former DOI is historical provenance for the [20 October manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf), not for the original v1.0.0 theorem. Earlier dated entries record the state at their release dates.
+
 ## 20 October 2026: reader-first editorial revision
 
 Replaced the cover-style front matter and status box with a conventional title, author, date and abstract. The abstract and proof roadmap are more direct; local/cross-edge and colex terminology is defined before use. Repeated provenance qualifications are consolidated, and the truthful AI-assistance disclosure is retained in the acknowledgments. The results, displayed mathematics, proof arguments, citations and certificate are unchanged.
@@ -58,7 +62,7 @@ macOS/Linux replay and independent-kernel evidence.
 
 - [Complete immutable package](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/1e73a12ff1076dd11affadbf619ddbbef587133e)
 - [Original v1.0.0 tag](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/tree/v1.0.0)
-- [Archived DOI 10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194)
+- [Former Zenodo DOI 10.5281/zenodo.23329194 — deposit withdrawn 22 October 2026](https://doi.org/10.5281/zenodo.23329194)
 - [Original paper](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/paper/fixed_dimension_670.pdf)
 - [Original verification record](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/verification/fixed670/REPLAY_STATUS.md)
 - [Original manuscript license](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/LICENSE-PAPER)

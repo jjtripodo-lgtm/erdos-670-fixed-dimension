@@ -1,13 +1,13 @@
 {
-  "documentation_updated": "2026-10-20",
+  "documentation_updated": "2026-10-22",
   "files": {
     ".gitignore": {
       "bytes": 62,
       "sha256": "64c57aea634f21f164a2795e0c3a1b2adef59ceeb0373fff67d4affd17708741"
     },
     "CITATION.cff": {
-      "bytes": 2271,
-      "sha256": "9f0122cbe6af9764d0f0d5361c9e2fce146c1e3b3e97f1787aeef6d10aac9913"
+      "bytes": 2325,
+      "sha256": "ce756cb2ef8b9607a189d5e4fa08c886d6132808633bef29c8dc2d236c1f1535"
     },
     "CITATIONS.md": {
       "bytes": 4797,
@@ -38,12 +38,12 @@
       "sha256": "b1b1eb2b578fc411604c74cf4041303190ab1e5c12ca2820ebe6c98e38c54275"
     },
     "README.md": {
-      "bytes": 7171,
-      "sha256": "ed3854028376ea4c66b89d4efcbccf458a6bf8489d22bd142c4480db616f83d8"
+      "bytes": 8401,
+      "sha256": "b9be5968163619674f2050d4e5d0152c89c981af885566409b46364d7bd756cd"
     },
     "VERSION_HISTORY.md": {
-      "bytes": 5533,
-      "sha256": "3e7947b8cbd872db2d11bcc3fbdbaefc04aea84c8eaed8d3114db1314f8987cb"
+      "bytes": 6606,
+      "sha256": "0bc91fcd661f18e0a465a132eb15f057244adebd08b5cc549b3d18e36d532752"
     },
     "lean/AxiomAudit.lean": {
       "bytes": 272,
