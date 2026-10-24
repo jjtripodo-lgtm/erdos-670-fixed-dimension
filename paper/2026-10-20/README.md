@@ -1,6 +1,6 @@
 # Separated distances in fixed dimension
 
-John Tripodo. GitHub manuscript, 20 October 2026.
+John Tripodo · [ORCID](https://orcid.org/0009-0006-9180-4953). GitHub manuscript, 20 October 2026. [Reader and scoped-review guide](../../READER_GUIDE.md).
 
 [Read the PDF](Separated_Distances_in_Fixed_Dimension.pdf) · [Complete editable source ZIP](Separated_Distances_in_Fixed_Dimension_source.zip) · [Theorem scopes and exact sources](SOURCE_MAP.md)
 
@@ -25,6 +25,6 @@ The [recorded validation](verification/PAPER_VALIDATION.json) describes this rel
 
 ## Versions and rights
 
-This is a new GitHub manuscript. The [Hexagon v1 paper](https://hexagonmath.org/2610.00254?version=1) identifies the earlier finite-result version, not this 20 October paper. The original Zenodo deposit (DOI `10.5281/zenodo.23329194`) and the separate 20 October deposit (DOI `10.5281/zenodo.23490573`) were voluntarily withdrawn on 22 October 2026; these identifiers are retained only as historical provenance and are not active archive or preferred citation destinations. See the repository [version history](../../VERSION_HISTORY.md).
+The current [Hexagon v2 record](https://hexagonmath.org/2610.00254v2) presents this 20 October mathematical scope: the tolerance family and dimension-29 results. The earlier [Hexagon v1 record](https://hexagonmath.org/2610.00254v1) is the superseded finite-result paper. The [immutable GitHub manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) is the preferred link for exact GitHub PDF bytes; a cross-host byte comparison has not been established. Hexagon moderation does not constitute peer review. The original Zenodo deposit (DOI `10.5281/zenodo.23329194`) and the separate 20 October deposit (DOI `10.5281/zenodo.23490573`) were voluntarily withdrawn on 22 October 2026; these identifiers are retained only as historical provenance and are not active archive or preferred citation destinations. See the repository [version history](../../VERSION_HISTORY.md).
 
 The paper and its included supporting files are [CC BY 4.0](LICENSE.md). Existing versions retain their own grants; see [public package provenance](../../PUBLIC_EXPORT.md).
