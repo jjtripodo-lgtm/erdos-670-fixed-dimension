@@ -1,7 +1,5 @@
 cff-version: 1.2.0
-message: Please cite the 20 October GitHub paper in preferred-citation. The unchanged earlier finite manuscript
-  is listed under references; its Hexagon identifier and the former v1.0.0 DOI (whose Zenodo deposit was withdrawn on 22 October 2026) do not identify the new
-  paper.
+message: "Current preprint: hexagon:2610.00254v2. For byte-specific citation use the pinned 20 October GitHub PDF. The earlier Hexagon v1 and withdrawn Zenodo deposits are separate historical records."
 type: software
 title: Separated distances in fixed dimension
 version: '2026-10-20'
@@ -22,11 +20,15 @@ preferred-citation:
   title: Separated distances in fixed dimension
   notes: GitHub manuscript dated 20 October 2026. Two-circle epsilon family and R29 prime-first construction,
     plus a separate written all-size R29 corollary. Source-specific internal Lean records are distinguished
-    from the written corollary. As of this GitHub release, no new DOI, Hexagon version or external acceptance
-    is asserted.
+    from the written corollary. Hexagon v2 is the current preprint record, but its PDF has not been independently
+    byte-compared against the pinned GitHub file. No DOI, independent specialist review or journal acceptance is claimed.
   date-published: '2026-10-20'
   version: '2026-10-20'
   url: https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf
+  identifiers:
+  - type: url
+    value: https://hexagonmath.org/2610.00254v2
+    description: "Hexagon preprint hexagon:2610.00254v2; published 20 October 2026; not a DOI or peer-review certificate."
   license: CC-BY-4.0
 keywords:
 - Erdős Problem 670
