@@ -11,20 +11,20 @@
 
 ## Mathematical claims to examine
 
-Under the maintained fixed-dimension interpretation of Erdős Problem #670, the work gives explicit point sets in a Euclidean dimension fixed independently of set size **n**, with unit separation of unordered edge lengths and sub-(n^2) diameter:
+Under the maintained fixed-dimension interpretation of Erdős Problem #670, the work gives explicit point sets in a Euclidean dimension fixed independently of set size **n**, with unit separation of unordered edge lengths and diameter below `n^2`:
 
-1. For each (0 < \varepsilon \le 1/2), let (m=\lceil8192/\varepsilon\rceil). Every (n\ge4m) has a configuration in dimension (10m-1) with diameter below ((1/2+\varepsilon)n^2). The dimension depends on epsilon, not on n.
-2. In dimension 29, arbitrarily large selected sizes admit diameter below (0.998n^2), with a prime-first Lean endpoint reported in the project status.
-3. A **separate written** prime-interval corollary gives dimension-29 configurations for **every** (n\ge400000), with diameter below (0.999n^2). This all-size statement is **not** a Lean endpoint.
+1. For each `0 < epsilon <= 1/2`, let `m = ceil(8192/epsilon)`. Every `n >= 4m` has a configuration in dimension `10m-1` with diameter below `(1/2+epsilon)n^2`. The dimension depends on epsilon, not on n.
+2. In dimension 29, arbitrarily large selected sizes admit diameter below `0.998n^2`, with a prime-first Lean endpoint reported in the project status.
+3. A **separate written** prime-interval corollary gives dimension-29 configurations for **every** `n >= 400000`, with diameter below `0.999n^2`. This all-size statement is **not** a Lean endpoint.
 
-The earlier finite (R^{81794}) / (0.735n^2) theorem has a distributed public Lean source closure and a separate exact Formal Conjectures statement adapter. The **newer v2 Lean proof closures remain private**; the public record includes statement excerpts, audit receipts, written proofs, and exact-arithmetic programs. Review [current status](PUBLIC_STATUS.md) and [new-paper source map](paper/2026-10-20/SOURCE_MAP.md) before interpreting formalization claims.
+The earlier finite `R^81794` / `0.735n^2` theorem has a distributed public Lean source closure and a separate exact Formal Conjectures statement adapter. The **newer v2 Lean proof closures remain private**; the public record includes statement excerpts, audit receipts, written proofs, and exact-arithmetic programs. Review [current status](PUBLIC_STATUS.md) and [new-paper source map](paper/2026-10-20/SOURCE_MAP.md) before interpreting formalization claims.
 
 ## Small, useful independent review tasks
 
 A reviewer need not assess the entire paper at once. These separable questions would add value:
 
 - Can the rational geometric certificate and 15 positive pivots be independently reconstructed? See [20 October reproduction instructions](paper/2026-10-20/README.md).
-- Does the **written** Dusart-based prime-interval step justify the claimed all-(n\) threshold and the strict distance gaps?
+- Does the **written** Dusart-based prime-interval step justify the claimed all-size threshold and the strict distance gaps?
 - Does the fixed-dimension quantifier structure match the maintained version of Problem #670, and how does it differ from Ho's earlier growing-dimension result? See [prior-art notes](PRIOR_ART.md) and [statement bridge](verification/statement_bridge/README.md).
 
 A negative result or a missing premise should be recorded as such. The finite controls are not a substitute for a universal proof, and a Lean compilation receipt is not independent human proof or a comprehensive priority review.
