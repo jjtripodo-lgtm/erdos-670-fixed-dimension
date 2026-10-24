@@ -1,5 +1,11 @@
 # Fixed-dimensional separated Euclidean distances
 
+**Current public preprint:** [*Separated distances in fixed dimension*, Hexagon v2 (hexagon:2610.00254v2)](https://hexagonmath.org/2610.00254v2) · [Immutable 20 October GitHub PDF](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) · [Reader and scoped-review guide](READER_GUIDE.md) · [John Tripodo's ORCID](https://orcid.org/0009-0006-9180-4953).
+
+**Version distinction:** Hexagon [v1](https://hexagonmath.org/2610.00254v1) is the earlier finite-dimension 81,794 theorem; current **v2** contains the later two-circle tolerance family and dimension-29 results. The PDF above is a pinned GitHub file; exact PDF-byte identity across hosts has not been established. Hexagon has assigned no DOI. Withdrawn Zenodo DOIs below are retained as historical provenance only.
+
+**Other papers:** [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree) · [Sparse determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants).
+
 **Erdős #670, under the maintained fixed-dimension interpretation:** the
 published construction is a counterexample, with a Lean proof and an exact
 conjecture-statement adapter. [Current explanation and formalization status](PUBLIC_STATUS.md)
@@ -23,7 +29,7 @@ Every statement includes minimum point distance at least one and separation of g
 
 [Editable source and checks](paper/2026-10-20/README.md) · [Source ZIP](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension_source.zip) · [Exact scope and source map](paper/2026-10-20/SOURCE_MAP.md)
 
-The newer Lean proof closures remain private; their existing public statement excerpts and audit records are linked below. No new Lean run or independent specialist review is claimed. This GitHub paper is a new version, not a replacement of the Hexagon v1 manuscript or the archived DOI. Existing paper and proof URLs remain unchanged.
+The newer Lean proof closures remain private; their existing public statement excerpts and audit records are linked below. No new Lean run or independent specialist review is claimed. The current Hexagon v2 preprint presents the later 20 October mathematical claims; Hexagon v1 and the two withdrawn Zenodo deposits remain separate historical records. Existing paper and proof URLs remain unchanged.
 
 ## Earlier finite result, retained unchanged
 
