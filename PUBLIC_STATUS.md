@@ -1,6 +1,6 @@
 # Erdős #670: result and formalization status
 
-Mathematical scope updated 20 October 2026; archival status corrected 22 October 2026. The [new GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the later two-circle and R29 constructions. The earlier finite paper, Hexagon version, and existing proof records remain available. Both the original and 20 October Zenodo deposits were voluntarily withdrawn on 22 October; their identifiers now serve as historical provenance, not active archive or preferred citation links. See [version history](VERSION_HISTORY.md). This update does not claim a new external deposit or acceptance.
+Mathematical scope updated 20 October 2026; archive status corrected 22 October 2026. The [20 October GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the two-circle and R29 constructions, also described by the current [Hexagon v2 preprint](https://hexagonmath.org/2610.00254v2). The earlier [Hexagon v1](https://hexagonmath.org/2610.00254v1) identifies the finite 0.735 theorem and remains permanently versioned. Both Zenodo deposits were voluntarily withdrawn on 22 October, so their DOIs are historical provenance rather than preferred citation links. See [version history](VERSION_HISTORY.md) and the [reader and scoped-review guide](READER_GUIDE.md). The newer complete Lean proof closures remain private; Hexagon moderation does not imply independent mathematical review.
 
 ## What the 14 October finite result establishes
 
@@ -66,8 +66,8 @@ the newer upstream Formal Conjectures project.
 
 These results have been checked in the private research workspace. Their
 proof closures and full execution records are **not distributed in this
-public package**, and they are not part of the Hexagon v1 manuscript.
-The new paper supplies written proofs of these constructions. Their Lean status
+public package**, and they are not part of the earlier Hexagon v1 manuscript.
+The current Hexagon v2 and the new GitHub paper present their written statements and proofs. Their Lean status
 is reported here as internal formalization status, not as additional
 publicly reproducible Lean certificates. [Exact statement excerpts and audit records](verification/internal_supplements/README.md)
 identify each source and its verification scope without supplying a proof closure.
