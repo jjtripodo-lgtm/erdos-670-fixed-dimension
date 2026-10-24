@@ -2,7 +2,7 @@
 
 **Current public preprint:** [*Separated distances in fixed dimension*, Hexagon v2 (hexagon:2610.00254v2)](https://hexagonmath.org/2610.00254v2) · [Immutable 20 October GitHub PDF](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) · [Reader and scoped-review guide](READER_GUIDE.md) · [John Tripodo's ORCID](https://orcid.org/0009-0006-9180-4953).
 
-**Version distinction:** Hexagon [v1](https://hexagonmath.org/2610.00254v1) is the earlier finite-dimension 81,794 theorem; current **v2** contains the later two-circle tolerance family and dimension-29 results. The PDF above is a pinned GitHub file; exact PDF-byte identity across hosts has not been established. Hexagon has assigned no DOI. Withdrawn Zenodo DOIs below are retained as historical provenance only.
+**Version distinction:** Hexagon [v1](https://hexagonmath.org/2610.00254v1) is the earlier finite-dimension 81,794 theorem; current **v2** contains the later two-circle tolerance family and dimension-29 results. The PDF above is a pinned GitHub file; exact PDF-byte identity across hosts has not been established. Hexagon has assigned no DOI. 
 
 **Other papers:** [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree) · [Sparse determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants).
 
@@ -10,12 +10,6 @@
 published construction is a counterexample, with a Lean proof and an exact
 conjecture-statement adapter. [Current explanation and formalization status](PUBLIC_STATUS.md)
 separate the published theorem, later internal extensions, and review limits.
-
-## Hosting update, 22 October 2026
-
-Following review of repository eligibility, the author voluntarily withdrew the original 12 October Zenodo deposit, DOI [10.5281/zenodo.23329194](https://doi.org/10.5281/zenodo.23329194). That identifier remains historical provenance for the original v1.0.0 theorem; read its [unchanged original manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/1e73a12ff1076dd11affadbf619ddbbef587133e/paper/fixed_dimension_670.pdf). The later Zenodo deposit, DOI [10.5281/zenodo.23490573](https://doi.org/10.5281/zenodo.23490573), was also voluntarily withdrawn on 22 October 2026. Its matching [20 October manuscript](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension/blob/12730b904260f3c10ff2259c49415a20df755ae7/paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) remains available. The later GitHub manuscripts and their distinct theorem scopes remain available. This hosting change does not withdraw the scientific papers.
-
-The archived 20 October source ZIP and its matching package README retain their original historical DOI wording. Their bytes are preserved; use this dated notice and [version history](VERSION_HISTORY.md) for current hosting status.
 
 ## New paper, 20 October 2026
 
