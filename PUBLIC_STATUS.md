@@ -1,6 +1,8 @@
 # Erdős #670: result and formalization status
 
-Mathematical scope updated 20 October 2026; archive status corrected 22 October 2026. The [20 October GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the two-circle and R29 constructions, also described by the current [Hexagon v2 preprint](https://hexagonmath.org/2610.00254v2). The earlier [Hexagon v1](https://hexagonmath.org/2610.00254v1) identifies the finite 0.735 theorem and remains permanently versioned. Both Zenodo deposits were voluntarily withdrawn on 22 October, so their DOIs are historical provenance rather than preferred citation links. See [version history](VERSION_HISTORY.md) and the [reader and scoped-review guide](READER_GUIDE.md). The newer complete Lean proof closures remain private; Hexagon moderation does not imply independent mathematical review.
+> **29 October 2026 post-Hexagon research checkpoint.** New **private** research records distinguish (i) a **written, exact-computationally checked** R29 result for every `n>=253` with actual diameter `<0.99999 n²`; (ii) **scoped Lean-compiled** B48 finite cases `283<=n<=288` with all point-distance, genuinely unordered edge-gap and diameter conjuncts; and (iii) a separate **eventual** effective R29 coefficient `q=0.98660`, with the source proving bounds `<tau n²` for rational `tau>q` and sufficiently large `n`. The new all-size result is **not** a Lean endpoint, and these later results are **not** part of Hexagon v2. [Precise claims, checks and outstanding public-proof gates](research_updates/R29_2026-10-29.md).
+
+Mathematical scope updated 20 October 2026; archive status corrected 22 October 2026. The [20 October GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the two-circle and R29 constructions, also described by the current [Hexagon v2 preprint](https://hexagonmath.org/2610.00254v2). The earlier [Hexagon v1](https://hexagonmath.org/2610.00254v1) identifies the finite 0.735 theorem and remains permanently versioned. Both Zenodo deposits were voluntarily withdrawn on 22 October, so their DOIs are historical provenance rather than preferred citation links. See [version history](VERSION_HISTORY.md) and the [reader and scoped-review guide](READER_GUIDE.md). The 20 October R29 subsequence and epsilon-family Lean companion closures have already been released publicly at [validation/lean-2026-10-20](validation/lean-2026-10-20/README.md). The newer 28 October B48 finite proof closure remains private; Hexagon moderation does not imply independent mathematical review.
 
 ## What the 14 October finite result establishes
 
@@ -64,9 +66,7 @@ the newer upstream Formal Conjectures project.
 
 ## Later constructions and their internal formalizations
 
-These results have been checked in the private research workspace. Their
-proof closures and full execution records are **not distributed in this
-public package**, and they are not part of the earlier Hexagon v1 manuscript.
+These results have distinct public and private verification scopes. The 20 October R29 and epsilon-family **Lean companions are now public** under [validation/lean-2026-10-20](validation/lean-2026-10-20/README.md); the newer 28 October B48 finite endpoint remains private. None of these results is part of the earlier Hexagon v1 manuscript.
 The current Hexagon v2 and the new GitHub paper present their written statements and proofs. Their Lean status
 is reported here as internal formalization status, not as additional
 publicly reproducible Lean certificates. [Exact statement excerpts and audit records](verification/internal_supplements/README.md)
@@ -80,7 +80,7 @@ identify each source and its verification scope without supplying a proof closur
 
 A separate written corollary in the new paper gives R^29 configurations for **every n >= 400000**, with minimum distance >= 1, unordered edge-length gaps > 1, and actual diameter < 0.999n². It combines the unchanged geometry with [Dusart, Proposition 6.8](https://arxiv.org/abs/1002.0442v1) and exact deletion/padding arithmetic. It has source-reviewed written support and exact arithmetic checks; it is **not a Lean endpoint**.
 
-The dimension-29 package also has a later successful replay record reported
+The dimension-29 companion is now included in the public Lean release described above. It also has a later successful replay record reported
 from a separate provider. That record does not transfer to the epsilon-family.
 The epsilon assembly review was
 performed by a separate worker who also authored helper lemmas; it is not

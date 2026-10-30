@@ -1,5 +1,5 @@
 {
-  "documentation_updated": "2026-10-24",
+  "documentation_updated": "2026-10-29",
   "files": {
     ".gitignore": {
       "bytes": 62,
@@ -430,16 +430,16 @@
       "sha256": "537eea9a74d6ecd541d533f0c4dfc7cb556d9ceb7fc01ec606e9fc5938f9f808"
     },
     "PUBLIC_STATUS.md": {
-      "bytes": 8845,
-      "sha256": "3f062db7596d9bc84f6835451b2e94d8ef87ee83b1c75ae17d7bd992d1edd456"
+      "bytes": 9943,
+      "sha256": "0aee078fe0ef9b608c80a5c5bc3551823127fda097be8694613159d7e623bb83"
     },
     "READER_GUIDE.md": {
-      "bytes": 4003,
-      "sha256": "d2cc5ca73e94ca01f2b721eb22da477f47224aa11a99e7be0082fab13e211781"
+      "bytes": 4625,
+      "sha256": "29d6c52d991547486111cf41b17c904712f2aee1f54fc603c5af9f5743d49e3f"
     },
     "README.md": {
-      "bytes": 9543,
-      "sha256": "e2de81d2baf3f82aada39b4a4524180e03a4a5a6e95f72c9c99e7449feb46c8e"
+      "bytes": 9023,
+      "sha256": "4a6b2da555bc1d7dfb4e40cef9d29d647832773657499f1f112beaef51a4428b"
     },
     "research/DIMENSION_EXPONENT_BARRIER_2026-10-16.md": {
       "bytes": 2629,
@@ -1408,6 +1408,14 @@
     "VERSION_HISTORY.md": {
       "bytes": 7322,
       "sha256": "20bbbca9c1a16243bf04a6378c4be42e5876e4586b7e5345c6909335d80068eb"
+    },
+    "research_updates/R29_2026-10-29.md": {
+      "bytes": 6667,
+      "sha256": "8850426d62cb4c300d3c9d51600168dddf71f2245bbef55db6956601d51a1f79"
+    },
+    "research_updates/verify_finite_window_structure.py": {
+      "bytes": 2359,
+      "sha256": "af5ff8a6c9cfdfa4b21633fef1f1d2643506987d39cfbe937902d29e1c43e83f"
     }
   },
   "finite_proof_commit": "f1604c368efce996a9af4d46f581e676e49054f5",

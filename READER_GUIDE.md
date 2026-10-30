@@ -2,6 +2,8 @@
 
 **John Tripodo** · [ORCID 0009-0006-9180-4953](https://orcid.org/0009-0006-9180-4953)
 
+**29 October 2026 verification update:** The 20 October R29 and epsilon-family Lean companion closures are already [public](validation/lean-2026-10-20/README.md). The later private **written** `n>=253` R29 construction and private scoped **Lean** `283..288` theorem are carefully separated in the [post-Hexagon research addendum](research_updates/R29_2026-10-29.md), and are **not** a revision to the current Hexagon paper.
+
 ## Where to start and what to cite
 
 - **Current Hexagon preprint:** [*Separated distances in fixed dimension*, hexagon:2610.00254v2](https://hexagonmath.org/2610.00254v2). Hexagon is a moderated preprint archive, not peer review; it has not assigned a DOI.
@@ -17,7 +19,7 @@ Under the maintained fixed-dimension interpretation of Erdős Problem #670, the 
 2. In dimension 29, arbitrarily large selected sizes admit diameter below `0.998n^2`, with a prime-first Lean endpoint reported in the project status.
 3. A **separate written** prime-interval corollary gives dimension-29 configurations for **every** `n >= 400000`, with diameter below `0.999n^2`. This all-size statement is **not** a Lean endpoint.
 
-The earlier finite `R^81794` / `0.735n^2` theorem has a distributed public Lean source closure and a separate exact Formal Conjectures statement adapter. The **newer v2 Lean proof closures remain private**; the public record includes statement excerpts, audit receipts, written proofs, and exact-arithmetic programs. Review [current status](PUBLIC_STATUS.md) and [new-paper source map](paper/2026-10-20/SOURCE_MAP.md) before interpreting formalization claims.
+The earlier finite `R^81794` / `0.735n^2` theorem has a distributed public Lean source closure and a separate exact Formal Conjectures statement adapter. The **20 October v2 R29/epsilon Lean companion closures are public** at [validation/lean-2026-10-20](validation/lean-2026-10-20/README.md), including recorded scoped replays. The *still newer* 28 October finite B48 Lean closure remains private. The public record also contains written proofs and exact-arithmetic programs with the scope stated in each source. Review [current status](PUBLIC_STATUS.md) and [new-paper source map](paper/2026-10-20/SOURCE_MAP.md) before interpreting formalization claims.
 
 ## Small, useful independent review tasks
 

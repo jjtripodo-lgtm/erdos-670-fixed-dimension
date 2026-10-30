@@ -4,6 +4,8 @@
 
 **Version distinction:** Hexagon [v1](https://hexagonmath.org/2610.00254v1) is the earlier finite-dimension 81,794 theorem; current **v2** contains the later two-circle tolerance family and dimension-29 results. The PDF above is a pinned GitHub file; exact PDF-byte identity across hosts has not been established. Hexagon has assigned no DOI. 
 
+**29 October research addendum (not a Hexagon revision):** [R29 post-Hexagon exact-scope update](research_updates/R29_2026-10-29.md) distinguishes the *private* written all-size `n>=253` construction, the *private* scoped Lean-compiled finite `n=283..288` theorem, and the separate eventual `q=0.98660` bound. A [tiny structural audit](research_updates/verify_finite_window_structure.py) checks prime windows and rational scaling only, not the geometry or Lean proofs. The earlier R29 and epsilon [public Lean companions](validation/lean-2026-10-20/README.md) are already available.
+
 **Other papers:** [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree) · [Sparse determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants).
 
 **Erdős #670, under the maintained fixed-dimension interpretation:** the
@@ -23,7 +25,7 @@ Every statement includes minimum point distance at least one and separation of g
 
 [Editable source and checks](paper/2026-10-20/README.md) · [Source ZIP](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension_source.zip) · [Exact scope and source map](paper/2026-10-20/SOURCE_MAP.md)
 
-The newer Lean proof closures remain private; their existing public statement excerpts and audit records are linked below. No new Lean run or independent specialist review is claimed. The current Hexagon v2 preprint presents the later 20 October mathematical claims; Hexagon v1 and the two withdrawn Zenodo deposits remain separate historical records. Existing paper and proof URLs remain unchanged.
+The 20 October R29 subsequence and epsilon-family Lean companion closures are already **public** at [validation/lean-2026-10-20](validation/lean-2026-10-20/README.md). The newer 28 October B48 finite proof closure remains private; its scope is described in the [29 October addendum](research_updates/R29_2026-10-29.md). No new Lean run or independent specialist review is claimed. The current Hexagon v2 preprint presents the later 20 October mathematical claims; Hexagon v1 and the two withdrawn Zenodo deposits remain separate historical records. Existing paper and proof URLs remain unchanged.
 
 ## Earlier finite result, retained unchanged
 
