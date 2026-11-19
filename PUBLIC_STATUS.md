@@ -1,6 +1,8 @@
 # Erdős #670: result and formalization status
 
-Mathematical scope updated 20 October 2026; archive status corrected 22 October 2026. The [20 October GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the two-circle and R29 constructions, also described by the current [Hexagon v2 preprint](https://hexagonmath.org/2610.00254v2). The earlier [Hexagon v1](https://hexagonmath.org/2610.00254v1) identifies the finite 0.735 theorem and remains permanently versioned. Both Zenodo deposits were voluntarily withdrawn on 22 October, so their DOIs are historical provenance rather than preferred citation links. See [version history](VERSION_HISTORY.md) and the [reader and scoped-review guide](READER_GUIDE.md). The newer complete Lean proof closures remain private; Hexagon moderation does not imply independent mathematical review.
+**Public verification and registry status updated 18 November 2026.** The [R29 Palomar record](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-11-000002) links a public theorem-comparison proof of the *unbounded-subsequence* R29 statement and the negation of the fixed-dimensional Formal Conjectures formulation. The [public 20 October Lean companions](validation/lean-2026-10-20/README.md) separately cover R29 and the epsilon-family. Do not infer that the R29 registered theorem formalizes the written all-size corollary. None of these registrations or build receipts is an independent human proof, novelty or editorial verdict.
+
+Mathematical scope updated 20 October 2026; archive status corrected 22 October 2026. The [20 October GitHub paper](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension.pdf) presents the two-circle and R29 constructions, also described by the current [Hexagon v2 preprint](https://hexagonmath.org/2610.00254v2). The earlier [Hexagon v1](https://hexagonmath.org/2610.00254v1) identifies the finite 0.735 theorem and remains permanently versioned. Both Zenodo deposits were voluntarily withdrawn on 22 October, so their DOIs are historical provenance rather than preferred citation links. See [version history](VERSION_HISTORY.md) and the [reader and scoped-review guide](READER_GUIDE.md). The 20 October R29 and epsilon-family Lean companion source closures are public, and the selected R29 statement also has a later registered Palomar package. Hexagon moderation and Palomar registration do not imply independent mathematical or priority review.
 
 ## What the 14 October finite result establishes
 
@@ -64,13 +66,7 @@ the newer upstream Formal Conjectures project.
 
 ## Later constructions and their internal formalizations
 
-These results have been checked in the private research workspace. Their
-proof closures and full execution records are **not distributed in this
-public package**, and they are not part of the earlier Hexagon v1 manuscript.
-The current Hexagon v2 and the new GitHub paper present their written statements and proofs. Their Lean status
-is reported here as internal formalization status, not as additional
-publicly reproducible Lean certificates. [Exact statement excerpts and audit records](verification/internal_supplements/README.md)
-identify each source and its verification scope without supplying a proof closure.
+The 20 October R29 and epsilon-family claims have public, pinned Lean source closures at [validation/lean-2026-10-20](validation/lean-2026-10-20/README.md), while the independent [registered R29 package](https://github.com/jjtripodo-lgtm/erdos-670-r29) selects an unbounded-subsequence theorem and exact formal conjecture negation. Their source projects and recorded proof checks have separate locks and scopes. The earlier [internal supplements](verification/internal_supplements/README.md) remain a historical audit record, not a complete map of current public availability. This is distinct from later unpublished research developments, for which no new public verification is asserted here. The current Hexagon v2 manuscript presents the written results and their quantifiers; Hexagon v1 predates them.
 
 | Result | Exact quantifiers and bound | Recorded formal scope |
 | --- | --- | --- |
@@ -80,8 +76,7 @@ identify each source and its verification scope without supplying a proof closur
 
 A separate written corollary in the new paper gives R^29 configurations for **every n >= 400000**, with minimum distance >= 1, unordered edge-length gaps > 1, and actual diameter < 0.999n². It combines the unchanged geometry with [Dusart, Proposition 6.8](https://arxiv.org/abs/1002.0442v1) and exact deletion/padding arithmetic. It has source-reviewed written support and exact arithmetic checks; it is **not a Lean endpoint**.
 
-The dimension-29 package also has a later successful replay record reported
-from a separate provider. That record does not transfer to the epsilon-family.
+The public dimension-29 companion has a separately reported replay from another provider. The later Palomar R29 entry reports verification of its two selected statements under its pinned toolchain and comparator rules; these are separate verification records. That record does not transfer to the epsilon-family.
 The epsilon assembly review was
 performed by a separate worker who also authored helper lemmas; it is not
 a wholly independent review of the entire proof.
@@ -104,13 +99,8 @@ Formal verification of exact statements is separate from independent human
 proof and priority review, journal acceptance, and recognition by problem
 trackers. None of those forms of acceptance is asserted here.
 
-The latest retained [ErdősProblems status](https://www.erdosproblems.com/670)
-lists the problem as open and gives
-17 April 2026 as its last edit, predating the October preprint. A direct
-19 October fetch returned HTTP 403, so this update does not claim a fresh
-live-status confirmation or an editorial decision on this work.
+The [ErdősProblems discussion thread](https://www.erdosproblems.com/forum/thread/670) accessible through the public search index on 18 November 2026 still displayed OPEN and a 17 April 2026 last-edit date, predating this preprint. Direct live page fetching remains restricted; this update does not infer a new editorial decision or a completed submission.
 
 The [version history](VERSION_HISTORY.md) distinguishes the retained 0.735
-theorem from the archived 0.74 theorem. Palomar production verification and
-Prove2Me preflight evidence concern that older version only; they must not
-be presented as acceptance of the current constants or later extensions.
+theorem from the archived 0.74 theorem. The older Palomar registration
+[PALOMAR-2026-10-14-000003](https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-14-000003) concerns a different R458999 / 0.74 theorem; the later [R29 registration](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-11-000002) concerns only its two selected statements. Neither entry certifies the paper's every-n R29 corollary or the arbitrary-epsilon family; proof and priority review remain distinct.
