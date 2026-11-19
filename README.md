@@ -4,6 +4,8 @@
 
 **Version distinction:** Hexagon [v1](https://hexagonmath.org/2610.00254v1) is the earlier finite-dimension 81,794 theorem; current **v2** contains the later two-circle tolerance family and dimension-29 results. The PDF above is a pinned GitHub file; exact PDF-byte identity across hosts has not been established. Hexagon has assigned no DOI. 
 
+**Formal verification update (18 November 2026):** The unbounded-subsequence theorem in one fixed space `R^29` is publicly registered as [Palomar PALOMAR-2026-11-11-000002](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-11-000002); the selected [Lean statement and proof package](https://github.com/jjtripodo-lgtm/erdos-670-r29) includes an exact negation of the fixed-dimensional Formal Conjectures formulation. The earlier [20 October public Lean companions](validation/lean-2026-10-20/README.md) also distribute separate R29 and arbitrary-epsilon projects. **These are not the same verification scope:** Palomar's R29 entry proves arbitrarily large sizes with diameter `<0.998n²`; the written all-size R29 corollary and the epsilon family are not part of that selected entry. Registration is not specialist peer review or priority certification. See [the review guide](READER_GUIDE.md) and [verification status](PUBLIC_STATUS.md).
+
 **Other papers:** [Double Hall](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree) · [Sparse determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants).
 
 **Erdős #670, under the maintained fixed-dimension interpretation:** the
@@ -23,7 +25,7 @@ Every statement includes minimum point distance at least one and separation of g
 
 [Editable source and checks](paper/2026-10-20/README.md) · [Source ZIP](paper/2026-10-20/Separated_Distances_in_Fixed_Dimension_source.zip) · [Exact scope and source map](paper/2026-10-20/SOURCE_MAP.md)
 
-The newer Lean proof closures remain private; their existing public statement excerpts and audit records are linked below. No new Lean run or independent specialist review is claimed. The current Hexagon v2 preprint presents the later 20 October mathematical claims; Hexagon v1 and the two withdrawn Zenodo deposits remain separate historical records. Existing paper and proof URLs remain unchanged.
+The 20 October R29 and epsilon-family Lean companion source closures are [public](validation/lean-2026-10-20/README.md), and the later exact R29 statement has a separate [registered package](https://github.com/jjtripodo-lgtm/erdos-670-r29). The R29 registered claim covers an unbounded subsequence, not every sufficiently large size; the written all-size corollary is not included in that Palomar record. No new Lean execution or independent specialist review is claimed by this documentation update. The current Hexagon v2 preprint presents the later 20 October mathematical claims; Hexagon v1 and the two withdrawn Zenodo deposits remain separate historical records. Existing paper and proof URLs remain unchanged.
 
 ## Earlier finite result, retained unchanged
 
