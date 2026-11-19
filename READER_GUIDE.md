@@ -32,6 +32,10 @@ A reviewer need not assess the entire paper at once. These separable questions w
 
 A negative result or a missing premise should be recorded as such. The finite controls are not a substitute for a universal proof, and a Lean compilation receipt is not independent human proof or a comprehensive priority review.
 
+## Where external assessment or updates can be submitted
+
+As of 18 November 2026, [Thomas Bloom's 6 October notice](https://terrytao.wordpress.com/2026/10/06/changes-to-the-erdos-problems-web-site/) governs the primary erdosproblems.com catalog: new per-problem comments and proof claims are paused and status labels are not shown; update suggestions and high-quality expositions may be sent through the notice's email route. The distinct [teorth/erdosproblems](https://github.com/teorth/erdosproblems) community database supplies the [third-party #670 status display](https://www.erdosproblemaday.com/problem/670), which was still based on an April 2026 database update when checked. [Erdős Problem a Day's #670 attempt form](https://erdosproblemaday.com/submit?problem=670) offers AI-assisted verification, explicitly not human mathematical refereeing. A submitted or posted claim is not presumed independently accepted. No outreach or external status-change action is reported by this documentation update.
+
 ## Other publicly posted papers
 
 - [Asymptotically optimal degree for the double Hall property](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree)
